@@ -26,7 +26,9 @@ class MyApp extends StatelessWidget {
       },
 
       theme: ThemeData(
-        primarySwatch: Colors.red,
+        appBarTheme: Theme.of(context)
+            .appBarTheme
+            .copyWith(backgroundColor: Colors.white70, color: Colors.black87),
         elevatedButtonTheme: ElevatedButtonThemeData(
             style: ElevatedButton.styleFrom(
                 primary: Colors.white,
