@@ -5,6 +5,7 @@ import 'dart:html';
 import 'package:flutter/material.dart';
 import 'package:gorky_name/const/const_variables.dart';
 import 'package:gorky_name/data/main_menu.dart';
+import 'package:gorky_name/ui/component/widgets/main_appbar.dart';
 import 'package:gorky_name/ui/component/widgets/menu_button.dart';
 //import 'package:gorky_name/ui/theme/components_style.dart';
 import 'package:gorky_name/ui/theme/screen.dart';
@@ -21,10 +22,8 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
 //      backgroundColor: Colors.blueGrey.shade200,
-      appBar: AppBar(
-        centerTitle: true,
-        title: const Text(GlobalVar.nameLib),
-      ),
+      appBar: MainAppBar(context),
+
       body: SafeArea(
         child: Stack(
           children: [

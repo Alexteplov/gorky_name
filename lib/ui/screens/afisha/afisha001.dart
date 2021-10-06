@@ -3,6 +3,7 @@ import 'package:gorky_name/const/const_variables.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_bottom_event.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_header_event.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_event.dart';
+import 'package:gorky_name/ui/component/widgets/main_appbar.dart';
 import 'package:gorky_name/ui/theme/screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -12,10 +13,7 @@ class Afisha extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: const Text(GlobalVar.nameLib),
-      ),
+      appBar: MainAppBar(context),
       body: SafeArea(
         child: Stack(
           children: [
