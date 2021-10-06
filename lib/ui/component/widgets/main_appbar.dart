@@ -12,6 +12,14 @@ class MainAppBar extends AppBar {
           ),
           backgroundColor: Colors.white70,
           centerTitle: true,
+          leading: Navigator.canPop(context)
+              ? IconButton(
+                  icon: const Icon(Icons.arrow_back, color: Colors.black87),
+                  onPressed: () {
+                    if (Navigator.canPop(context)) Navigator.pop(context);
+                  },
+                )
+              : Container(),
           title: Text(
             GlobalVar.nameLib,
             style: GoogleFonts.oswald(
@@ -21,11 +29,7 @@ class MainAppBar extends AppBar {
           automaticallyImplyLeading: false,
           actions: <Widget>[
             IconButton(
-              icon: const Icon(Icons.notifications),
-              onPressed: () {},
-            ),
-            IconButton(
-              icon: const Icon(Icons.person),
+              icon: const Icon(Icons.person, color: Colors.black87),
               onPressed: () {},
             ),
           ],
