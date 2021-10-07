@@ -8,35 +8,38 @@ class AfishaBottomEvent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        SizedBox(
-          width: Screen.width(context) > 500 ? 50 : 0,
-        ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Text(
-            'Обязательно предварительная запись.',
-            style: GoogleFonts.oswald(
-                textStyle: Theme.of(context).textTheme.headline5!),
+    return Expanded(
+      flex: 1,
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SizedBox(
+            width: Screen.width(context) > 500 ? 50 : 0,
           ),
-        ),
-        Flexible(
-          child: Padding(
+          Padding(
             padding: const EdgeInsets.all(8.0),
             child: Text(
-              'Телефон: 8(351)264-75-30',
+              'Обязательно предварительная запись.',
               style: GoogleFonts.oswald(
-                  textStyle: Theme.of(context)
-                      .textTheme
-                      .headline5!
-                      .copyWith(color: Colors.red)),
-              //overflow: TextOverflow.ellipsis,
+                  textStyle: Theme.of(context).textTheme.headline5!),
             ),
           ),
-        ),
-      ],
+          Flexible(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'Телефон: 8(351)264-75-30',
+                style: GoogleFonts.oswald(
+                    textStyle: Theme.of(context)
+                        .textTheme
+                        .headline5!
+                        .copyWith(color: Colors.red)),
+                //overflow: TextOverflow.ellipsis,
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
