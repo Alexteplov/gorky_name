@@ -1,9 +1,12 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AfishaHeaderEvent extends StatelessWidget {
-  const AfishaHeaderEvent({Key? key}) : super(key: key);
+  const AfishaHeaderEvent({Key? key, required this.head}) : super(key: key);
+  final String head;
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +15,7 @@ class AfishaHeaderEvent extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: Text(
-            '05 Октября',
+            head,
             style: GoogleFonts.oswald(
                 textStyle: Theme.of(context).textTheme.headline4!),
           ),

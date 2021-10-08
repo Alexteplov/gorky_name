@@ -22,7 +22,9 @@ class BottomLeftRight extends StatelessWidget {
               : Container(),
           next_steep.isNotEmpty
               ? FloatingActionButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, next_steep);
+                  },
                   child: const Icon(Icons.arrow_forward),
                   backgroundColor: Colors.red,
                 )

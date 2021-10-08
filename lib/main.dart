@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
 
       routes: {
         '/': (context) => const MyHomePage(),
-        '/afisha': (context) => const Afisha(),
+        '/afisha': (context) => Afisha(),
       },
 
       theme: ThemeData(

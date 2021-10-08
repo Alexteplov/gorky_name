@@ -141,7 +141,7 @@ class Afisha extends StatelessWidget {
                   flex: 2,
                   child: Container(),
                 ),
-                const BottomLeftRight(next_steep: '/afisha_second'),
+                const BottomLeftRight(),
               ],
             ),
           ],
