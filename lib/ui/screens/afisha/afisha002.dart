@@ -10,7 +10,7 @@ import 'package:gorky_name/ui/component/widgets/main_appbar.dart';
 import 'package:gorky_name/ui/theme/screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Afisha extends StatelessWidget {
+class AfishaSecond extends StatelessWidget {
 /*   final Map<String, String> dayData = {
     '12:00': 'Экскурсия по библиотеке «В гости к МАКСу» (от 10 лет)',
     '14:00': 'Литературно-игровой час «Сказка ключницы Пелагеи» (7-10 лет)',
@@ -20,7 +20,7 @@ class Afisha extends StatelessWidget {
 
   final List<int> tmpw = [];
  */
-  Afisha({Key? key}) : super(key: key);
+  AfishaSecond({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -55,42 +55,82 @@ class Afisha extends StatelessWidget {
                 const Expanded(
                   flex: 1,
                   child: AfishaHeaderEvent(
-                    head: '11 октября - понедельник',
+                    head: '14 октября – четверг',
                   ),
                 ),
                 //const AfishaDayEvent(),
                 const AfishaEvent(
-                  time: '14:00',
+                  time: '10:00',
                   information:
-                      'Литературно-игровой час «Сказка ключницы Пелагеи» (7-10 лет)',
+                      'Экскурсия для дошколят «В гости к Максу» (5-7 лет)',
                 ),
                 const AfishaEvent(
-                  time: '14:00',
+                  time: '15:00',
                   information:
-                      'Литературно-игровой час «Сказка ключницы Пелагеи» (7-10 лет)',
+                      'Клуб любителей настольных игр «Сто наСтолок». Игра «Мой Зоопарк» (6-9  лет)',
                 ),
                 const AfishaEvent(
-                  time: '16:30',
+                  time: '16:00',
                   information:
-                      'Познавательное занятие о правилах гигиены «День мытья рук» (5-7 лет)',
+                      'Интерактивное образовательное занятие «Умный пол» - «Напряги извилины»  (от 9 лет)',
                 ),
                 const AfishaBottomEvent(),
                 /************************ */
                 const Expanded(
                   flex: 1,
                   child: AfishaHeaderEvent(
-                    head: '12 октября – вторник',
+                    head: '15 октября – пятница',
+                  ),
+                ),
+                //const AfishaDayEvent(),
+                const AfishaEvent(
+                  time: '14:00',
+                  information:
+                      'Интерактивное образовательное занятие «Умный пол» - «Музыкальные инструменты» (6 -10 лет)',
+                ),
+                const AfishaEvent(
+                  time: '16:00',
+                  information:
+                      'Дегустация книжных новинок «ТОП-5 книг про дружбу» (от 10 лет)',
+                ),
+                const AfishaEvent(
+                  time: '17:00',
+                  information:
+                      'Виниловый  MIX «Чайковский П.И. Времена года» (от 8 лет)',
+                ),
+
+                const AfishaBottomEvent(),
+                /************************ */
+                const Expanded(
+                  flex: 1,
+                  child: AfishaHeaderEvent(
+                    head: '16 октября – суббота',
                   ),
                 ),
                 //const AfishaDayEvent(),
                 const AfishaEvent(
                   time: '11:00',
-                  information: 'Брейн-ринг «Легенды Танкограда» (от 12 лет)',
+                  information: 'Просмотр диафильма «Паровозик-перевозик»',
                 ),
                 const AfishaEvent(
-                  time: '11:00',
+                  time: '12:00',
                   information:
-                      'Познавательное занятие о правилах гигиены «День мытья рук» (5-7 лет)',
+                      '«Игрушки на песке» - занятие творческого кружка «Сказка на песке» (3 - 5 лет)',
+                ),
+                const AfishaEvent(
+                  time: '12:00',
+                  information:
+                      'Интерактивное занятие по 4D-энциклопедии «Живой мир» (от 10 лет)',
+                ),
+                const AfishaEvent(
+                  time: '14:00 - 16:00',
+                  information:
+                      '«Мир профессий» - игра-тренинг психолога и профориентолога Н.С.Глебовой (старшеклассники и взрослые)',
+                ),
+                const AfishaEvent(
+                  time: '15:00',
+                  information:
+                      'Мульстудия «Настроение». «Творческий блок. Съемка» (от 10 лет)',
                 ),
                 const AfishaEvent(
                   time: '16:00',
@@ -98,43 +138,14 @@ class Afisha extends StatelessWidget {
                       'Краеведческая встреча клуба «Тайны уездного города Че» (от 10 лет)',
                 ),
                 const AfishaEvent(
-                  time: '17:00',
+                  time: '16:30',
                   information:
-                      'Интерактивное занятие по 4D-энциклопедии «Живой мир» (от 10 лет)',
-                ),
-                const AfishaBottomEvent(),
-                /************************ */
-                const Expanded(
-                  flex: 1,
-                  child: AfishaHeaderEvent(
-                    head: '13 октября - среда',
-                  ),
-                ),
-                //const AfishaDayEvent(),
-                const AfishaEvent(
-                  time: '11:00',
-                  information:
-                      'Проект «Библионяня». Развивающее занятие «Дикие животные. Заяц» (1,5-3 года)',
-                ),
-                const AfishaEvent(
-                  time: '14:00',
-                  information:
-                      'Программа «ЭКО — что-то». Экологический урок «Вода в нашей жизни» (7-10 лет)',
-                ),
-                const AfishaEvent(
-                  time: '16:00',
-                  information:
-                      'Клуб любителей настольных игр «Сто наСтолок». Игра по ОБЖ «Предупрежден — значит вооружен!» (от 10 лет)',
+                      '«Игрушки на песке» - занятие творческого кружка «Сказка на песке»  (3 - 5 лет)',
                 ),
                 const AfishaEvent(
                   time: '17:00',
                   information:
-                      'Проект «Библионяня». Развивающее занятие «Дикие животные. Заяц» (1,5-3 года)',
-                ),
-                const AfishaEvent(
-                  time: '17:30',
-                  information:
-                      'Клуб по развитию лидерских качеств и организаторских способностей «PROЯвись». Тема «Лидер — кто это?» (от 12 лет)',
+                      'Клуб любителей настольных игр «Сто наСтолок».  Игра по ОБЖ «Предупрежден — значит вооружен!» (от 10 лет)',
                 ),
                 const AfishaBottomEvent(),
                 Expanded(
@@ -142,6 +153,9 @@ class Afisha extends StatelessWidget {
                   child: Container(),
                 ),
                 const BottomLeftRight(),
+                const SizedBox(
+                  height: 30,
+                ),
               ],
             ),
           ],

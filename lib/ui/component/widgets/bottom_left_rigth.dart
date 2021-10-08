@@ -4,12 +4,13 @@ import 'package:flutter/widgets.dart';
 class BottomLeftRight extends StatelessWidget {
   const BottomLeftRight({Key? key, this.next_steep = ''}) : super(key: key);
   final String next_steep;
+
   @override
   Widget build(BuildContext context) {
     return Expanded(
       flex: 1,
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Navigator.canPop(context)
               ? FloatingActionButton(

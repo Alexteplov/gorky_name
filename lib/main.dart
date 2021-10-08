@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gorky_name/const/const_variables.dart';
 import 'package:gorky_name/ui/screens/afisha/afisha001.dart';
+import 'package:gorky_name/ui/screens/afisha/afisha002.dart';
 import 'package:gorky_name/ui/screens/main_screen.dart';
 import 'package:gorky_name/ui/theme/const_colors.dart';
 
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => const MyHomePage(),
         '/afisha': (context) => Afisha(),
+        '/afisha_second': (context) => AfishaSecond(),
       },
 
       theme: ThemeData(
