@@ -21,7 +21,8 @@ class AfishaBottomEvent extends StatelessWidget {
             child: Text(
               'Обязательно предварительная запись.',
               style: GoogleFonts.oswald(
-                  textStyle: Theme.of(context).textTheme.headline5!),
+                  textStyle: Theme.of(context).textTheme.headline4!),
+              overflow: TextOverflow.ellipsis,
             ),
           ),
           Flexible(
@@ -32,9 +33,9 @@ class AfishaBottomEvent extends StatelessWidget {
                 style: GoogleFonts.oswald(
                     textStyle: Theme.of(context)
                         .textTheme
-                        .headline5!
+                        .headline4!
                         .copyWith(color: Colors.red)),
-                //overflow: TextOverflow.ellipsis,
+                overflow: TextOverflow.ellipsis,
               ),
             ),
           ),

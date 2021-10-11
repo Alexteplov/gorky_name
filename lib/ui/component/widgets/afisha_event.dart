@@ -36,8 +36,8 @@ class AfishaEvent extends StatelessWidget {
               child: Text(
                 information,
                 style: GoogleFonts.oswald(
-                    textStyle: Theme.of(context).textTheme.headline6!),
-                //overflow: TextOverflow.ellipsis,
+                    textStyle: Theme.of(context).textTheme.headline5!),
+                overflow: TextOverflow.ellipsis,
               ),
             ),
           ),

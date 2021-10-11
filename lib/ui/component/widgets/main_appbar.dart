@@ -5,8 +5,9 @@ import 'package:google_fonts/google_fonts.dart';
 class MainAppBar extends AppBar {
   final BuildContext context;
 
-  MainAppBar(@required this.context)
+  MainAppBar(this.context, {Key? key})
       : super(
+          key: key,
           iconTheme: const IconThemeData(
             color: Colors.black,
           ),

@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class BottomLeftRight extends StatelessWidget {
+  // ignore: non_constant_identifier_names
   const BottomLeftRight({Key? key, this.next_steep = ''}) : super(key: key);
+  // ignore: non_constant_identifier_names
   final String next_steep;
 
   @override
@@ -26,7 +28,10 @@ class BottomLeftRight extends StatelessWidget {
                   onPressed: () {
                     Navigator.pushNamed(context, next_steep);
                   },
-                  child: const Icon(Icons.arrow_forward),
+                  child: const Icon(
+                    Icons.arrow_forward,
+                    //size: 75,
+                  ),
                   backgroundColor: Colors.red,
                 )
               : Container(),

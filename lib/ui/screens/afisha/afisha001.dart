@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gorky_name/const/const_variables.dart';
-import 'package:gorky_name/data/afisha_data.dart';
+//import 'package:gorky_name/data/afisha_data.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_bottom_event.dart';
-import 'package:gorky_name/ui/component/widgets/afisha_day_event.dart';
+//import 'package:gorky_name/ui/component/widgets/afisha_day_event.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_header_event.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_event.dart';
 import 'package:gorky_name/ui/component/widgets/bottom_left_rigth.dart';
@@ -20,7 +20,7 @@ class Afisha extends StatelessWidget {
 
   final List<int> tmpw = [];
  */
-  Afisha({Key? key}) : super(key: key);
+  const Afisha({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -52,12 +52,10 @@ class Afisha extends StatelessWidget {
                     ),
                   ),
                 ),
-                const Expanded(
-                  flex: 1,
-                  child: AfishaHeaderEvent(
-                    head: '11 октября - понедельник',
-                  ),
+                const AfishaHeaderEvent(
+                  head: '11 октября - понедельник',
                 ),
+
                 //const AfishaDayEvent(),
                 const AfishaEvent(
                   time: '14:00',
@@ -76,12 +74,10 @@ class Afisha extends StatelessWidget {
                 ),
                 const AfishaBottomEvent(),
                 /************************ */
-                const Expanded(
-                  flex: 1,
-                  child: AfishaHeaderEvent(
-                    head: '12 октября – вторник',
-                  ),
+                const AfishaHeaderEvent(
+                  head: '12 октября – вторник',
                 ),
+
                 //const AfishaDayEvent(),
                 const AfishaEvent(
                   time: '11:00',
@@ -103,45 +99,11 @@ class Afisha extends StatelessWidget {
                       'Интерактивное занятие по 4D-энциклопедии «Живой мир» (от 10 лет)',
                 ),
                 const AfishaBottomEvent(),
-                /************************ */
-                const Expanded(
-                  flex: 1,
-                  child: AfishaHeaderEvent(
-                    head: '13 октября - среда',
-                  ),
-                ),
-                //const AfishaDayEvent(),
-                const AfishaEvent(
-                  time: '11:00',
-                  information:
-                      'Проект «Библионяня». Развивающее занятие «Дикие животные. Заяц» (1,5-3 года)',
-                ),
-                const AfishaEvent(
-                  time: '14:00',
-                  information:
-                      'Программа «ЭКО — что-то». Экологический урок «Вода в нашей жизни» (7-10 лет)',
-                ),
-                const AfishaEvent(
-                  time: '16:00',
-                  information:
-                      'Клуб любителей настольных игр «Сто наСтолок». Игра по ОБЖ «Предупрежден — значит вооружен!» (от 10 лет)',
-                ),
-                const AfishaEvent(
-                  time: '17:00',
-                  information:
-                      'Проект «Библионяня». Развивающее занятие «Дикие животные. Заяц» (1,5-3 года)',
-                ),
-                const AfishaEvent(
-                  time: '17:30',
-                  information:
-                      'Клуб по развитию лидерских качеств и организаторских способностей «PROЯвись». Тема «Лидер — кто это?» (от 12 лет)',
-                ),
-                const AfishaBottomEvent(),
                 Expanded(
                   flex: 2,
                   child: Container(),
                 ),
-                const BottomLeftRight(next_steep: '/afisha_second'),
+                const BottomLeftRight(next_steep: GlobalVar.routeAfisha01),
                 const SizedBox(
                   height: 30,
                 ),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:gorky_name/ui/theme/screen.dart';
 
+// ignore: must_be_immutable
 class MenuButton extends StatelessWidget {
   MenuButton(
       {Key? key,

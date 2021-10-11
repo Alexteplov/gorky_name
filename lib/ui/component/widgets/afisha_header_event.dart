@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -10,17 +8,20 @@ class AfishaHeaderEvent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Text(
-            head,
-            style: GoogleFonts.oswald(
-                textStyle: Theme.of(context).textTheme.headline4!),
+    return Expanded(
+      flex: 1,
+      child: Row(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              head,
+              style: GoogleFonts.oswald(
+                  textStyle: Theme.of(context).textTheme.headline3!),
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
