@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:gorky_name/const/const_variables.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -31,7 +33,9 @@ class MainAppBar extends AppBar {
           actions: <Widget>[
             IconButton(
               icon: const Icon(Icons.person, color: Colors.black87),
-              onPressed: () {},
+              onPressed: () {
+                document.exitFullscreen();
+              },
             ),
           ],
         );

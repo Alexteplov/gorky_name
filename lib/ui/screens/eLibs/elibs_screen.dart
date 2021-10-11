@@ -1,23 +1,12 @@
-// ignore_for_file: unnecessary_const
-
-//import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:gorky_name/const/const_variables.dart';
-//import 'package:gorky_name/data/main_menu.dart';
 import 'package:gorky_name/ui/component/widgets/main_appbar.dart';
 import 'package:gorky_name/ui/component/widgets/menu_button.dart';
-//import 'package:gorky_name/ui/theme/components_style.dart';
 import 'package:gorky_name/ui/theme/screen.dart';
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+class ElLibs extends StatelessWidget {
+  const ElLibs({Key? key}) : super(key: key);
 
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,21 +48,26 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  MenuButton(context: context, nameButton: GlobalVar.structure),
+                  //MainMenu(),
+                  MenuButton(
+                      context: context,
+                      nameButton: GlobalVar.elNEDB,
+                      route: GlobalVar.routeElLibNEDB),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  MenuButton(
+                    context: context,
+                    nameButton: GlobalVar.elNEB,
+                    route: GlobalVar.routeElLibNEB,
+                  ),
                   const SizedBox(
                     height: 20,
                   ),
                   MenuButton(
                       context: context,
-                      nameButton: GlobalVar.elLibs,
-                      route: GlobalVar.routeElLibs),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  MenuButton(
-                      context: context,
-                      nameButton: GlobalVar.billboard,
-                      route: GlobalVar.routeAfisha),
+                      nameButton: GlobalVar.elLitress,
+                      route: GlobalVar.routeElLibLitres),
                   const SizedBox(
                     height: 20,
                   ),

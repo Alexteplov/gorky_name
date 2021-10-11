@@ -29,7 +29,7 @@ class MenuButton extends StatelessWidget {
           //print('route ${route}');
         }
       },
-      child: Text(nameButton),
+      child: Center(child: Text(nameButton)),
     );
   }
 }

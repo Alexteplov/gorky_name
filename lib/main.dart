@@ -3,9 +3,11 @@ import 'dart:html';
 
 import 'package:flutter/material.dart';
 import 'package:gorky_name/const/const_variables.dart';
+import 'package:gorky_name/ui/component/widgets/el_libs_qr.dart';
 import 'package:gorky_name/ui/screens/afisha/afisha001.dart';
 import 'package:gorky_name/ui/screens/afisha/afisha002.dart';
 import 'package:gorky_name/ui/screens/afisha/afisha003.dart';
+import 'package:gorky_name/ui/screens/eLibs/elibs_screen.dart';
 import 'package:gorky_name/ui/screens/main_screen.dart';
 
 void main() {
@@ -27,7 +29,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    goFullScreen();
+    //goFullScreen();
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: GlobalVar.nameLib,
@@ -38,6 +40,13 @@ class MyApp extends StatelessWidget {
         GlobalVar.routeAfisha: (context) => const Afisha(),
         GlobalVar.routeAfisha01: (context) => const AfishaSecond(),
         GlobalVar.routeAfisha02: (context) => const AfishaThird(),
+        GlobalVar.routeElLibs: (context) => const ElLibs(),
+        GlobalVar.routeElLibLitres: (context) =>
+            const ElLibsQr(nameLib: GlobalVar.elLitress),
+        GlobalVar.routeElLibNEB: (context) =>
+            const ElLibsQr(nameLib: GlobalVar.elNEBFull),
+        GlobalVar.routeElLibNEDB: (context) =>
+            const ElLibsQr(nameLib: GlobalVar.elNEDBFull),
       },
 
       theme: ThemeData(
