@@ -32,9 +32,14 @@ class MainAppBar extends AppBar {
           automaticallyImplyLeading: false,
           actions: <Widget>[
             IconButton(
-              icon: const Icon(Icons.person, color: Colors.black87),
+              icon: const Icon(Icons.settings, color: Colors.black87),
               onPressed: () {
-                document.exitFullscreen();
+                window.close();
+                //document.exitFullscreen();
+
+/*                 Future.delayed(const Duration(milliseconds: 1000), () {
+                  SystemChannels.platform.invokeMethod('SystemNavigator.pop');
+                }); */
               },
             ),
           ],

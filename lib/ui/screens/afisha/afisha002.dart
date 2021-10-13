@@ -29,13 +29,16 @@ class AfishaSecond extends StatelessWidget {
       body: SafeArea(
         child: Stack(
           children: [
-            Container(
-              height: Screen.height(context),
-              width: Screen.width(context),
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage(GlobalVar.bgImgAfisha),
-                  fit: BoxFit.fill,
+            Opacity(
+              opacity: 0.4,
+              child: Container(
+                height: Screen.height(context),
+                width: Screen.width(context),
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(GlobalVar.bgImgAfisha),
+                    fit: BoxFit.fill,
+                  ),
                 ),
               ),
             ),

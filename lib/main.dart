@@ -7,6 +7,8 @@ import 'package:gorky_name/ui/component/widgets/el_libs_qr.dart';
 import 'package:gorky_name/ui/screens/afisha/afisha001.dart';
 import 'package:gorky_name/ui/screens/afisha/afisha002.dart';
 import 'package:gorky_name/ui/screens/afisha/afisha003.dart';
+import 'package:gorky_name/ui/screens/afisha/afisha_w01.dart';
+import 'package:gorky_name/ui/screens/afisha/afisha_w02.dart';
 import 'package:gorky_name/ui/screens/eLibs/elibs_screen.dart';
 import 'package:gorky_name/ui/screens/main_screen.dart';
 
@@ -40,13 +42,15 @@ class MyApp extends StatelessWidget {
         GlobalVar.routeAfisha: (context) => const Afisha(),
         GlobalVar.routeAfisha01: (context) => const AfishaSecond(),
         GlobalVar.routeAfisha02: (context) => const AfishaThird(),
+        GlobalVar.routeAfishaW01: (context) => const AfishaSaturday(),
+        GlobalVar.routeAfishaW02: (context) => const AfishaSunday(),
         GlobalVar.routeElLibs: (context) => const ElLibs(),
-        GlobalVar.routeElLibLitres: (context) =>
-            const ElLibsQr(nameLib: GlobalVar.elLitress),
-        GlobalVar.routeElLibNEB: (context) =>
-            const ElLibsQr(nameLib: GlobalVar.elNEBFull),
-        GlobalVar.routeElLibNEDB: (context) =>
-            const ElLibsQr(nameLib: GlobalVar.elNEDBFull),
+        GlobalVar.routeElLibLitres: (context) => const ElLibsQr(
+            nameLib: GlobalVar.elLitress, qrCode: GlobalVar.qrLitress),
+        GlobalVar.routeElLibNEB: (context) => const ElLibsQr(
+            nameLib: GlobalVar.elNEBFull, qrCode: GlobalVar.qrNEB),
+        GlobalVar.routeElLibNEDB: (context) => const ElLibsQr(
+            nameLib: GlobalVar.elNEDBFull, qrCode: GlobalVar.qrNEDB),
       },
 
       theme: ThemeData(
