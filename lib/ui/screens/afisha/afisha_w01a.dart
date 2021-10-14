@@ -10,7 +10,7 @@ import 'package:gorky_name/ui/component/widgets/main_appbar.dart';
 import 'package:gorky_name/ui/theme/screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class AfishaThird extends StatelessWidget {
+class AfishaSaturdayA extends StatelessWidget {
 /*   final Map<String, String> dayData = {
     '12:00': 'Экскурсия по библиотеке «В гости к МАКСу» (от 10 лет)',
     '14:00': 'Литературно-игровой час «Сказка ключницы Пелагеи» (7-10 лет)',
@@ -20,7 +20,7 @@ class AfishaThird extends StatelessWidget {
 
   final List<int> tmpw = [];
  */
-  const AfishaThird({Key? key}) : super(key: key);
+  const AfishaSaturdayA({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -30,13 +30,13 @@ class AfishaThird extends StatelessWidget {
         child: Stack(
           children: [
             Opacity(
-              opacity: 0.4,
+              opacity: 0.2,
               child: Container(
                 height: Screen.height(context),
                 width: Screen.width(context),
                 decoration: const BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage(GlobalVar.bgImgAfisha),
+                    image: AssetImage(GlobalVar.bgImgAfishaWeekends),
                     fit: BoxFit.fill,
                   ),
                 ),
@@ -60,32 +60,55 @@ class AfishaThird extends StatelessWidget {
                 ),
                 /************************ */
                 const AfishaHeaderEvent(
-                  head: '15 октября – пятница',
+                  head: '23 октября – суббота',
                 ),
 
                 //const AfishaDayEvent(),
                 const AfishaEvent(
+                  time: '11:00',
+                  information: 'Просмотр диафильма «Гадкий утенок» (3 - 6 лет)',
+                ),
+                const AfishaEvent(
+                  time: '12:00',
+                  information:
+                      '«Песочные каракули» - занятие творческого кружка «Сказка на песке»  (3 - 5 лет)',
+                ),
+                const AfishaEvent(
+                  time: '12:00',
+                  information:
+                      'Лаборатория чистой воды "Вода в нашей жизни" в рамках программы "ЭКО что-то" (от 8 лет)',
+                ),
+                const AfishaEvent(
                   time: '14:00',
                   information:
-                      'Интерактивное образовательное занятие «Умный пол» - «Музыкальные инструменты» (6 -10 лет)',
+                      'Библиотечная лаборатория с опытами и экспериментами "Научно - нескучно". Тема:"Вещества" (от 8 лет)',
+                ),
+                const AfishaEvent(
+                  time: '15:00',
+                  information:
+                      'Познавательно–практическое занятие «Наш дом – Солнечная система» (от 10 лет)',
                 ),
                 const AfishaEvent(
                   time: '16:00',
                   information:
-                      'Дегустация книжных новинок «ТОП-5 книг про дружбу» (от 10 лет)',
+                      'Мастер-класс по актёрскому мастерству "Искусство быть разным" (от 10 лет)',
+                ),
+                const AfishaEvent(
+                  time: '16:30',
+                  information:
+                      '«Песочные каракули» - занятие творческого кружка «Сказка на песке»  (3 - 5 лет)',
                 ),
                 const AfishaEvent(
                   time: '17:00',
                   information:
-                      'Виниловый  MIX «Чайковский П.И. Времена года» (от 8 лет)',
+                      'Клуб любителей настольных игр «Сто наСтолок». Игра «ДаНетки» (от 10  лет)',
                 ),
-
                 const AfishaBottomEvent(),
                 Expanded(
-                  flex: 6,
+                  flex: 2,
                   child: Container(),
                 ),
-                const BottomLeftRight(next_steep: GlobalVar.routeAfishaW01),
+                const BottomLeftRight(next_steep: GlobalVar.routeAfishaW02a),
                 const SizedBox(
                   height: 30,
                 ),

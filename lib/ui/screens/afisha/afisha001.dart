@@ -51,20 +51,24 @@ class Afisha extends StatelessWidget {
                     child: Text(
                       'Афиша',
                       style: GoogleFonts.oswald(
-                          textStyle: Theme.of(context).textTheme.headline2!),
+                          textStyle: Theme.of(context)
+                              .textTheme
+                              .headline2!
+                              .copyWith(color: Colors.black)),
                     ),
                   ),
                 ),
                 const AfishaHeaderEvent(
-                  head: '11 октября - понедельник',
+                  head: '18 октября - понедельник',
                 ),
 
                 //const AfishaDayEvent(),
                 const AfishaEvent(
                   time: '14:00',
                   information:
-                      'Литературно-игровой час «Сказка ключницы Пелагеи» (7-10 лет)',
+                      'Познавательное занятие «Почемучки среди нас» (7-10 лет)',
                 ),
+/*
                 const AfishaEvent(
                   time: '14:00',
                   information:
@@ -75,38 +79,40 @@ class Afisha extends StatelessWidget {
                   information:
                       'Познавательное занятие о правилах гигиены «День мытья рук» (5-7 лет)',
                 ),
+*/
                 const AfishaBottomEvent(),
                 /************************ */
                 const AfishaHeaderEvent(
-                  head: '12 октября – вторник',
+                  head: '19 октября – вторник',
                 ),
 
                 //const AfishaDayEvent(),
                 const AfishaEvent(
-                  time: '11:00',
-                  information: 'Брейн-ринг «Легенды Танкограда» (от 12 лет)',
+                  time: '10:00',
+                  information:
+                      'День новой книги. Знакомство с новой серией книг "Познавательные истории про животных и насекомых" (5-7 лет)',
                 ),
                 const AfishaEvent(
-                  time: '11:00',
+                  time: '10:00',
                   information:
-                      'Познавательное занятие о правилах гигиены «День мытья рук» (5-7 лет)',
+                      'День новой книги. Знакомство с книжками про мышек (5-7 лет)',
                 ),
                 const AfishaEvent(
-                  time: '16:00',
+                  time: '10:30',
                   information:
-                      'Краеведческая встреча клуба «Тайны уездного города Че» (от 10 лет)',
+                      'День новой книги. Квиз-игра по научно-познавательным книгам "Науко-это круто!"с обзором научно-познавательных книг (от 12 лет)',
                 ),
                 const AfishaEvent(
                   time: '17:00',
                   information:
-                      'Интерактивное занятие по 4D-энциклопедии «Живой мир» (от 10 лет)',
+                      'День новой книги. Знакомство с интерактивными книгами 3D и 4D "Девчонки" и "Мальчишки" (от 10 лет)',
                 ),
                 const AfishaBottomEvent(),
                 Expanded(
-                  flex: 2,
+                  flex: 1,
                   child: Container(),
                 ),
-                const BottomLeftRight(next_steep: GlobalVar.routeAfisha01),
+                const BottomLeftRight(next_steep: GlobalVar.routeAfisha02),
                 const SizedBox(
                   height: 30,
                 ),

@@ -51,7 +51,10 @@ class AfishaSunday extends StatelessWidget {
                     child: Text(
                       'Афиша',
                       style: GoogleFonts.oswald(
-                          textStyle: Theme.of(context).textTheme.headline2!),
+                          textStyle: Theme.of(context)
+                              .textTheme
+                              .headline2!
+                              .copyWith(color: Colors.black)),
                     ),
                   ),
                 ),
@@ -102,7 +105,7 @@ class AfishaSunday extends StatelessWidget {
                   flex: 2,
                   child: Container(),
                 ),
-                const BottomLeftRight(),
+                const BottomLeftRight(next_steep: GlobalVar.routeAfisha01),
                 const SizedBox(
                   height: 30,
                 ),

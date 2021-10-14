@@ -15,24 +15,37 @@ class BottomLeftRight extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Navigator.canPop(context)
-              ? FloatingActionButton(
-                  onPressed: () {
-                    if (Navigator.canPop(context)) Navigator.pop(context);
-                  },
-                  child: const Icon(Icons.arrow_back),
-                  backgroundColor: Colors.red,
+              ? SizedBox(
+                  width: 150,
+                  height: 150,
+                  child: FloatingActionButton(
+                    onPressed: () {
+                      if (Navigator.canPop(context)) Navigator.pop(context);
+                    },
+                    child: const FittedBox(
+                        child: Icon(
+                      Icons.arrow_back,
+                      size: 32,
+                    )),
+                    backgroundColor: Colors.red,
+                  ),
                 )
               : Container(),
           next_steep.isNotEmpty
-              ? FloatingActionButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, next_steep);
-                  },
-                  child: const Icon(
-                    Icons.arrow_forward,
-                    //size: 75,
+              ? SizedBox(
+                  width: 150,
+                  height: 150,
+                  child: FloatingActionButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, next_steep);
+                    },
+                    child: const FittedBox(
+                        child: Icon(
+                      Icons.arrow_forward,
+                      size: 32,
+                    )),
+                    backgroundColor: Colors.red,
                   ),
-                  backgroundColor: Colors.red,
                 )
               : Container(),
         ],

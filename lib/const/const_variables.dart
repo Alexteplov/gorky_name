@@ -24,11 +24,15 @@ class GlobalVar {
 //Маршруты роутинга(переходов)
   static const String routeMainMenu = '/';
   //afisha
-  static const String routeAfisha = '/afisha';
-  static const String routeAfisha01 = '/afisha_second';
-  static const String routeAfisha02 = '/afisha_third';
+  static const String routeAfisha01 = '/afisha';
+  static const String routeAfisha02 = '/afisha_second';
+  static const String routeAfisha03 = '/afisha_third';
+  static const String routeAfisha03a = '/afisha_thirda';
   static const String routeAfishaW01 = '/afisha_saturday';
   static const String routeAfishaW02 = '/afisha_sunday';
+  static const String routeAfishaW01a = '/afisha_saturdaya';
+  static const String routeAfishaW02a = '/afisha_sundaya';
+
   //electronic librarys
   static const String routeElLibs = '/main_el_lib';
   static const String routeElLibLitres = '/main_el_litres';

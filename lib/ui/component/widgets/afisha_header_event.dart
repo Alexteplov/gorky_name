@@ -17,7 +17,10 @@ class AfishaHeaderEvent extends StatelessWidget {
             child: Text(
               head,
               style: GoogleFonts.oswald(
-                  textStyle: Theme.of(context).textTheme.headline3!),
+                  textStyle: Theme.of(context)
+                      .textTheme
+                      .headline3!
+                      .copyWith(color: Colors.red)),
             ),
           ),
         ],

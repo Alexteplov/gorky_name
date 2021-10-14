@@ -7,8 +7,11 @@ import 'package:gorky_name/ui/component/widgets/el_libs_qr.dart';
 import 'package:gorky_name/ui/screens/afisha/afisha001.dart';
 import 'package:gorky_name/ui/screens/afisha/afisha002.dart';
 import 'package:gorky_name/ui/screens/afisha/afisha003.dart';
+import 'package:gorky_name/ui/screens/afisha/afisha003a.dart';
 import 'package:gorky_name/ui/screens/afisha/afisha_w01.dart';
+import 'package:gorky_name/ui/screens/afisha/afisha_w01a.dart';
 import 'package:gorky_name/ui/screens/afisha/afisha_w02.dart';
+import 'package:gorky_name/ui/screens/afisha/afisha_w02a.dart';
 import 'package:gorky_name/ui/screens/eLibs/elibs_screen.dart';
 import 'package:gorky_name/ui/screens/main_screen.dart';
 
@@ -39,11 +42,14 @@ class MyApp extends StatelessWidget {
 
       routes: {
         GlobalVar.routeMainMenu: (context) => const MyHomePage(),
-        GlobalVar.routeAfisha: (context) => const Afisha(),
-        GlobalVar.routeAfisha01: (context) => const AfishaSecond(),
-        GlobalVar.routeAfisha02: (context) => const AfishaThird(),
+        GlobalVar.routeAfisha01: (context) => const Afisha(),
+        GlobalVar.routeAfisha02: (context) => const AfishaSecond(),
+        GlobalVar.routeAfisha03: (context) => const AfishaThird(),
         GlobalVar.routeAfishaW01: (context) => const AfishaSaturday(),
         GlobalVar.routeAfishaW02: (context) => const AfishaSunday(),
+        GlobalVar.routeAfisha03a: (context) => const AfishaThirdA(),
+        GlobalVar.routeAfishaW01a: (context) => const AfishaSaturdayA(),
+        GlobalVar.routeAfishaW02a: (context) => const AfishaSundayA(),
         GlobalVar.routeElLibs: (context) => const ElLibs(),
         GlobalVar.routeElLibLitres: (context) => const ElLibsQr(
             nameLib: GlobalVar.elLitress, qrCode: GlobalVar.qrLitress),
