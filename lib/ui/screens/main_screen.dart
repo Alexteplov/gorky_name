@@ -73,7 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   MenuButton(
                       context: context,
                       nameButton: GlobalVar.billboard,
-                      route: GlobalVar.routeAfisha03),
+                      route: GlobalVar.routeAfisha01),
                   const SizedBox(
                     height: 20,
                   ),

@@ -65,6 +65,17 @@ class AfishaSundayA extends StatelessWidget {
 
                 //const AfishaDayEvent(),
                 const AfishaEvent(
+                  time: '11:00',
+                  information:
+                      'Кружок вязания «Чудесный крючок». Знакомство с техникой вязания крючком (от 8 лет)',
+                ),
+                const AfishaEvent(
+                  time: '11:00',
+                  information:
+                      'Школа фиксиков. Тема занятия "Механика вокруг нас" (5-7 лет)',
+                ),
+
+                const AfishaEvent(
                   time: '12:00',
                   information:
                       'Литературный клуб «РасЧитайка». Литературно-игровое занятие «Играем с Винтиком и Шпунтиком в Умный пол» (4-6 лет)',
@@ -72,7 +83,7 @@ class AfishaSundayA extends StatelessWidget {
                 const AfishaEvent(
                   time: '12:00',
                   information:
-                      'Знакомство с интерактивными книгами 3D и 4D формата"Девчонки" и "Мальчишки" (от 8 лет)',
+                      'Знакомство с интерактивными книгами 3D и 4D формата "Девчонки" и "Мальчишки" (от 8 лет)',
                 ),
                 const AfishaEvent(
                   time: '14:00',
