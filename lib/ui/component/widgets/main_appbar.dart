@@ -3,6 +3,7 @@ import 'dart:html';
 import 'package:flutter/material.dart';
 import 'package:gorky_name/const/const_variables.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:gorky_name/ui/component/widgets/current_date.dart';
 
 class MainAppBar extends AppBar {
   final BuildContext context;
@@ -31,17 +32,20 @@ class MainAppBar extends AppBar {
           elevation: 0.0,
           automaticallyImplyLeading: false,
           actions: <Widget>[
+            CurrentDate(),
+            /*
             IconButton(
               icon: const Icon(Icons.settings, color: Colors.black87),
               onPressed: () {
-                window.close();
+              window.close();
                 //document.exitFullscreen();
 
-/*                 Future.delayed(const Duration(milliseconds: 1000), () {
+                 Future.delayed(const Duration(milliseconds: 1000), () {
                   SystemChannels.platform.invokeMethod('SystemNavigator.pop');
-                }); */
+                }); 
               },
             ),
+*/
           ],
         );
 }
