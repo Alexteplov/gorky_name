@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:gorky_name/data/routing_data.dart';
 import 'package:gorky_name/ui/theme/screen.dart';
+import 'package:provider/src/provider.dart';
 
 // ignore: must_be_immutable
 class MenuButton extends StatelessWidget {
@@ -25,7 +27,8 @@ class MenuButton extends StatelessWidget {
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))),
       onPressed: () {
         if (route.isNotEmpty) {
-          Navigator.pushNamed(context, route);
+          context.read<RoutingData>().setRoute(route);
+          //Navigator.pushNamed(context, route);
           //print('route ${route}');
         }
       },

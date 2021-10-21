@@ -24,115 +24,112 @@ class AfishaSecond extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: MainAppBar(context),
-      body: SafeArea(
-        child: Stack(
-          children: [
-            Opacity(
-              opacity: 0.4,
-              child: Container(
-                height: Screen.height(context),
-                width: Screen.width(context),
-                decoration: const BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage(GlobalVar.bgImgAfisha),
-                    fit: BoxFit.fill,
-                  ),
+    return SafeArea(
+      child: Stack(
+        children: [
+          Opacity(
+            opacity: 0.4,
+            child: Container(
+              height: Screen.height(context),
+              width: Screen.width(context),
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(GlobalVar.bgImgAfisha),
+                  fit: BoxFit.fill,
                 ),
               ),
             ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Expanded(
-                  flex: 2,
-                  child: Center(
-                    child: Text(
-                      'Афиша',
-                      style: GoogleFonts.oswald(
-                          textStyle: Theme.of(context)
-                              .textTheme
-                              .headline2!
-                              .copyWith(color: Colors.black)),
-                    ),
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Expanded(
+                flex: 2,
+                child: Center(
+                  child: Text(
+                    'Афиша',
+                    style: GoogleFonts.oswald(
+                        textStyle: Theme.of(context)
+                            .textTheme
+                            .headline2!
+                            .copyWith(color: Colors.black)),
                   ),
                 ),
-                /************************ */
-                const AfishaHeaderEvent(
-                  head: '20 октября - среда',
-                ),
+              ),
+              /************************ */
+              const AfishaHeaderEvent(
+                head: '20 октября - среда',
+              ),
 
-                //const AfishaDayEvent(),
-                const AfishaEvent(
-                  time: '11:00',
-                  information:
-                      'Проект «Библионяня». Развивающее занятие «Дикие животные. Ежик» (1,5-3 года)',
-                ),
-                const AfishaEvent(
-                  time: '14:00',
-                  information:
-                      'Познавательное занятие «Почемучки среди нас» (7-10 лет)',
-                ),
-                const AfishaEvent(
-                  time: '16:00',
-                  information:
-                      'Клуб любителей настольных игр «Сто наСтолок». Игра  «Имаджинариум» (от 12 лет)',
-                ),
-                const AfishaEvent(
-                  time: '17:00',
-                  information:
-                      'Проект «Библионяня». Развивающее занятие «Дикие животные. Ежик» (1,5-3 года)',
-                ),
-                const AfishaEvent(
-                  time: '17:30',
-                  information:
-                      'Клуб по развитию лидерских качеств и организаторских способностей «PROЯвись». Тема «Лидер — кто это?»  (от 12 лет)',
-                ),
-                const AfishaBottomEvent(),
+              //const AfishaDayEvent(),
+              const AfishaEvent(
+                time: '11:00',
+                information:
+                    'Проект «Библионяня». Развивающее занятие «Дикие животные. Ежик» (1,5-3 года)',
+              ),
+              const AfishaEvent(
+                time: '14:00',
+                information:
+                    'Познавательное занятие «Почемучки среди нас» (7-10 лет)',
+              ),
+              const AfishaEvent(
+                time: '16:00',
+                information:
+                    'Клуб любителей настольных игр «Сто наСтолок». Игра  «Имаджинариум» (от 12 лет)',
+              ),
+              const AfishaEvent(
+                time: '17:00',
+                information:
+                    'Проект «Библионяня». Развивающее занятие «Дикие животные. Ежик» (1,5-3 года)',
+              ),
+              const AfishaEvent(
+                time: '17:30',
+                information:
+                    'Клуб по развитию лидерских качеств и организаторских способностей «PROЯвись». Тема «Лидер — кто это?»  (от 12 лет)',
+              ),
+              const AfishaBottomEvent(),
 /********************* */
-                const AfishaHeaderEvent(
-                  head: '21 октября – четверг',
-                ),
+              const AfishaHeaderEvent(
+                head: '21 октября – четверг',
+              ),
 
-                //const AfishaDayEvent(),
-                const AfishaEvent(
-                  time: '10:00',
-                  information:
-                      'Экскурсия по библиотеке «В гости к МАКСу» (5-7 лет)',
-                ),
-                const AfishaEvent(
-                  time: '11:00',
-                  information:
-                      'Знакомство с новой серией книг "Познавательные истории про животных и насекомых" (5-7 лет)',
-                ),
-                const AfishaEvent(
-                  time: '15:00',
-                  information:
-                      'Клуб любителей настольных игр «Сто наСтолок». Игра «Паутинка» (6-9 лет)',
-                ),
-                const AfishaEvent(
-                  time: '15:00',
-                  information: 'Квиз «Литературная интуиция» (от 15 лет)',
-                ),
-                const AfishaEvent(
-                  time: '17:00',
-                  information:
-                      'Интерактивное образовательное занятие «Умный пол» - «Напряги извилины!»» (от 9 лет)',
-                ),
-                const AfishaBottomEvent(),
-                Expanded(
-                  flex: 1,
-                  child: Container(),
-                ),
-                const BottomLeftRight(next_steep: GlobalVar.routeAfisha03a),
-                const SizedBox(
-                  height: 30,
-                ),
-              ],
-            ),
-          ],
-        ),
+              //const AfishaDayEvent(),
+              const AfishaEvent(
+                time: '10:00',
+                information:
+                    'Экскурсия по библиотеке «В гости к МАКСу» (5-7 лет)',
+              ),
+              const AfishaEvent(
+                time: '11:00',
+                information:
+                    'Знакомство с новой серией книг "Познавательные истории про животных и насекомых" (5-7 лет)',
+              ),
+              const AfishaEvent(
+                time: '15:00',
+                information:
+                    'Клуб любителей настольных игр «Сто наСтолок». Игра «Паутинка» (6-9 лет)',
+              ),
+              const AfishaEvent(
+                time: '15:00',
+                information: 'Квиз «Литературная интуиция» (от 15 лет)',
+              ),
+              const AfishaEvent(
+                time: '17:00',
+                information:
+                    'Интерактивное образовательное занятие «Умный пол» - «Напряги извилины!»» (от 9 лет)',
+              ),
+              const AfishaBottomEvent(),
+              Expanded(
+                flex: 1,
+                child: Container(),
+              ),
+              const BottomLeftRight(next_steep: GlobalVar.routeAfisha03a),
+              const SizedBox(
+                height: 30,
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }

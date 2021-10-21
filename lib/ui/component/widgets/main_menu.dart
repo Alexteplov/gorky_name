@@ -1,10 +1,10 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:gorky_name/const/const_variables.dart';
 import 'package:gorky_name/ui/component/widgets/menu_button.dart';
 import 'package:gorky_name/ui/theme/screen.dart';
 
-class ElLibs extends StatelessWidget {
-  const ElLibs({Key? key}) : super(key: key);
+class MainMenu extends StatelessWidget {
+  const MainMenu({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -43,26 +43,21 @@ class ElLibs extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                //MainMenu(),
-                MenuButton(
-                    context: context,
-                    nameButton: GlobalVar.elNEDB,
-                    route: GlobalVar.routeElLibNEDB),
-                const SizedBox(
-                  height: 20,
-                ),
-                MenuButton(
-                  context: context,
-                  nameButton: GlobalVar.elNEB,
-                  route: GlobalVar.routeElLibNEB,
-                ),
+                MenuButton(context: context, nameButton: GlobalVar.structure),
                 const SizedBox(
                   height: 20,
                 ),
                 MenuButton(
                     context: context,
-                    nameButton: GlobalVar.elLitress,
-                    route: GlobalVar.routeElLibLitres),
+                    nameButton: GlobalVar.elLibs,
+                    route: GlobalVar.routeElLibs),
+                const SizedBox(
+                  height: 20,
+                ),
+                MenuButton(
+                    context: context,
+                    nameButton: GlobalVar.billboard,
+                    route: GlobalVar.routeAfisha01),
                 const SizedBox(
                   height: 20,
                 ),

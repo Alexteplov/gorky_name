@@ -24,87 +24,85 @@ class AfishaSundayA extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: MainAppBar(context),
-      body: SafeArea(
-        child: Stack(
-          children: [
-            Opacity(
-              opacity: 0.2,
-              child: Container(
-                height: Screen.height(context),
-                width: Screen.width(context),
-                decoration: const BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage(GlobalVar.bgImgAfishaWeekends),
-                    fit: BoxFit.fill,
-                  ),
+    return SafeArea(
+      child: Stack(
+        children: [
+          Opacity(
+            opacity: 0.2,
+            child: Container(
+              height: Screen.height(context),
+              width: Screen.width(context),
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(GlobalVar.bgImgAfishaWeekends),
+                  fit: BoxFit.fill,
                 ),
               ),
             ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Expanded(
-                  flex: 2,
-                  child: Center(
-                    child: Text(
-                      'Афиша',
-                      style: GoogleFonts.oswald(
-                          textStyle: Theme.of(context)
-                              .textTheme
-                              .headline2!
-                              .copyWith(color: Colors.black)),
-                    ),
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Expanded(
+                flex: 2,
+                child: Center(
+                  child: Text(
+                    'Афиша',
+                    style: GoogleFonts.oswald(
+                        textStyle: Theme.of(context)
+                            .textTheme
+                            .headline2!
+                            .copyWith(color: Colors.black)),
                   ),
                 ),
-                /************************ */
-                const AfishaHeaderEvent(
-                  head: '24 октября – воскресенье',
-                ),
+              ),
+              /************************ */
+              const AfishaHeaderEvent(
+                head: '24 октября – воскресенье',
+              ),
 
-                //const AfishaDayEvent(),
-                const AfishaEvent(
-                  time: '11:00',
-                  information:
-                      'Кружок вязания «Чудесный крючок». Знакомство с техникой вязания крючком (от 8 лет)',
-                ),
-                const AfishaEvent(
-                  time: '11:00',
-                  information:
-                      'Школа фиксиков. Тема занятия "Механика вокруг нас" (5-7 лет)',
-                ),
+              //const AfishaDayEvent(),
+              const AfishaEvent(
+                time: '11:00',
+                information:
+                    'Кружок вязания «Чудесный крючок». Знакомство с техникой вязания крючком (от 8 лет)',
+              ),
+              const AfishaEvent(
+                time: '11:00',
+                information:
+                    'Школа фиксиков. Тема занятия "Механика вокруг нас" (5-7 лет)',
+              ),
 
-                const AfishaEvent(
-                  time: '12:00',
-                  information:
-                      'Литературный клуб «РасЧитайка». Литературно-игровое занятие «Играем с Винтиком и Шпунтиком в Умный пол» (4-6 лет)',
-                ),
-                const AfishaEvent(
-                  time: '12:00',
-                  information:
-                      'Знакомство с интерактивными книгами 3D и 4D формата "Девчонки" и "Мальчишки" (от 8 лет)',
-                ),
-                const AfishaEvent(
-                  time: '14:00',
-                  information:
-                      'Интерактивное образовательное занятие «Умный пол» - «Напряги мозги» (6 -10 лет)',
-                ),
-                const AfishaEvent(
-                  time: '14:00',
-                  information:
-                      'Клуб любителей настольных игр «Сто наСтолок». Игра «ДаНетки» (от 10  лет)',
-                ),
-                const AfishaEvent(
-                  time: '15:00',
-                  information:
-                      '"Мастерилка с художником". Мастер-класс по рисованию гуашью «Листопад» (от 7 лет)',
-                ),
-                const AfishaEvent(
-                  time: '16:00',
-                  information:
-                      'Клуб «БиблиоБЛОГИНГ». Занятие по теме: «Основные элементы сценария» (10-16 лет)',
-                ),
+              const AfishaEvent(
+                time: '12:00',
+                information:
+                    'Литературный клуб «РасЧитайка». Литературно-игровое занятие «Играем с Винтиком и Шпунтиком в Умный пол» (4-6 лет)',
+              ),
+              const AfishaEvent(
+                time: '12:00',
+                information:
+                    'Знакомство с интерактивными книгами 3D и 4D формата "Девчонки" и "Мальчишки" (от 8 лет)',
+              ),
+              const AfishaEvent(
+                time: '14:00',
+                information:
+                    'Интерактивное образовательное занятие «Умный пол» - «Напряги мозги» (6 -10 лет)',
+              ),
+              const AfishaEvent(
+                time: '14:00',
+                information:
+                    'Клуб любителей настольных игр «Сто наСтолок». Игра «ДаНетки» (от 10  лет)',
+              ),
+              const AfishaEvent(
+                time: '15:00',
+                information:
+                    '"Мастерилка с художником". Мастер-класс по рисованию гуашью «Листопад» (от 7 лет)',
+              ),
+              const AfishaEvent(
+                time: '16:00',
+                information:
+                    'Клуб «БиблиоБЛОГИНГ». Занятие по теме: «Основные элементы сценария» (10-16 лет)',
+              ),
 /*
                 const AfishaEvent(
                   time: '16:00',
@@ -112,19 +110,18 @@ class AfishaSundayA extends StatelessWidget {
                       'Клуб «Библиоголос». Занятие по ораторскому мастерству по теме: «Дикция и артикуляция» (от 10 лет)',
                 ),
 */
-                const AfishaBottomEvent(),
-                Expanded(
-                  flex: 2,
-                  child: Container(),
-                ),
-                const BottomLeftRight(/*next_steep: GlobalVar.routeAfisha01*/),
-                const SizedBox(
-                  height: 30,
-                ),
-              ],
-            ),
-          ],
-        ),
+              const AfishaBottomEvent(),
+              Expanded(
+                flex: 2,
+                child: Container(),
+              ),
+              const BottomLeftRight(/*next_steep: GlobalVar.routeAfisha01*/),
+              const SizedBox(
+                height: 30,
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }

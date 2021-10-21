@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:gorky_name/data/routing_data.dart';
+import 'package:provider/src/provider.dart';
 
 class BottomLeftRight extends StatelessWidget {
   // ignore: non_constant_identifier_names
@@ -14,14 +16,13 @@ class BottomLeftRight extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          Navigator.canPop(context)
+          //context.read<RoutingData>().isReturnActive()
+          true
               ? SizedBox(
                   width: 150,
                   height: 150,
                   child: FloatingActionButton(
-                    onPressed: () {
-                      if (Navigator.canPop(context)) Navigator.pop(context);
-                    },
+                    onPressed: () => context.read<RoutingData>().returnBack,
                     child: const FittedBox(
                         child: Icon(
                       Icons.arrow_back,
@@ -36,9 +37,8 @@ class BottomLeftRight extends StatelessWidget {
                   width: 150,
                   height: 150,
                   child: FloatingActionButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, next_steep);
-                    },
+                    onPressed: () =>
+                        context.read<RoutingData>().setRoute(next_steep),
                     child: const FittedBox(
                         child: Icon(
                       Icons.arrow_forward,

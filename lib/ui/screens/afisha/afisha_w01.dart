@@ -24,98 +24,95 @@ class AfishaSaturday extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: MainAppBar(context),
-      body: SafeArea(
-        child: Stack(
-          children: [
-            Opacity(
-              opacity: 0.2,
-              child: Container(
-                height: Screen.height(context),
-                width: Screen.width(context),
-                decoration: const BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage(GlobalVar.bgImgAfishaWeekends),
-                    fit: BoxFit.fill,
-                  ),
+    return SafeArea(
+      child: Stack(
+        children: [
+          Opacity(
+            opacity: 0.2,
+            child: Container(
+              height: Screen.height(context),
+              width: Screen.width(context),
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(GlobalVar.bgImgAfishaWeekends),
+                  fit: BoxFit.fill,
                 ),
               ),
             ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Expanded(
-                  flex: 2,
-                  child: Center(
-                    child: Text(
-                      'Афиша',
-                      style: GoogleFonts.oswald(
-                          textStyle: Theme.of(context)
-                              .textTheme
-                              .headline2!
-                              .copyWith(color: Colors.black)),
-                    ),
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Expanded(
+                flex: 2,
+                child: Center(
+                  child: Text(
+                    'Афиша',
+                    style: GoogleFonts.oswald(
+                        textStyle: Theme.of(context)
+                            .textTheme
+                            .headline2!
+                            .copyWith(color: Colors.black)),
                   ),
                 ),
-                /************************ */
-                const AfishaHeaderEvent(
-                  head: '16 октября – суббота',
-                ),
+              ),
+              /************************ */
+              const AfishaHeaderEvent(
+                head: '16 октября – суббота',
+              ),
 
-                //const AfishaDayEvent(),
-                const AfishaEvent(
-                  time: '11:00',
-                  information: 'Просмотр диафильма «Паровозик-перевозик»',
-                ),
-                const AfishaEvent(
-                  time: '12:00',
-                  information:
-                      '«Игрушки на песке» - занятие творческого кружка «Сказка на песке» (3 - 5 лет)',
-                ),
-                const AfishaEvent(
-                  time: '12:00',
-                  information:
-                      'Интерактивное занятие по 4D-энциклопедии «Живой мир» (от 10 лет)',
-                ),
-                const AfishaEvent(
-                  time: '14:00 - 16:00',
-                  information:
-                      '«Мир профессий» - игра-тренинг психолога и профориентолога Н.С.Глебовой (старшеклассники и взрослые)',
-                ),
-                const AfishaEvent(
-                  time: '15:00',
-                  information:
-                      'Мульстудия «Настроение». «Творческий блок. Съемка» (от 10 лет)',
-                ),
-                const AfishaEvent(
-                  time: '16:00',
-                  information:
-                      'Краеведческая встреча клуба «Тайны уездного города Че» (от 10 лет)',
-                ),
-                const AfishaEvent(
-                  time: '16:30',
-                  information:
-                      '«Игрушки на песке» - занятие творческого кружка «Сказка на песке»  (3 - 5 лет)',
-                ),
-                const AfishaEvent(
-                  time: '17:00',
-                  information:
-                      'Клуб любителей настольных игр «Сто наСтолок».  Игра по ОБЖ «Предупрежден — значит вооружен!» (от 10 лет)',
-                ),
-                const AfishaBottomEvent(),
-                Expanded(
-                  flex: 2,
-                  child: Container(),
-                ),
-                const BottomLeftRight(next_steep: GlobalVar.routeAfishaW02),
-                const SizedBox(
-                  height: 30,
-                ),
-              ],
-            ),
-          ],
-        ),
+              //const AfishaDayEvent(),
+              const AfishaEvent(
+                time: '11:00',
+                information: 'Просмотр диафильма «Паровозик-перевозик»',
+              ),
+              const AfishaEvent(
+                time: '12:00',
+                information:
+                    '«Игрушки на песке» - занятие творческого кружка «Сказка на песке» (3 - 5 лет)',
+              ),
+              const AfishaEvent(
+                time: '12:00',
+                information:
+                    'Интерактивное занятие по 4D-энциклопедии «Живой мир» (от 10 лет)',
+              ),
+              const AfishaEvent(
+                time: '14:00 - 16:00',
+                information:
+                    '«Мир профессий» - игра-тренинг психолога и профориентолога Н.С.Глебовой (старшеклассники и взрослые)',
+              ),
+              const AfishaEvent(
+                time: '15:00',
+                information:
+                    'Мульстудия «Настроение». «Творческий блок. Съемка» (от 10 лет)',
+              ),
+              const AfishaEvent(
+                time: '16:00',
+                information:
+                    'Краеведческая встреча клуба «Тайны уездного города Че» (от 10 лет)',
+              ),
+              const AfishaEvent(
+                time: '16:30',
+                information:
+                    '«Игрушки на песке» - занятие творческого кружка «Сказка на песке»  (3 - 5 лет)',
+              ),
+              const AfishaEvent(
+                time: '17:00',
+                information:
+                    'Клуб любителей настольных игр «Сто наСтолок».  Игра по ОБЖ «Предупрежден — значит вооружен!» (от 10 лет)',
+              ),
+              const AfishaBottomEvent(),
+              Expanded(
+                flex: 2,
+                child: Container(),
+              ),
+              const BottomLeftRight(next_steep: GlobalVar.routeAfishaW02),
+              const SizedBox(
+                height: 30,
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }

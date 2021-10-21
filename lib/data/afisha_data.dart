@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+/* import 'package:flutter/material.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_event.dart';
 
 class AfishaData {
@@ -16,3 +16,4 @@ class AfishaData {
 
   List<Widget> get getWidgets => dataEv.toList();
 }
+ */

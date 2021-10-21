@@ -24,75 +24,72 @@ class AfishaThird extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: MainAppBar(context),
-      body: SafeArea(
-        child: Stack(
-          children: [
-            Opacity(
-              opacity: 0.4,
-              child: Container(
-                height: Screen.height(context),
-                width: Screen.width(context),
-                decoration: const BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage(GlobalVar.bgImgAfisha),
-                    fit: BoxFit.fill,
-                  ),
+    return SafeArea(
+      child: Stack(
+        children: [
+          Opacity(
+            opacity: 0.4,
+            child: Container(
+              height: Screen.height(context),
+              width: Screen.width(context),
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(GlobalVar.bgImgAfisha),
+                  fit: BoxFit.fill,
                 ),
               ),
             ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Expanded(
-                  flex: 2,
-                  child: Center(
-                    child: Text(
-                      'Афиша',
-                      style: GoogleFonts.oswald(
-                          textStyle: Theme.of(context)
-                              .textTheme
-                              .headline2!
-                              .copyWith(color: Colors.black)),
-                    ),
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Expanded(
+                flex: 2,
+                child: Center(
+                  child: Text(
+                    'Афиша',
+                    style: GoogleFonts.oswald(
+                        textStyle: Theme.of(context)
+                            .textTheme
+                            .headline2!
+                            .copyWith(color: Colors.black)),
                   ),
                 ),
-                /************************ */
-                const AfishaHeaderEvent(
-                  head: '15 октября – пятница',
-                ),
+              ),
+              /************************ */
+              const AfishaHeaderEvent(
+                head: '15 октября – пятница',
+              ),
 
-                //const AfishaDayEvent(),
-                const AfishaEvent(
-                  time: '14:00',
-                  information:
-                      'Интерактивное образовательное занятие «Умный пол» - «Музыкальные инструменты» (6 -10 лет)',
-                ),
-                const AfishaEvent(
-                  time: '16:00',
-                  information:
-                      'Дегустация книжных новинок «ТОП-5 книг про дружбу» (от 10 лет)',
-                ),
-                const AfishaEvent(
-                  time: '17:00',
-                  information:
-                      'Виниловый  MIX «Чайковский П.И. Времена года» (от 8 лет)',
-                ),
+              //const AfishaDayEvent(),
+              const AfishaEvent(
+                time: '14:00',
+                information:
+                    'Интерактивное образовательное занятие «Умный пол» - «Музыкальные инструменты» (6 -10 лет)',
+              ),
+              const AfishaEvent(
+                time: '16:00',
+                information:
+                    'Дегустация книжных новинок «ТОП-5 книг про дружбу» (от 10 лет)',
+              ),
+              const AfishaEvent(
+                time: '17:00',
+                information:
+                    'Виниловый  MIX «Чайковский П.И. Времена года» (от 8 лет)',
+              ),
 
-                const AfishaBottomEvent(),
-                Expanded(
-                  flex: 6,
-                  child: Container(),
-                ),
-                const BottomLeftRight(next_steep: GlobalVar.routeAfishaW01),
-                const SizedBox(
-                  height: 30,
-                ),
-              ],
-            ),
-          ],
-        ),
+              const AfishaBottomEvent(),
+              Expanded(
+                flex: 6,
+                child: Container(),
+              ),
+              const BottomLeftRight(next_steep: GlobalVar.routeAfishaW01),
+              const SizedBox(
+                height: 30,
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }

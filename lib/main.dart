@@ -3,20 +3,33 @@ import 'dart:html';
 
 import 'package:flutter/material.dart';
 import 'package:gorky_name/const/const_variables.dart';
-import 'package:gorky_name/ui/component/widgets/el_libs_qr.dart';
-import 'package:gorky_name/ui/screens/afisha/afisha001.dart';
-import 'package:gorky_name/ui/screens/afisha/afisha002.dart';
-import 'package:gorky_name/ui/screens/afisha/afisha003.dart';
-import 'package:gorky_name/ui/screens/afisha/afisha003a.dart';
-import 'package:gorky_name/ui/screens/afisha/afisha_w01.dart';
-import 'package:gorky_name/ui/screens/afisha/afisha_w01a.dart';
-import 'package:gorky_name/ui/screens/afisha/afisha_w02.dart';
-import 'package:gorky_name/ui/screens/afisha/afisha_w02a.dart';
-import 'package:gorky_name/ui/screens/eLibs/elibs_screen.dart';
+import 'package:gorky_name/data/routing_data.dart';
 import 'package:gorky_name/ui/screens/main_screen.dart';
+import 'package:provider/provider.dart';
+
+import 'ui/component/widgets/el_libs_qr.dart';
+import 'ui/component/widgets/main_menu.dart';
+import 'ui/screens/afisha/afisha001.dart';
+import 'ui/screens/afisha/afisha002.dart';
+import 'ui/screens/afisha/afisha003.dart';
+import 'ui/screens/afisha/afisha003a.dart';
+import 'ui/screens/afisha/afisha_w01.dart';
+import 'ui/screens/afisha/afisha_w01a.dart';
+import 'ui/screens/afisha/afisha_w02.dart';
+import 'ui/screens/afisha/afisha_w02a.dart';
+import 'ui/screens/eLibs/elibs_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    /// Providers are above [MyApp] instead of inside it, so that tests
+    /// can use [MyApp] while mocking the providers
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => RoutingData()),
+      ],
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -30,6 +43,7 @@ class MyApp extends StatelessWidget {
     document.exitFullscreen();
   }
 
+  //final String data = GlobalVar.routeMainMenu;
   //get static => null;
   // This widget is the root of your application.
   @override
@@ -38,27 +52,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: GlobalVar.nameLib,
-      initialRoute: '/',
-
-      routes: {
-        GlobalVar.routeMainMenu: (context) => const MyHomePage(),
-        GlobalVar.routeAfisha01: (context) => const Afisha(),
-        GlobalVar.routeAfisha02: (context) => const AfishaSecond(),
-        GlobalVar.routeAfisha03: (context) => const AfishaThird(),
-        GlobalVar.routeAfishaW01: (context) => const AfishaSaturday(),
-        GlobalVar.routeAfishaW02: (context) => const AfishaSunday(),
-        GlobalVar.routeAfisha03a: (context) => const AfishaThirdA(),
-        GlobalVar.routeAfishaW01a: (context) => const AfishaSaturdayA(),
-        GlobalVar.routeAfishaW02a: (context) => const AfishaSundayA(),
-        GlobalVar.routeElLibs: (context) => const ElLibs(),
-        GlobalVar.routeElLibLitres: (context) => const ElLibsQr(
-            nameLib: GlobalVar.elLitress, qrCode: GlobalVar.qrLitress),
-        GlobalVar.routeElLibNEB: (context) => const ElLibsQr(
-            nameLib: GlobalVar.elNEBFull, qrCode: GlobalVar.qrNEB),
-        GlobalVar.routeElLibNEDB: (context) => const ElLibsQr(
-            nameLib: GlobalVar.elNEDBFull, qrCode: GlobalVar.qrNEDB),
-      },
-
       theme: ThemeData(
         elevatedButtonTheme: ElevatedButtonThemeData(
             style: ElevatedButton.styleFrom(
@@ -69,7 +62,7 @@ class MyApp extends StatelessWidget {
                     fontWeight: FontWeight.w600,
                     fontSize: 52))),
       ),
-      //home: const MyHomePage(),
+      home: const MyHomePage(),
     );
   }
 }

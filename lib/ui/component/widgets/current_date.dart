@@ -15,19 +15,19 @@ class _CurrentDateState extends State<CurrentDate> {
   @override
   void initState() {
     _currentTime =
-        "${DateTime.now().hour}:${DateTime.now().minute}:${DateTime.now().second}";
+        "${DateTime.now().hour.toString().padLeft(2, '0')}:${DateTime.now().minute.toString().padLeft(2, '0')}:${DateTime.now().second.toString().padLeft(2, '0')}";
     _currentDate =
-        "${DateTime.now().day}.${DateTime.now().month}.${DateTime.now().year}";
-    Timer.periodic(Duration(seconds: 1), (Timer t) => _getCurrentTime());
+        "${DateTime.now().day.toString().padLeft(2, '0')}.${DateTime.now().month.toString().padLeft(2, '0')}.${DateTime.now().year}";
+    Timer.periodic(const Duration(seconds: 1), (Timer t) => _getCurrentTime());
     super.initState();
   }
 
   void _getCurrentTime() {
     setState(() {
       _currentTime =
-          "${DateTime.now().hour}:${DateTime.now().minute}:${DateTime.now().second}";
+          "${DateTime.now().hour.toString().padLeft(2, '0')}:${DateTime.now().minute.toString().padLeft(2, '0')}:${DateTime.now().second.toString().padLeft(2, '0')}";
       _currentDate =
-          "${DateTime.now().day}.${DateTime.now().month}.${DateTime.now().year}";
+          "${DateTime.now().day.toString().padLeft(2, '0')}.${DateTime.now().month.toString().padLeft(2, '0')}.${DateTime.now().year}";
     });
   }
 

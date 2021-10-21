@@ -26,67 +26,64 @@ class Afisha extends StatelessWidget {
       '17:00':
           'День новой книги. Знакомство с интерактивными книгами 3D и 4D "Девчонки" и "Мальчишки" (от 10 лет)'
     };
-    return Scaffold(
-      appBar: MainAppBar(context),
-      body: SafeArea(
-        child: Stack(
-          children: [
-            Opacity(
-              opacity: 0.4,
-              child: Container(
-                height: Screen.height(context),
-                width: Screen.width(context),
-                decoration: const BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage(GlobalVar.bgImgAfisha),
-                    fit: BoxFit.fill,
-                  ),
+    return SafeArea(
+      child: Stack(
+        children: [
+          Opacity(
+            opacity: 0.4,
+            child: Container(
+              height: Screen.height(context),
+              width: Screen.width(context),
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(GlobalVar.bgImgAfisha),
+                  fit: BoxFit.fill,
                 ),
               ),
             ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Expanded(
-                  flex: 2,
-                  child: Center(
-                    child: Text(
-                      'Афиша',
-                      style: GoogleFonts.oswald(
-                          textStyle: Theme.of(context)
-                              .textTheme
-                              .headline2!
-                              .copyWith(color: Colors.black)),
-                    ),
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Expanded(
+                flex: 2,
+                child: Center(
+                  child: Text(
+                    'Афиша',
+                    style: GoogleFonts.oswald(
+                        textStyle: Theme.of(context)
+                            .textTheme
+                            .headline2!
+                            .copyWith(color: Colors.black)),
                   ),
                 ),
-                const AfishaHeaderEvent(
-                  head: '18 октября - понедельник',
-                ),
-                ...events.entries
-                    .map((e) => AfishaEvent(time: e.key, information: e.value)),
-                const AfishaBottomEvent(),
-                /************************ */
-                const AfishaHeaderEvent(
-                  head: '19 октября – вторник',
-                ),
+              ),
+              const AfishaHeaderEvent(
+                head: '18 октября - понедельник',
+              ),
+              ...events.entries
+                  .map((e) => AfishaEvent(time: e.key, information: e.value)),
+              const AfishaBottomEvent(),
+              /************************ */
+              const AfishaHeaderEvent(
+                head: '19 октября – вторник',
+              ),
 
-                //const AfishaDayEvent(),
-                ...eventsA.entries
-                    .map((e) => AfishaEvent(time: e.key, information: e.value)),
-                const AfishaBottomEvent(),
-                Expanded(
-                  flex: 1,
-                  child: Container(),
-                ),
-                const BottomLeftRight(next_steep: GlobalVar.routeAfisha02),
-                const SizedBox(
-                  height: 30,
-                ),
-              ],
-            ),
-          ],
-        ),
+              //const AfishaDayEvent(),
+              ...eventsA.entries
+                  .map((e) => AfishaEvent(time: e.key, information: e.value)),
+              const AfishaBottomEvent(),
+              Expanded(
+                flex: 1,
+                child: Container(),
+              ),
+              const BottomLeftRight(next_steep: GlobalVar.routeAfisha02),
+              const SizedBox(
+                height: 30,
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }
