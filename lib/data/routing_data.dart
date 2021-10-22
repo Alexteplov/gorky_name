@@ -17,10 +17,10 @@ import '../const/const_variables.dart';
 
 class RoutingData with ChangeNotifier {
   //String _route = GlobalVar.routeMainMenu;
-  var _stackW = [];
+  final _stackW = [];
+  String _next_steep = 'empty';
 //  Widget get getWidget => const MainMenu();
   Widget get getWidget {
-    if (_stackW.isEmpty) setStack(GlobalVar.routeMainMenu);
     return _stackW.isNotEmpty ? _stackW.last : const MainMenu();
 
     //return const MainMenu();
@@ -35,6 +35,16 @@ class RoutingData with ChangeNotifier {
 
     notifyListeners();
   }
+
+  void setRouteNextSteep(String route) {
+    if (route.isNotEmpty) {
+      _next_steep = route;
+    } else {
+      _next_steep = 'empty';
+    }
+  }
+
+  String get getNextSteep => _next_steep;
 
   Widget get returnBack {
     _stackW.removeLast();

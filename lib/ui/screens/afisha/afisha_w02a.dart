@@ -115,7 +115,7 @@ class AfishaSundayA extends StatelessWidget {
                 flex: 2,
                 child: Container(),
               ),
-              const BottomLeftRight(/*next_steep: GlobalVar.routeAfisha01*/),
+              const BottomLeftRight(next_steep: GlobalVar.routeAfisha01),
               const SizedBox(
                 height: 30,
               ),

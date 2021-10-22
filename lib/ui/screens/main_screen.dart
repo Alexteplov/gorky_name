@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gorky_name/data/routing_data.dart';
+import 'package:gorky_name/ui/component/widgets/bottom_left_rigth.dart';
+import 'package:gorky_name/ui/component/widgets/lower_navigation.dart';
 import 'package:gorky_name/ui/component/widgets/main_appbar.dart';
 import 'package:gorky_name/ui/component/widgets/main_menu.dart';
 //import 'package:gorky_name/ui/component/widgets/main_menu.dart';
@@ -16,6 +18,8 @@ class MyHomePage extends StatelessWidget {
 //      backgroundColor: Colors.blueGrey.shade200,
       appBar: MainAppBar(context),
       body: context.watch<RoutingData>().getWidget,
+      //floatingActionButton: const LowerNavigation(),
+      //floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       //RoutingData().getWidget,
     );
   }

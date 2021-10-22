@@ -11,19 +11,31 @@ import 'package:gorky_name/ui/theme/screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AfishaSecond extends StatelessWidget {
-/*   final Map<String, String> dayData = {
-    '12:00': 'Экскурсия по библиотеке «В гости к МАКСу» (от 10 лет)',
-    '14:00': 'Литературно-игровой час «Сказка ключницы Пелагеи» (7-10 лет)',
-    '16:30':
-        'Познавательное занятие о правилах гигиены «День мытья рук» (5-7 лет)'
-  };
-
-  final List<int> tmpw = [];
- */
   const AfishaSecond({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final Map<String, String> events = {
+      '11:00':
+          'Проект «Библионяня». Развивающее занятие «Дикие животные. Лиса» (1,5-3 года)',
+      '12:00':
+          'Клуб любителей настольных игр «Сто наСтолок». Игра "Гембло" (6-9 лет)',
+      '14:00': 'Час интересных сообщений "Безопасность в городе" (7-10 лет)',
+      '15:00': 'Игра-соревнование "Охотники за разумом" (от 8 лет)',
+      '16:00':
+          'Клуб любителей настольных игр «Сто наСтолок». Игра «Башня с фантами» (от 8 лет)',
+      '17:00':
+          'Проект «Библионяня». Развивающее занятие «Дикие животные. Лиса» (1,5-3 года)',
+    };
+    /*
+    final Map<String, String> eventsA = {
+      '10:00':
+          'Литературно-игровое занятие "Ключ от сказки Романа Сефа" (5-7 лет)',
+      '14:00': 'Квиз-игра "Наука — это круто" (от 8 лет)',
+      '15:00': 'Праздник Осени (4-8 лет)',
+      '16:00': 'Тренинг по актерскому мастерству "Верю - не верю" (от 8 лет)',
+    };
+    */
     return SafeArea(
       child: Stack(
         children: [
@@ -58,72 +70,26 @@ class AfishaSecond extends StatelessWidget {
               ),
               /************************ */
               const AfishaHeaderEvent(
-                head: '20 октября - среда',
+                head: '27 октября - среда',
               ),
-
-              //const AfishaDayEvent(),
-              const AfishaEvent(
-                time: '11:00',
-                information:
-                    'Проект «Библионяня». Развивающее занятие «Дикие животные. Ежик» (1,5-3 года)',
-              ),
-              const AfishaEvent(
-                time: '14:00',
-                information:
-                    'Познавательное занятие «Почемучки среди нас» (7-10 лет)',
-              ),
-              const AfishaEvent(
-                time: '16:00',
-                information:
-                    'Клуб любителей настольных игр «Сто наСтолок». Игра  «Имаджинариум» (от 12 лет)',
-              ),
-              const AfishaEvent(
-                time: '17:00',
-                information:
-                    'Проект «Библионяня». Развивающее занятие «Дикие животные. Ежик» (1,5-3 года)',
-              ),
-              const AfishaEvent(
-                time: '17:30',
-                information:
-                    'Клуб по развитию лидерских качеств и организаторских способностей «PROЯвись». Тема «Лидер — кто это?»  (от 12 лет)',
-              ),
+              ...events.entries
+                  .map((e) => AfishaEvent(time: e.key, information: e.value)),
               const AfishaBottomEvent(),
 /********************* */
+/*
               const AfishaHeaderEvent(
                 head: '21 октября – четверг',
               ),
 
-              //const AfishaDayEvent(),
-              const AfishaEvent(
-                time: '10:00',
-                information:
-                    'Экскурсия по библиотеке «В гости к МАКСу» (5-7 лет)',
-              ),
-              const AfishaEvent(
-                time: '11:00',
-                information:
-                    'Знакомство с новой серией книг "Познавательные истории про животных и насекомых" (5-7 лет)',
-              ),
-              const AfishaEvent(
-                time: '15:00',
-                information:
-                    'Клуб любителей настольных игр «Сто наСтолок». Игра «Паутинка» (6-9 лет)',
-              ),
-              const AfishaEvent(
-                time: '15:00',
-                information: 'Квиз «Литературная интуиция» (от 15 лет)',
-              ),
-              const AfishaEvent(
-                time: '17:00',
-                information:
-                    'Интерактивное образовательное занятие «Умный пол» - «Напряги извилины!»» (от 9 лет)',
-              ),
+               ...eventsA.entries
+                  .map((e) => AfishaEvent(time: e.key, information: e.value)),
               const AfishaBottomEvent(),
+*/
               Expanded(
                 flex: 1,
                 child: Container(),
               ),
-              const BottomLeftRight(next_steep: GlobalVar.routeAfisha03a),
+              const BottomLeftRight(next_steep: GlobalVar.routeAfisha03),
               const SizedBox(
                 height: 30,
               ),

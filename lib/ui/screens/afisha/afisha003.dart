@@ -11,19 +11,17 @@ import 'package:gorky_name/ui/theme/screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AfishaThird extends StatelessWidget {
-/*   final Map<String, String> dayData = {
-    '12:00': 'Экскурсия по библиотеке «В гости к МАКСу» (от 10 лет)',
-    '14:00': 'Литературно-игровой час «Сказка ключницы Пелагеи» (7-10 лет)',
-    '16:30':
-        'Познавательное занятие о правилах гигиены «День мытья рук» (5-7 лет)'
-  };
-
-  final List<int> tmpw = [];
- */
   const AfishaThird({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final Map<String, String> events = {
+      '10:00':
+          'Литературно-игровое занятие "Ключ от сказки Романа Сефа" (5-7 лет)',
+      '14:00': 'Квиз-игра "Наука — это круто" (от 8 лет)',
+      '15:00': 'Праздник Осени (4-8 лет)',
+      '16:00': 'Тренинг по актерскому мастерству "Верю - не верю" (от 8 лет)',
+    };
     return SafeArea(
       child: Stack(
         children: [
@@ -58,26 +56,10 @@ class AfishaThird extends StatelessWidget {
               ),
               /************************ */
               const AfishaHeaderEvent(
-                head: '15 октября – пятница',
+                head: '29 октября – пятница',
               ),
-
-              //const AfishaDayEvent(),
-              const AfishaEvent(
-                time: '14:00',
-                information:
-                    'Интерактивное образовательное занятие «Умный пол» - «Музыкальные инструменты» (6 -10 лет)',
-              ),
-              const AfishaEvent(
-                time: '16:00',
-                information:
-                    'Дегустация книжных новинок «ТОП-5 книг про дружбу» (от 10 лет)',
-              ),
-              const AfishaEvent(
-                time: '17:00',
-                information:
-                    'Виниловый  MIX «Чайковский П.И. Времена года» (от 8 лет)',
-              ),
-
+              ...events.entries
+                  .map((e) => AfishaEvent(time: e.key, information: e.value)),
               const AfishaBottomEvent(),
               Expanded(
                 flex: 6,

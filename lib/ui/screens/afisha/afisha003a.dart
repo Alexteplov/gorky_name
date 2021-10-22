@@ -11,15 +11,6 @@ import 'package:gorky_name/ui/theme/screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AfishaThirdA extends StatelessWidget {
-/*   final Map<String, String> dayData = {
-    '12:00': 'Экскурсия по библиотеке «В гости к МАКСу» (от 10 лет)',
-    '14:00': 'Литературно-игровой час «Сказка ключницы Пелагеи» (7-10 лет)',
-    '16:30':
-        'Познавательное занятие о правилах гигиены «День мытья рук» (5-7 лет)'
-  };
-
-  final List<int> tmpw = [];
- */
   const AfishaThirdA({Key? key}) : super(key: key);
 
   @override

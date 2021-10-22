@@ -7,22 +7,8 @@ import 'package:gorky_name/data/routing_data.dart';
 import 'package:gorky_name/ui/screens/main_screen.dart';
 import 'package:provider/provider.dart';
 
-import 'ui/component/widgets/el_libs_qr.dart';
-import 'ui/component/widgets/main_menu.dart';
-import 'ui/screens/afisha/afisha001.dart';
-import 'ui/screens/afisha/afisha002.dart';
-import 'ui/screens/afisha/afisha003.dart';
-import 'ui/screens/afisha/afisha003a.dart';
-import 'ui/screens/afisha/afisha_w01.dart';
-import 'ui/screens/afisha/afisha_w01a.dart';
-import 'ui/screens/afisha/afisha_w02.dart';
-import 'ui/screens/afisha/afisha_w02a.dart';
-import 'ui/screens/eLibs/elibs_screen.dart';
-
 void main() {
   runApp(
-    /// Providers are above [MyApp] instead of inside it, so that tests
-    /// can use [MyApp] while mocking the providers
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => RoutingData()),
@@ -43,9 +29,6 @@ class MyApp extends StatelessWidget {
     document.exitFullscreen();
   }
 
-  //final String data = GlobalVar.routeMainMenu;
-  //get static => null;
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     //goFullScreen();

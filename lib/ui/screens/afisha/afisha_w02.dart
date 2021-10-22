@@ -11,19 +11,26 @@ import 'package:gorky_name/ui/theme/screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AfishaSunday extends StatelessWidget {
-/*   final Map<String, String> dayData = {
-    '12:00': 'Экскурсия по библиотеке «В гости к МАКСу» (от 10 лет)',
-    '14:00': 'Литературно-игровой час «Сказка ключницы Пелагеи» (7-10 лет)',
-    '16:30':
-        'Познавательное занятие о правилах гигиены «День мытья рук» (5-7 лет)'
-  };
-
-  final List<int> tmpw = [];
- */
   const AfishaSunday({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final Map<String, String> events = {
+      '11:00':
+          'Кружок вязания «Чудесный крючок». Знакомство с техникой вязания крючком (от 8 лет)',
+      '11:00': 'Кружок "Киберзнайка". Работа в текстовом редакторе.',
+      '12:00':
+          'Интерактивная игра "Самый внимательный" по 4D-энциклопедии "Животный мир" (от 8 лет)',
+      '12:00':
+          'Литературный клуб «РасЧитайка». Литературно-игровое занятие «Веселая страна Николая Носова» (4-6 лет)',
+      '14:00':
+          'Интерактивное образовательное занятие «Умный пол» - «Найди пару» (6 -10 лет)',
+      '14:00':
+          'Клуб любителей настольных игр «Сто наСтолок». Игра «Тик-Так Бум!»» (от 10 лет)',
+      '15:00': 'Мастер-класс по скрапбукингу "Осеннее настроение" (от 8 лет)',
+      '16:00':
+          'Клуб «Библиоголос». Занятие по ораторскому мастерству по теме: «Интонация и дикция» (от 10 лет)',
+    };
     return SafeArea(
       child: Stack(
         children: [
@@ -58,52 +65,16 @@ class AfishaSunday extends StatelessWidget {
               ),
               /************************ */
               const AfishaHeaderEvent(
-                head: '17 октября – воскресенье',
+                head: '31 октября – воскресенье',
               ),
-
-              //const AfishaDayEvent(),
-              const AfishaEvent(
-                time: '11:00',
-                information:
-                    'Кружок вязания «Чудесный крючок». Знакомство с техникой вязания крючком (от 8 лет)',
-              ),
-              const AfishaEvent(
-                time: '12:00',
-                information:
-                    'Литературный клуб «РасЧитайка». Литературно-игровое занятие «Игры в прятки со сказками Дональда Биссета» (4-6 лет)',
-              ),
-              const AfishaEvent(
-                time: '12:00',
-                information:
-                    'Интерактивное занятие по 4D-энциклопедии «Живой мир» (от 10 лет)',
-              ),
-              const AfishaEvent(
-                time: '14:00',
-                information:
-                    'Интерактивное образовательное занятие «Умный пол» - «Найди пару» (6 -10 лет)',
-              ),
-              const AfishaEvent(
-                time: '14:00',
-                information:
-                    'Клуб любителей настольных игр «Сто наСтолок».  Игра по ОБЖ «Предупрежден — значит вооружен!» (от 10 лет)',
-              ),
-              const AfishaEvent(
-                time: '15:00',
-                information:
-                    'Творческая мастерская «#Сделал сам». Мастер-класс по изготовлению объемной открытки «Букет цветов» (5-8 лет)',
-              ),
-              const AfishaEvent(
-                time: '16:00',
-                information:
-                    'Клуб «Библиоголос». Занятие по ораторскому мастерству по теме: «Дикция и артикуляция» (от 10 лет)',
-              ),
-
+              ...events.entries
+                  .map((e) => AfishaEvent(time: e.key, information: e.value)),
               const AfishaBottomEvent(),
               Expanded(
                 flex: 2,
                 child: Container(),
               ),
-              const BottomLeftRight(next_steep: GlobalVar.routeAfisha01),
+              const BottomLeftRight(/*next_steep: GlobalVar.routeAfisha01*/),
               const SizedBox(
                 height: 30,
               ),
