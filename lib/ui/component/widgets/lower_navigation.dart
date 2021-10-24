@@ -5,7 +5,8 @@ import 'package:gorky_name/data/routing_data.dart';
 import 'package:provider/src/provider.dart';
 
 class LowerNavigation extends StatelessWidget {
-  const LowerNavigation({Key? key}) : super(key: key);
+  const LowerNavigation({Key? key, required this.context}) : super(key: key);
+  final BuildContext context;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -14,8 +15,8 @@ class LowerNavigation extends StatelessWidget {
       children: [
         context.read<RoutingData>().isReturnActive()
             ? SizedBox(
-                width: 150,
-                height: 150,
+                width: 100,
+                height: 100,
                 child: FloatingActionButton(
                   onPressed: () => context.read<RoutingData>().returnBack,
                   child: const FittedBox(

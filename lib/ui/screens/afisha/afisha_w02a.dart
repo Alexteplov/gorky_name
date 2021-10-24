@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gorky_name/const/const_variables.dart';
+import 'package:gorky_name/data/routing_data.dart';
 //import 'package:gorky_name/data/afisha_data.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_bottom_event.dart';
 //import 'package:gorky_name/ui/component/widgets/afisha_day_event.dart';
@@ -9,6 +10,7 @@ import 'package:gorky_name/ui/component/widgets/bottom_left_rigth.dart';
 import 'package:gorky_name/ui/component/widgets/main_appbar.dart';
 import 'package:gorky_name/ui/theme/screen.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/src/provider.dart';
 
 class AfishaSundayA extends StatelessWidget {
 /*   final Map<String, String> dayData = {
@@ -24,6 +26,7 @@ class AfishaSundayA extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    context.watch<RoutingData>().setRouteNextSteep(GlobalVar.routeAfisha01);
     return SafeArea(
       child: Stack(
         children: [
@@ -115,7 +118,7 @@ class AfishaSundayA extends StatelessWidget {
                 flex: 2,
                 child: Container(),
               ),
-              const BottomLeftRight(next_steep: GlobalVar.routeAfisha01),
+              //const BottomLeftRight(next_steep: GlobalVar.routeAfisha01),
               const SizedBox(
                 height: 30,
               ),

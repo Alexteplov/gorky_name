@@ -18,13 +18,12 @@ class MainAppBar extends AppBar {
           ),
           backgroundColor: Colors.white70,
           centerTitle: true,
-          leading: //context.read<RoutingData>().isReturnActive()
-              true
-                  ? IconButton(
-                      icon: const Icon(Icons.arrow_back, color: Colors.black87),
-                      onPressed: () => context.read<RoutingData>().returnBack,
-                    )
-                  : Container(),
+          leading: context.read<RoutingData>().isReturnActive()
+              ? IconButton(
+                  icon: const Icon(Icons.arrow_back, color: Colors.black87),
+                  onPressed: () => context.read<RoutingData>().returnBack,
+                )
+              : Container(),
           title: Text(
             GlobalVar.nameLib,
             style: GoogleFonts.oswald(

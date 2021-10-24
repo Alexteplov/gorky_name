@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:gorky_name/const/const_variables.dart';
 import 'package:gorky_name/ui/component/widgets/el_libs_qr.dart';
+import 'package:gorky_name/ui/component/widgets/lower_navigation.dart';
 import 'package:gorky_name/ui/component/widgets/main_menu.dart';
 import 'package:gorky_name/ui/screens/afisha/afisha001.dart';
 import 'package:gorky_name/ui/screens/afisha/afisha002.dart';
@@ -18,13 +19,19 @@ import '../const/const_variables.dart';
 class RoutingData with ChangeNotifier {
   //String _route = GlobalVar.routeMainMenu;
   final _stackW = [];
+  late final BuildContext _context;
   String _next_steep = 'empty';
 //  Widget get getWidget => const MainMenu();
+
+  RoutingData(this._context);
+
   Widget get getWidget {
     return _stackW.isNotEmpty ? _stackW.last : const MainMenu();
 
     //return const MainMenu();
   }
+
+  Widget get getLowerNavigation => LowerNavigation(context: _context);
 
   void setRoute(String route) {
     if (route.isNotEmpty) {
@@ -39,6 +46,7 @@ class RoutingData with ChangeNotifier {
   void setRouteNextSteep(String route) {
     if (route.isNotEmpty) {
       _next_steep = route;
+      print('set route = $route');
     } else {
       _next_steep = 'empty';
     }
@@ -48,6 +56,9 @@ class RoutingData with ChangeNotifier {
 
   Widget get returnBack {
     _stackW.removeLast();
+    if (_stackW.isEmpty) {
+      _next_steep = 'empty';
+    }
     notifyListeners();
     return _stackW.isNotEmpty ? _stackW.last : const MainMenu();
   }
@@ -88,7 +99,12 @@ class RoutingData with ChangeNotifier {
           nameLib: GlobalVar.elNEDBFull, qrCode: GlobalVar.qrNEDB));
     } else {
       _stackW.add(const MainMenu());
+      _next_steep = 'empty';
     }
+  }
+
+  void setContext(BuildContext context) {
+    _context = context;
   }
 
   //setRoute({String route}) {}

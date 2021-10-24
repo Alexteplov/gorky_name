@@ -14,12 +14,13 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //context.watch<RoutingData>().setContext(context);
     return Scaffold(
 //      backgroundColor: Colors.blueGrey.shade200,
       appBar: MainAppBar(context),
       body: context.watch<RoutingData>().getWidget,
-      //floatingActionButton: const LowerNavigation(),
-      //floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: context.watch<RoutingData>().getLowerNavigation,
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       //RoutingData().getWidget,
     );
   }

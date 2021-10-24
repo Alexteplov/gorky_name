@@ -1,5 +1,6 @@
 // ignore: avoid_web_libraries_in_flutter
 import 'dart:html';
+import 'dart:js';
 
 import 'package:flutter/material.dart';
 import 'package:gorky_name/const/const_variables.dart';
@@ -9,12 +10,7 @@ import 'package:provider/provider.dart';
 
 void main() {
   runApp(
-    MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (_) => RoutingData()),
-      ],
-      child: const MyApp(),
-    ),
+    const MyApp(),
   );
 }
 
@@ -32,20 +28,25 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //goFullScreen();
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: GlobalVar.nameLib,
-      theme: ThemeData(
-        elevatedButtonTheme: ElevatedButtonThemeData(
-            style: ElevatedButton.styleFrom(
-                primary: Colors.white,
-                onPrimary: Colors.black87,
-                textStyle: const TextStyle(
-                    color: Colors.black87,
-                    fontWeight: FontWeight.w600,
-                    fontSize: 52))),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => RoutingData(context)),
+      ],
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: GlobalVar.nameLib,
+        theme: ThemeData(
+          elevatedButtonTheme: ElevatedButtonThemeData(
+              style: ElevatedButton.styleFrom(
+                  primary: Colors.white,
+                  onPrimary: Colors.black87,
+                  textStyle: const TextStyle(
+                      color: Colors.black87,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 52))),
+        ),
+        home: const MyHomePage(),
       ),
-      home: const MyHomePage(),
     );
   }
 }
