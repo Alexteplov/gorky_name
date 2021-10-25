@@ -1,3 +1,4 @@
+//not using
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:gorky_name/data/routing_data.dart';
@@ -31,7 +32,7 @@ class BottomLeftRight extends StatelessWidget {
                     backgroundColor: Colors.red,
                   ),
                 )
-              : Container(),
+              : SizedBox(),
           next_steep.isNotEmpty
               ? SizedBox(
                   width: 150,

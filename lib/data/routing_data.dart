@@ -13,6 +13,7 @@ import 'package:gorky_name/ui/screens/afisha/afisha_w01a.dart';
 import 'package:gorky_name/ui/screens/afisha/afisha_w02.dart';
 import 'package:gorky_name/ui/screens/afisha/afisha_w02a.dart';
 import 'package:gorky_name/ui/screens/eLibs/elibs_screen.dart';
+import 'package:gorky_name/ui/screens/rules_for_readers.dart';
 
 import '../const/const_variables.dart';
 
@@ -20,7 +21,7 @@ class RoutingData with ChangeNotifier {
   //String _route = GlobalVar.routeMainMenu;
   final _stackW = [];
   late final BuildContext _context;
-  String _next_steep = 'empty';
+  String _nextSteep = 'empty';
 //  Widget get getWidget => const MainMenu();
 
   RoutingData(this._context);
@@ -32,6 +33,13 @@ class RoutingData with ChangeNotifier {
   }
 
   Widget get getLowerNavigation => LowerNavigation(context: _context);
+
+  void goMainMenu() {
+    _nextSteep = 'empty';
+    _stackW.clear();
+    //setStack(GlobalVar.routeMainMenu);
+    notifyListeners();
+  }
 
   void setRoute(String route) {
     if (route.isNotEmpty) {
@@ -45,19 +53,19 @@ class RoutingData with ChangeNotifier {
 
   void setRouteNextSteep(String route) {
     if (route.isNotEmpty) {
-      _next_steep = route;
-      print('set route = $route');
+      _nextSteep = route;
+      //print('set route = $route');
     } else {
-      _next_steep = 'empty';
+      _nextSteep = 'empty';
     }
   }
 
-  String get getNextSteep => _next_steep;
+  String get getNextSteep => _nextSteep;
 
   Widget get returnBack {
     _stackW.removeLast();
     if (_stackW.isEmpty) {
-      _next_steep = 'empty';
+      _nextSteep = 'empty';
     }
     notifyListeners();
     return _stackW.isNotEmpty ? _stackW.last : const MainMenu();
@@ -97,9 +105,11 @@ class RoutingData with ChangeNotifier {
     } else if (route == GlobalVar.routeElLibNEDB) {
       _stackW.add(const ElLibsQr(
           nameLib: GlobalVar.elNEDBFull, qrCode: GlobalVar.qrNEDB));
+    } else if (route == GlobalVar.routeRules4Readers) {
+      _stackW.add(const RulesForReaders());
     } else {
       _stackW.add(const MainMenu());
-      _next_steep = 'empty';
+      _nextSteep = 'empty';
     }
   }
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gorky_name/const/const_variables.dart';
-import 'package:gorky_name/ui/component/widgets/bottom_left_rigth.dart';
+//import 'package:gorky_name/ui/component/widgets/bottom_left_rigth.dart';
 import 'package:gorky_name/ui/theme/screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -80,7 +80,7 @@ class ElLibsQr extends StatelessWidget {
                   flex: 3,
                   child: Container(),
                 ),
-                const Expanded(flex: 1, child: BottomLeftRight()),
+                //const Expanded(flex: 1, child: BottomLeftRight()),
               ],
             ),
           ),

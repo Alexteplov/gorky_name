@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gorky_name/const/const_variables.dart';
+import 'package:gorky_name/data/routing_data.dart';
 //import 'package:gorky_name/data/afisha_data.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_bottom_event.dart';
 //import 'package:gorky_name/ui/component/widgets/afisha_day_event.dart';
@@ -9,6 +10,7 @@ import 'package:gorky_name/ui/component/widgets/bottom_left_rigth.dart';
 import 'package:gorky_name/ui/component/widgets/main_appbar.dart';
 import 'package:gorky_name/ui/theme/screen.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/src/provider.dart';
 
 class AfishaSaturday extends StatelessWidget {
   const AfishaSaturday({Key? key}) : super(key: key);
@@ -28,6 +30,7 @@ class AfishaSaturday extends StatelessWidget {
       '17:00':
           'Клуб любителей настольных игр «Сто наСтолок». Игра «Тик-Так Бум!» (от 10 лет)',
     };
+    context.watch<RoutingData>().setRouteNextSteep(GlobalVar.routeAfishaW02);
     return SafeArea(
       child: Stack(
         children: [
@@ -71,7 +74,7 @@ class AfishaSaturday extends StatelessWidget {
                 flex: 2,
                 child: Container(),
               ),
-              const BottomLeftRight(next_steep: GlobalVar.routeAfishaW02),
+              //const BottomLeftRight(next_steep: GlobalVar.routeAfishaW02),
               const SizedBox(
                 height: 30,
               ),

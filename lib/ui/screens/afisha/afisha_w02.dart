@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:gorky_name/const/const_variables.dart';
+import 'package:gorky_name/data/routing_data.dart';
 //import 'package:gorky_name/data/afisha_data.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_bottom_event.dart';
 //import 'package:gorky_name/ui/component/widgets/afisha_day_event.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_header_event.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_event.dart';
-import 'package:gorky_name/ui/component/widgets/bottom_left_rigth.dart';
-import 'package:gorky_name/ui/component/widgets/main_appbar.dart';
+//import 'package:gorky_name/ui/component/widgets/bottom_left_rigth.dart';
+//import 'package:gorky_name/ui/component/widgets/main_appbar.dart';
 import 'package:gorky_name/ui/theme/screen.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/src/provider.dart';
 
 class AfishaSunday extends StatelessWidget {
   const AfishaSunday({Key? key}) : super(key: key);
@@ -31,6 +33,7 @@ class AfishaSunday extends StatelessWidget {
       '16:00':
           'Клуб «Библиоголос». Занятие по ораторскому мастерству по теме: «Интонация и дикция» (от 10 лет)',
     };
+    context.watch<RoutingData>().setRouteNextSteep('empty');
     return SafeArea(
       child: Stack(
         children: [
@@ -74,7 +77,7 @@ class AfishaSunday extends StatelessWidget {
                 flex: 2,
                 child: Container(),
               ),
-              const BottomLeftRight(/*next_steep: GlobalVar.routeAfisha01*/),
+              //const BottomLeftRight(/*next_steep: GlobalVar.routeAfisha01*/),
               const SizedBox(
                 height: 30,
               ),

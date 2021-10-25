@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:gorky_name/const/const_variables.dart';
+import 'package:gorky_name/data/routing_data.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_bottom_event.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_header_event.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_event.dart';
-import 'package:gorky_name/ui/component/widgets/bottom_left_rigth.dart';
-import 'package:gorky_name/ui/component/widgets/main_appbar.dart';
+//import 'package:gorky_name/ui/component/widgets/bottom_left_rigth.dart';
+//import 'package:gorky_name/ui/component/widgets/main_appbar.dart';
 import 'package:gorky_name/ui/theme/screen.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/src/provider.dart';
 
 class Afisha extends StatelessWidget {
   const Afisha({Key? key}) : super(key: key);
@@ -31,6 +33,7 @@ class Afisha extends StatelessWidget {
           'Литературно-музыкальный праздник "Осень, Осень, в гости просим!" (4-8 лет)',
       '16:00': 'Тренинг по актерскому мастерству "Верю - не верю" (от 8 лет)',
     };
+    context.watch<RoutingData>().setRouteNextSteep(GlobalVar.routeAfisha02);
     return SafeArea(
       child: Stack(
         children: [
@@ -82,7 +85,7 @@ class Afisha extends StatelessWidget {
                 flex: 1,
                 child: Container(),
               ),
-              const BottomLeftRight(next_steep: GlobalVar.routeAfisha02),
+              //const BottomLeftRight(next_steep: GlobalVar.routeAfisha02),
               const SizedBox(
                 height: 30,
               ),

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:gorky_name/data/routing_data.dart';
-import 'package:gorky_name/ui/component/widgets/bottom_left_rigth.dart';
-import 'package:gorky_name/ui/component/widgets/lower_navigation.dart';
+//import 'package:gorky_name/ui/component/widgets/bottom_left_rigth.dart';
+//import 'package:gorky_name/ui/component/widgets/lower_navigation.dart';
 import 'package:gorky_name/ui/component/widgets/main_appbar.dart';
-import 'package:gorky_name/ui/component/widgets/main_menu.dart';
+//import 'package:gorky_name/ui/component/widgets/main_menu.dart';
 //import 'package:gorky_name/ui/component/widgets/main_menu.dart';
 import 'package:provider/src/provider.dart';
 
-import '../../main.dart';
+//import '../../main.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({Key? key}) : super(key: key);

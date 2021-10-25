@@ -35,7 +35,11 @@ class _CurrentDateState extends State<CurrentDate> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text(_currentTime, style: Theme.of(context).textTheme.headline5),
+        Text(_currentTime,
+            style: Theme.of(context)
+                .textTheme
+                .headline5!
+                .copyWith(fontWeight: FontWeight.bold)),
         Text(_currentDate, style: Theme.of(context).textTheme.headline5),
       ],
     );

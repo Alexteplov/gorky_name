@@ -1,6 +1,6 @@
 // ignore: avoid_web_libraries_in_flutter
 import 'dart:html';
-import 'dart:js';
+//import 'dart:js';
 
 import 'package:flutter/material.dart';
 import 'package:gorky_name/const/const_variables.dart';

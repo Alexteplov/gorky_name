@@ -28,6 +28,21 @@ class LowerNavigation extends StatelessWidget {
                 ),
               )
             : Container(),
+        context.read<RoutingData>().isReturnActive()
+            ? SizedBox(
+                width: 100,
+                height: 100,
+                child: FloatingActionButton(
+                  onPressed: () => context.read<RoutingData>().goMainMenu(),
+                  child: const FittedBox(
+                      child: Icon(
+                    Icons.home,
+                    size: 32,
+                  )),
+                  backgroundColor: Colors.red,
+                ),
+              )
+            : const SizedBox(),
         context.read<RoutingData>().getNextSteep != 'empty'
             ? SizedBox(
                 width: 100,

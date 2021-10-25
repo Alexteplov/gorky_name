@@ -11,6 +11,8 @@ class GlobalVar {
   static const String elNEDB = 'НЭДБ';
   static const String elNEDBFull =
       'Национальная электронная детская библиотека';
+  static const String rules4Readers = 'Правила для читателей';
+
 //QR codes
   static const String qrNEDB = 'image/QR_nedb.png';
   static const String qrNEB = 'image/QR_neb.png';
@@ -21,6 +23,7 @@ class GlobalVar {
   static const String logoImg = 'image/LIB_logotype.png';
   static const String bgImgAfisha = 'image/bgImgAfisha.png';
   static const String bgImgAfishaWeekends = 'image/bgImgAfishaWeekends.jpg';
+  static const String logoAppBar = 'image/logo_app_bar.png';
 //Маршруты роутинга(переходов)
   static const String routeMainMenu = '/';
   //afisha
@@ -38,4 +41,7 @@ class GlobalVar {
   static const String routeElLibLitres = '/main_el_litres';
   static const String routeElLibNEB = '/main_el_NEB';
   static const String routeElLibNEDB = '/main_el_NEDB';
+
+  //rules for readers
+  static const String routeRules4Readers = '/rules_for_readers';
 }
