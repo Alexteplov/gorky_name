@@ -22,10 +22,10 @@ class MainMenu extends StatelessWidget {
             ),
           ),
           Positioned(
-            left: 0,
+            left: Screen.width(context) / 2 - Screen.width(context) * 0.7 / 2,
             top: 5,
-            width: Screen.width(context),
-            height: Screen.width(context) * 0.29,
+            width: Screen.width(context) * 0.7,
+            height: Screen.width(context) * 0.2,
             child: Center(
               child: Container(
                 //height: Screen.height(context),
@@ -39,11 +39,24 @@ class MainMenu extends StatelessWidget {
               ),
             ),
           ),
-          Center(
+          Positioned(
+            top: Screen.width(context) * 0.2 + 150,
+            left: (Screen.width(context) - Screen.width(context) * 0.6) / 2,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                MenuButton(context: context, nameButton: GlobalVar.structure),
+                MenuButton(
+                  context: context,
+                  nameButton: GlobalVar.colleagues,
+                  //route: GlobalVar.routeElLibs
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                MenuButton(
+                    context: context,
+                    nameButton: GlobalVar.structure,
+                    route: GlobalVar.routeLibiraryStructure),
                 const SizedBox(
                   height: 20,
                 ),
@@ -55,9 +68,33 @@ class MainMenu extends StatelessWidget {
                   height: 20,
                 ),
                 MenuButton(
+                  context: context,
+                  nameButton: GlobalVar.libInNetwork,
+                  //route: GlobalVar.routeElLibs
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                MenuButton(
                     context: context,
                     nameButton: GlobalVar.elLibs,
                     route: GlobalVar.routeElLibs),
+                const SizedBox(
+                  height: 20,
+                ),
+                MenuButton(
+                  context: context,
+                  nameButton: GlobalVar.eCatalog,
+                  //route: GlobalVar.routeElLibs
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                MenuButton(
+                  context: context,
+                  nameButton: GlobalVar.booksCoolection,
+                  //route: GlobalVar.routeElLibs
+                ),
                 const SizedBox(
                   height: 20,
                 ),

@@ -23,7 +23,7 @@ class MenuButton extends StatelessWidget {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
           fixedSize:
-              Size(Screen.width(context) * 0.6, Screen.height(context) * 0.083),
+              Size(Screen.width(context) * 0.6, Screen.height(context) * 0.07),
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))),
       onPressed: () {

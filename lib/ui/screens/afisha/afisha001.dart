@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gorky_name/const/const_variables.dart';
+import 'package:gorky_name/data/afisha_data.dart';
 import 'package:gorky_name/data/routing_data.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_bottom_event.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_header_event.dart';
@@ -66,26 +67,28 @@ class Afisha extends StatelessWidget {
                   ),
                 ),
               ),
+              /************************ */
               const AfishaHeaderEvent(
                 head: '25 октября - понедельник',
               ),
               ...events.entries
                   .map((e) => AfishaEvent(time: e.key, information: e.value)),
               const AfishaBottomEvent(),
-              /************************ */
+/********************* */
+
               const AfishaHeaderEvent(
                 head: '26 октября – вторник',
               ),
 
-              //const AfishaDayEvent(),
               ...eventsA.entries
                   .map((e) => AfishaEvent(time: e.key, information: e.value)),
               const AfishaBottomEvent(),
+
               Expanded(
                 flex: 1,
                 child: Container(),
               ),
-              //const BottomLeftRight(next_steep: GlobalVar.routeAfisha02),
+              //const BottomLeftRight(next_steep: GlobalVar.routeAfisha03),
               const SizedBox(
                 height: 30,
               ),

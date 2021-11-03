@@ -34,6 +34,7 @@ class _CurrentDateState extends State<CurrentDate> {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(_currentTime,
             style: Theme.of(context)

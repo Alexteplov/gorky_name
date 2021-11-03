@@ -13,6 +13,7 @@ import 'package:gorky_name/ui/screens/afisha/afisha_w01a.dart';
 import 'package:gorky_name/ui/screens/afisha/afisha_w02.dart';
 import 'package:gorky_name/ui/screens/afisha/afisha_w02a.dart';
 import 'package:gorky_name/ui/screens/eLibs/elibs_screen.dart';
+import 'package:gorky_name/ui/screens/library_structure/library_structure.dart';
 import 'package:gorky_name/ui/screens/rules_for_readers.dart';
 
 import '../const/const_variables.dart';
@@ -107,6 +108,8 @@ class RoutingData with ChangeNotifier {
           nameLib: GlobalVar.elNEDBFull, qrCode: GlobalVar.qrNEDB));
     } else if (route == GlobalVar.routeRules4Readers) {
       _stackW.add(const RulesForReaders());
+    } else if (route == GlobalVar.routeLibiraryStructure) {
+      _stackW.add(const LibraryStructure());
     } else {
       _stackW.add(const MainMenu());
       _nextSteep = 'empty';

@@ -12,6 +12,7 @@ class MainAppBar extends AppBar {
 
   MainAppBar(this.context, {Key? key})
       : super(
+          toolbarHeight: 100,
           key: key,
           iconTheme: const IconThemeData(
             color: Colors.black,
@@ -19,17 +20,22 @@ class MainAppBar extends AppBar {
           backgroundColor: Colors.white70,
           centerTitle: true,
           leading: Container(
-            width: 100,
-            height: 100,
+            //width: 150,
+            //height: 100,
             decoration: const BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage(GlobalVar.logoAppBar),
-                    fit: BoxFit.cover)),
+                    fit: BoxFit.contain)),
+            child: const SizedBox(
+              height: 100,
+              width: 150,
+            ),
           ),
           title: Text(
             GlobalVar.nameLib,
             style: GoogleFonts.oswald(
                 textStyle: Theme.of(context).textTheme.headline4!),
+            textAlign: TextAlign.center,
           ),
           elevation: 0.0,
           automaticallyImplyLeading: false,
