@@ -1,11 +1,12 @@
-import 'package:flutter/material.dart';
+//Библиотека в сети
+import 'package:flutter/widgets.dart';
 import 'package:gorky_name/const/const_variables.dart';
 import 'package:gorky_name/ui/component/widgets/library_logo.dart';
 import 'package:gorky_name/ui/component/widgets/menu_button.dart';
 import 'package:gorky_name/ui/theme/screen.dart';
 
-class ElLibs extends StatelessWidget {
-  const ElLibs({Key? key}) : super(key: key);
+class LibraryInNetwork extends StatelessWidget {
+  const LibraryInNetwork({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,24 +30,38 @@ class ElLibs extends StatelessWidget {
               children: <Widget>[
                 //MainMenu(),
                 MenuButton(
-                    context: context,
-                    nameButton: GlobalVar.elNEDB,
-                    route: GlobalVar.routeElLibNEDB),
+                  context: context,
+                  nameButton: GlobalVar.libInNet,
+                  route: GlobalVar.routeLib,
+                  logo: GlobalVar.logoLibInNet,
+                ),
                 const SizedBox(
                   height: 20,
                 ),
                 MenuButton(
                   context: context,
-                  nameButton: GlobalVar.elNEB,
-                  route: GlobalVar.routeElLibNEB,
+                  nameButton: GlobalVar.inContact,
+                  route: GlobalVar.routeInContact,
+                  logo: GlobalVar.logoInContact,
                 ),
                 const SizedBox(
                   height: 20,
                 ),
                 MenuButton(
-                    context: context,
-                    nameButton: GlobalVar.elLitress,
-                    route: GlobalVar.routeElLibLitres),
+                  context: context,
+                  nameButton: GlobalVar.instagram,
+                  route: GlobalVar.routeInstagram,
+                  logo: GlobalVar.logoInstagram,
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                MenuButton(
+                  context: context,
+                  nameButton: GlobalVar.tiktok,
+                  route: GlobalVar.routeTikTok,
+                  logo: GlobalVar.logoTiktok,
+                ),
                 const SizedBox(
                   height: 20,
                 ),

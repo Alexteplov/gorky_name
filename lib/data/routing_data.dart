@@ -13,6 +13,7 @@ import 'package:gorky_name/ui/screens/afisha/afisha_w01a.dart';
 import 'package:gorky_name/ui/screens/afisha/afisha_w02.dart';
 import 'package:gorky_name/ui/screens/afisha/afisha_w02a.dart';
 import 'package:gorky_name/ui/screens/eLibs/elibs_screen.dart';
+import 'package:gorky_name/ui/screens/library_in_network/library_in_network.dart';
 import 'package:gorky_name/ui/screens/library_structure/library_structure.dart';
 import 'package:gorky_name/ui/screens/rules_for_readers.dart';
 
@@ -110,6 +111,21 @@ class RoutingData with ChangeNotifier {
       _stackW.add(const RulesForReaders());
     } else if (route == GlobalVar.routeLibiraryStructure) {
       _stackW.add(const LibraryStructure());
+    } else if (route == GlobalVar.routeLibInNetwork) {
+      _stackW.add(const LibraryInNetwork());
+//QR codes from social network
+    } else if (route == GlobalVar.routeLib) {
+      _stackW.add(
+          const ElLibsQr(nameLib: GlobalVar.libInNet, qrCode: GlobalVar.qrLib));
+    } else if (route == GlobalVar.routeInContact) {
+      _stackW.add(const ElLibsQr(
+          nameLib: GlobalVar.inContact, qrCode: GlobalVar.qrContact));
+    } else if (route == GlobalVar.routeInstagram) {
+      _stackW.add(const ElLibsQr(
+          nameLib: GlobalVar.instagram, qrCode: GlobalVar.qrInstagram));
+    } else if (route == GlobalVar.routeTikTok) {
+      _stackW.add(const ElLibsQr(
+          nameLib: GlobalVar.tiktok, qrCode: GlobalVar.qrTikTok));
     } else {
       _stackW.add(const MainMenu());
       _nextSteep = 'empty';

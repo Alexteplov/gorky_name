@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:gorky_name/const/const_variables.dart';
+import 'package:gorky_name/ui/component/widgets/library_logo.dart';
 import 'package:gorky_name/ui/component/widgets/menu_button.dart';
 import 'package:gorky_name/ui/theme/screen.dart';
 
@@ -21,24 +22,7 @@ class MainMenu extends StatelessWidget {
               ),
             ),
           ),
-          Positioned(
-            left: Screen.width(context) / 2 - Screen.width(context) * 0.7 / 2,
-            top: 5,
-            width: Screen.width(context) * 0.7,
-            height: Screen.width(context) * 0.2,
-            child: Center(
-              child: Container(
-                //height: Screen.height(context),
-                width: Screen.width(context),
-                decoration: const BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage(GlobalVar.logoImg),
-                    fit: BoxFit.fill,
-                  ),
-                ),
-              ),
-            ),
-          ),
+          const LibraryLogo(),
           Positioned(
             top: Screen.width(context) * 0.2 + 150,
             left: (Screen.width(context) - Screen.width(context) * 0.6) / 2,
@@ -70,7 +54,7 @@ class MainMenu extends StatelessWidget {
                 MenuButton(
                   context: context,
                   nameButton: GlobalVar.libInNetwork,
-                  //route: GlobalVar.routeElLibs
+                  route: GlobalVar.routeLibInNetwork,
                 ),
                 const SizedBox(
                   height: 20,
@@ -101,7 +85,7 @@ class MainMenu extends StatelessWidget {
                 MenuButton(
                     context: context,
                     nameButton: GlobalVar.billboard,
-                    route: GlobalVar.routeAfisha01),
+                    route: GlobalVar.routeAfisha03),
                 const SizedBox(
                   height: 20,
                 ),

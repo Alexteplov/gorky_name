@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gorky_name/const/const_variables.dart';
-import 'package:gorky_name/ui/component/widgets/menu_button.dart';
+import 'package:gorky_name/ui/component/widgets/library_logo.dart';
 import 'package:gorky_name/ui/theme/screen.dart';
 
 class LibraryStructure extends StatelessWidget {
@@ -21,24 +21,7 @@ class LibraryStructure extends StatelessWidget {
               ),
             ),
           ),
-          Positioned(
-            left: 0,
-            top: 5,
-            width: Screen.width(context),
-            height: Screen.width(context) * 0.29,
-            child: Center(
-              child: Container(
-                //height: Screen.height(context),
-                width: Screen.width(context),
-                decoration: const BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage(GlobalVar.logoImg),
-                    fit: BoxFit.fill,
-                  ),
-                ),
-              ),
-            ),
-          ),
+          const LibraryLogo(),
           Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,

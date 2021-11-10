@@ -11,12 +11,14 @@ class MenuButton extends StatelessWidget {
       {Key? key,
       required this.context,
       required this.nameButton,
-      this.route = ''})
+      this.route = '',
+      this.logo = ''})
       : super(key: key);
 
   final BuildContext context;
   final String nameButton;
   String route;
+  String logo;
 
   @override
   Widget build(BuildContext context) {
@@ -33,10 +35,26 @@ class MenuButton extends StatelessWidget {
           //print('route ${route}');
         }
       },
-      child: Text(
-        nameButton,
-        textAlign: TextAlign.center,
-      ),
+      child: logo.isNotEmpty
+          ? Row(
+              children: [
+                Image.asset(
+                  logo,
+                  width: Screen.height(context) * 0.05,
+                  height: Screen.height(context) * 0.05,
+                ),
+                Expanded(
+                  child: Text(
+                    nameButton,
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+              ],
+            )
+          : Text(
+              nameButton,
+              textAlign: TextAlign.center,
+            ),
     );
   }
 }

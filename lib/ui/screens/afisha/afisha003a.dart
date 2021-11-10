@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:gorky_name/const/const_variables.dart';
 import 'package:gorky_name/data/routing_data.dart';
-//import 'package:gorky_name/data/afisha_data.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_bottom_event.dart';
-//import 'package:gorky_name/ui/component/widgets/afisha_day_event.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_header_event.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_event.dart';
-//import 'package:gorky_name/ui/component/widgets/bottom_left_rigth.dart';
-//import 'package:gorky_name/ui/component/widgets/main_appbar.dart';
 import 'package:gorky_name/ui/theme/screen.dart';
 import 'package:google_fonts/google_fonts.dart';
+// ignore: implementation_imports
 import 'package:provider/src/provider.dart';
 
 class AfishaThirdA extends StatelessWidget {

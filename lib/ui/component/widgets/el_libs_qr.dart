@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:gorky_name/const/const_variables.dart';
-//import 'package:gorky_name/ui/component/widgets/bottom_left_rigth.dart';
 import 'package:gorky_name/ui/theme/screen.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import 'library_logo.dart';
 
 class ElLibsQr extends StatelessWidget {
   const ElLibsQr({Key? key, required this.nameLib, required this.qrCode})
@@ -25,30 +26,13 @@ class ElLibsQr extends StatelessWidget {
               ),
             ),
           ),
-          Positioned(
-            left: 0,
-            top: 5,
-            width: Screen.width(context),
-            height: Screen.width(context) * 0.29,
-            child: Center(
-              child: Container(
-                //height: Screen.height(context),
-                width: Screen.width(context),
-                decoration: const BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage(GlobalVar.logoImg),
-                    fit: BoxFit.fill,
-                  ),
-                ),
-              ),
-            ),
-          ),
+          const LibraryLogo(),
           Center(
             child: Column(
               children: [
-                Expanded(
+                const Expanded(
                   flex: 4,
-                  child: Container(),
+                  child: SizedBox(),
                 ),
                 Expanded(
                   flex: 1,
@@ -74,13 +58,12 @@ class ElLibsQr extends StatelessWidget {
                             ),
                           ),
                         )
-                      : Container(),
+                      : const SizedBox(),
                 ),
-                Expanded(
+                const Expanded(
                   flex: 3,
-                  child: Container(),
+                  child: SizedBox(),
                 ),
-                //const Expanded(flex: 1, child: BottomLeftRight()),
               ],
             ),
           ),

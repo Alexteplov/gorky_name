@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/semantics.dart';
 import 'package:flutter/widgets.dart';
 import 'package:gorky_name/data/routing_data.dart';
+// ignore: implementation_imports
 import 'package:provider/src/provider.dart';
 
 class LowerNavigation extends StatelessWidget {
@@ -22,22 +22,22 @@ class LowerNavigation extends StatelessWidget {
                   child: const FittedBox(
                       child: Icon(
                     Icons.arrow_back,
-                    size: 32,
+                    size: 44,
                   )),
                   backgroundColor: Colors.red,
                 ),
               )
-            : Container(),
+            : const SizedBox(width: 100, height: 100),
         context.read<RoutingData>().isReturnActive()
             ? SizedBox(
-                width: 100,
-                height: 100,
+                width: 125,
+                height: 125,
                 child: FloatingActionButton(
                   onPressed: () => context.read<RoutingData>().goMainMenu(),
                   child: const FittedBox(
                       child: Icon(
                     Icons.home,
-                    size: 32,
+                    size: 56,
                   )),
                   backgroundColor: Colors.red,
                 ),
@@ -54,12 +54,12 @@ class LowerNavigation extends StatelessWidget {
                   child: const FittedBox(
                       child: Icon(
                     Icons.arrow_forward,
-                    size: 32,
+                    size: 44,
                   )),
                   backgroundColor: Colors.red,
                 ),
               )
-            : Container(),
+            : const SizedBox(width: 100, height: 100),
       ],
     );
   }

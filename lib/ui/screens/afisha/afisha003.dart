@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:gorky_name/const/const_variables.dart';
 import 'package:gorky_name/data/routing_data.dart';
-//import 'package:gorky_name/data/afisha_data.dart';
-import 'package:gorky_name/ui/component/widgets/afisha_bottom_event.dart';
-//import 'package:gorky_name/ui/component/widgets/afisha_day_event.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_header_event.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_event.dart';
-//import 'package:gorky_name/ui/component/widgets/bottom_left_rigth.dart';
-//import 'package:gorky_name/ui/component/widgets/main_appbar.dart';
+import 'package:gorky_name/ui/component/widgets/afisha_qr_code.dart';
 import 'package:gorky_name/ui/theme/screen.dart';
 import 'package:google_fonts/google_fonts.dart';
+// ignore: implementation_imports
 import 'package:provider/src/provider.dart';
 
 class AfishaThird extends StatelessWidget {
@@ -18,14 +15,26 @@ class AfishaThird extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Map<String, String> events = {
-      '10:00':
-          'Литературно-игровой час "Этикет в рассказах и стихах" (7-10 лет)',
-      '11:00': 'Час интересных сообщений "Безопасность в городе" (7-10 лет)',
-      '15:00':
-          'Час кино по теме «Экология». Просмотр и обсуждение фильма "Дядя Ваня" (от 10 лет)',
-      '16:00': 'Игра "Литературное дело для настоящих сыщиков" (от 10 лет)',
+      '15:00': 'Прямой эфир. Обзор книг от Робота МАКСа "Мои книжные друзья"',
     };
-    context.watch<RoutingData>().setRouteNextSteep(GlobalVar.routeAfishaW01);
+    final Map<String, String> eventsA = {
+      '11:00': 'Прямой эфир. Читаем рассказ В.Драгунского "Девочка на шаре.',
+      '16:00': 'Прямой эфир "ТОП- 5 книг, которые изменят твой взгляд на мир.',
+    };
+
+    final Map<String, String> eventsB = {
+      '11:00':
+          'Прямой эфир. Рассказываем о новых книгах для малышей "Полезные сказки Елены Ульевой"',
+      '16:00': 'Прямой эфир. Квиз-игра "Литературные гонки"',
+    };
+
+    final Map<String, String> eventsC = {
+      '11:00':
+          'Прямой эфир. Литературное чтение "Достоевский детям", посвященное 200-летие со дня рождения писателя.',
+      '15:00':
+          'Прямой эфир. Познавательный кроссворд "Синичкин день" (к Синичкиному дню -12 ноября).',
+    };
+    context.watch<RoutingData>().setRouteNextSteep(GlobalVar.routeAfishaW02);
     return SafeArea(
       child: Stack(
         children: [
@@ -60,14 +69,31 @@ class AfishaThird extends StatelessWidget {
               ),
               /************************ */
               const AfishaHeaderEvent(
-                head: '29 октября – пятница',
+                head: '9 ноября – вторник',
+              ),
+              ...eventsA.entries
+                  .map((e) => AfishaEvent(time: e.key, information: e.value)),
+
+              const AfishaHeaderEvent(
+                head: '10 ноября - среда',
+              ),
+              ...eventsB.entries
+                  .map((e) => AfishaEvent(time: e.key, information: e.value)),
+              const AfishaHeaderEvent(
+                head: '11 ноября – четверг',
+              ),
+
+              ...eventsC.entries
+                  .map((e) => AfishaEvent(time: e.key, information: e.value)),
+              const AfishaHeaderEvent(
+                head: '12 ноября – пятница',
               ),
               ...events.entries
                   .map((e) => AfishaEvent(time: e.key, information: e.value)),
-              const AfishaBottomEvent(),
-              Expanded(
-                flex: 6,
-                child: Container(),
+              const AfishaQrCode(),
+              const Expanded(
+                flex: 2,
+                child: SizedBox(),
               ),
               //const BottomLeftRight(next_steep: GlobalVar.routeAfishaW01),
               const SizedBox(

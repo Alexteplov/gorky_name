@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:gorky_name/const/const_variables.dart';
-import 'package:gorky_name/data/afisha_data.dart';
 import 'package:gorky_name/data/routing_data.dart';
-import 'package:gorky_name/ui/component/widgets/afisha_bottom_event.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_header_event.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_event.dart';
-//import 'package:gorky_name/ui/component/widgets/bottom_left_rigth.dart';
-//import 'package:gorky_name/ui/component/widgets/main_appbar.dart';
 import 'package:gorky_name/ui/theme/screen.dart';
 import 'package:google_fonts/google_fonts.dart';
+// ignore: implementation_imports
 import 'package:provider/src/provider.dart';
 
 class Afisha extends StatelessWidget {
@@ -16,6 +13,7 @@ class Afisha extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+/* 
     final Map<String, String> events = {
       '14:00': 'Час интересных сообщений "Безопасность в городе" (7-10 лет)',
       '15:00': 'Квиз "Литературная интуиция" (от 14 лет)',
@@ -24,15 +22,10 @@ class Afisha extends StatelessWidget {
       '16:30':
           'Литературно-игровое занятие "Ключ от сказки Романа Сефа" (5-7 лет)',
     };
+ */
     final Map<String, String> eventsA = {
-      '10:00':
-          'Литературно-игровое занятие "Ключ от сказки Романа Сефа" (5-7 лет)',
-      '12:00':
-          'Мастер-класс "Открытка для любимых бабушек и дедушек" (от 7 лет)',
-      '14:00': 'Квиз-игра "Наука — это круто" (от 8 лет)',
-      '15:00':
-          'Литературно-музыкальный праздник "Осень, Осень, в гости просим!" (4-8 лет)',
-      '16:00': 'Тренинг по актерскому мастерству "Верю - не верю" (от 8 лет)',
+      '11:00': 'Прямой эфир. Читаем рассказ В.Драгунского "Девочка на шаре.',
+      '16:00': 'Прямой эфир "ТОП- 5 книг, которые изменят твой взгляд на мир.',
     };
     context.watch<RoutingData>().setRouteNextSteep(GlobalVar.routeAfisha02);
     return SafeArea(
@@ -68,25 +61,25 @@ class Afisha extends StatelessWidget {
                 ),
               ),
               /************************ */
-              const AfishaHeaderEvent(
+/*               const AfishaHeaderEvent(
                 head: '25 октября - понедельник',
               ),
               ...events.entries
                   .map((e) => AfishaEvent(time: e.key, information: e.value)),
               const AfishaBottomEvent(),
-/********************* */
+ */ /********************* */
 
               const AfishaHeaderEvent(
-                head: '26 октября – вторник',
+                head: '9 ноября – вторник',
               ),
 
               ...eventsA.entries
                   .map((e) => AfishaEvent(time: e.key, information: e.value)),
-              const AfishaBottomEvent(),
+              //const AfishaBottomEvent(),
 
-              Expanded(
-                flex: 1,
-                child: Container(),
+              const Expanded(
+                flex: 8,
+                child: SizedBox(),
               ),
               //const BottomLeftRight(next_steep: GlobalVar.routeAfisha03),
               const SizedBox(

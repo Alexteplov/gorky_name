@@ -24,6 +24,24 @@ class GlobalVar {
   static const String qrNEB = 'image/QR_neb.png';
   static const String qrLitress = 'image/QR_litress.png';
 
+  //коды для ссылок на соц.сети
+  static const String qrLib = 'image/QR_lib.png';
+  static const String qrContact = 'image/QR_vk.png';
+  static const String qrInstagram = 'image/QR_instagram.png';
+  static const String qrTikTok = 'image/QR_tiktok.png';
+
+//Библиотека в сети
+  static const String libInNet = 'Сайт www.db74.ru';
+  static const String inContact = 'ВКонтакте';
+  static const String instagram = 'Instagram';
+  static const String tiktok = 'TikTok';
+
+  //лого
+  static const String logoLibInNet = 'image/http_logo.png';
+  static const String logoInContact = 'image/vk_logo.png';
+  static const String logoInstagram = 'image/instagram_logo.png';
+  static const String logoTiktok = 'image/tiktok_logo.png';
+
 //Фоновая картинка
   static const String bgImage = 'image/main_background.jpg';
   static const String logoImg = 'image/LIB_logotype.png';
@@ -51,9 +69,18 @@ class GlobalVar {
   //rules for readers
   static const String routeRules4Readers = '/rules_for_readers';
 
+  //library in Newtwork
+  static const String routeLibInNetwork = '/lib_in_network';
+  //на страницу qr кодов
+  static const String routeLib = '/lib_qr';
+  static const String routeInContact = '/inContact_qr';
+  static const String routeInstagram = '/instagram_qr';
+  static const String routeTikTok = '/tikTok_qr';
+
   //structure library
   static const String routeLibiraryStructure = '/library_structure';
 
+// Пока не используется не получается развернуть через спред оператор.
   static List<AfishaData> listDay01 = [day01, day02];
   static AfishaData day01 = AfishaData(
       '25 октября - понедельник',
