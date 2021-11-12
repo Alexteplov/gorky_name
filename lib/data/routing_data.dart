@@ -110,7 +110,7 @@ class RoutingData with ChangeNotifier {
     } else if (route == GlobalVar.routeRules4Readers) {
       _stackW.add(const RulesForReaders());
     } else if (route == GlobalVar.routeLibiraryStructure) {
-      _stackW.add(const LibraryStructure());
+      _stackW.add(LibraryStructure());
     } else if (route == GlobalVar.routeLibInNetwork) {
       _stackW.add(const LibraryInNetwork());
 //QR codes from social network

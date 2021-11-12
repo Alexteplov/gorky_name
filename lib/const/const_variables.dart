@@ -47,6 +47,8 @@ class GlobalVar {
   static const String logoImg = 'image/LIB_logotype.png';
   static const String bgImgAfisha = 'image/bgImgAfisha.png';
   static const String bgImgAfishaWeekends = 'image/bgImgAfishaWeekends.jpg';
+  static const String bgImgAfishaWeekendsW =
+      'image/bgImgAfishaWeekendsWinter.jpg';
   static const String logoAppBar = 'image/logo_app_bar.png';
 //Маршруты роутинга(переходов)
   static const String routeMainMenu = '/';

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:gorky_name/const/const_variables.dart';
 import 'package:gorky_name/data/routing_data.dart';
-import 'package:gorky_name/ui/component/widgets/afisha_bottom_event.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_header_event.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_event.dart';
+import 'package:gorky_name/ui/component/widgets/afisha_qr_code.dart';
 import 'package:gorky_name/ui/theme/screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 // ignore: implementation_imports
@@ -14,7 +14,29 @@ class AfishaThirdA extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    context.watch<RoutingData>().setRouteNextSteep(GlobalVar.routeAfishaW01a);
+    final Map<String, String> events = {
+      '15:00':
+          'Проект "Учимся летать вместе с крышами" от детской писательницы Зули Стадник',
+    };
+    final Map<String, String> eventsA = {
+      '16:00': 'Прямой эфир. Обзор - игра "По следам литературных сыщиков"',
+    };
+
+    final Map<String, String> eventsB = {
+      '11:00': 'Прямой эфир. Обзор новинок о дружбе "Ты мой лучший друг!"',
+      '16:00': 'Прямой эфир. "5 интересных книг для младших школьников"',
+    };
+
+    final Map<String, String> eventsC = {
+      '11:00':
+          'Прямой эфир. "ТОП самых интересных изобретений М.В. Ломоносова"',
+      '16:00':
+          'Прямой эфир. Викторина от робота МАКСа "С Днем рождения, Дед Мороз!"',
+    };
+    final Map<String, String> eventsD = {
+      '15:00': 'Прямой эфир "Сказка-тренинг по правам ребенка"',
+    };
+    context.watch<RoutingData>().setRouteNextSteep(GlobalVar.routeAfishaW02a);
     return SafeArea(
       child: Stack(
         children: [
@@ -49,22 +71,38 @@ class AfishaThirdA extends StatelessWidget {
               ),
               /************************ */
               const AfishaHeaderEvent(
-                head: '22 октября – пятница',
+                head: '15 ноября – понедельник',
+              ),
+              ...events.entries
+                  .map((e) => AfishaEvent(time: e.key, information: e.value)),
+              const AfishaHeaderEvent(
+                head: '16 ноября – вторник',
+              ),
+              ...eventsA.entries
+                  .map((e) => AfishaEvent(time: e.key, information: e.value)),
+
+              const AfishaHeaderEvent(
+                head: '17 ноября - среда',
+              ),
+              ...eventsB.entries
+                  .map((e) => AfishaEvent(time: e.key, information: e.value)),
+              const AfishaHeaderEvent(
+                head: '18 ноября – четверг',
               ),
 
-              //const AfishaDayEvent(),
-              const AfishaEvent(
-                time: '14:00',
-                information:
-                    'Интерактивное образовательное занятие «Умный пол» - «Логические тесты» (6-10 лет)',
+              ...eventsC.entries
+                  .map((e) => AfishaEvent(time: e.key, information: e.value)),
+              const AfishaHeaderEvent(
+                head: '19 ноября – пятница',
               ),
-
-              const AfishaBottomEvent(),
-              Expanded(
-                flex: 6,
-                child: Container(),
+              ...eventsD.entries
+                  .map((e) => AfishaEvent(time: e.key, information: e.value)),
+              const AfishaQrCode(),
+              const Expanded(
+                flex: 2,
+                child: SizedBox(),
               ),
-              //const BottomLeftRight(next_steep: GlobalVar.routeAfishaW01a),
+              //const BottomLeftRight(next_steep: GlobalVar.routeAfishaW01),
               const SizedBox(
                 height: 30,
               ),

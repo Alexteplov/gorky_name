@@ -23,7 +23,7 @@ class AfishaSunday extends StatelessWidget {
       '15:00':
           'Видеоурок "Академия безопасности 2.0: Безопасность детей на воде".',
     };
-    context.watch<RoutingData>().setRouteNextSteep('empty');
+    context.watch<RoutingData>().setRouteNextSteep(GlobalVar.routeAfisha03a);
     return SafeArea(
       child: Stack(
         children: [
