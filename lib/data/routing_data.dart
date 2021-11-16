@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
 import 'package:gorky_name/const/const_variables.dart';
 import 'package:gorky_name/ui/component/widgets/el_libs_qr.dart';
 import 'package:gorky_name/ui/component/widgets/lower_navigation.dart';
@@ -110,7 +109,7 @@ class RoutingData with ChangeNotifier {
     } else if (route == GlobalVar.routeRules4Readers) {
       _stackW.add(const RulesForReaders());
     } else if (route == GlobalVar.routeLibiraryStructure) {
-      _stackW.add(LibraryStructure());
+      _stackW.add(const LibraryStructure());
     } else if (route == GlobalVar.routeLibInNetwork) {
       _stackW.add(const LibraryInNetwork());
 //QR codes from social network

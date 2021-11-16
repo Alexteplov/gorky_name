@@ -85,7 +85,7 @@ class MainMenu extends StatelessWidget {
                 MenuButton(
                     context: context,
                     nameButton: GlobalVar.billboard,
-                    route: GlobalVar.routeAfisha03),
+                    route: GlobalVar.routeAfisha03a),
                 const SizedBox(
                   height: 20,
                 ),
