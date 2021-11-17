@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:gorky_name/data/afisha_data.dart';
 
 class GlobalVar {
@@ -81,6 +82,8 @@ class GlobalVar {
 
   //structure library
   static const String routeLibiraryStructure = '/library_structure';
+  static const String routeLibiraryStructureA = '/library_structure_a';
+  static const String routeLibiraryStructureB = '/library_structure_b';
 
 // Пока не используется не получается развернуть через спред оператор.
   static List<AfishaData> listDay01 = [day01, day02];
@@ -112,30 +115,77 @@ class GlobalVar {
 
 class StructureData {
   //изображения
+  static Color colorRed = const Color(0xFFFF170F);
   static String meetingEventHall = 'image/structure/meeting_event_hall.jpg';
   static String redBookmark = 'image/structure/red_bookmark.png';
 
+  static Color colorLiteBlue = const Color(0xFF459DB7);
+  static String smallKidsHall = 'image/structure/small_kids_hall.jpg';
+  static String liteBlueBookmark = 'image/structure/lite_blue_bookmark.png';
+
+  static Color colorYellow = const Color(0xFFFFFF00);
+  static String sectorOperatinsInfoHall =
+      'image/structure/sector_operation_info.jpg';
+  static String yellowBookmark = 'image/structure/yellow_bookmark.png';
+
+  static Color colorMaroon = const Color(0xFFB00000);
+  static String freeReadersPlaceHall =
+      'image/structure/freeReadersPlace_hall.jpg';
+  static String maroonBookmark = 'image/structure/maroon_bookmark.png';
+
+  static Color colorOrange = const Color(0xFFFF8000);
+  static String silendHoleHall = 'image/structure/silent_hall.jpg';
+  static String orangeBookmark = 'image/structure/orange_bookmark.png';
+
+  static Color colorGreen = const Color(0xFF00BB00);
+  static String roomTransformerHall = 'image/structure/room_transformer.jpg';
+  static String greenBookmark = 'image/structure/green_bookmark.png';
+
+  static Color colorTeen = const Color(0xFF098E8B);
+  static String smallRoomTeenClubHall = 'image/structure/teen_club.jpg';
+  static String teenBookmark = 'image/structure/teen_bookmark.png';
+
+  static Color colorBlue = const Color(0xFF0D7DAD);
+  static String experimentalStationHall = 'image/structure/station_max.jpg';
+  static String blueBookmark = 'image/structure/blue_bookmark.png';
+
+  static Color colorWhite = const Color(0xFFFFFFFF);
+  static String whiteBookmark = 'image/structure/white_bookmark.png';
+
   static String roomMeetingEventHead = 'Зал встреч и событий';
   static String roomMeetingEvent =
-      ' – это одновременно и лекционный, и концертный, и выставочный зал, зал для показа фильмов и спектаклей, для проведения детских праздников, музыкальных вечеров, круглых столов и мастер-классов. Не пропустите новые встречи и выставки!';
+      'это одновременно и лекционный, и концертный, и выставочный зал, зал для показа фильмов и спектаклей, для проведения детских праздников, музыкальных вечеров, круглых столов и мастер-классов. Не пропустите новые встречи и выставки!';
   static String roomReadersHead =
       'Зал чтения и общения для дошкольников и младших школьников';
   static String roomReaders =
       ''' – место самостоятельного выбора книг, игровая площадка для дошкольников, мини-зал для групп младших школьников «Библиопродленка» с возможностью выбора и чтения книг, просмотра фильмов, работы за компьютером и познавательных занятий. Здесь настоящее раздолье для ума и для души: книжки-игрушки, научно-познавательные книги, художественная литература, сказки, развивающие настольные и компьютерные игры. Свои книги найдут здесь и заботливые взрослые. Это книги о воспитании и детском чтении. ''';
+  static String sectorOperatinsInfoHead = 'Сектор оперативной информации';
   static String sectorOperatinsInfo =
-      '''Сектор оперативной информации знакомит с новинками книг и периодики и предоставляет автоматизированные рабочие места для доступа к ресурсам Национальной электронной детской библиотеки (НЭДБ) и Национальной электронной библиотеки (НЭБ).''';
+      '''знакомит с новинками книг и периодики и предоставляет автоматизированные рабочие места для доступа к ресурсам Национальной электронной детской библиотеки (НЭДБ) и Национальной электронной библиотеки (НЭБ).''';
+  static String freeReadersPlaceHead = 'Свободная читательская площадка';
   static String freeReadersPlace =
-      '''Свободная читательская площадка - самое большое книжное пространство для самостоятельного выбора изданий с кафедрой выдачи и станцией самостоятельной книговыдачи. Здесь всегда есть нужные художественные тексты для уроков литературы, а также много книг на любой вкус, которые обязательно захочется почитать «для себя».''';
+      '''самое большое книжное пространство для самостоятельного выбора изданий с кафедрой выдачи и станцией самостоятельной книговыдачи. Здесь всегда есть нужные художественные тексты для уроков литературы, а также много книг на любой вкус, которые обязательно захочется почитать «для себя».''';
+  static String silendHoleHeader = 'Территория «тихого чтения»';
   static String silendHole =
-      '''Территория «тихого чтения» - отдельное помещение в стиле «гостиной с камином» для любителей уединиться и побыть в «мире без гаджетов». Здесь можно почитать в уютных креслах, поиграть в шахматы, послушать чтение вслух или собраться литературным клубом.''';
+      '''отдельное помещение в стиле «гостиной с камином» для любителей уединиться и побыть в «мире без гаджетов». Здесь можно почитать в уютных креслах, поиграть в шахматы, послушать чтение вслух или собраться литературным клубом.''';
+  static String roomTransformerHeader = 'Зал – трансформер';
   static String roomTransformer =
-      '''Зал – трансформер с фондом научно-популярной, справочной и научно-художественной литературы, а также литературы нашего края и о нашем крае.''';
+      '''с фондом научно-популярной, справочной и научно-художественной литературы, а также литературы нашего края и о нашем крае.''';
+  static String smallRoomTeenClubHeader = 'В мини-зал «Teen-клуб»';
   static String smallRoomTeenClub =
-      '''В мини-зал «Teen-клуб» можно прийти дружной компанией просто пообщаться друг с другом среди книг, сделать домашнее задание, обсудить насущные вопросы, вместе посмотреть понравившийся фильм, спортивную передачу, послушать винил, поиграть в настольные игры, выбор которых разнообразен.''';
+      '''можно прийти дружной компанией просто пообщаться друг с другом среди книг, сделать домашнее задание, обсудить насущные вопросы, вместе посмотреть понравившийся фильм, спортивную передачу, послушать винил, поиграть в настольные игры, выбор которых разнообразен.''';
+  static String experimentalStationHeader =
+      'Зал мастер-классов «Опытная станция» ';
   static String experimentalStation =
-      '''Зал мастер-классов «Опытная станция» предназначен для проведения кружковых занятий, мастер-классов, видеоконференций и других активностей.''';
+      '''предназначен для проведения кружковых занятий, мастер-классов, видеоконференций и других активностей.''';
+  static String coordinationDepartmentHeader =
+      'координационно-методический отдел';
   static String coordinationDepartment =
-      '''Кроме того, для профессионалов, для студентов библиотечной и педагогической специальностей и родителей работает координационно-методический отдел. В фонде отдела литературоведческие труды, литература по психологии и педагогике, по методике воспитания и обучения детей, по истории библиотечного дела, периодические издания библиотековедческой, литературоведческой и педагогической тематики, сценарии школьных, семейных, литературных, новогодних праздников, родительских собраний и классных часов, игровых и познавательных занятий самой разной тематики.''';
+      'Кроме того, для профессионалов, для студентов библиотечной и педагогической специальностей и родителей работает ';
+  static String coordinationDepartmentA =
+      '. В фонде отдела литературоведческие труды, литература по психологии и педагогике, по методике воспитания и обучения детей, по истории библиотечного дела, периодические издания библиотековедческой, литературоведческой и педагогической тематики, сценарии школьных, семейных, литературных, новогодних праздников, родительских собраний и классных часов, игровых и познавательных занятий самой разной тематики.';
+  static String informationLibraryDepartmentHeader =
+      'Информационно-библиографический отдел';
   static String informationLibraryDepartment =
-      '''Информационно-библиографический отдел поможет подобрать литературу к реферату, проекту или выпускной квалификационной работе. Выполнит сложный тематический запрос.''';
+      '''поможет подобрать литературу к реферату, проекту или выпускной квалификационной работе. Выполнит сложный тематический запрос.''';
 }

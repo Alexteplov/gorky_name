@@ -14,6 +14,8 @@ import 'package:gorky_name/ui/screens/afisha/afisha_w02a.dart';
 import 'package:gorky_name/ui/screens/eLibs/elibs_screen.dart';
 import 'package:gorky_name/ui/screens/library_in_network/library_in_network.dart';
 import 'package:gorky_name/ui/screens/library_structure/library_structure.dart';
+import 'package:gorky_name/ui/screens/library_structure/library_structure_a.dart';
+import 'package:gorky_name/ui/screens/library_structure/library_structure_b.dart';
 import 'package:gorky_name/ui/screens/rules_for_readers.dart';
 
 import '../const/const_variables.dart';
@@ -110,6 +112,10 @@ class RoutingData with ChangeNotifier {
       _stackW.add(const RulesForReaders());
     } else if (route == GlobalVar.routeLibiraryStructure) {
       _stackW.add(const LibraryStructure());
+    } else if (route == GlobalVar.routeLibiraryStructureA) {
+      _stackW.add(const LibraryStructureA());
+    } else if (route == GlobalVar.routeLibiraryStructureB) {
+      _stackW.add(const LibraryStructureB());
     } else if (route == GlobalVar.routeLibInNetwork) {
       _stackW.add(const LibraryInNetwork());
 //QR codes from social network

@@ -1,30 +1,28 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:gorky_name/const/const_variables.dart';
-import 'package:gorky_name/data/routing_data.dart';
 import 'package:gorky_name/ui/component/widgets/library_logo.dart';
 import 'package:gorky_name/ui/component/widgets/struct_custom_clipper.dart';
 import 'package:gorky_name/ui/theme/screen.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:gorky_name/data/routing_data.dart';
 // ignore: implementation_imports
 import 'package:provider/src/provider.dart';
 
-class LibraryStructure extends StatefulWidget {
-  const LibraryStructure({Key? key}) : super(key: key);
+class LibraryStructureB extends StatefulWidget {
+  const LibraryStructureB({Key? key}) : super(key: key);
 
   @override
-  _LibraryStructureState createState() => _LibraryStructureState();
+  _LibraryStructureStateB createState() => _LibraryStructureStateB();
 }
 
-class _LibraryStructureState extends State<LibraryStructure> {
+class _LibraryStructureStateB extends State<LibraryStructureB> {
   bool _showPreview = false;
   String _image = GlobalVar.bgImgAfishaWeekendsW;
   static double rectangleSide = 200;
   @override
   Widget build(BuildContext context) {
-    context
-        .watch<RoutingData>()
-        .setRouteNextSteep(GlobalVar.routeLibiraryStructureA);
+    context.watch<RoutingData>().setRouteNextSteep('empty');
     return SafeArea(
       child: Stack(
         children: [
@@ -54,7 +52,7 @@ class _LibraryStructureState extends State<LibraryStructure> {
                           child: Container(
                             width: rectangleSide,
                             height: rectangleSide,
-                            color: StructureData.colorRed,
+                            color: StructureData.colorTeen,
                           ),
                         ),
                         Positioned(
@@ -64,7 +62,7 @@ class _LibraryStructureState extends State<LibraryStructure> {
                             onTap: () {
                               setState(() {
                                 _showPreview = !_showPreview;
-                                _image = StructureData.meetingEventHall;
+                                _image = StructureData.smallRoomTeenClubHall;
                                 //print(_showPreview);
                               });
                             },
@@ -75,7 +73,7 @@ class _LibraryStructureState extends State<LibraryStructure> {
                                 borderRadius: BorderRadius.circular(20),
                                 image: DecorationImage(
                                     image: AssetImage(
-                                        StructureData.meetingEventHall),
+                                        StructureData.smallRoomTeenClubHall),
                                     fit: BoxFit.cover),
                               ),
                             ),
@@ -91,8 +89,8 @@ class _LibraryStructureState extends State<LibraryStructure> {
                           top: 12,
                           left: 15,
                           child: Image.asset(
-                            StructureData.redBookmark,
-                            width: 240,
+                            StructureData.teenBookmark,
+                            width: 260,
                             height: 40,
                             fit: BoxFit.fill,
                           ),
@@ -106,7 +104,7 @@ class _LibraryStructureState extends State<LibraryStructure> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    StructureData.roomMeetingEventHead,
+                                    StructureData.smallRoomTeenClubHeader,
                                     style: GoogleFonts.oswald(
                                         textStyle: Theme.of(context)
                                             .textTheme
@@ -115,7 +113,7 @@ class _LibraryStructureState extends State<LibraryStructure> {
                                                 fontWeight: FontWeight.bold)),
                                   ),
                                   Text(
-                                    StructureData.roomMeetingEvent,
+                                    StructureData.smallRoomTeenClub,
                                     style: GoogleFonts.oswald(
                                         textStyle: Theme.of(context)
                                             .textTheme
@@ -147,7 +145,7 @@ class _LibraryStructureState extends State<LibraryStructure> {
                           child: Container(
                             width: rectangleSide,
                             height: rectangleSide,
-                            color: StructureData.colorLiteBlue,
+                            color: StructureData.colorBlue,
                           ),
                         ),
                         Positioned(
@@ -157,7 +155,7 @@ class _LibraryStructureState extends State<LibraryStructure> {
                             onTap: () {
                               setState(() {
                                 _showPreview = !_showPreview;
-                                _image = StructureData.smallKidsHall;
+                                _image = StructureData.experimentalStationHall;
                                 //print(_showPreview);
                               });
                             },
@@ -167,8 +165,8 @@ class _LibraryStructureState extends State<LibraryStructure> {
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(20),
                                 image: DecorationImage(
-                                    image:
-                                        AssetImage(StructureData.smallKidsHall),
+                                    image: AssetImage(
+                                        StructureData.experimentalStationHall),
                                     fit: BoxFit.cover),
                               ),
                             ),
@@ -184,8 +182,8 @@ class _LibraryStructureState extends State<LibraryStructure> {
                           top: 12,
                           left: 15,
                           child: Image.asset(
-                            StructureData.liteBlueBookmark,
-                            width: 580,
+                            StructureData.blueBookmark,
+                            width: 440,
                             height: 40,
                             fit: BoxFit.fill,
                           ),
@@ -193,13 +191,79 @@ class _LibraryStructureState extends State<LibraryStructure> {
                         Padding(
                           padding: const EdgeInsets.only(left: 20.0, top: 8),
                           child: SizedBox(
-                            width: 680,
+                              width: 680,
+                              height: 200,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    StructureData.experimentalStationHeader,
+                                    style: GoogleFonts.oswald(
+                                        textStyle: Theme.of(context)
+                                            .textTheme
+                                            .headline5!
+                                            .copyWith(
+                                                fontWeight: FontWeight.bold)),
+                                  ),
+                                  Text(
+                                    StructureData.experimentalStation,
+                                    style: GoogleFonts.oswald(
+                                        textStyle: Theme.of(context)
+                                            .textTheme
+                                            .headline5!),
+                                  ),
+                                ],
+                              )),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+
+          /* ******************************** */
+          Positioned(
+            top: 1000,
+            left: 100,
+            child: Column(
+              children: [
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Stack(
+                      textDirection: TextDirection.ltr,
+                      alignment: AlignmentDirectional.topStart,
+                      children: [
+                        Positioned(
+                          top: 12,
+                          left: 15,
+                          child: Image.asset(
+                            StructureData.whiteBookmark,
+                            width: 900,
+                            height: 40,
+                            fit: BoxFit.fill,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 20.0, top: 8),
+                          child: SizedBox(
+                            width: 880,
                             height: 350,
                             child: Text.rich(
                               TextSpan(
                                 children: <TextSpan>[
                                   TextSpan(
-                                    text: StructureData.roomReadersHead,
+                                    text: StructureData.coordinationDepartment,
+                                    style: GoogleFonts.oswald(
+                                        textStyle: Theme.of(context)
+                                            .textTheme
+                                            .headline5!),
+                                  ),
+                                  TextSpan(
+                                    text: StructureData
+                                        .coordinationDepartmentHeader,
                                     style: GoogleFonts.oswald(
                                         textStyle: Theme.of(context)
                                             .textTheme
@@ -208,7 +272,7 @@ class _LibraryStructureState extends State<LibraryStructure> {
                                                 fontWeight: FontWeight.bold)),
                                   ),
                                   TextSpan(
-                                    text: StructureData.roomReaders,
+                                    text: StructureData.coordinationDepartmentA,
                                     style: GoogleFonts.oswald(
                                         textStyle: Theme.of(context)
                                             .textTheme
@@ -228,49 +292,13 @@ class _LibraryStructureState extends State<LibraryStructure> {
           ),
           /* ***************************** */
           Positioned(
-            top: 1100,
+            top: 1300,
             left: 100,
             child: Column(
               children: [
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Stack(
-                      children: [
-                        ClipPath(
-                          clipper: StructCustomClipper(), // <--
-                          child: Container(
-                            width: rectangleSide,
-                            height: rectangleSide,
-                            color: StructureData.colorYellow,
-                          ),
-                        ),
-                        Positioned(
-                          top: rectangleSide * 0.025,
-                          left: rectangleSide * 0.025,
-                          child: GestureDetector(
-                            onTap: () {
-                              setState(() {
-                                _showPreview = !_showPreview;
-                                _image = StructureData.sectorOperatinsInfoHall;
-                                //print(_showPreview);
-                              });
-                            },
-                            child: Container(
-                              width: rectangleSide - (rectangleSide * 0.05),
-                              height: rectangleSide - (rectangleSide * 0.05),
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                image: DecorationImage(
-                                    image: AssetImage(
-                                        StructureData.sectorOperatinsInfoHall),
-                                    fit: BoxFit.cover),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
                     Stack(
                       textDirection: TextDirection.ltr,
                       alignment: AlignmentDirectional.topStart,
@@ -279,8 +307,8 @@ class _LibraryStructureState extends State<LibraryStructure> {
                           top: 12,
                           left: 15,
                           child: Image.asset(
-                            StructureData.yellowBookmark,
-                            width: 360,
+                            StructureData.whiteBookmark,
+                            width: 470,
                             height: 40,
                             fit: BoxFit.fill,
                           ),
@@ -288,13 +316,14 @@ class _LibraryStructureState extends State<LibraryStructure> {
                         Padding(
                           padding: const EdgeInsets.only(left: 20.0, top: 8),
                           child: SizedBox(
-                            width: 680,
+                            width: 880,
                             height: 200,
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  StructureData.sectorOperatinsInfoHead,
+                                  StructureData
+                                      .informationLibraryDepartmentHeader,
                                   style: GoogleFonts.oswald(
                                       textStyle: Theme.of(context)
                                           .textTheme
@@ -303,7 +332,7 @@ class _LibraryStructureState extends State<LibraryStructure> {
                                               fontWeight: FontWeight.bold)),
                                 ),
                                 Text(
-                                  StructureData.sectorOperatinsInfo,
+                                  StructureData.informationLibraryDepartment,
                                   style: GoogleFonts.oswald(
                                       textStyle: Theme.of(context)
                                           .textTheme
