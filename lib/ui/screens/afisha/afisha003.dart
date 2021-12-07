@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gorky_name/const/const_variables.dart';
 import 'package:gorky_name/data/routing_data.dart';
+import 'package:gorky_name/ui/component/widgets/afisha_bottom_event.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_header_event.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_event.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_qr_code.dart';
@@ -15,26 +16,14 @@ class AfishaThird extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Map<String, String> events = {
-      '15:00': 'Прямой эфир. Обзор книг от Робота МАКСа "Мои книжные друзья"',
-    };
-    final Map<String, String> eventsA = {
-      '11:00': 'Прямой эфир. Читаем рассказ В.Драгунского "Девочка на шаре.',
-      '16:00': 'Прямой эфир "ТОП- 5 книг, которые изменят твой взгляд на мир.',
-    };
-
-    final Map<String, String> eventsB = {
-      '11:00':
-          'Прямой эфир. Рассказываем о новых книгах для малышей "Полезные сказки Елены Ульевой"',
-      '16:00': 'Прямой эфир. Квиз-игра "Литературные гонки"',
-    };
-
-    final Map<String, String> eventsC = {
-      '11:00':
-          'Прямой эфир. Литературное чтение "Достоевский детям", посвященное 200-летие со дня рождения писателя.',
+      '12:00': 'Правовой час "Я - гражданин России" (от 10 лет)',
+      '14:00':
+          'Киноурок. Просмотр и обсуждение фильма «Не трус и не предатель». Тема «Дружба» (7-10 лет)',
       '15:00':
-          'Прямой эфир. Познавательный кроссворд "Синичкин день" (к Синичкиному дню -12 ноября).',
+          '«Поэзия на все времена» - литературный час к 200-летию Н.Некрасова (от 10 лет)',
     };
-    context.watch<RoutingData>().setRouteNextSteep(GlobalVar.routeAfishaW02);
+
+    context.watch<RoutingData>().setRouteNextSteep(GlobalVar.routeAfishaW01);
     return SafeArea(
       child: Stack(
         children: [
@@ -69,30 +58,13 @@ class AfishaThird extends StatelessWidget {
               ),
               /************************ */
               const AfishaHeaderEvent(
-                head: '9 ноября – вторник',
-              ),
-              ...eventsA.entries
-                  .map((e) => AfishaEvent(time: e.key, information: e.value)),
-
-              const AfishaHeaderEvent(
-                head: '10 ноября - среда',
-              ),
-              ...eventsB.entries
-                  .map((e) => AfishaEvent(time: e.key, information: e.value)),
-              const AfishaHeaderEvent(
-                head: '11 ноября – четверг',
-              ),
-
-              ...eventsC.entries
-                  .map((e) => AfishaEvent(time: e.key, information: e.value)),
-              const AfishaHeaderEvent(
-                head: '12 ноября – пятница',
+                head: '10 декабря - пятница',
               ),
               ...events.entries
                   .map((e) => AfishaEvent(time: e.key, information: e.value)),
-              const AfishaQrCode(),
+              const AfishaBottomEvent(),
               const Expanded(
-                flex: 2,
+                flex: 8,
                 child: SizedBox(),
               ),
               //const BottomLeftRight(next_steep: GlobalVar.routeAfishaW01),

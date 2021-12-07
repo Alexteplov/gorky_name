@@ -22,7 +22,7 @@ class _CurrentDateState extends State<CurrentDate> {
     super.initState();
   }
 
-  void _getCurrentTime() {
+  void _getCurrentTime() async {
     setState(() {
       _currentTime =
           "${DateTime.now().hour.toString().padLeft(2, '0')}:${DateTime.now().minute.toString().padLeft(2, '0')}:${DateTime.now().second.toString().padLeft(2, '0')}";

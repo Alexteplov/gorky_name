@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gorky_name/const/const_variables.dart';
 import 'package:gorky_name/data/routing_data.dart';
+import 'package:gorky_name/ui/component/widgets/afisha_bottom_event.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_header_event.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_event.dart';
 import 'package:gorky_name/ui/theme/screen.dart';
@@ -15,15 +16,24 @@ class AfishaSecond extends StatelessWidget {
   Widget build(BuildContext context) {
     final Map<String, String> events = {
       '11:00':
-          'Прямой эфир. Рассказываем о новых книгах для малышей "Полезные сказки Елены Ульевой"',
-      '15:00': 'Прямой эфир. Квиз-игра "Литературные гонки"',
+          'Проект «Библионяня». Развивающее занятие «Снеговик» (1,5-3 года)',
+      '14:00':
+          'Программа «ЭКО - что-то».  Экологический урок «Сила леса»  (7-10 лет) ',
+      '15:00':
+          'Киноурок. Просмотр и обсуждение фильма «Александр». Тема «Ответственность» (от 10 лет)',
+      '16:00':
+          'Клуб любителей настольных игр «Сто наСтолок». Игра  «Тумба» (от 12 лет)',
+      '17:00':
+          'Проект «Библионяня». Развивающее занятие «Снеговик» (1,5-3 года)',
+      '17:30':
+          'Клуб по развитию лидерских качеств и организаторских способностей «PROЯвись». Тема «Лидер — кто это?» (от 12 лет)',
     };
 
     final Map<String, String> eventsA = {
-      '11:00':
-          'Прямой эфир. Литературное чтение "Достоевский детям", посвященное 200-летие со дня рождения писателя.',
-      '15:00':
-          'Прямой эфир. Познавательный кроссворд "Синичкин день" (к Синичкиному дню -12 ноября).',
+      '11:00': 'Литературное занятие «Сказки зимнего леса» (5-7 лет)',
+      '12:00':
+          'Киноурок. Просмотр и обсуждение фильма «Большая восьмерка».Тема «Дружба» (от 8 лет)',
+      '15:00': 'Познавательный час «Парад планет» (от 8 лет)',
     };
 
     context.watch<RoutingData>().setRouteNextSteep(GlobalVar.routeAfisha03);
@@ -61,7 +71,7 @@ class AfishaSecond extends StatelessWidget {
               ),
               /************************ */
               const AfishaHeaderEvent(
-                head: '10 ноября - среда',
+                head: '8 декабря - среда',
               ),
               ...events.entries
                   .map((e) => AfishaEvent(time: e.key, information: e.value)),
@@ -69,15 +79,15 @@ class AfishaSecond extends StatelessWidget {
 /********************* */
 
               const AfishaHeaderEvent(
-                head: '11 ноября – четверг',
+                head: '9 декабря – четверг',
               ),
 
               ...eventsA.entries
                   .map((e) => AfishaEvent(time: e.key, information: e.value)),
-              //const AfishaBottomEvent(),
+              const AfishaBottomEvent(),
 
               const Expanded(
-                flex: 8,
+                flex: 7,
                 child: SizedBox(),
               ),
               //const BottomLeftRight(next_steep: GlobalVar.routeAfisha03),

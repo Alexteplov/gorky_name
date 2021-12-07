@@ -46,8 +46,9 @@ class GlobalVar {
 //Фоновая картинка
   static const String bgImage = 'image/main_background.jpg';
   static const String logoImg = 'image/LIB_logotype.png';
-  static const String bgImgAfisha = 'image/bgImgAfisha.png';
-  static const String bgImgAfishaWeekends = 'image/bgImgAfishaWeekends.jpg';
+  static const String bgImgAfisha = 'image/bgImgAfishaWeekendsWinter2.jpg';
+  static const String bgImgAfishaWeekends =
+      'image/bgImgAfishaWeekendsWinter3.jpg';
   static const String bgImgAfishaWeekendsW =
       'image/bgImgAfishaWeekendsWinter.jpg';
   static const String logoAppBar = 'image/logo_app_bar.png';
@@ -84,6 +85,13 @@ class GlobalVar {
   static const String routeLibiraryStructure = '/library_structure';
   static const String routeLibiraryStructureA = '/library_structure_a';
   static const String routeLibiraryStructureB = '/library_structure_b';
+
+  //ecatalog
+  static const String routeECatalog = '/e_catalog';
+  static const String routeECatalogA = '/e_catalog_a';
+
+  //books collection
+  static const String routeBookCollection = '/book_collection';
 
 // Пока не используется не получается развернуть через спред оператор.
   static List<AfishaData> listDay01 = [day01, day02];
@@ -188,4 +196,13 @@ class StructureData {
       'Информационно-библиографический отдел';
   static String informationLibraryDepartment =
       '''поможет подобрать литературу к реферату, проекту или выпускной квалификационной работе. Выполнит сложный тематический запрос.''';
+}
+
+class BooksCollectionData {
+  static String goncharovHeader =
+      'Гончаров И. А. : Фрегат «Паллада»: путевой дневник кругосветного путешествия,  Издательство: Эксмо; Око, 2014';
+  static String goncharovBody =
+      'Эта книга – явление в своем роде уникальное. Ни один из классиков русской литературы, ни до ни после Гончарова, не участвовал в подобном путешествии. Два с половиной года, тысячи километров по суше и по морю двигалась ответственная дипломатическая экспедиция через Британию, Мадейру, Атлантику, Южную Африку, Индонезию, Сингапур, Японию, Китай, Филиппины. Через два месяца после возвращения Ивана Александровича появились первые очерки об экспедиции, а через два года вышло в свет первое полное издание «Фрегата “Паллада”», которое выдержало множество переизданий.';
+  static String goncharovQuote =
+      '«…Пасмурно и ветрено; моросит дождь; ветер сильный. Мы идем по реке Вусуну; она широка, местами с нашу Оку. Ясно видим оба берега, низменные, закрытые плотинами, за плотинами группируются дома, кое-где видны кумирни или вообще здания, имеющие особенное назначение; они выше и наряднее прочих…. Ближе к Шанхаю река заметно оживлялась: беспрестанно встречались джонки. С своими, красно-бурого цвета, парусами, из каких-то древесных волокон и коры….»';
 }
