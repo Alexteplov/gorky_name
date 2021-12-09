@@ -11,7 +11,7 @@ class ElectronicCatalogA extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    context.watch<RoutingData>().setRouteNextSteep('empty');
+    context.watch<RoutingData>().setRouteNextSteep(GlobalVar.routeECatalogHtml);
     return SafeArea(
       child: Stack(
         children: [

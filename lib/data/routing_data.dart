@@ -14,6 +14,10 @@ import 'package:gorky_name/ui/screens/afisha/afisha_w02a.dart';
 import 'package:gorky_name/ui/screens/books_collection/book_collection.dart';
 import 'package:gorky_name/ui/screens/catalog/el_catalog.dart';
 import 'package:gorky_name/ui/screens/catalog/el_catalog_a.dart';
+import 'package:gorky_name/ui/screens/catalog/el_catalog_html.dart';
+import 'package:gorky_name/ui/screens/catalog/el_catalog_html_a.dart';
+import 'package:gorky_name/ui/screens/catalog/el_catalog_kids.dart';
+import 'package:gorky_name/ui/screens/catalog/el_catalog_menu.dart';
 import 'package:gorky_name/ui/screens/eLibs/elibs_screen.dart';
 import 'package:gorky_name/ui/screens/library_in_network/library_in_network.dart';
 import 'package:gorky_name/ui/screens/library_structure/library_structure.dart';
@@ -135,11 +139,21 @@ class RoutingData with ChangeNotifier {
       _stackW.add(const ElLibsQr(
           nameLib: GlobalVar.tiktok, qrCode: GlobalVar.qrTikTok));
     }
-    //eCatalog
-    else if (route == GlobalVar.routeECatalog) {
+    //eCatalog routeECatalogKids
+    else if (route == GlobalVar.routeECatalogMenu) {
+      _stackW.add(const ElCatalogMenu());
+    } else if (route == GlobalVar.routeECatalog) {
       _stackW.add(const ElectronicCatalog());
     } else if (route == GlobalVar.routeECatalogA) {
       _stackW.add(const ElectronicCatalogA());
+    } else if (route == GlobalVar.routeECatalogHtml) {
+      _stackW.add(ElCatalogHtml(
+        urlSrc: GlobalVar.urlECatalog,
+      ));
+    } else if (route == GlobalVar.routeECatalogKids) {
+      _stackW.add(const ElectronicCatalogKids());
+    } else if (route == GlobalVar.routeECatalogHtmlK) {
+      _stackW.add(ElCatalogHtmlA());
     }
     //books collection
     else if (route == GlobalVar.routeBookCollection) {

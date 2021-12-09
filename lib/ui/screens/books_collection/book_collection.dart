@@ -1,7 +1,7 @@
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:gorky_name/const/const_variables.dart';
 import 'package:gorky_name/data/routing_data.dart';
+import 'package:gorky_name/ui/component/widgets/html_content.dart';
 import 'package:gorky_name/ui/component/widgets/struct_custom_clipper.dart';
 import 'package:gorky_name/ui/theme/screen.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -20,13 +20,14 @@ class _BookCollectionState extends State<BookCollection> {
   //bool _showPreview = false;
   //String _image = GlobalVar.bgImgAfishaWeekendsW;
   //static double rectangleSide = 200;
+  String createdViewId = 'map_element';
+
   @override
   Widget build(BuildContext context) {
-    context
-        .watch<RoutingData>()
-        .setRouteNextSteep(GlobalVar.routeLibiraryStructureA);
+    context.watch<RoutingData>().setRouteNextSteep('empty');
     return SafeArea(
-      child: DropCapText(
+      child: HtmlContent(srcUrl: GlobalVar.urlECatalog),
+/*       DropCapText(
         'Lorem ipsum **dolor sit amet, consectetur adipiscing elit, ++sed do eiusmod++ tempor incididunt** ut labore et _dolore magna aliqua_.',
         parseInlineMarkdown: true,
         mode: DropCapMode.aside,
@@ -35,6 +36,7 @@ class _BookCollectionState extends State<BookCollection> {
         dropCapPadding: const EdgeInsets.only(right: 19.0),
         style: const TextStyle(fontSize: 18.0, height: 1.5),
       ),
+ */
     );
   }
 }

@@ -20,6 +20,9 @@ class GlobalVar {
       'Национальная электронная детская библиотека';
   static const String rules4Readers = 'Правила для читателей';
 
+  static const String elCatalogChildren =
+      'Электронный каталог книг для детей 8-10 лет';
+
 //QR codes
   static const String qrNEDB = 'image/QR_nedb.png';
   static const String qrNEB = 'image/QR_neb.png';
@@ -42,6 +45,8 @@ class GlobalVar {
   static const String logoInContact = 'image/vk_logo.png';
   static const String logoInstagram = 'image/instagram_logo.png';
   static const String logoTiktok = 'image/tiktok_logo.png';
+  static const String logoIrbis = 'image/irbis_logo.png';
+  static const String logoIrbisKids = 'image/irbisKids_logo.png';
 
 //Фоновая картинка
   static const String bgImage = 'image/main_background.jpg';
@@ -87,8 +92,16 @@ class GlobalVar {
   static const String routeLibiraryStructureB = '/library_structure_b';
 
   //ecatalog
+  static const String routeECatalogMenu = '/e_catalog_menu';
   static const String routeECatalog = '/e_catalog';
   static const String routeECatalogA = '/e_catalog_a';
+  static const String routeECatalogKids = '/e_catalog_kids';
+  static const String routeECatalogHtml = '/e_catalog_html';
+  static const String routeECatalogHtmlK = '/e_catalog_html_k';
+
+  static const String urlECatalog =
+      'http://irbis.db74.ru:8080/cgi-bin/irbis64r_15/cgiirbis_64.exe?Z21ID=&I21DBN=IBIS&P21DBN=IBIS&C21COM=F&LNG=&S21YEAR=2021';
+  static const String urlECatalogKids = 'http://irbis.db74.ru:8080/index.php';
 
   //books collection
   static const String routeBookCollection = '/book_collection';
