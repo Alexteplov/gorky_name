@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:gorky_name/const/const_variables.dart';
 import 'package:gorky_name/data/routing_data.dart';
+import 'package:gorky_name/ui/component/widgets/afisha_bottom_event.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_header_event.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_event.dart';
-import 'package:gorky_name/ui/component/widgets/afisha_qr_code.dart';
+//import 'package:gorky_name/ui/component/widgets/afisha_qr_code.dart';
 import 'package:gorky_name/ui/theme/screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 // ignore: implementation_imports
@@ -15,28 +16,15 @@ class AfishaThirdA extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Map<String, String> events = {
+      '12:00':
+          'Клуб любителей настольных игр «Сто наСтолок» - Игра «Мемо» (от 8 лет)',
+      '14:00': 'Познавательный час «Зимнее путешествие по Уралу» (7-10 лет)',
       '15:00':
-          'Проект "Учимся летать вместе с крышами" от детской писательницы Зули Стадник',
-    };
-    final Map<String, String> eventsA = {
-      '16:00': 'Прямой эфир. Обзор - игра "По следам литературных сыщиков"',
+          'Интеллектуальная игра по школьным наукам «Охотники за разумом» (от 10 лет)',
+      '16:00': 'Квиз «Литературная интуиция» (от 12 лет)',
     };
 
-    final Map<String, String> eventsB = {
-      '11:00': 'Прямой эфир. Обзор новинок о дружбе "Ты мой лучший друг!"',
-      '16:00': 'Прямой эфир. "5 интересных книг для младших школьников"',
-    };
-
-    final Map<String, String> eventsC = {
-      '11:00':
-          'Прямой эфир. "ТОП самых интересных изобретений М.В. Ломоносова"',
-      '16:00':
-          'Прямой эфир. Викторина от робота МАКСа "С Днем рождения, Дед Мороз!"',
-    };
-    final Map<String, String> eventsD = {
-      '15:00': 'Прямой эфир "Сказка-тренинг по правам ребенка"',
-    };
-    context.watch<RoutingData>().setRouteNextSteep(GlobalVar.routeAfishaW02a);
+    context.watch<RoutingData>().setRouteNextSteep(GlobalVar.routeAfishaW01a);
     return SafeArea(
       child: Stack(
         children: [
@@ -71,35 +59,13 @@ class AfishaThirdA extends StatelessWidget {
               ),
               /************************ */
               const AfishaHeaderEvent(
-                head: '15 ноября – понедельник',
+                head: '17 декабря - пятница',
               ),
               ...events.entries
                   .map((e) => AfishaEvent(time: e.key, information: e.value)),
-              const AfishaHeaderEvent(
-                head: '16 ноября – вторник',
-              ),
-              ...eventsA.entries
-                  .map((e) => AfishaEvent(time: e.key, information: e.value)),
-
-              const AfishaHeaderEvent(
-                head: '17 ноября - среда',
-              ),
-              ...eventsB.entries
-                  .map((e) => AfishaEvent(time: e.key, information: e.value)),
-              const AfishaHeaderEvent(
-                head: '18 ноября – четверг',
-              ),
-
-              ...eventsC.entries
-                  .map((e) => AfishaEvent(time: e.key, information: e.value)),
-              const AfishaHeaderEvent(
-                head: '19 ноября – пятница',
-              ),
-              ...eventsD.entries
-                  .map((e) => AfishaEvent(time: e.key, information: e.value)),
-              const AfishaQrCode(),
+              const AfishaBottomEvent(),
               const Expanded(
-                flex: 2,
+                flex: 8,
                 child: SizedBox(),
               ),
               //const BottomLeftRight(next_steep: GlobalVar.routeAfishaW01),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gorky_name/const/const_variables.dart';
 import 'package:gorky_name/data/routing_data.dart';
+import 'package:gorky_name/ui/component/widgets/afisha_bottom_event.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_header_event.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_event.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_qr_code.dart';
@@ -24,26 +25,35 @@ class AfishaSundayA extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Map<String, String> events = {
-      '11:00': 'Прямой эфир. Кукольный спектакль "Кот, Петух и Лиса"',
-    };
-    final Map<String, String> eventsA = {
       '11:00':
-          'Прямой эфир. Мастер-класс в технике скрапбукинг "Открытка для мамы"',
+          'Кружок вязания «Чудесный крючок». Знакомство с техникой вязания крючком (от 8 лет)',
+      '11:00': 'Просмотр диафильма «Морозко»(4-7 лет)',
+      '12:00':
+          'Литературный клуб «РасЧитайка». Литературно-игровое занятие «Мы едем в Дедморозовку» - по книгам Андрея Усачева (4-7 лет)',
+      '14:00':
+          'Клуб любителей настольных игр «Сто наСтолок». Игра «Экивоки» (от 8 лет)',
+      '14:30':
+          'Интерактивное занятие «Умный пол». Игра «Подбери узор» (6-10 лет)',
       '15:00':
-          'Видеоурок №2 "Академия безопасности 2.0: Оказание первой помощи детьми"',
+          'Мастерилка с художником.  Мастер-класс «Символ года» (от 5 лет)',
+      '16:00':
+          'Клуб «БиблиоБЛОГИНГ». Занятие по теме: «Разработка идеи и концепции блога»',
+      '16:00':
+          'Клуб «БиблиоБЛОГИНГ». Занятие  по теме: «Разработка идеи и концепции блога» (от 10 лет)',
     };
+
     context.watch<RoutingData>().setRouteNextSteep('empty');
     return SafeArea(
       child: Stack(
         children: [
           Opacity(
-            opacity: 0.6,
+            opacity: 0.3,
             child: Container(
               height: Screen.height(context),
               width: Screen.width(context),
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage(GlobalVar.bgImgAfishaWeekendsW),
+                  image: AssetImage(GlobalVar.bgImgAfishaWeekends),
                   fit: BoxFit.fill,
                 ),
               ),
@@ -67,16 +77,12 @@ class AfishaSundayA extends StatelessWidget {
               ),
               /************************ */
               const AfishaHeaderEvent(
-                head: '20 ноября – суббота',
+                head: '12 декабря – воскресенье',
               ),
               ...events.entries
                   .map((e) => AfishaEvent(time: e.key, information: e.value)),
-              const AfishaHeaderEvent(
-                head: '21 ноября – воскресенье',
-              ),
-              ...eventsA.entries
-                  .map((e) => AfishaEvent(time: e.key, information: e.value)),
-              const AfishaQrCode(),
+
+              const AfishaBottomEvent(),
               const Expanded(
                 flex: 8,
                 child: SizedBox(),

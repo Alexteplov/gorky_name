@@ -32,7 +32,7 @@ class AfishaSunday extends StatelessWidget {
       '16:00':
           'Клуб «Библиоголос». Занятие по ораторскому мастерству по теме: «Интонация»   (от 10 лет)',
     };
-    context.watch<RoutingData>().setRouteNextSteep('empty');
+    context.watch<RoutingData>().setRouteNextSteep(GlobalVar.routeAfisha01);
     return SafeArea(
       child: Stack(
         children: [
