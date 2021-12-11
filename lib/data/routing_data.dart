@@ -11,7 +11,14 @@ import 'package:gorky_name/ui/screens/afisha/afisha_w01.dart';
 import 'package:gorky_name/ui/screens/afisha/afisha_w01a.dart';
 import 'package:gorky_name/ui/screens/afisha/afisha_w02.dart';
 import 'package:gorky_name/ui/screens/afisha/afisha_w02a.dart';
-import 'package:gorky_name/ui/screens/books_collection/book_collection.dart';
+import 'package:gorky_name/ui/screens/books_collection/book_collection_history.dart';
+import 'package:gorky_name/ui/screens/books_collection/book_collection_history_a.dart';
+import 'package:gorky_name/ui/screens/books_collection/book_collection_russia.dart';
+import 'package:gorky_name/ui/screens/books_collection/book_collection_russia_a.dart';
+import 'package:gorky_name/ui/screens/books_collection/book_collection_travels.dart';
+import 'package:gorky_name/ui/screens/books_collection/book_collection_travels_a.dart';
+import 'package:gorky_name/ui/screens/books_collection/book_collection_travels_b.dart';
+import 'package:gorky_name/ui/screens/books_collection/books_menu.dart';
 import 'package:gorky_name/ui/screens/catalog/el_catalog.dart';
 import 'package:gorky_name/ui/screens/catalog/el_catalog_a.dart';
 import 'package:gorky_name/ui/screens/catalog/el_catalog_html.dart';
@@ -156,8 +163,22 @@ class RoutingData with ChangeNotifier {
       _stackW.add(ElCatalogHtmlA());
     }
     //books collection
-    else if (route == GlobalVar.routeBookCollection) {
-      _stackW.add(const BookCollection());
+    else if (route == GlobalVar.routeBookCollectionMenu) {
+      _stackW.add(const BooksMenu());
+    } else if (route == GlobalVar.routeBookCollectionTravels) {
+      _stackW.add(const BookCollectionTravels());
+    } else if (route == GlobalVar.routeBookCollectionTravelsA) {
+      _stackW.add(const BookCollectionTravelsA());
+    } else if (route == GlobalVar.routeBookCollectionTravelsB) {
+      _stackW.add(const BookCollectionTravelsB());
+    } else if (route == GlobalVar.routeBookCollectionRussia) {
+      _stackW.add(const BookCollectionRussia());
+    } else if (route == GlobalVar.routeBookCollectionRussiaA) {
+      _stackW.add(const BookCollectionRussiaA());
+    } else if (route == GlobalVar.routeBookCollectionHistory) {
+      _stackW.add(const BookCollectionHistory());
+    } else if (route == GlobalVar.routeBookCollectionHistoryA) {
+      _stackW.add(const BookCollectionHistoryA());
     } else {
       _stackW.add(const MainMenu());
       _nextSteep = 'empty';

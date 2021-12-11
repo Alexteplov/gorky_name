@@ -23,6 +23,11 @@ class GlobalVar {
   static const String elCatalogChildren =
       'Электронный каталог книг для детей 8-10 лет';
 
+//Книжные коллекции
+  static const String booksCollectionTravel = 'Великие русские путешественники';
+  static const String booksCollectionRussia = 'Книги о России';
+  static const String booksCollectionHistory = 'Пешком в историю';
+
 //QR codes
   static const String qrNEDB = 'image/QR_nedb.png';
   static const String qrNEB = 'image/QR_neb.png';
@@ -104,7 +109,15 @@ class GlobalVar {
   static const String urlECatalogKids = 'http://irbis.db74.ru:8080/index.php';
 
   //books collection
-  static const String routeBookCollection = '/book_collection';
+  static const String routeBookCollectionMenu = '/book_collection_menu';
+  static const String routeBookCollectionTravels = '/book_collection_travels';
+  static const String routeBookCollectionTravelsA = '/book_collection_travelsA';
+  static const String routeBookCollectionTravelsB = '/book_collection_travelsB';
+  static const String routeBookCollectionRussia = '/book_collection_russia';
+  static const String routeBookCollectionRussiaA = '/book_collection_russia_a';
+  static const String routeBookCollectionHistory = '/book_collection_history';
+  static const String routeBookCollectionHistoryA =
+      '/book_collection_history_a';
 
 // Пока не используется не получается развернуть через спред оператор.
   static List<AfishaData> listDay01 = [day01, day02];
@@ -212,10 +225,27 @@ class StructureData {
 }
 
 class BooksCollectionData {
-  static String goncharovHeader =
+  //image
+  static String logoBooksCollection =
+      'image/booksCollections/logo_collection.png';
+  static String imgGoncharovRecords =
+      'image/booksCollections/goncharov_records.jpg';
+  static String imgGoncharovFregat =
+      'image/booksCollections/goncharov_fregat.jpg';
+  static String imgKrasheninnikov = 'image/booksCollections/krasheninnikov.jpg';
+  static String imgCibkov = 'image/booksCollections/cibkov.jpg';
+  static String imgOldRoom = 'image/booksCollections/old_room.jpg';
+  static String imgTransib = 'image/booksCollections/transib.jpg';
+  static String imgDay = 'image/booksCollections/day.jpg';
+  static String imgScena = 'image/booksCollections/in_scene.jpg';
+  static String imgKonops = 'image/booksCollections/konops.jpg';
+  static String imgSerkova = 'image/booksCollections/serkova.jpg';
+
+/*   static String goncharovHeader =
       'Гончаров И. А. : Фрегат «Паллада»: путевой дневник кругосветного путешествия,  Издательство: Эксмо; Око, 2014';
   static String goncharovBody =
       'Эта книга – явление в своем роде уникальное. Ни один из классиков русской литературы, ни до ни после Гончарова, не участвовал в подобном путешествии. Два с половиной года, тысячи километров по суше и по морю двигалась ответственная дипломатическая экспедиция через Британию, Мадейру, Атлантику, Южную Африку, Индонезию, Сингапур, Японию, Китай, Филиппины. Через два месяца после возвращения Ивана Александровича появились первые очерки об экспедиции, а через два года вышло в свет первое полное издание «Фрегата “Паллада”», которое выдержало множество переизданий.';
   static String goncharovQuote =
       '«…Пасмурно и ветрено; моросит дождь; ветер сильный. Мы идем по реке Вусуну; она широка, местами с нашу Оку. Ясно видим оба берега, низменные, закрытые плотинами, за плотинами группируются дома, кое-где видны кумирни или вообще здания, имеющие особенное назначение; они выше и наряднее прочих…. Ближе к Шанхаю река заметно оживлялась: беспрестанно встречались джонки. С своими, красно-бурого цвета, парусами, из каких-то древесных волокон и коры….»';
+ */
 }

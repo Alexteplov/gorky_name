@@ -64,7 +64,7 @@ class AfishaSaturdayA extends StatelessWidget {
               /************************ */
               const AfishaHeaderEvent(
                 head:
-                    '11 декабря – суббота\n          Фестиваль НПЛ «Читаем. Думаем. Творим»',
+                    '18 декабря – суббота\n          Фестиваль НПЛ «Читаем. Думаем. Творим»',
               ),
               ...events.entries
                   .map((e) => AfishaEvent(time: e.key, information: e.value)),

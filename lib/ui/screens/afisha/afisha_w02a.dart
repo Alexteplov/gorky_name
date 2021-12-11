@@ -77,7 +77,7 @@ class AfishaSundayA extends StatelessWidget {
               ),
               /************************ */
               const AfishaHeaderEvent(
-                head: '12 декабря – воскресенье',
+                head: '19 декабря – воскресенье',
               ),
               ...events.entries
                   .map((e) => AfishaEvent(time: e.key, information: e.value)),
