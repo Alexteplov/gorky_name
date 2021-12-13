@@ -76,7 +76,7 @@ class _BookCollectionHistoryAState extends State<BookCollectionHistoryA> {
                                 image: DecorationImage(
                                     image: AssetImage(
                                         BooksCollectionData.imgScena),
-                                    fit: BoxFit.cover),
+                                    fit: BoxFit.scaleDown),
                               ),
                             ),
                           ),
@@ -182,7 +182,7 @@ class _BookCollectionHistoryAState extends State<BookCollectionHistoryA> {
                                 image: DecorationImage(
                                     image:
                                         AssetImage(BooksCollectionData.imgDay),
-                                    fit: BoxFit.cover),
+                                    fit: BoxFit.scaleDown),
                               ),
                             ),
                           ),

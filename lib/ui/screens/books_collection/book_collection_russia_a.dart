@@ -76,7 +76,7 @@ class _BookCollectionRussiaAState extends State<BookCollectionRussiaA> {
                                 image: DecorationImage(
                                     image: AssetImage(
                                         BooksCollectionData.imgTransib),
-                                    fit: BoxFit.cover),
+                                    fit: BoxFit.scaleDown),
                               ),
                             ),
                           ),

@@ -78,7 +78,7 @@ class _BookCollectionHistoryState extends State<BookCollectionHistory> {
                                 image: DecorationImage(
                                     image: AssetImage(
                                         BooksCollectionData.imgKonops),
-                                    fit: BoxFit.cover),
+                                    fit: BoxFit.scaleDown),
                               ),
                             ),
                           ),
@@ -183,7 +183,7 @@ class _BookCollectionHistoryState extends State<BookCollectionHistory> {
                                 image: DecorationImage(
                                     image: AssetImage(
                                         BooksCollectionData.imgSerkova),
-                                    fit: BoxFit.cover),
+                                    fit: BoxFit.scaleDown),
                               ),
                             ),
                           ),

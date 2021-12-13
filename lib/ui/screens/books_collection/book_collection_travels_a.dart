@@ -80,7 +80,7 @@ class _BookCollectionTravelsAState extends State<BookCollectionTravelsA> {
                                 image: DecorationImage(
                                     image: AssetImage(BooksCollectionData
                                         .imgGoncharovRecords),
-                                    fit: BoxFit.cover),
+                                    fit: BoxFit.scaleDown),
                               ),
                             ),
                           ),
@@ -199,7 +199,7 @@ class _BookCollectionTravelsAState extends State<BookCollectionTravelsA> {
                                 image: DecorationImage(
                                     image: AssetImage(
                                         BooksCollectionData.imgKrasheninnikov),
-                                    fit: BoxFit.cover),
+                                    fit: BoxFit.scaleDown),
                               ),
                             ),
                           ),

@@ -77,7 +77,7 @@ class _BookCollectionTravelsBState extends State<BookCollectionTravelsB> {
                                 image: DecorationImage(
                                     image: AssetImage(
                                         BooksCollectionData.imgCibkov),
-                                    fit: BoxFit.cover),
+                                    fit: BoxFit.scaleDown),
                               ),
                             ),
                           ),

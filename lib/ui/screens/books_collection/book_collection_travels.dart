@@ -123,7 +123,7 @@ class _BookCollectionTravelsState extends State<BookCollectionTravels> {
                                 image: DecorationImage(
                                     image: AssetImage(
                                         BooksCollectionData.imgGoncharovFregat),
-                                    fit: BoxFit.cover),
+                                    fit: BoxFit.scaleDown),
                               ),
                             ),
                           ),
