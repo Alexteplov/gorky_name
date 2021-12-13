@@ -32,7 +32,7 @@ class MainMenu extends StatelessWidget {
                 MenuButton(
                   context: context,
                   nameButton: GlobalVar.colleagues,
-                  //route: GlobalVar.routeElLibs
+                  route: GlobalVar.routeStaffMenu,
                 ),
                 const SizedBox(
                   height: 20,
@@ -85,7 +85,7 @@ class MainMenu extends StatelessWidget {
                 MenuButton(
                     context: context,
                     nameButton: GlobalVar.billboard,
-                    route: GlobalVar.routeAfisha03),
+                    route: GlobalVar.routeAfisha01),
                 const SizedBox(
                   height: 20,
                 ),

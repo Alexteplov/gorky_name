@@ -31,6 +31,8 @@ import 'package:gorky_name/ui/screens/library_structure/library_structure.dart';
 import 'package:gorky_name/ui/screens/library_structure/library_structure_a.dart';
 import 'package:gorky_name/ui/screens/library_structure/library_structure_b.dart';
 import 'package:gorky_name/ui/screens/rules_for_readers.dart';
+import 'package:gorky_name/ui/screens/staff/staff_administration.dart';
+import 'package:gorky_name/ui/screens/staff/staff_menu.dart';
 
 import '../const/const_variables.dart';
 
@@ -179,6 +181,12 @@ class RoutingData with ChangeNotifier {
       _stackW.add(const BookCollectionHistory());
     } else if (route == GlobalVar.routeBookCollectionHistoryA) {
       _stackW.add(const BookCollectionHistoryA());
+
+      //Staff menu routeStaffMenu
+    } else if (route == GlobalVar.routeStaffMenu) {
+      _stackW.add(const StaffMenu());
+    } else if (route == GlobalVar.routeStaffAdministration) {
+      _stackW.add(const StaffAdministration());
     } else {
       _stackW.add(const MainMenu());
       _nextSteep = 'empty';

@@ -119,6 +119,9 @@ class GlobalVar {
   static const String routeBookCollectionHistoryA =
       '/book_collection_history_a';
 
+  //staff
+  static const String routeStaffMenu = '/staff_menu';
+  static const String routeStaffAdministration = '/staff_administration';
 // Пока не используется не получается развернуть через спред оператор.
   static List<AfishaData> listDay01 = [day01, day02];
   static AfishaData day01 = AfishaData(
@@ -248,4 +251,21 @@ class BooksCollectionData {
   static String goncharovQuote =
       '«…Пасмурно и ветрено; моросит дождь; ветер сильный. Мы идем по реке Вусуну; она широка, местами с нашу Оку. Ясно видим оба берега, низменные, закрытые плотинами, за плотинами группируются дома, кое-где видны кумирни или вообще здания, имеющие особенное назначение; они выше и наряднее прочих…. Ближе к Шанхаю река заметно оживлялась: беспрестанно встречались джонки. С своими, красно-бурого цвета, парусами, из каких-то древесных волокон и коры….»';
  */
+}
+
+class StaffData {
+  static const Color headerColor = Color(0xFF6A3025);
+  static const String staffLogo = 'image/staff/staff_logo.png';
+  static const String staffDirector = 'image/staff/director.jpg';
+
+  //Departments
+  static const String departmentReaders = 'ОТДЕЛ ПО РАБОТЕ С ЧИТАТЕЛЯМИ';
+  static const String departmentInfo = 'ИНФОРМАЦИОННО-БИБЛИОГРАФИЧЕСКИЙ ОТДЕЛ';
+  static const String departmentCoordinations =
+      'КООРДИОЦИОННО-МЕТОДИЧЕСКИЙ ОТДЕЛ';
+  static const String departmentFond = 'ОТДЕЛ ФОРМИРОВАНИЯ И ОРГАНИЗАЦИИ ФОНДА';
+  static const String departmentRedaction = 'РЕДАКЦИОННО-ИЗДАТЕЛЬСКИЙ ОТДЕЛ';
+  static const String departmentInformation =
+      'ОТДЕЛ АВТОМАТИЗАЦИИ БИБЛИОТЕЧНЫХ ТЕХНОЛОГИЙ';
+  static const String departmentAdministration = 'АДМИНИСТРАЦИЯ';
 }

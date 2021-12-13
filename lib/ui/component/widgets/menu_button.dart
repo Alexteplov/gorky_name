@@ -12,7 +12,8 @@ class MenuButton extends StatelessWidget {
       required this.nameButton,
       this.route = '',
       this.logo = '',
-      this.buttonHeight = 0.07})
+      this.buttonHeight = 0.07,
+      this.buttonWidth = 0.6})
       : super(key: key);
 
   final BuildContext context;
@@ -20,12 +21,13 @@ class MenuButton extends StatelessWidget {
   String route;
   String logo;
   double buttonHeight;
+  double buttonWidth;
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-          fixedSize: Size(Screen.width(context) * 0.6,
+          fixedSize: Size(Screen.width(context) * buttonWidth,
               Screen.height(context) * buttonHeight),
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))),

@@ -4,26 +4,21 @@ import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:gorky_name/ui/theme/screen.dart';
 
+// ignore: must_be_immutable
 class HtmlContent extends StatefulWidget {
   String srcUrl;
   HtmlContent({Key? key, required this.srcUrl}) : super(key: key);
 
   @override
+  // ignore: no_logic_in_create_state
   _HtmlContentState createState() => _HtmlContentState(srcUrl);
 }
 
 class _HtmlContentState extends State<HtmlContent> {
   late Widget _iframeWidget;
-  html.IFrameElement _iframeElement = html.IFrameElement();
+  final html.IFrameElement _iframeElement = html.IFrameElement();
   String srcUrl;
-  _HtmlContentState(this.srcUrl) {
-    Future.delayed(
-        const Duration(milliseconds: 1000),
-        () => setState(() {
-              _iframeElement.src = srcUrl;
-              print('Future url=${srcUrl}');
-            }));
-  }
+  _HtmlContentState(this.srcUrl);
 
   @override
   void initState() {
@@ -47,7 +42,7 @@ class _HtmlContentState extends State<HtmlContent> {
       key: UniqueKey(),
       viewType: 'iframeElement',
     );
-    print('url=${srcUrl}');
+    //print('url=${srcUrl}');
   }
 
   @override
