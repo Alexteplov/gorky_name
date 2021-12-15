@@ -122,7 +122,9 @@ class GlobalVar {
   //staff
   static const String routeStaffMenu = '/staff_menu';
   static const String routeStaffAdministration = '/staff_administration';
+  static const String routeStaffDepReaders = '/staff_department_readers';
 // Пока не используется не получается развернуть через спред оператор.
+  /*
   static List<AfishaData> listDay01 = [day01, day02];
   static AfishaData day01 = AfishaData(
       '25 октября - понедельник',
@@ -148,6 +150,7 @@ class GlobalVar {
         '16:00': 'Тренинг по актерскому мастерству "Верю - не верю" (от 8 лет)',
       },
       300);
+      */
 }
 
 class StructureData {
@@ -257,6 +260,11 @@ class StaffData {
   static const Color headerColor = Color(0xFF6A3025);
   static const String staffLogo = 'image/staff/staff_logo.png';
   static const String staffDirector = 'image/staff/director.jpg';
+  static const String staffSamDirector = 'image/staff/sam_dir.jpg';
+  static const String staffEmptyMan = 'image/staff/empty_man.jpg';
+  static const String staffEmptyWoman = 'image/staff/empty_woman.jpg';
+  static const String staffDepReadersArz = 'image/staff/arsamasceva.jpg';
+  static const String staffDepReadersBuk = 'image/staff/bukreeva.jpg';
 
   //Departments
   static const String departmentReaders = 'ОТДЕЛ ПО РАБОТЕ С ЧИТАТЕЛЯМИ';
