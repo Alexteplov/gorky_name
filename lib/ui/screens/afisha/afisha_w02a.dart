@@ -4,7 +4,7 @@ import 'package:gorky_name/data/routing_data.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_bottom_event.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_header_event.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_event.dart';
-import 'package:gorky_name/ui/component/widgets/afisha_qr_code.dart';
+//import 'package:gorky_name/ui/component/widgets/afisha_qr_code.dart';
 import 'package:gorky_name/ui/theme/screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 // ignore: implementation_imports
@@ -42,7 +42,7 @@ class AfishaSundayA extends StatelessWidget {
           'Клуб «БиблиоБЛОГИНГ». Занятие  по теме: «Разработка идеи и концепции блога» (от 10 лет)',
     };
 
-    context.watch<RoutingData>().setRouteNextSteep('empty');
+    context.watch<RoutingData>().setRouteNextSteep(GlobalVar.routeAfisha01);
     return SafeArea(
       child: Stack(
         children: [

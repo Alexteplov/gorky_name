@@ -8,28 +8,21 @@ import 'package:google_fonts/google_fonts.dart';
 // ignore: implementation_imports
 import 'package:provider/src/provider.dart';
 
+import '../../component/widgets/afisha_bottom_event.dart';
+
 class Afisha extends StatelessWidget {
   const Afisha({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-/* 
     final Map<String, String> events = {
-      '14:00': 'Час интересных сообщений "Безопасность в городе" (7-10 лет)',
-      '15:00': 'Квиз "Литературная интуиция" (от 14 лет)',
-      '16:00':
-          'Час кино. Просмотр фильма "Там, где мечтают медведи" (от 10 лет)',
-      '16:30':
-          'Литературно-игровое занятие "Ключ от сказки Романа Сефа" (5-7 лет)',
+      '15:00': 'Квест «Новогодние приключения МАКСа и Эла» (от 10 лет)',
     };
- */
+
     final Map<String, String> eventsA = {
-      '10:00':
-          'Литературно-игровое занятие «Мы едем в Дедморозовку» - по книгам Андрея Усачева (5-7 лет)',
-      '14:00':
-          'Квест «Секретное слово для МАКСа, или Посвящение в пятиклассники» (от 10 лет)',
-      '15:00':
-          'Кинопросмотр и обсуждение фильма «Шайба» с обзором художественных книг по теме: дружба и взаимовыручка (от 10 лет)',
+      '15:00': 'Квест «Новогодние приключения МАКСа и Эла» (от 10 лет)',
+      '16:00':
+          'Клуб любителей настольных игр «Сто наСтолок». Игра «Прятки» (от 6 до 10 лет)',
     };
     context.watch<RoutingData>().setRouteNextSteep(GlobalVar.routeAfisha02);
     return SafeArea(
@@ -65,21 +58,21 @@ class Afisha extends StatelessWidget {
                 ),
               ),
               /************************ */
-/*               const AfishaHeaderEvent(
-                head: '25 октября - понедельник',
+              const AfishaHeaderEvent(
+                head: '20 декабря - понедельник',
               ),
               ...events.entries
                   .map((e) => AfishaEvent(time: e.key, information: e.value)),
-              const AfishaBottomEvent(),
- */ /********************* */
+              //const AfishaBottomEvent(),
+              /********************* */
 
               const AfishaHeaderEvent(
-                head: '14 декабря – вторник',
+                head: '21 декабря – вторник',
               ),
 
               ...eventsA.entries
                   .map((e) => AfishaEvent(time: e.key, information: e.value)),
-              //const AfishaBottomEvent(),
+              const AfishaBottomEvent(),
 
               const Expanded(
                 flex: 8,

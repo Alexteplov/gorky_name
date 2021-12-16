@@ -4,7 +4,7 @@ import 'package:gorky_name/data/routing_data.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_bottom_event.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_header_event.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_event.dart';
-import 'package:gorky_name/ui/component/widgets/afisha_qr_code.dart';
+//import 'package:gorky_name/ui/component/widgets/afisha_qr_code.dart';
 import 'package:gorky_name/ui/theme/screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 // ignore: implementation_imports
@@ -16,34 +16,25 @@ class AfishaSunday extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Map<String, String> events = {
-      '10:00 – 18:00':
-          'День вопросов и ответов «Что ты должен знать о Конституции Российской Федерации»',
-      '11:00': 'Просмотр диафильма «Сказка городка Жур-Жур» (4-7 лет)',
+      '12:00': 'Кукольный спектакль «Снеговик-почтовик» (3 -7 лет)',
       '12:00':
-          'Киноурок. Просмотр и обсуждение фильма «Большая восьмерка». Тема «Дружба» (от 8 лет)',
-      '12:00':
-          'Литературный клуб «РасЧитайка». Литературно- игровой час по сказкам Т. Александровой «Давай дружить, Кузька!»  (4-6 лет)',
-      '14:30':
-          'Интерактивное образовательное занятие «Умный пол» - «Медаль за логику» (6 -10 лет)',
-      '14:30':
-          'Клуб любителей настольных игр «Сто наСтолок». Игра «ДаНетки» (от 10  лет)',
-      '15:00':
-          'Творческая мастерская «#Сделай сам!». Мастер-класс «Новогодняя игрушка» с украшением Библиотечного Дерева (от 5 лет)',
+          'Мастерская Деда Мороза. Мастер-класс «Новогодняя поделка» (от 8 лет)',
+      '14:30': 'Новогодняя викторина с роботом МАКСом (7 - 10 лет)',
       '16:00':
-          'Клуб «Библиоголос». Занятие по ораторскому мастерству по теме: «Интонация»   (от 10 лет)',
+          'Мастерская Деда Мороза. Мастер-класс «Новогодняя игрушка» (от 6 лет)',
     };
-    context.watch<RoutingData>().setRouteNextSteep(GlobalVar.routeAfisha01);
+    context.watch<RoutingData>().setRouteNextSteep('empty');
     return SafeArea(
       child: Stack(
         children: [
           Opacity(
-            opacity: 0.3,
+            opacity: 0.2,
             child: Container(
               height: Screen.height(context),
               width: Screen.width(context),
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage(GlobalVar.bgImgAfishaWeekends),
+                  image: AssetImage(GlobalVar.bgImgAfisha02),
                   fit: BoxFit.fill,
                 ),
               ),
@@ -67,7 +58,7 @@ class AfishaSunday extends StatelessWidget {
               ),
               /************************ */
               const AfishaHeaderEvent(
-                head: '12 декабря – воскресенье',
+                head: '26 декабря – воскресенье',
               ),
               ...events.entries
                   .map((e) => AfishaEvent(time: e.key, information: e.value)),

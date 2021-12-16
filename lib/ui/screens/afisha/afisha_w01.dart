@@ -15,15 +15,16 @@ class AfishaSaturday extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Map<String, String> events = {
-      '11:00': 'Кукольный спектакль по сказкам Геннадия Цыферова (4-7 лет)',
+      '11:00':
+          '«Новый год на песке» - занятие творческого кружка «Сказка на песке» (3 - 5 лет)',
+      '11:00':
+          'Мастерская Деда Мороза. Мастер-класс «Новогодняя открытка» (от 6 лет)',
       '12:00':
-          '«Зима из песка» - занятие творческого кружка «Сказка на песке» (3 - 5 лет)',
-      '12:00':
-          'Библиотечная лаборатория «Круговорот воды в природе» с мастер-классом в технике пластилинография (от 8 лет)',
+          'Клуб любителей настольных игр «Сто наСтолок». Игра «Дженга» (от 8 лет)',
+      '15:30':
+          'Мастерская Деда Мороза. Елочная игрушка «Новогоднее лукошко» (от 10 лет)',
       '16:00':
-          'Клуб любителей настольных игр «Сто наСтолок». Игра «Гембло» (6-10 лет)',
-      '17:00':
-          'Клуб любителей настольных игр «Сто наСтолок». Игра «Абраказам» (от 8 лет)',
+          '«Новый год на песке» - занятие творческого кружка «Сказка на песке» (3 - 5 лет)',
     };
     context.watch<RoutingData>().setRouteNextSteep(GlobalVar.routeAfishaW02);
     return SafeArea(
@@ -36,7 +37,7 @@ class AfishaSaturday extends StatelessWidget {
               width: Screen.width(context),
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage(GlobalVar.bgImgAfishaWeekendsW),
+                  image: AssetImage(GlobalVar.bgImgAfisha01),
                   fit: BoxFit.fill,
                 ),
               ),
@@ -60,7 +61,7 @@ class AfishaSaturday extends StatelessWidget {
               ),
               /************************ */
               const AfishaHeaderEvent(
-                head: '11 декабря – суббота',
+                head: '25 декабря – суббота',
               ),
               ...events.entries
                   .map((e) => AfishaEvent(time: e.key, information: e.value)),

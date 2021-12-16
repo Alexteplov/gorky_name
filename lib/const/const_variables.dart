@@ -57,6 +57,9 @@ class GlobalVar {
   static const String bgImage = 'image/main_background.jpg';
   static const String logoImg = 'image/LIB_logotype.png';
   static const String bgImgAfisha = 'image/bgImgAfishaWeekendsWinter2.jpg';
+  static const String bgImgAfisha01 = 'image/bgImgAfishaWeekendsWinter4.jpg';
+  static const String bgImgAfisha02 = 'image/bgImgAfishaWeekendsWinter5.jpg';
+  static const String bgImgAfisha03 = 'image/bgImgAfishaWeekendsWinter6.jpg';
   static const String bgImgAfishaWeekends =
       'image/bgImgAfishaWeekendsWinter3.jpg';
   static const String bgImgAfishaWeekendsW =
@@ -265,6 +268,7 @@ class StaffData {
   static const String staffEmptyWoman = 'image/staff/empty_woman.jpg';
   static const String staffDepReadersArz = 'image/staff/arsamasceva.jpg';
   static const String staffDepReadersBuk = 'image/staff/bukreeva.jpg';
+  static const String staffDepReadersZai = 'image/staff/zaikova.jpg';
 
   //Departments
   static const String departmentReaders = 'ОТДЕЛ ПО РАБОТЕ С ЧИТАТЕЛЯМИ';
