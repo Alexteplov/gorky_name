@@ -269,6 +269,12 @@ class StaffData {
   static const String staffDepReadersArz = 'image/staff/arsamasceva.jpg';
   static const String staffDepReadersBuk = 'image/staff/bukreeva.jpg';
   static const String staffDepReadersZai = 'image/staff/zaikova.jpg';
+  static const String staffDepReadersKun = 'image/staff/kunakkildina.jpg';
+  static const String staffDepReadersNas = 'image/staff/nasirova.jpg';
+  static const String staffDepReadersPro = 'image/staff/prosvirina.jpg';
+  static const String staffDepReadersRya = 'image/staff/ryabchenko.jpg';
+  static const String staffDepReadersUru = 'image/staff/urusheva.jpg';
+  static const String staffDepReadersHiz = 'image/staff/hizhnyak.jpg';
 
   //Departments
   static const String departmentReaders = 'ОТДЕЛ ПО РАБОТЕ С ЧИТАТЕЛЯМИ';
