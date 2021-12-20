@@ -126,6 +126,9 @@ class GlobalVar {
   static const String routeStaffMenu = '/staff_menu';
   static const String routeStaffAdministration = '/staff_administration';
   static const String routeStaffDepReaders = '/staff_department_readers';
+  static const String routeStaffDepInfo = '/staff_department_info';
+  static const String routeStaffDepCoordination =
+      '/staff_department_coordination';
 // Пока не используется не получается развернуть через спред оператор.
   /*
   static List<AfishaData> listDay01 = [day01, day02];
@@ -275,6 +278,16 @@ class StaffData {
   static const String staffDepReadersRya = 'image/staff/ryabchenko.jpg';
   static const String staffDepReadersUru = 'image/staff/urusheva.jpg';
   static const String staffDepReadersHiz = 'image/staff/hizhnyak.jpg';
+  //Info
+  static const String staffDepInfoVin = 'image/staff/vinnik.jpg';
+  static const String staffDepInfoCir = 'image/staff/cirazhitdinova.jpg';
+  static const String staffDepInfoYaz = 'image/staff/yazenko.jpg';
+
+//Coordination
+  static const String staffDepCoorBaz = 'image/staff/bazgutdinova.jpg';
+  static const String staffDepCoorRom = 'image/staff/romashkina.jpg';
+  static const String staffDepCoorSaf = 'image/staff/safonova.jpg';
+  static const String staffDepCoorUda = 'image/staff/udalova.jpg';
 
   //Departments
   static const String departmentReaders = 'ОТДЕЛ ПО РАБОТЕ С ЧИТАТЕЛЯМИ';

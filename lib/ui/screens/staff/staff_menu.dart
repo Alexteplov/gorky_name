@@ -61,7 +61,7 @@ class StaffMenu extends StatelessWidget {
                 MenuButton(
                   context: context,
                   nameButton: StaffData.departmentInfo,
-                  //route: GlobalVar.routeBookCollectionHistory,
+                  route: GlobalVar.routeStaffDepInfo,
                   logo: StaffData.staffLogo,
                   buttonHeight: 0.1,
                   buttonWidth: 0.8,
@@ -72,7 +72,7 @@ class StaffMenu extends StatelessWidget {
                 MenuButton(
                   context: context,
                   nameButton: StaffData.departmentCoordinations,
-                  //route: GlobalVar.routeBookCollectionHistory,
+                  route: GlobalVar.routeStaffDepCoordination,
                   logo: StaffData.staffLogo,
                   buttonHeight: 0.08,
                   buttonWidth: 0.8,
