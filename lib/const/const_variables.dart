@@ -129,6 +129,7 @@ class GlobalVar {
   static const String routeStaffDepInfo = '/staff_department_info';
   static const String routeStaffDepCoordination =
       '/staff_department_coordination';
+  static const String routeStaffDepFond = '/staff_department_fond';
 // Пока не используется не получается развернуть через спред оператор.
   /*
   static List<AfishaData> listDay01 = [day01, day02];

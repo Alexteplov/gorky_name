@@ -33,6 +33,7 @@ import 'package:gorky_name/ui/screens/library_structure/library_structure_b.dart
 import 'package:gorky_name/ui/screens/rules_for_readers.dart';
 import 'package:gorky_name/ui/screens/staff/staff_administration.dart';
 import 'package:gorky_name/ui/screens/staff/staff_department_coordination.dart';
+import 'package:gorky_name/ui/screens/staff/staff_department_fond.dart';
 import 'package:gorky_name/ui/screens/staff/staff_department_info.dart';
 import 'package:gorky_name/ui/screens/staff/staff_department_readers.dart';
 import 'package:gorky_name/ui/screens/staff/staff_menu.dart';
@@ -196,6 +197,8 @@ class RoutingData with ChangeNotifier {
       _stackW.add(const StaffDepartmentInfo());
     } else if (route == GlobalVar.routeStaffDepCoordination) {
       _stackW.add(const StaffDepartmentCoordination());
+      } else if (route == GlobalVar.routeStaffDepFond) {
+      _stackW.add(const StaffDepartmentFond());
     } else {
       _stackW.add(const MainMenu());
       _nextSteep = 'empty';
