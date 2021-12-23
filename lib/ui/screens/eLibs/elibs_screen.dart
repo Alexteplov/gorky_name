@@ -31,22 +31,24 @@ class ElLibs extends StatelessWidget {
                 MenuButton(
                     context: context,
                     nameButton: GlobalVar.elNEDB,
-                    route: GlobalVar.routeElLibNEDB),
+                    route: GlobalVar.routeElLibNEDB,
+                    logo: GlobalVar.logoNEDB),
                 const SizedBox(
                   height: 20,
                 ),
                 MenuButton(
-                  context: context,
-                  nameButton: GlobalVar.elNEB,
-                  route: GlobalVar.routeElLibNEB,
-                ),
+                    context: context,
+                    nameButton: GlobalVar.elNEB,
+                    route: GlobalVar.routeElLibNEB,
+                    logo: GlobalVar.logoNEB),
                 const SizedBox(
                   height: 20,
                 ),
                 MenuButton(
                     context: context,
                     nameButton: GlobalVar.elLitress,
-                    route: GlobalVar.routeElLibLitres),
+                    route: GlobalVar.routeElLibLitres,
+                    logo: GlobalVar.logoLitres),
                 const SizedBox(
                   height: 20,
                 ),

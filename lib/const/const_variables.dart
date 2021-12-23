@@ -12,10 +12,10 @@ class GlobalVar {
   static const String billboard = 'Афиша';
   static const String structure = 'Структура';
   static const String elLibs = 'Электронные библиотеки';
-  static const String elLitress = 'ЛИТРЕС';
-  static const String elNEB = 'НЭБ';
+  static const String elLitress = 'ЛИТРЕС  ';
+  static const String elNEB = 'НЭБ  ';
   static const String elNEBFull = 'Национальная электронная библиотека';
-  static const String elNEDB = 'НЭДБ';
+  static const String elNEDB = 'НЭДБ  ';
   static const String elNEDBFull =
       'Национальная электронная детская библиотека';
   static const String rules4Readers = 'Правила для читателей';
@@ -52,6 +52,9 @@ class GlobalVar {
   static const String logoTiktok = 'image/tiktok_logo.png';
   static const String logoIrbis = 'image/irbis_logo.png';
   static const String logoIrbisKids = 'image/irbisKids_logo.png';
+  static const String logoLitres = 'image/litres_logo.png';
+  static const String logoNEB = 'image/neb_logo.png';
+  static const String logoNEDB = 'image/nedb_logo.png';
 
 //Фоновая картинка
   static const String bgImage = 'image/main_background.jpg';
@@ -130,6 +133,9 @@ class GlobalVar {
   static const String routeStaffDepCoordination =
       '/staff_department_coordination';
   static const String routeStaffDepFond = '/staff_department_fond';
+  static const String routeStaffDepRedaction = '/staff_department_redaction';
+  static const String routeStaffDepInformation =
+      '/staff_department_information';
 // Пока не используется не получается развернуть через спред оператор.
   /*
   static List<AfishaData> listDay01 = [day01, day02];
@@ -297,6 +303,12 @@ class StaffData {
   static const String staffDepFondNik = 'image/staff/nikitenko.jpg';
   static const String staffDepFondPil = 'image/staff/pilnikova.jpg';
   static const String staffDepFondRya = 'image/staff/ryabova.jpg';
+
+//Redaction
+  static const String staffDepRedactMat = 'image/staff/matveenkova.jpg';
+//Information
+  static const String staffDepInformationOne = 'image/staff/onehorned.jpg';
+  static const String staffDepInformationTep = 'image/staff/teplov.jpg';
 
   //Departments
   static const String departmentReaders = 'ОТДЕЛ ПО РАБОТЕ С ЧИТАТЕЛЯМИ';
