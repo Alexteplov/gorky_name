@@ -26,7 +26,7 @@ class AfishaSaturday extends StatelessWidget {
       '16:00':
           '«Новый год на песке» - занятие творческого кружка «Сказка на песке» (3 - 5 лет)',
     };
-    context.watch<RoutingData>().setRouteNextSteep(GlobalVar.routeAfishaW02);
+    context.read<RoutingData>().setRouteNextSteep(GlobalVar.routeAfishaW02);
     return SafeArea(
       child: Stack(
         children: [
@@ -35,9 +35,9 @@ class AfishaSaturday extends StatelessWidget {
             child: Container(
               height: Screen.height(context),
               width: Screen.width(context),
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage(GlobalVar.bgImgAfisha01),
+                  image: AssetImage(context.read<RoutingData>().getBgAfisha),
                   fit: BoxFit.fill,
                 ),
               ),

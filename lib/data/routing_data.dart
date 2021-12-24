@@ -1,3 +1,6 @@
+import 'dart:math';
+
+import 'package:intl/intl.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:gorky_name/const/const_variables.dart';
 import 'package:gorky_name/ui/component/widgets/el_libs_qr.dart';
@@ -47,6 +50,7 @@ class RoutingData with ChangeNotifier {
   final _stackW = [];
   late final BuildContext _context;
   String _nextSteep = 'empty';
+
 //  Widget get getWidget => const MainMenu();
 
   RoutingData(this._context);
@@ -85,7 +89,38 @@ class RoutingData with ChangeNotifier {
     }
   }
 
+  String get getBgAfisha {
+    return 'image/bgAfisha/0${Random().nextInt(9)}.jpg';
+  }
+
   String get getNextSteep => _nextSteep;
+
+  String get getAfishaRoute {
+    DateTime _now =
+        DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day);
+    //DateTime _sDt = DateTime(2021, 12, 24);
+    String _retStr = GlobalVar.routeAfisha01;
+    if (_now == DateTime(2021, 12, 24)) {
+      _retStr = GlobalVar.routeAfisha03;
+    } else if (_now == DateTime(2021, 12, 25)) {
+      _retStr = GlobalVar.routeAfishaW01;
+    } else if (_now == DateTime(2021, 12, 26)) {
+      _retStr = GlobalVar.routeAfishaW02;
+    } else if (_now == DateTime(2021, 12, 27) ||
+        _now == DateTime(2021, 12, 28)) {
+      _retStr = GlobalVar.routeAfisha01;
+    } else if (_now == DateTime(2021, 12, 29) ||
+        _now == DateTime(2021, 12, 30)) {
+      _retStr = GlobalVar.routeAfisha02;
+    } else if (_now.compareTo(DateTime(2021, 12, 31)) >= 0 &&
+        _now.compareTo(DateTime(2022, 01, 06)) <= 0) {
+      _retStr = GlobalVar.routeAfisha03a;
+    } else if (_now.compareTo(DateTime(2022, 01, 07)) >= 0) {
+      _retStr = GlobalVar.routeAfishaW02a;
+    }
+
+    return _retStr;
+  }
 
   Widget get returnBack {
     _stackW.removeLast();

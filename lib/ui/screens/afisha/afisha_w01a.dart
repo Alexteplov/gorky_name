@@ -37,9 +37,9 @@ class AfishaSaturdayA extends StatelessWidget {
             child: Container(
               height: Screen.height(context),
               width: Screen.width(context),
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage(GlobalVar.bgImgAfishaWeekendsW),
+                  image: AssetImage(context.read<RoutingData>().getBgAfisha),
                   fit: BoxFit.fill,
                 ),
               ),

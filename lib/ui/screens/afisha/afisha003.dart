@@ -28,9 +28,9 @@ class AfishaThird extends StatelessWidget {
             child: Container(
               height: Screen.height(context),
               width: Screen.width(context),
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage(GlobalVar.bgImgAfisha03),
+                  image: AssetImage(context.read<RoutingData>().getBgAfisha),
                   fit: BoxFit.fill,
                 ),
               ),

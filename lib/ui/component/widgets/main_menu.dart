@@ -1,8 +1,10 @@
 import 'package:flutter/widgets.dart';
 import 'package:gorky_name/const/const_variables.dart';
+import 'package:gorky_name/data/routing_data.dart';
 import 'package:gorky_name/ui/component/widgets/library_logo.dart';
 import 'package:gorky_name/ui/component/widgets/menu_button.dart';
 import 'package:gorky_name/ui/theme/screen.dart';
+import 'package:provider/src/provider.dart';
 
 class MainMenu extends StatelessWidget {
   const MainMenu({Key? key}) : super(key: key);
@@ -85,7 +87,7 @@ class MainMenu extends StatelessWidget {
                 MenuButton(
                     context: context,
                     nameButton: GlobalVar.billboard,
-                    route: GlobalVar.routeAfisha03a),
+                    route: context.read<RoutingData>().getAfishaRoute),
                 const SizedBox(
                   height: 20,
                 ),

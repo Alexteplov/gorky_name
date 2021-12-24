@@ -25,24 +25,17 @@ class AfishaSundayA extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Map<String, String> events = {
-      '11:00':
-          'Кружок вязания «Чудесный крючок». Знакомство с техникой вязания крючком (от 8 лет)',
-      '11:00': 'Просмотр диафильма «Морозко»(4-7 лет)',
       '12:00':
-          'Литературный клуб «РасЧитайка». Литературно-игровое занятие «Мы едем в Дедморозовку» - по книгам Андрея Усачева (4-7 лет)',
-      '14:00':
-          'Клуб любителей настольных игр «Сто наСтолок». Игра «Экивоки» (от 8 лет)',
-      '14:30':
-          'Интерактивное занятие «Умный пол». Игра «Подбери узор» (6-10 лет)',
-      '15:00':
-          'Мастерилка с художником.  Мастер-класс «Символ года» (от 5 лет)',
+          'Литературно-игровая программа «Новогодний калейдоскоп» клуба «РасЧитайка» (от 6 лет)',
+      '14:30': 'Квест «Новогодние приключения МАКСа и Эла» (от 10 лет)',
+      '15:00': 'Мастерская Деда Мороза. Мастер-класс «Снеговик» (от 6 лет)',
       '16:00':
-          'Клуб «БиблиоБЛОГИНГ». Занятие по теме: «Разработка идеи и концепции блога»',
-      '16:00':
-          'Клуб «БиблиоБЛОГИНГ». Занятие  по теме: «Разработка идеи и концепции блога» (от 10 лет)',
+          'Квест-игра по главным праздникам 2022 года «Двенадцать месяцев» ',
+      '17:00':
+          'Клуб любителей настольных игр «Сто наСтолок». «Новогодняя игротека» (от 8 лет)',
     };
 
-    context.watch<RoutingData>().setRouteNextSteep(GlobalVar.routeAfisha01);
+    context.watch<RoutingData>().setRouteNextSteep('empty');
     return SafeArea(
       child: Stack(
         children: [
@@ -51,9 +44,9 @@ class AfishaSundayA extends StatelessWidget {
             child: Container(
               height: Screen.height(context),
               width: Screen.width(context),
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage(GlobalVar.bgImgAfishaWeekends),
+                  image: AssetImage(context.read<RoutingData>().getBgAfisha),
                   fit: BoxFit.fill,
                 ),
               ),
@@ -77,7 +70,7 @@ class AfishaSundayA extends StatelessWidget {
               ),
               /************************ */
               const AfishaHeaderEvent(
-                head: '19 декабря – воскресенье',
+                head: '9 января – воскресенье',
               ),
               ...events.entries
                   .map((e) => AfishaEvent(time: e.key, information: e.value)),

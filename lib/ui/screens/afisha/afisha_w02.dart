@@ -23,7 +23,7 @@ class AfishaSunday extends StatelessWidget {
       '16:00':
           'Мастерская Деда Мороза. Мастер-класс «Новогодняя игрушка» (от 6 лет)',
     };
-    context.watch<RoutingData>().setRouteNextSteep('empty');
+    context.watch<RoutingData>().setRouteNextSteep(GlobalVar.routeAfisha01);
     return SafeArea(
       child: Stack(
         children: [
@@ -32,9 +32,9 @@ class AfishaSunday extends StatelessWidget {
             child: Container(
               height: Screen.height(context),
               width: Screen.width(context),
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage(GlobalVar.bgImgAfisha02),
+                  image: AssetImage(context.read<RoutingData>().getBgAfisha),
                   fit: BoxFit.fill,
                 ),
               ),
