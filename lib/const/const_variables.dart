@@ -70,6 +70,7 @@ class GlobalVar {
   static const String logoAppBar = 'image/logo_app_bar.png';
 //Маршруты роутинга(переходов)
   static const String routeMainMenu = '/';
+  static const String routeEmpty = 'empty';
   //afisha
   static const String routeAfisha01 = '/afisha';
   static const String routeAfisha02 = '/afisha_second';

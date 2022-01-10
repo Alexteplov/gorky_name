@@ -49,7 +49,7 @@ class RoutingData with ChangeNotifier {
   //String _route = GlobalVar.routeMainMenu;
   final _stackW = [];
   late final BuildContext _context;
-  String _nextSteep = 'empty';
+  String _nextSteep = GlobalVar.routeEmpty;
 
 //  Widget get getWidget => const MainMenu();
 
@@ -64,7 +64,7 @@ class RoutingData with ChangeNotifier {
   Widget get getLowerNavigation => LowerNavigation(context: _context);
 
   void goMainMenu() {
-    _nextSteep = 'empty';
+    _nextSteep = GlobalVar.routeEmpty;
     _stackW.clear();
     //setStack(GlobalVar.routeMainMenu);
     notifyListeners();
@@ -85,7 +85,7 @@ class RoutingData with ChangeNotifier {
       _nextSteep = route;
       //print('set route = $route');
     } else {
-      _nextSteep = 'empty';
+      _nextSteep = GlobalVar.routeEmpty;
     }
   }
 
@@ -99,24 +99,17 @@ class RoutingData with ChangeNotifier {
     DateTime _now =
         DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day);
     //DateTime _sDt = DateTime(2021, 12, 24);
-    String _retStr = GlobalVar.routeAfisha01;
-    if (_now == DateTime(2021, 12, 24)) {
-      _retStr = GlobalVar.routeAfisha03;
-    } else if (_now == DateTime(2021, 12, 25)) {
-      _retStr = GlobalVar.routeAfishaW01;
-    } else if (_now == DateTime(2021, 12, 26)) {
-      _retStr = GlobalVar.routeAfishaW02;
-    } else if (_now == DateTime(2021, 12, 27) ||
-        _now == DateTime(2021, 12, 28)) {
+    String _retStr = GlobalVar.routeAfishaW02;
+    if (_now.compareTo(DateTime(2022, 01, 11)) <= 0) {
       _retStr = GlobalVar.routeAfisha01;
-    } else if (_now == DateTime(2021, 12, 29) ||
-        _now == DateTime(2021, 12, 30)) {
+    } else if (_now.compareTo(DateTime(2022, 01, 13)) <= 0) {
       _retStr = GlobalVar.routeAfisha02;
-    } else if (_now.compareTo(DateTime(2021, 12, 31)) >= 0 &&
-        _now.compareTo(DateTime(2022, 01, 06)) <= 0) {
-      _retStr = GlobalVar.routeAfisha03a;
-    } else if (_now.compareTo(DateTime(2022, 01, 07)) >= 0) {
-      _retStr = GlobalVar.routeAfishaW02a;
+    } else if (_now.compareTo(DateTime(2022, 01, 14)) <= 0) {
+      _retStr = GlobalVar.routeAfisha03;
+    } else if (_now.compareTo(DateTime(2022, 01, 15)) <= 0) {
+      _retStr = GlobalVar.routeAfishaW01;
+    } else if (_now.compareTo(DateTime(2022, 01, 16)) <= 0) {
+      _retStr = GlobalVar.routeAfishaW02;
     }
 
     return _retStr;
@@ -125,7 +118,7 @@ class RoutingData with ChangeNotifier {
   Widget get returnBack {
     _stackW.removeLast();
     if (_stackW.isEmpty) {
-      _nextSteep = 'empty';
+      _nextSteep = GlobalVar.routeEmpty;
     }
     notifyListeners();
     return _stackW.isNotEmpty ? _stackW.last : const MainMenu();
@@ -242,7 +235,7 @@ class RoutingData with ChangeNotifier {
       _stackW.add(const StaffDepartmentInformation());
     } else {
       _stackW.add(const MainMenu());
-      _nextSteep = 'empty';
+      _nextSteep = GlobalVar.routeEmpty;
     }
   }
 
