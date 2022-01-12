@@ -24,7 +24,7 @@ class _StaffDepartmentInfoState extends State<StaffDepartmentInfo> {
 
   @override
   Widget build(BuildContext context) {
-    context.watch<RoutingData>().setRouteNextSteep('empty');
+    context.watch<RoutingData>().setRouteNextSteep(GlobalVar.routeEmpty);
     return SafeArea(
       child: SingleChildScrollView(
         child: Stack(

@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
@@ -23,11 +24,27 @@ class _StaffDepartmentReadersState extends State<StaffDepartmentReaders> {
   String _image = GlobalVar.bgImgAfishaWeekendsW;
   static double rectangleSide = 320;
   static double hSingleChV = 6000;
+  double _hImage = 0;
   //double _hPosition = 1920;
+
+  Future<Size> _calculateImageDimension() {
+    Completer<Size> completer = Completer();
+    Image image = Image.network(_image);
+    image.image.resolve(const ImageConfiguration()).addListener(
+      ImageStreamListener(
+        (ImageInfo image, bool synchronousCall) {
+          var myImage = image.image;
+          Size size = Size(myImage.width.toDouble(), myImage.height.toDouble());
+          completer.complete(size);
+        },
+      ),
+    );
+    return completer.future;
+  }
 
   @override
   Widget build(BuildContext context) {
-    context.watch<RoutingData>().setRouteNextSteep('empty');
+    context.watch<RoutingData>().setRouteNextSteep(GlobalVar.routeEmpty);
     return SafeArea(
       child: SingleChildScrollView(
         controller: _scrollController,
@@ -68,12 +85,15 @@ class _StaffDepartmentReadersState extends State<StaffDepartmentReaders> {
                               top: rectangleSide * 0.025,
                               left: rectangleSide * 0.025,
                               child: GestureDetector(
-                                onTap: () {
+                                onTap: () async {
                                   setState(() {
                                     _showPreview = !_showPreview;
                                     _image = StaffData.staffEmptyWoman;
+
                                     //print(_showPreview);
                                   });
+                                  _hImage = await _calculateImageDimension()
+                                      .then((size) => size.height);
                                 },
                                 child: Container(
                                   width: rectangleSide - (rectangleSide * 0.05),
@@ -246,12 +266,15 @@ class _StaffDepartmentReadersState extends State<StaffDepartmentReaders> {
                               top: rectangleSide * 0.025,
                               left: rectangleSide * 0.025,
                               child: GestureDetector(
-                                onTap: () {
+                                onTap: () async {
                                   setState(() {
                                     _showPreview = !_showPreview;
                                     _image = StaffData.staffDepReadersArz;
+
                                     //print(_showPreview);
                                   });
+                                  _hImage = await _calculateImageDimension()
+                                      .then((size) => size.height);
                                 },
                                 child: Container(
                                   width: rectangleSide - (rectangleSide * 0.05),
@@ -426,12 +449,15 @@ class _StaffDepartmentReadersState extends State<StaffDepartmentReaders> {
                               top: rectangleSide * 0.025,
                               left: rectangleSide * 0.025,
                               child: GestureDetector(
-                                onTap: () {
+                                onTap: () async {
                                   setState(() {
                                     _showPreview = !_showPreview;
                                     _image = StaffData.staffDepReadersBuk;
+
                                     //print(_showPreview);
                                   });
+                                  _hImage = await _calculateImageDimension()
+                                      .then((size) => size.height);
                                 },
                                 child: Container(
                                   width: rectangleSide - (rectangleSide * 0.05),
@@ -606,12 +632,15 @@ class _StaffDepartmentReadersState extends State<StaffDepartmentReaders> {
                               top: rectangleSide * 0.025,
                               left: rectangleSide * 0.025,
                               child: GestureDetector(
-                                onTap: () {
+                                onTap: () async {
                                   setState(() {
                                     _showPreview = !_showPreview;
                                     _image = StaffData.staffEmptyWoman;
+
                                     //print(_showPreview);
                                   });
+                                  _hImage = await _calculateImageDimension()
+                                      .then((size) => size.height);
                                 },
                                 child: Container(
                                   width: rectangleSide - (rectangleSide * 0.05),
@@ -785,12 +814,15 @@ class _StaffDepartmentReadersState extends State<StaffDepartmentReaders> {
                               top: rectangleSide * 0.025,
                               left: rectangleSide * 0.025,
                               child: GestureDetector(
-                                onTap: () {
+                                onTap: () async {
                                   setState(() {
                                     _showPreview = !_showPreview;
                                     _image = StaffData.staffDepReadersZai;
+
                                     //print(_showPreview);
                                   });
+                                  _hImage = await _calculateImageDimension()
+                                      .then((size) => size.height);
                                 },
                                 child: Container(
                                   width: rectangleSide - (rectangleSide * 0.05),
@@ -966,13 +998,16 @@ class _StaffDepartmentReadersState extends State<StaffDepartmentReaders> {
                               top: rectangleSide * 0.025,
                               left: rectangleSide * 0.025,
                               child: GestureDetector(
-                                onTap: () {
+                                onTap: () async {
                                   setState(() {
                                     _showPreview = !_showPreview;
                                     _image = StaffData.staffDepReadersKun;
+
                                     //print(
                                     //   'offset = ${_scrollController.offset}');
                                   });
+                                  _hImage = await _calculateImageDimension()
+                                      .then((size) => size.height);
                                 },
                                 child: Container(
                                   width: rectangleSide - (rectangleSide * 0.05),
@@ -1147,13 +1182,16 @@ class _StaffDepartmentReadersState extends State<StaffDepartmentReaders> {
                               top: rectangleSide * 0.025,
                               left: rectangleSide * 0.025,
                               child: GestureDetector(
-                                onTap: () {
+                                onTap: () async {
                                   setState(() {
                                     _showPreview = !_showPreview;
                                     _image = StaffData.staffDepReadersNas;
+
                                     //print(
                                     //   'offset = ${_scrollController.offset}');
                                   });
+                                  _hImage = await _calculateImageDimension()
+                                      .then((size) => size.height);
                                 },
                                 child: Container(
                                   width: rectangleSide - (rectangleSide * 0.05),
@@ -1329,13 +1367,16 @@ class _StaffDepartmentReadersState extends State<StaffDepartmentReaders> {
                               top: rectangleSide * 0.025,
                               left: rectangleSide * 0.025,
                               child: GestureDetector(
-                                onTap: () {
+                                onTap: () async {
                                   setState(() {
                                     _showPreview = !_showPreview;
                                     _image = StaffData.staffDepReadersPro;
+
                                     //print(
                                     //   'offset = ${_scrollController.offset}');
                                   });
+                                  _hImage = await _calculateImageDimension()
+                                      .then((size) => size.height);
                                 },
                                 child: Container(
                                   width: rectangleSide - (rectangleSide * 0.05),
@@ -1511,13 +1552,16 @@ class _StaffDepartmentReadersState extends State<StaffDepartmentReaders> {
                               top: rectangleSide * 0.025,
                               left: rectangleSide * 0.025,
                               child: GestureDetector(
-                                onTap: () {
+                                onTap: () async {
                                   setState(() {
                                     _showPreview = !_showPreview;
                                     _image = StaffData.staffDepReadersRya;
+
                                     //print(
                                     //   'offset = ${_scrollController.offset}');
                                   });
+                                  _hImage = await _calculateImageDimension()
+                                      .then((size) => size.height);
                                 },
                                 child: Container(
                                   width: rectangleSide - (rectangleSide * 0.05),
@@ -1693,13 +1737,16 @@ class _StaffDepartmentReadersState extends State<StaffDepartmentReaders> {
                               top: rectangleSide * 0.025,
                               left: rectangleSide * 0.025,
                               child: GestureDetector(
-                                onTap: () {
+                                onTap: () async {
                                   setState(() {
                                     _showPreview = !_showPreview;
                                     _image = StaffData.staffDepReadersUru;
+
                                     //print(
                                     //   'offset = ${_scrollController.offset}');
                                   });
+                                  _hImage = await _calculateImageDimension()
+                                      .then((size) => size.height);
                                 },
                                 child: Container(
                                   width: rectangleSide - (rectangleSide * 0.05),
@@ -1874,13 +1921,16 @@ class _StaffDepartmentReadersState extends State<StaffDepartmentReaders> {
                               top: rectangleSide * 0.025,
                               left: rectangleSide * 0.025,
                               child: GestureDetector(
-                                onTap: () {
+                                onTap: () async {
                                   setState(() {
                                     _showPreview = !_showPreview;
                                     _image = StaffData.staffDepReadersHiz;
+
                                     //print(
                                     //   'offset = ${_scrollController.offset}');
                                   });
+                                  _hImage = await _calculateImageDimension()
+                                      .then((size) => size.height);
                                 },
                                 child: Container(
                                   width: rectangleSide - (rectangleSide * 0.05),
@@ -2055,12 +2105,15 @@ class _StaffDepartmentReadersState extends State<StaffDepartmentReaders> {
                               top: rectangleSide * 0.025,
                               left: rectangleSide * 0.025,
                               child: GestureDetector(
-                                onTap: () {
+                                onTap: () async {
                                   setState(() {
                                     _showPreview = !_showPreview;
                                     _image = StaffData.staffEmptyWoman;
+
                                     //print(_showPreview);
                                   });
+                                  _hImage = await _calculateImageDimension()
+                                      .then((size) => size.height);
                                 },
                                 child: Container(
                                   width: rectangleSide - (rectangleSide * 0.05),
@@ -2223,20 +2276,29 @@ class _StaffDepartmentReadersState extends State<StaffDepartmentReaders> {
                     color: Colors.white.withOpacity(0.6),
                   ),
                 ),
-                SizedBox(
-                  height: Screen.height(context) + _scrollController.offset * 2,
-                  width: Screen.width(context),
-                  child: Center(
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(10.0),
-                      child: GestureDetector(
-                        onTap: () {
-                          setState(() {
-                            _showPreview = !_showPreview;
-                          });
-                        },
-                        child: Image.asset(
-                          _image,
+                Positioned(
+                  top: _scrollController.offset > 10
+                      ? (Screen.height(context) / 2 +
+                          _scrollController.offset -
+                          (_hImage > 0 ? _hImage : 0))
+                      : (Screen.height(context) -
+                              _scrollController.offset -
+                              (_hImage > 0 ? _hImage : 0)) /
+                          2,
+                  child: SizedBox(
+                    width: Screen.width(context),
+                    child: Center(
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(10.0),
+                        child: GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              _showPreview = !_showPreview;
+                            });
+                          },
+                          child: Image.asset(
+                            _image,
+                          ),
                         ),
                       ),
                     ),

@@ -14,7 +14,7 @@ class StaffMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    context.watch<RoutingData>().setRouteNextSteep('empty');
+    context.watch<RoutingData>().setRouteNextSteep(GlobalVar.routeEmpty);
     return SafeArea(
       child: Stack(
         children: [
