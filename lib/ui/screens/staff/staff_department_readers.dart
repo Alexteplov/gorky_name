@@ -458,6 +458,8 @@ class _StaffDepartmentReadersState extends State<StaffDepartmentReaders> {
                                   });
                                   _hImage = await _calculateImageDimension()
                                       .then((size) => size.height);
+                                  print(
+                                      'offset =  ${_scrollController.offset} hImage = ${_hImage} screenH = ${Screen.height(context)}');
                                 },
                                 child: Container(
                                   width: rectangleSide - (rectangleSide * 0.05),
@@ -2277,13 +2279,12 @@ class _StaffDepartmentReadersState extends State<StaffDepartmentReaders> {
                   ),
                 ),
                 Positioned(
-                  top: _scrollController.offset > 10
+                  top: _scrollController.offset > 300
                       ? (Screen.height(context) / 2 +
-                          _scrollController.offset -
+                          _scrollController.offset * 0.9 -
                           (_hImage > 0 ? _hImage : 0))
-                      : (Screen.height(context) -
-                              _scrollController.offset -
-                              (_hImage > 0 ? _hImage : 0)) /
+                      : (Screen.height(context) / 2 -
+                              (_hImage > 0 ? _hImage / 2 : 0)) /
                           2,
                   child: SizedBox(
                     width: Screen.width(context),
