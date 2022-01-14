@@ -29,7 +29,7 @@ class AfishaSunday extends StatelessWidget {
       '16:00':
           'Кинопросмотр фильма «Как приручить дракона» по мотивам одноименной книги Крессиды Коуэлл (8-12 лет) ',
     };
-    context.watch<RoutingData>().setRouteNextSteep(GlobalVar.routeEmpty);
+    context.watch<RoutingData>().setRouteNextSteep(GlobalVar.routeAfisha01);
     return SafeArea(
       child: Stack(
         children: [

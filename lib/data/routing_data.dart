@@ -99,17 +99,22 @@ class RoutingData with ChangeNotifier {
     DateTime _now =
         DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day);
     //DateTime _sDt = DateTime(2021, 12, 24);
-    String _retStr = GlobalVar.routeAfishaW02;
-    if (_now.compareTo(DateTime(2022, 01, 11)) <= 0) {
-      _retStr = GlobalVar.routeAfisha01;
-    } else if (_now.compareTo(DateTime(2022, 01, 13)) <= 0) {
-      _retStr = GlobalVar.routeAfisha02;
-    } else if (_now.compareTo(DateTime(2022, 01, 14)) <= 0) {
-      _retStr = GlobalVar.routeAfisha03;
-    } else if (_now.compareTo(DateTime(2022, 01, 15)) <= 0) {
+    //Show default page
+    String _retStr = GlobalVar.routeAfishaW02a;
+    if (_now.compareTo(DateTime(2022, 01, 15)) <= 0) {
       _retStr = GlobalVar.routeAfishaW01;
     } else if (_now.compareTo(DateTime(2022, 01, 16)) <= 0) {
       _retStr = GlobalVar.routeAfishaW02;
+    } else if (_now.compareTo(DateTime(2022, 01, 17)) <= 0) {
+      _retStr = GlobalVar.routeAfisha01;
+    } else if (_now.compareTo(DateTime(2022, 01, 19)) <= 0) {
+      _retStr = GlobalVar.routeAfisha02;
+    } else if (_now.compareTo(DateTime(2022, 01, 21)) <= 0) {
+      _retStr = GlobalVar.routeAfisha03;
+    } else if (_now.compareTo(DateTime(2022, 01, 22)) <= 0) {
+      _retStr = GlobalVar.routeAfishaW01a;
+    } else if (_now.compareTo(DateTime(2022, 01, 23)) <= 0) {
+      _retStr = GlobalVar.routeAfishaW02a;
     }
 
     return _retStr;
