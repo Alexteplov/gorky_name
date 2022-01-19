@@ -4,7 +4,7 @@ import 'package:gorky_name/data/routing_data.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_bottom_event.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_header_event.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_event.dart';
-import 'package:gorky_name/ui/component/widgets/afisha_qr_code.dart';
+//import 'package:gorky_name/ui/component/widgets/afisha_qr_code.dart';
 import 'package:gorky_name/ui/theme/screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 // ignore: implementation_imports
@@ -18,9 +18,9 @@ class AfishaThird extends StatelessWidget {
     final Map<String, String> events = {
       '14:00': 'Литературно-игровое занятие «По следам Винни-Пуха» (от 7 лет)',
       '15:00':
-          'Интерактивное образовательное занятие «Умный пол». Игра «Танграм» (от 10 лет)',
-      '15:00':
           'Литературный час, посвященный блокаде Ленинграда «Жила, была…Таня Савичева», по книге Ильи Миксона «Жила, была» (от 10 лет)',
+      '15:00 ':
+          'Интерактивное образовательное занятие «Умный пол». Игра «Танграм» (от 10 лет)',
     };
 
     context.watch<RoutingData>().setRouteNextSteep(GlobalVar.routeAfishaW01a);
@@ -67,7 +67,6 @@ class AfishaThird extends StatelessWidget {
                 flex: 10,
                 child: SizedBox(),
               ),
-              //const BottomLeftRight(next_steep: GlobalVar.routeAfishaW01),
               const SizedBox(
                 height: 30,
               ),

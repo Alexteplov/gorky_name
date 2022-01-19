@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gorky_name/const/const_variables.dart';
+import 'package:gorky_name/ui/component/widgets/list_bullet.dart';
 import 'package:gorky_name/ui/theme/screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -47,29 +48,238 @@ class RulesForReaders extends StatelessWidget {
               Expanded(
                 flex: 8,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    '''   Выбери ближайшую к дому библиотеку. Если по какой-то причине ты не можешь посещать её, знай, что читателем Центральной городской детской библиотеки может стать каждый ребёнок и подросток, независимо от места проживания.
-  
-    Если ты младше 14 лет, порядок записи в библиотеку такой:
-  • родители, дедушки, бабушки, опекуны приносят в библиотеку свой паспорт,
-  • знакомятся с Правилами пользования библиотекой,
-  • заполняют поручительство, и своей подписью заверяют обязанность соблюдать Правила.
-
-    Если тебе 14 лет, ты можешь записаться в библиотеку по своему паспорту, но взрослый, представляющий твои интересы, так же заполняет поручительство.
-
-    При записи в библиотеку библиотекарь обязательно познакомит тебя с Правилами пользования библиотекой. Своё обязательство о выполнении Правил ты подтвердишь личной подписью на читательском формуляре. Дети расписываются на формуляре, начиная с 3 класса.
-
-    Если ты не живёшь в Челябинске, а приехал, например, на каникулы погостить к родственникам, ты можешь стать читателем библиотеки на тех же условиях, что и проживающие в городе дети и подростки.
-
-    Уважаемые родители, учителя, воспитатели! Если вас волнуют проблемы детского чтения, если вы испытываете необходимость в литературе по детской психологии и педагогике или хотите быть в курсе всех новинок детской литературы, вы так же можете стать читателями детских библиотек!
-''',
-                    textAlign: TextAlign.justify,
-                    style: GoogleFonts.oswald(
-                        textStyle: Theme.of(context)
-                            .textTheme
-                            .headline4!
-                            .copyWith(color: Colors.black87)),
+                  padding: const EdgeInsets.only(
+                      top: 30, left: 8, right: 8, bottom: 8),
+                  child: Column(
+                    //mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        '   Выбери ближайшую к дому библиотеку. Если по какой-то причине ты не можешь посещать её, знай, что читателем Центральной городской детской библиотеки может стать каждый ребёнок и подросток, независимо от места проживания.',
+                        textAlign: TextAlign.justify,
+                        style: GoogleFonts.oswald(
+                            textStyle: Theme.of(context)
+                                .textTheme
+                                .headline4!
+                                .copyWith(
+                                    color: Colors.black87,
+                                    fontWeight: FontWeight.bold)),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      RichText(
+                        textAlign: TextAlign.justify,
+                        text: TextSpan(
+                          text: '    Если ты младше 14 лет,',
+                          style: GoogleFonts.oswald(
+                              textStyle: Theme.of(context)
+                                  .textTheme
+                                  .headline4!
+                                  .copyWith(
+                                      color: Colors.black87,
+                                      fontWeight: FontWeight.bold)),
+                          children: [
+                            TextSpan(
+                              text: ' порядок записи в библиотеку такой:',
+                              style: GoogleFonts.oswald(
+                                  textStyle: Theme.of(context)
+                                      .textTheme
+                                      .headline4!
+                                      .copyWith(
+                                        color: Colors.black87,
+                                      )),
+                            ),
+                          ],
+                        ),
+                      ),
+                      RichText(
+                        text: TextSpan(
+                          text: '    • ',
+                          style: GoogleFonts.oswald(
+                              textStyle: Theme.of(context)
+                                  .textTheme
+                                  .headline4!
+                                  .copyWith(
+                                      color: Colors.black87,
+                                      fontWeight: FontWeight.bold)),
+                          children: [
+                            TextSpan(
+                              text:
+                                  ' родители, дедушки, бабушки, опекуны приносят в библиотеку свой паспорт,',
+                              style: GoogleFonts.oswald(
+                                  textStyle: Theme.of(context)
+                                      .textTheme
+                                      .headline4!
+                                      .copyWith(
+                                        color: Colors.black87,
+                                      )),
+                            ),
+                          ],
+                        ),
+                      ),
+                      RichText(
+                        text: TextSpan(
+                          text: '    • ',
+                          style: GoogleFonts.oswald(
+                              textStyle: Theme.of(context)
+                                  .textTheme
+                                  .headline4!
+                                  .copyWith(
+                                      color: Colors.black87,
+                                      fontWeight: FontWeight.bold)),
+                          children: [
+                            TextSpan(
+                              text:
+                                  ' знакомятся с Правилами пользования библиотекой,',
+                              style: GoogleFonts.oswald(
+                                  textStyle: Theme.of(context)
+                                      .textTheme
+                                      .headline4!
+                                      .copyWith(
+                                        color: Colors.black87,
+                                      )),
+                            ),
+                          ],
+                        ),
+                      ),
+                      RichText(
+                        text: TextSpan(
+                          text: '    • ',
+                          style: GoogleFonts.oswald(
+                              textStyle: Theme.of(context)
+                                  .textTheme
+                                  .headline4!
+                                  .copyWith(
+                                      color: Colors.black87,
+                                      fontWeight: FontWeight.bold)),
+                          children: [
+                            TextSpan(
+                              text:
+                                  ' заполняют поручительство, и своей подписью заверяют обязанность соблюдать ',
+                              style: GoogleFonts.oswald(
+                                  textStyle: Theme.of(context)
+                                      .textTheme
+                                      .headline4!
+                                      .copyWith(
+                                        color: Colors.black87,
+                                      )),
+                            ),
+                            TextSpan(
+                              text: 'Правила.',
+                              style: GoogleFonts.oswald(
+                                  textStyle: Theme.of(context)
+                                      .textTheme
+                                      .headline4!
+                                      .copyWith(
+                                        color: Colors.black87,
+                                        fontWeight: FontWeight.bold,
+                                      )),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      RichText(
+                        textAlign: TextAlign.justify,
+                        text: TextSpan(
+                          text: '    Если тебе 14 лет,',
+                          style: GoogleFonts.oswald(
+                              textStyle: Theme.of(context)
+                                  .textTheme
+                                  .headline4!
+                                  .copyWith(
+                                      color: Colors.black87,
+                                      fontWeight: FontWeight.bold)),
+                          children: [
+                            TextSpan(
+                              text:
+                                  ' ты можешь записаться в библиотеку по своему паспорту, но взрослый, представляющий твои интересы, так же заполняет поручительство.',
+                              style: GoogleFonts.oswald(
+                                  textStyle: Theme.of(context)
+                                      .textTheme
+                                      .headline4!
+                                      .copyWith(
+                                        color: Colors.black87,
+                                      )),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      Text(
+                        '    При записи в библиотеку библиотекарь обязательно познакомит тебя с Правилами пользования библиотекой. Своё обязательство о выполнении Правил ты подтвердишь личной подписью на читательском формуляре. Дети расписываются на формуляре, начиная с 3 класса.',
+                        textAlign: TextAlign.justify,
+                        style: GoogleFonts.oswald(
+                            textStyle: Theme.of(context)
+                                .textTheme
+                                .headline4!
+                                .copyWith(color: Colors.black87)),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      RichText(
+                        textAlign: TextAlign.justify,
+                        text: TextSpan(
+                          text:
+                              '    Если ты не живёшь в Челябинске, а приехал, например, на каникулы погостить к родственникам,',
+                          style: GoogleFonts.oswald(
+                              textStyle: Theme.of(context)
+                                  .textTheme
+                                  .headline4!
+                                  .copyWith(
+                                      color: Colors.black87,
+                                      fontWeight: FontWeight.bold)),
+                          children: [
+                            TextSpan(
+                              text:
+                                  ' ты можешь стать читателем библиотеки на тех же условиях, что и проживающие в городе дети и подростки.',
+                              style: GoogleFonts.oswald(
+                                  textStyle: Theme.of(context)
+                                      .textTheme
+                                      .headline4!
+                                      .copyWith(
+                                        color: Colors.black87,
+                                      )),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      RichText(
+                        textAlign: TextAlign.justify,
+                        text: TextSpan(
+                          text: '    Уважаемые родители, учителя, воспитатели!',
+                          style: GoogleFonts.oswald(
+                              textStyle: Theme.of(context)
+                                  .textTheme
+                                  .headline4!
+                                  .copyWith(
+                                      color: Colors.black87,
+                                      fontWeight: FontWeight.bold)),
+                          children: [
+                            TextSpan(
+                              text:
+                                  ' Если вас волнуют проблемы детского чтения, если вы испытываете необходимость в литературе по детской психологии и педагогике или хотите быть в курсе всех новинок детской литературы, вы так же можете стать читателями детских библиотек!',
+                              style: GoogleFonts.oswald(
+                                  textStyle: Theme.of(context)
+                                      .textTheme
+                                      .headline4!
+                                      .copyWith(
+                                        color: Colors.black87,
+                                      )),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),
