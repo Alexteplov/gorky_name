@@ -37,14 +37,23 @@ class ElectronicCatalogKids extends StatelessWidget {
                 child: Center(
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Text(
-                      'Электронный каталог книг для детей 8-10 лет',
-                      textAlign: TextAlign.center,
-                      style: GoogleFonts.oswald(
-                          textStyle: Theme.of(context)
-                              .textTheme
-                              .headline2!
-                              .copyWith(color: Colors.black)),
+                    child: GestureDetector(
+                      onTap: () {
+                        context
+                            .read<RoutingData>()
+                            .setRoute(GlobalVar.routeECatalogHtmlK);
+                      },
+                      child: Text(
+                        'Электронный каталог книг для детей 8-10 лет',
+                        textAlign: TextAlign.center,
+                        style: GoogleFonts.oswald(
+                            textStyle: Theme.of(context)
+                                .textTheme
+                                .headline2!
+                                .copyWith(
+                                    color: Colors.redAccent,
+                                    decoration: TextDecoration.underline)),
+                      ),
                     ),
                   ),
                 ),
@@ -60,7 +69,6 @@ class ElectronicCatalogKids extends StatelessWidget {
 
     В новом каталоге есть не только простой поиск, но и тематические подборки. Каталог посоветует, что почитать по выбранной теме или просто что бы такого почитать интересного. 
     
-    Ищите электронный каталог для детей 8-10 лет на главной странице сайта www.db74.ru – это синий баннер справа прямо под календарём.
 ''',
                     textAlign: TextAlign.justify,
                     style: GoogleFonts.oswald(

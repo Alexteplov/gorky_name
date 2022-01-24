@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:gorky_name/ui/screens/rules_for_readers_html.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:gorky_name/const/const_variables.dart';
@@ -100,21 +101,17 @@ class RoutingData with ChangeNotifier {
         DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day);
     //DateTime _sDt = DateTime(2021, 12, 24);
     //Show default page
-    String _retStr = GlobalVar.routeAfishaW02a;
-    if (_now.compareTo(DateTime(2022, 01, 15)) <= 0) {
-      _retStr = GlobalVar.routeAfishaW01;
-    } else if (_now.compareTo(DateTime(2022, 01, 16)) <= 0) {
-      _retStr = GlobalVar.routeAfishaW02;
-    } else if (_now.compareTo(DateTime(2022, 01, 17)) <= 0) {
+    String _retStr = GlobalVar.routeAfishaW02;
+    if (_now.compareTo(DateTime(2022, 01, 25)) <= 0) {
       _retStr = GlobalVar.routeAfisha01;
-    } else if (_now.compareTo(DateTime(2022, 01, 19)) <= 0) {
+    } else if (_now.compareTo(DateTime(2022, 01, 26)) <= 0) {
       _retStr = GlobalVar.routeAfisha02;
-    } else if (_now.compareTo(DateTime(2022, 01, 21)) <= 0) {
+    } else if (_now.compareTo(DateTime(2022, 01, 28)) <= 0) {
       _retStr = GlobalVar.routeAfisha03;
-    } else if (_now.compareTo(DateTime(2022, 01, 22)) <= 0) {
-      _retStr = GlobalVar.routeAfishaW01a;
-    } else if (_now.compareTo(DateTime(2022, 01, 23)) <= 0) {
-      _retStr = GlobalVar.routeAfishaW02a;
+    } else if (_now.compareTo(DateTime(2022, 01, 29)) <= 0) {
+      _retStr = GlobalVar.routeAfishaW01;
+    } else if (_now.compareTo(DateTime(2022, 01, 30)) <= 0) {
+      _retStr = GlobalVar.routeAfishaW02;
     }
 
     return _retStr;
@@ -163,8 +160,11 @@ class RoutingData with ChangeNotifier {
     } else if (route == GlobalVar.routeElLibNEDB) {
       _stackW.add(const ElLibsQr(
           nameLib: GlobalVar.elNEDBFull, qrCode: GlobalVar.qrNEDB));
+      //rules for readers
     } else if (route == GlobalVar.routeRules4Readers) {
       _stackW.add(const RulesForReaders());
+    } else if (route == GlobalVar.routeRulesForReadersHtml) {
+      _stackW.add(const RulesForReadersHtml(urlSrc: GlobalVar.urlRules));
     } else if (route == GlobalVar.routeLibiraryStructure) {
       _stackW.add(const LibraryStructure());
     } else if (route == GlobalVar.routeLibiraryStructureA) {

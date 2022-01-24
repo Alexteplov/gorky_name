@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:gorky_name/const/const_variables.dart';
-import 'package:gorky_name/ui/component/widgets/list_bullet.dart';
+import 'package:gorky_name/data/routing_data.dart';
 import 'package:gorky_name/ui/theme/screen.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/src/provider.dart';
 
 class RulesForReaders extends StatelessWidget {
   const RulesForReaders({Key? key}) : super(key: key);
@@ -77,7 +78,7 @@ class RulesForReaders extends StatelessWidget {
                                   .textTheme
                                   .headline4!
                                   .copyWith(
-                                      color: Colors.black87,
+                                      color: Colors.redAccent,
                                       fontWeight: FontWeight.bold)),
                           children: [
                             TextSpan(
@@ -143,40 +144,48 @@ class RulesForReaders extends StatelessWidget {
                           ],
                         ),
                       ),
-                      RichText(
-                        text: TextSpan(
-                          text: '    • ',
-                          style: GoogleFonts.oswald(
-                              textStyle: Theme.of(context)
-                                  .textTheme
-                                  .headline4!
-                                  .copyWith(
-                                      color: Colors.black87,
-                                      fontWeight: FontWeight.bold)),
-                          children: [
-                            TextSpan(
-                              text:
-                                  ' заполняют поручительство, и своей подписью заверяют обязанность соблюдать ',
-                              style: GoogleFonts.oswald(
-                                  textStyle: Theme.of(context)
-                                      .textTheme
-                                      .headline4!
-                                      .copyWith(
+                      GestureDetector(
+                        onTap: () {
+                          context
+                              .read<RoutingData>()
+                              .setRoute(GlobalVar.routeRulesForReadersHtml);
+                        },
+                        child: RichText(
+                          text: TextSpan(
+                            text: '    • ',
+                            style: GoogleFonts.oswald(
+                                textStyle: Theme.of(context)
+                                    .textTheme
+                                    .headline4!
+                                    .copyWith(
                                         color: Colors.black87,
-                                      )),
-                            ),
-                            TextSpan(
-                              text: 'Правила.',
-                              style: GoogleFonts.oswald(
-                                  textStyle: Theme.of(context)
-                                      .textTheme
-                                      .headline4!
-                                      .copyWith(
-                                        color: Colors.black87,
-                                        fontWeight: FontWeight.bold,
-                                      )),
-                            ),
-                          ],
+                                        fontWeight: FontWeight.bold)),
+                            children: [
+                              TextSpan(
+                                text:
+                                    ' заполняют поручительство, и своей подписью заверяют обязанность соблюдать ',
+                                style: GoogleFonts.oswald(
+                                    textStyle: Theme.of(context)
+                                        .textTheme
+                                        .headline4!
+                                        .copyWith(
+                                          color: Colors.black87,
+                                        )),
+                              ),
+                              TextSpan(
+                                text: 'Правила.',
+                                style: GoogleFonts.oswald(
+                                    textStyle: Theme.of(context)
+                                        .textTheme
+                                        .headline4!
+                                        .copyWith(
+                                          color: Colors.redAccent,
+                                          fontWeight: FontWeight.bold,
+                                          decoration: TextDecoration.underline,
+                                        )),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                       const SizedBox(
@@ -191,7 +200,7 @@ class RulesForReaders extends StatelessWidget {
                                   .textTheme
                                   .headline4!
                                   .copyWith(
-                                      color: Colors.black87,
+                                      color: Colors.redAccent,
                                       fontWeight: FontWeight.bold)),
                           children: [
                             TextSpan(
@@ -279,6 +288,30 @@ class RulesForReaders extends StatelessWidget {
                           ],
                         ),
                       ),
+                      const SizedBox(height: 20),
+                      Center(
+                          child: Text(
+                        'Рады видеть Вас в детских библиотеках г. Челябинска.',
+                        style: GoogleFonts.oswald(
+                            textStyle: Theme.of(context)
+                                .textTheme
+                                .headline4!
+                                .copyWith(
+                                    color: Colors.black87,
+                                    fontWeight: FontWeight.bold)),
+                      )),
+                      const SizedBox(height: 20),
+                      Center(
+                          child: Text(
+                        'ЧИТАЙТЕ С НАМИ!',
+                        style: GoogleFonts.oswald(
+                            textStyle: Theme.of(context)
+                                .textTheme
+                                .headline4!
+                                .copyWith(
+                                    color: Colors.black87,
+                                    fontWeight: FontWeight.bold)),
+                      )),
                     ],
                   ),
                 ),

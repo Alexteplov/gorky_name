@@ -89,6 +89,7 @@ class GlobalVar {
 
   //rules for readers
   static const String routeRules4Readers = '/rules_for_readers';
+  static const String routeRulesForReadersHtml = '/rules_for_readers_html';
 
   //library in Newtwork
   static const String routeLibInNetwork = '/lib_in_network';
@@ -114,6 +115,7 @@ class GlobalVar {
   static const String urlECatalog =
       'http://irbis.db74.ru:8080/cgi-bin/irbis64r_15/cgiirbis_64.exe?Z21ID=&I21DBN=IBIS&P21DBN=IBIS&C21COM=F&LNG=&S21YEAR=2021';
   static const String urlECatalogKids = 'http://irbis.db74.ru:8080/index.php';
+  static const String urlRules = 'http://db74.ru/chitatelyam/docs/rules/';
 
   //books collection
   static const String routeBookCollectionMenu = '/book_collection_menu';

@@ -6,9 +6,9 @@ import 'package:gorky_name/ui/component/widgets/html_content.dart';
 // ignore: implementation_imports
 import 'package:provider/src/provider.dart';
 
-class ElCatalogHtml extends StatelessWidget {
+class RulesForReadersHtml extends StatelessWidget {
   final String urlSrc;
-  const ElCatalogHtml({Key? key, required this.urlSrc}) : super(key: key);
+  const RulesForReadersHtml({Key? key, required this.urlSrc}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

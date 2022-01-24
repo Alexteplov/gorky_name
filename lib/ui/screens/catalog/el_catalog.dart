@@ -35,14 +35,23 @@ class ElectronicCatalog extends StatelessWidget {
                 child: Center(
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Text(
-                      'Электронный каталог.',
-                      textAlign: TextAlign.center,
-                      style: GoogleFonts.oswald(
-                          textStyle: Theme.of(context)
-                              .textTheme
-                              .headline2!
-                              .copyWith(color: Colors.black)),
+                    child: GestureDetector(
+                      onTap: () {
+                        context
+                            .read<RoutingData>()
+                            .setRoute(GlobalVar.routeECatalogHtml);
+                      },
+                      child: Text(
+                        'Электронный каталог.',
+                        textAlign: TextAlign.center,
+                        style: GoogleFonts.oswald(
+                            textStyle: Theme.of(context)
+                                .textTheme
+                                .headline2!
+                                .copyWith(
+                                    color: Colors.redAccent,
+                                    decoration: TextDecoration.underline)),
+                      ),
                     ),
                   ),
                 ),
