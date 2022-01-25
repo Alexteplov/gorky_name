@@ -27,6 +27,7 @@ class GlobalVar {
   static const String booksCollectionTravel = 'Великие русские путешественники';
   static const String booksCollectionRussia = 'Книги о России';
   static const String booksCollectionHistory = 'Пешком в историю';
+  static const String booksCollectionGorky = 'Редкие книги\nА.М. Горького';
 
 //QR codes
   static const String qrNEDB = 'image/QR_nedb.png';
@@ -127,7 +128,7 @@ class GlobalVar {
   static const String routeBookCollectionHistory = '/book_collection_history';
   static const String routeBookCollectionHistoryA =
       '/book_collection_history_a';
-
+  static const String routeBookCollectionGorky = '/book_collection_gorky';
   //staff
   static const String routeStaffMenu = '/staff_menu';
   static const String routeStaffAdministration = '/staff_administration';
@@ -248,6 +249,7 @@ class StructureData {
 
 class BooksCollectionData {
   //image
+  static String logoBooksCollectionG = 'image/booksCollections/logo_gorky.jpg';
   static String logoBooksCollection =
       'image/booksCollections/logo_collection.png';
   static String imgGoncharovRecords =

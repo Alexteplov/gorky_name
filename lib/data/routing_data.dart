@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:gorky_name/ui/screens/books_collection/book_collection_gorky.dart';
 import 'package:gorky_name/ui/screens/rules_for_readers_html.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter/cupertino.dart';
@@ -195,13 +196,13 @@ class RoutingData with ChangeNotifier {
     } else if (route == GlobalVar.routeECatalogA) {
       _stackW.add(const ElectronicCatalogA());
     } else if (route == GlobalVar.routeECatalogHtml) {
-      _stackW.add(ElCatalogHtml(
+      _stackW.add(const ElCatalogHtml(
         urlSrc: GlobalVar.urlECatalog,
       ));
     } else if (route == GlobalVar.routeECatalogKids) {
       _stackW.add(const ElectronicCatalogKids());
     } else if (route == GlobalVar.routeECatalogHtmlK) {
-      _stackW.add(ElCatalogHtmlA());
+      _stackW.add(const ElCatalogHtmlA());
     }
     //books collection
     else if (route == GlobalVar.routeBookCollectionMenu) {
@@ -220,6 +221,8 @@ class RoutingData with ChangeNotifier {
       _stackW.add(const BookCollectionHistory());
     } else if (route == GlobalVar.routeBookCollectionHistoryA) {
       _stackW.add(const BookCollectionHistoryA());
+    } else if (route == GlobalVar.routeBookCollectionGorky) {
+      _stackW.add(const BookCollectionGorky());
 
       //Staff menu routeStaffMenu
     } else if (route == GlobalVar.routeStaffMenu) {

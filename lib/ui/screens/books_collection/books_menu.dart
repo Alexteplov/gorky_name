@@ -14,7 +14,7 @@ class BooksMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    context.watch<RoutingData>().setRouteNextSteep('empty');
+    context.watch<RoutingData>().setRouteNextSteep(GlobalVar.routeEmpty);
     return SafeArea(
       child: Stack(
         children: [
@@ -74,6 +74,16 @@ class BooksMenu extends StatelessWidget {
                   nameButton: GlobalVar.booksCollectionHistory,
                   route: GlobalVar.routeBookCollectionHistory,
                   logo: BooksCollectionData.logoBooksCollection,
+                  //buttonHeight: 0.1,
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                MenuButton(
+                  context: context,
+                  nameButton: GlobalVar.booksCollectionGorky,
+                  route: GlobalVar.routeBookCollectionGorky,
+                  logo: BooksCollectionData.logoBooksCollectionG,
                   //buttonHeight: 0.1,
                 ),
               ],
