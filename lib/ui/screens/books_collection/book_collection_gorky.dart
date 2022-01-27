@@ -45,6 +45,7 @@ class _BookCollectionGorkyState extends State<BookCollectionGorky> {
             top: 300,
             left: 20,
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 RichText(
                   textAlign: TextAlign.center,
@@ -72,21 +73,323 @@ class _BookCollectionGorkyState extends State<BookCollectionGorky> {
                     ],
                   ),
                 ),
-                const SizedBox(
-                  height: 50,
+              ],
+            ),
+          ),
+          /* ******************************** */
+          Positioned(
+            top: 550,
+            left: 20,
+            child: Column(
+              children: [
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Stack(
+                      children: [
+                        ClipPath(
+                          clipper: StructCustomClipper(), // <--
+                          child: Container(
+                            width: rectangleSide,
+                            height: rectangleSide,
+                            color: StructureData.colorWhite,
+                          ),
+                        ),
+                        Positioned(
+                          top: rectangleSide * 0.025,
+                          left: rectangleSide * 0.025,
+                          child: GestureDetector(
+                            onTap: () {
+                              setState(() {
+                                _showPreview = !_showPreview;
+                                _image = BooksCollectionData.imgOldRoom;
+                                //print(_showPreview);
+                              });
+                            },
+                            child: Container(
+                              width: rectangleSide - (rectangleSide * 0.05),
+                              height: rectangleSide - (rectangleSide * 0.05),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                image: DecorationImage(
+                                    image: AssetImage(
+                                        BooksCollectionData.imgOldRoom),
+                                    fit: BoxFit.scaleDown),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Stack(
+                      textDirection: TextDirection.ltr,
+                      alignment: AlignmentDirectional.topStart,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 20.0, top: 8),
+                          child: SizedBox(
+                              width: 820,
+                              height: 200,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  RichText(
+                                    text: TextSpan(
+                                      text: 'О',
+                                      style: GoogleFonts.oswald(
+                                          textStyle: Theme.of(context)
+                                              .textTheme
+                                              .headline5!
+                                              .copyWith(
+                                                  fontWeight: FontWeight.bold)),
+                                      children: [
+                                        TextSpan(
+                                          text:
+                                              'собое место в фонде редких книг МКУК ЦСДБ  г. Челябинска по праву занимают книги А. М. Горького, поскольку Центральная городская детская библиотека носит имя этого писателя. Нас часто спрашивают, почему библиотека носит имя Алексея Максимовича Горького?',
+                                          style: GoogleFonts.oswald(
+                                              textStyle: Theme.of(context)
+                                                  .textTheme
+                                                  .headline5!),
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    height: 20,
+                                  ),
+                                  RichText(
+                                    text: TextSpan(
+                                      text: 'В 30-е годы',
+                                      style: GoogleFonts.oswald(
+                                          textStyle: Theme.of(context)
+                                              .textTheme
+                                              .headline5!
+                                              .copyWith(
+                                                  fontWeight: FontWeight.bold)),
+                                      children: [
+                                        TextSpan(
+                                          text:
+                                              ' ХХ века именем Горького стали называть города, улицы, станции метро,',
+                                          style: GoogleFonts.oswald(
+                                              textStyle: Theme.of(context)
+                                                  .textTheme
+                                                  .headline5!),
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              )),
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
                 SizedBox(
                   width: 1040,
-                  height: 650,
+                  height: 30,
                   child: RichText(
                     textDirection: TextDirection.ltr,
                     textAlign: TextAlign.justify,
                     text: TextSpan(
-                      text: '''библиотеками России. 
-    Книга уже отмечена многими наградами – стала лауреатом премии «Ревизор-2017, отмечена «Золотым яблоком» на самом представительном иллюстраторском форуме, Биеннале иллюстраторов в Братиславе, книга переведена на  другие языки. \n
-    Авторы видят главную задачу своей книги в том, чтобы дать детям и взрослым внутри семьи содержательное пространство для разговора: «Нам хочется, чтобы люди взяли в руки нашу книгу и нашли, о чем поговорить с ребенком, пока он еще интересуется, а мама помнит и знает». Авторы призывают культивировать ауру «семейного тепла и преемственности…, тонкие нити общих воспоминаний, историй, культурных традиций».\n
-    На единение над книгой ребенка и взрослого работает здесь все – и визуальный ряд, и текст. Рассказывают здесь не только герои, но и предметы, вещи: мебель, одежда, посуда, книги – все несет на себе отпечаток времени, следы эпохи. Уже на форзаце и авантитуле встречаются коллажи из множества документов: фотографий, бланков телеграмм, ученического табеля, газетных вырезок, надписанных конвертов и открыток, афиш и т.д. Это все – как дверь в иное временное пространство, когда ощутимо ощущаешь знобкое дыхание другого мира. Текст книги также апеллирует к совместности. А. Литвина говорит: «Я старалась, чтобы в тексте тоже были приметы времени – какие-нибудь характерные словечки или манера выражаться, чтобы не только рисунки выражали эпоху».
-\n\n''',
+                      text:
+                          'институты, театры, библиотеки, парки и даже аэропланы, не считаясь с тем, что Горький сердился и протестовал.',
+                      style: GoogleFonts.oswald(
+                          textStyle: Theme.of(context)
+                              .textTheme
+                              .headline5!
+                              .copyWith(color: Colors.black87)),
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                SizedBox(
+                  width: 1040,
+                  height: 140,
+                  child: RichText(
+                    textDirection: TextDirection.ltr,
+                    textAlign: TextAlign.justify,
+                    text: TextSpan(
+                      text: 'А с конца 80-х',
+                      style: GoogleFonts.oswald(
+                          textStyle: Theme.of(context)
+                              .textTheme
+                              .headline5!
+                              .copyWith(
+                                  color: Colors.black87,
+                                  fontWeight: FontWeight.bold)),
+                      children: [
+                        TextSpan(
+                            text:
+                                ' годов пошел обратный процесс: город, в котором он родился и который был наречен его именем, переименовали, как переименовали и станцию метро, и одну из главных улиц Москвы. Были даже предложения изъять его произведения из школьной программы, а в Челябинске, во время чисток одной из партийных библиотек книги Горького были сожжены...',
+                            style: GoogleFonts.oswald(
+                                textStyle: Theme.of(context)
+                                    .textTheme
+                                    .headline5!
+                                    .copyWith(color: Colors.black87))),
+                      ],
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                SizedBox(
+                  width: 1040,
+                  height: 200,
+                  child: RichText(
+                    textDirection: TextDirection.ltr,
+                    textAlign: TextAlign.justify,
+                    text: TextSpan(
+                      text: 'X',
+                      style: GoogleFonts.oswald(
+                          textStyle: Theme.of(context)
+                              .textTheme
+                              .headline5!
+                              .copyWith(
+                                  color: Colors.black87,
+                                  fontWeight: FontWeight.bold)),
+                      children: [
+                        TextSpan(
+                            text:
+                                'орошо, что здравый смысл не позволил довести процесс переименования до постыдного конца. По всей стране сохранились  библиотеки, улицы, музеи, носящие имя писателя. Вот и Центральная городская детская библиотека города Челябинска носит имя А.М. Горького и гордится этим, потому что А.М. Горький – замечательный русский писатель и очень хороший человек.  Он любил детей и многое сделал для них.',
+                            style: GoogleFonts.oswald(
+                                textStyle: Theme.of(context)
+                                    .textTheme
+                                    .headline5!
+                                    .copyWith(color: Colors.black87))),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          /* ******************************** */
+          Positioned(
+            top: 1150,
+            left: 20,
+            child: Column(
+              children: [
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Stack(
+                      children: [
+                        ClipPath(
+                          clipper: StructCustomClipper(), // <--
+                          child: Container(
+                            width: rectangleSide,
+                            height: rectangleSide,
+                            color: StructureData.colorWhite,
+                          ),
+                        ),
+                        Positioned(
+                          top: rectangleSide * 0.025,
+                          left: rectangleSide * 0.025,
+                          child: GestureDetector(
+                            onTap: () {
+                              setState(() {
+                                _showPreview = !_showPreview;
+                                _image = BooksCollectionData.imgOldRoom;
+                                //print(_showPreview);
+                              });
+                            },
+                            child: Container(
+                              width: rectangleSide - (rectangleSide * 0.05),
+                              height: rectangleSide - (rectangleSide * 0.05),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                image: DecorationImage(
+                                    image: AssetImage(
+                                        BooksCollectionData.imgOldRoom),
+                                    fit: BoxFit.scaleDown),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Stack(
+                      textDirection: TextDirection.ltr,
+                      alignment: AlignmentDirectional.topStart,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 20.0, top: 8),
+                          child: SizedBox(
+                            width: 820,
+                            height: 200,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                RichText(
+                                  textDirection: TextDirection.ltr,
+                                  textAlign: TextAlign.justify,
+                                  text: TextSpan(
+                                    text: 'Ф',
+                                    style: GoogleFonts.oswald(
+                                        textStyle: Theme.of(context)
+                                            .textTheme
+                                            .headline5!
+                                            .copyWith(
+                                                color: Colors.black87,
+                                                fontWeight: FontWeight.bold)),
+                                    children: [
+                                      TextSpan(
+                                          text:
+                                              'онд редких книг – это часть основного фонда, в которую включаются редкие или особо ценные документы, отличающиеся выдающимися историческими, научными, художественно-эстетическими и полиграфическими достоинствами.',
+                                          style: GoogleFonts.oswald(
+                                              textStyle: Theme.of(context)
+                                                  .textTheme
+                                                  .headline5!
+                                                  .copyWith(
+                                                      color: Colors.black87))),
+                                    ],
+                                  ),
+                                ),
+                                const SizedBox(
+                                  height: 20,
+                                ),
+                                RichText(
+                                  text: TextSpan(
+                                    text: 'C',
+                                    style: GoogleFonts.oswald(
+                                        textStyle: Theme.of(context)
+                                            .textTheme
+                                            .headline5!
+                                            .copyWith(
+                                                fontWeight: FontWeight.bold)),
+                                    children: [
+                                      TextSpan(
+                                        text:
+                                            'тарая книга, книга со следами чтения - это живая память о человеке. Ее хочется взять в руки, полистать страницы, прочесть, узнать, кому она принадлежала, выяснить судьбу',
+                                        style: GoogleFonts.oswald(
+                                            textStyle: Theme.of(context)
+                                                .textTheme
+                                                .headline5!),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  width: 1040,
+                  height: 200,
+                  child: RichText(
+                    textDirection: TextDirection.ltr,
+                    textAlign: TextAlign.justify,
+                    text: TextSpan(
+                      text:
+                          'книги. Обзор редких книг приурочен к  150-летию со дня рождения Алексея Максимовича Горького (1868 – 1936). Перелистаем наиболее интересные из них.',
                       style: GoogleFonts.oswald(
                           textStyle: Theme.of(context)
                               .textTheme
