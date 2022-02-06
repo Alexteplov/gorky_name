@@ -16,28 +16,24 @@ class AfishaThirdA extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Map<String, String> events = {
-      '10:00':
-          'Акция «В Новый год — с библиотекой!» для первых десяти читателей 2022 года',
-      '11:00': 'Волшебный фонарь. Просмотр диафильма (от 3 лет)',
-      '12:00': 'Мастер-класс «Снежинка» (от 7 лет)',
-      '15:00': 'Новогодний баттл «Зажги ёлку» (от 10 лет)',
-      '16:00':
-          'Литературно-игровое занятие «Мы едем в Дедморозовку» - по книгам Андрея Усачева (от 5 лет)',
-      '16:00':
-          'Презентация книжной экспозиции «Ёлка» с мастер-классом «Новогодние елочки» (от 10 лет)',
+      '14:00': 'Познавательный час «Зимнее путешествие по Уралу» (7-9 лет)',
+      '14:00 ':
+          'Литературно-исторический час «На Мамаевом кургане тишина», ко Дню Сталинградской битвы (от 10 лет)',
+      '15:00':
+          'Интерактивное образовательное занятие «Умный пол» - «Напряги извилины» (от 8 лет)',
     };
 
-    final Map<String, String> eventsA = {
+/*     final Map<String, String> eventsA = {
       '12:00': 'Мастер-класс «Новогодняя фантазия» (от 6 лет)',
       '14:30':
           'Литературно-игровая программа "Новогодний салат из сказок" (от 6 лет)',
       '15:00':
           'Клуб любителей настольных игр «Сто наСтолок». «Новогодняя игротека» (от 8 лет)',
-      '15:00':
+      '15:00 ':
           'Новогодний кинопросмотр фильма «Гринч» по мотивам книги Доктора Сьюза «Как Гринч украл Рождество» (от 6 лет)',
     };
-
-    context.watch<RoutingData>().setRouteNextSteep(GlobalVar.routeAfishaW02a);
+ */
+    context.watch<RoutingData>().setRouteNextSteep(GlobalVar.routeAfishaW01a);
     return SafeArea(
       child: Stack(
         children: [
@@ -72,18 +68,18 @@ class AfishaThirdA extends StatelessWidget {
               ),
               /************************ */
               const AfishaHeaderEvent(
-                head: '5 января - среда',
+                head: '4 февраля - пятница',
               ),
               ...events.entries
                   .map((e) => AfishaEvent(time: e.key, information: e.value)),
               const AfishaBottomEvent(),
-              const AfishaHeaderEvent(
+/*               const AfishaHeaderEvent(
                 head: '6 января - четверг',
               ),
               ...eventsA.entries
                   .map((e) => AfishaEvent(time: e.key, information: e.value)),
               const AfishaBottomEvent(),
-
+ */
               const Expanded(
                 flex: 8,
                 child: SizedBox(),

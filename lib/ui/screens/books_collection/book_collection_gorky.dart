@@ -24,9 +24,7 @@ class _BookCollectionGorkyState extends State<BookCollectionGorky> {
 
   @override
   Widget build(BuildContext context) {
-    context
-        .watch<RoutingData>()
-        .setRouteNextSteep(GlobalVar.routeBookCollectionRussiaA);
+    context.watch<RoutingData>().setRouteNextSteep(GlobalVar.routeEmpty);
     return SafeArea(
       child: Stack(
         children: [
@@ -44,36 +42,39 @@ class _BookCollectionGorkyState extends State<BookCollectionGorky> {
           Positioned(
             top: 300,
             left: 20,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                RichText(
-                  textAlign: TextAlign.center,
-                  text: TextSpan(
-                    text: 'Отраженье исчезнувших лет…\n',
-                    style: GoogleFonts.oswald(
-                        textStyle: Theme.of(context)
-                            .textTheme
-                            .headline3!
-                            .copyWith(
-                                color: Colors.black87,
-                                fontWeight: FontWeight.bold)),
-                    children: [
-                      TextSpan(
-                        text:
-                            '(обзор редких изданий А. М. Горького\nиз фондов детских библиотек г. Челябинска)',
-                        style: GoogleFonts.oswald(
-                            textStyle: Theme.of(context)
-                                .textTheme
-                                .headline4!
-                                .copyWith(
-                                    color: Colors.black87,
-                                    fontWeight: FontWeight.bold)),
-                      ),
-                    ],
+            child: SizedBox(
+              width: 1040,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  RichText(
+                    textAlign: TextAlign.center,
+                    text: TextSpan(
+                      text: 'Отраженье исчезнувших лет…\n',
+                      style: GoogleFonts.oswald(
+                          textStyle: Theme.of(context)
+                              .textTheme
+                              .headline3!
+                              .copyWith(
+                                  color: Colors.black87,
+                                  fontWeight: FontWeight.bold)),
+                      children: [
+                        TextSpan(
+                          text:
+                              '(обзор редких изданий А. М. Горького\nиз фондов детских библиотек г. Челябинска)',
+                          style: GoogleFonts.oswald(
+                              textStyle: Theme.of(context)
+                                  .textTheme
+                                  .headline4!
+                                  .copyWith(
+                                      color: Colors.black87,
+                                      fontWeight: FontWeight.bold)),
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
           /* ******************************** */
@@ -102,7 +103,7 @@ class _BookCollectionGorkyState extends State<BookCollectionGorky> {
                             onTap: () {
                               setState(() {
                                 _showPreview = !_showPreview;
-                                _image = BooksCollectionData.imgOldRoom;
+                                _image = BooksCollectionData.imgGorky;
                                 //print(_showPreview);
                               });
                             },
@@ -113,7 +114,7 @@ class _BookCollectionGorkyState extends State<BookCollectionGorky> {
                                 borderRadius: BorderRadius.circular(20),
                                 image: DecorationImage(
                                     image: AssetImage(
-                                        BooksCollectionData.imgOldRoom),
+                                        BooksCollectionData.imgGorky),
                                     fit: BoxFit.scaleDown),
                               ),
                             ),
@@ -293,7 +294,7 @@ class _BookCollectionGorkyState extends State<BookCollectionGorky> {
                             onTap: () {
                               setState(() {
                                 _showPreview = !_showPreview;
-                                _image = BooksCollectionData.imgOldRoom;
+                                _image = BooksCollectionData.imgGorkyBooks;
                                 //print(_showPreview);
                               });
                             },
@@ -304,7 +305,7 @@ class _BookCollectionGorkyState extends State<BookCollectionGorky> {
                                 borderRadius: BorderRadius.circular(20),
                                 image: DecorationImage(
                                     image: AssetImage(
-                                        BooksCollectionData.imgOldRoom),
+                                        BooksCollectionData.imgGorkyBooks),
                                     fit: BoxFit.scaleDown),
                               ),
                             ),

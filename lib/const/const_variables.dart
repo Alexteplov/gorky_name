@@ -249,6 +249,10 @@ class StructureData {
 
 class BooksCollectionData {
   //image
+  //gorky
+  static String imgGorky = 'image/booksCollections/gorky/gorky001.jpg';
+  static String imgGorkyBooks = 'image/booksCollections/gorky/books.jpg';
+
   static String logoBooksCollectionG = 'image/booksCollections/logo_gorky.jpg';
   static String logoBooksCollection =
       'image/booksCollections/logo_collection.png';
