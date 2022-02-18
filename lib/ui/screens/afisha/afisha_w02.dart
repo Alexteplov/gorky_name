@@ -32,7 +32,7 @@ class AfishaSunday extends StatelessWidget {
       '16:30':
           'Кружок «Сказка на песке». Тема занятия «Песочные узоры» (3-5 лет)',
     };
-    context.watch<RoutingData>().setRouteNextSteep(GlobalVar.routeEmpty);
+    context.watch<RoutingData>().setRouteNextSteep(GlobalVar.routeAfisha01);
     return SafeArea(
       child: Stack(
         children: [
