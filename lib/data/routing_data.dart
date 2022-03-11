@@ -2,7 +2,6 @@ import 'dart:math';
 
 import 'package:gorky_name/ui/screens/books_collection/book_collection_gorky.dart';
 import 'package:gorky_name/ui/screens/rules_for_readers_html.dart';
-import 'package:intl/intl.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:gorky_name/const/const_variables.dart';
 import 'package:gorky_name/ui/component/widgets/el_libs_qr.dart';
@@ -102,23 +101,18 @@ class RoutingData with ChangeNotifier {
         DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day);
     //DateTime _sDt = DateTime(2021, 12, 24);
     //Show default page
-    String _retStr = GlobalVar.routeAfishaW02a;
-    if (_now.compareTo(DateTime(2022, 02, 18)) <= 0) {
-      _retStr = GlobalVar.routeAfisha03;
-    } else if (_now.compareTo(DateTime(2022, 02, 19)) <= 0) {
-      _retStr = GlobalVar.routeAfishaW01;
-    } else if (_now.compareTo(DateTime(2022, 02, 20)) <= 0) {
-      _retStr = GlobalVar.routeAfishaW02;
-    } else if (_now.compareTo(DateTime(2022, 02, 22)) <= 0) {
+    String _retStr = GlobalVar.routeAfishaW02;
+    if (_now.compareTo(DateTime(2022, 03, 15)) <= 0) {
       _retStr = GlobalVar.routeAfisha01;
-    } else if (_now.compareTo(DateTime(2022, 02, 25)) <= 0) {
-      _retStr = GlobalVar.routeAfisha03a;
-    } else if (_now.compareTo(DateTime(2022, 02, 26)) <= 0) {
-      _retStr = GlobalVar.routeAfishaW01a;
-    } else if (_now.compareTo(DateTime(2022, 02, 27)) <= 0) {
-      _retStr = GlobalVar.routeAfishaW02a;
+    } else if (_now.compareTo(DateTime(2022, 03, 17)) <= 0) {
+      _retStr = GlobalVar.routeAfisha02;
+    } else if (_now.compareTo(DateTime(2022, 03, 18)) <= 0) {
+      _retStr = GlobalVar.routeAfisha03;
+    } else if (_now.compareTo(DateTime(2022, 03, 19)) <= 0) {
+      _retStr = GlobalVar.routeAfishaW01;
+    } else if (_now.compareTo(DateTime(2022, 03, 20)) <= 0) {
+      _retStr = GlobalVar.routeAfishaW02;
     }
-
     return _retStr;
   }
 

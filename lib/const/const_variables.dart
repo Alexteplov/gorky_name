@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gorky_name/data/afisha_data.dart';
 
 class GlobalVar {
   static const String nameLib =
