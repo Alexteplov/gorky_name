@@ -16,10 +16,11 @@ class AfishaThird extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Map<String, String> events = {
-      '12:00': 'Познавательный час «Путешествие в страну Светофорию» (7-9 лет)',
-      '14:00':
-          'Занятие по программе «ЭКО Что-то» - «Чистый город начинается с тебя» (7-9 лет)',
-      '15:30': 'Экскурсия «Новая. Удобная. Твоя» (от 9 лет)',
+      '11:00': 'Мастер-класс по легоконструированию (от 8 лет)',
+      '14:00':'Интерактивное занятие «Умный пол». Приглашаем на игру «Космический мусор» (от 8 лет)',
+      '16:00': 'Мастер-класс по легоконструированию (от 8 лет)',
+      '17:00':
+          'Клуб любителей настольных игр «Сто наСтолок». Игра «Гембло» (от 7 лет)',
     };
 
     context.watch<RoutingData>().setRouteNextSteep(GlobalVar.routeAfishaW01);
@@ -57,7 +58,7 @@ class AfishaThird extends StatelessWidget {
               ),
               /************************ */
               const AfishaHeaderEvent(
-                head: '18 марта - пятница',
+                head: '25 марта - пятница',
               ),
               ...events.entries
                   .map((e) => AfishaEvent(time: e.key, information: e.value)),

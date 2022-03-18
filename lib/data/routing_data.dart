@@ -102,15 +102,15 @@ class RoutingData with ChangeNotifier {
     //DateTime _sDt = DateTime(2021, 12, 24);
     //Show default page
     String _retStr = GlobalVar.routeAfishaW02;
-    if (_now.compareTo(DateTime(2022, 03, 15)) <= 0) {
+    if (_now.compareTo(DateTime(2022, 03, 22)) <= 0) {
       _retStr = GlobalVar.routeAfisha01;
-    } else if (_now.compareTo(DateTime(2022, 03, 17)) <= 0) {
+    } else if (_now.compareTo(DateTime(2022, 03, 24)) <= 0) {
       _retStr = GlobalVar.routeAfisha02;
-    } else if (_now.compareTo(DateTime(2022, 03, 18)) <= 0) {
+    } else if (_now.compareTo(DateTime(2022, 03, 25)) <= 0) {
       _retStr = GlobalVar.routeAfisha03;
-    } else if (_now.compareTo(DateTime(2022, 03, 19)) <= 0) {
+    } else if (_now.compareTo(DateTime(2022, 03, 26)) <= 0) {
       _retStr = GlobalVar.routeAfishaW01;
-    } else if (_now.compareTo(DateTime(2022, 03, 20)) <= 0) {
+    } else if (_now.compareTo(DateTime(2022, 03, 27)) <= 0) {
       _retStr = GlobalVar.routeAfishaW02;
     }
     return _retStr;
