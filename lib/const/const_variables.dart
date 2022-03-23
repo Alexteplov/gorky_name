@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 
+class MainSettings {
+  static int duration2MainMenu =
+      5 * 60; // 5 min time for go to main screen if not active
+}
+
 class GlobalVar {
   static const String nameLib =
       'Центральная городская детская библиотека \nим. А. М. Горького';
@@ -137,6 +142,7 @@ class GlobalVar {
       '/staff_department_coordination';
   static const String routeStaffDepFond = '/staff_department_fond';
   static const String routeStaffDepRedaction = '/staff_department_redaction';
+  static const String routeStaffDepSecInfo = '/staff_sector_information';
   static const String routeStaffDepInformation =
       '/staff_department_information';
 // Пока не используется не получается развернуть через спред оператор.
@@ -311,6 +317,9 @@ class StaffData {
   static const String staffDepFondNik = 'image/staff/nikitenko.jpg';
   static const String staffDepFondPil = 'image/staff/pilnikova.jpg';
   static const String staffDepFondRya = 'image/staff/ryabova.jpg';
+// Staff Sector registration and information
+  static const String staffDepSecSus = 'image/staff/empty_woman.jpg';
+  static const String staffDepSecMar = 'image/staff/empty_woman.jpg';
 
 //Redaction
   static const String staffDepRedactMat = 'image/staff/matveenkova.jpg';
@@ -328,4 +337,8 @@ class StaffData {
   static const String departmentInformation =
       'ОТДЕЛ АВТОМАТИЗАЦИИ БИБЛИОТЕЧНЫХ ТЕХНОЛОГИЙ';
   static const String departmentAdministration = 'АДМИНИСТРАЦИЯ';
+
+  //Sector registration and information
+  static const String departmentSecRegAndInfo =
+      'СЕКТОР РЕГИСТРАЦИИ И ИНФОРМАЦИИ';
 }

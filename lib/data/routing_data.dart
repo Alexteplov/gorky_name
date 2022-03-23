@@ -45,11 +45,13 @@ import 'package:gorky_name/ui/screens/staff/staff_department_redaction.dart';
 import 'package:gorky_name/ui/screens/staff/staff_menu.dart';
 
 import '../const/const_variables.dart';
+import '../ui/screens/staff/staff_department_sector.dart';
 
 class RoutingData with ChangeNotifier {
   //String _route = GlobalVar.routeMainMenu;
   final _stackW = [];
   late final BuildContext _context;
+  DateTime eventDt = DateTime.now();
   String _nextSteep = GlobalVar.routeEmpty;
 
 //  Widget get getWidget => const MainMenu();
@@ -63,6 +65,8 @@ class RoutingData with ChangeNotifier {
   }
 
   Widget get getLowerNavigation => LowerNavigation(context: _context);
+
+  DateTime get getEventDt => eventDt;
 
   void goMainMenu() {
     _nextSteep = GlobalVar.routeEmpty;
@@ -88,6 +92,7 @@ class RoutingData with ChangeNotifier {
     } else {
       _nextSteep = GlobalVar.routeEmpty;
     }
+    eventDt = DateTime.now();
   }
 
   String get getBgAfisha {
@@ -239,6 +244,8 @@ class RoutingData with ChangeNotifier {
       _stackW.add(const StaffDepartmentRedaction());
     } else if (route == GlobalVar.routeStaffDepInformation) {
       _stackW.add(const StaffDepartmentInformation());
+    } else if (route == GlobalVar.routeStaffDepSecInfo) {
+      _stackW.add(const StaffSector());
     } else {
       _stackW.add(const MainMenu());
       _nextSteep = GlobalVar.routeEmpty;

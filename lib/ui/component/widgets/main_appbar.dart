@@ -1,5 +1,7 @@
 //import 'dart:html';
 
+//import 'dart:js';
+
 import 'package:flutter/material.dart';
 import 'package:gorky_name/const/const_variables.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -32,7 +34,7 @@ class MainAppBar extends AppBar {
           elevation: 0.0,
           automaticallyImplyLeading: false,
           actions: <Widget>[
-            const CurrentDate(),
+            CurrentDate(context: context),
           ],
         );
 }

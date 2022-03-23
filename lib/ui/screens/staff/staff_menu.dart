@@ -6,7 +6,8 @@ import 'package:gorky_name/data/routing_data.dart';
 import 'package:gorky_name/ui/component/widgets/library_logo.dart';
 import 'package:gorky_name/ui/component/widgets/menu_button.dart';
 import 'package:gorky_name/ui/theme/screen.dart';
-import 'package:google_fonts/google_fonts.dart';
+//import 'package:google_fonts/google_fonts.dart';
+// ignore: implementation_imports
 import 'package:provider/src/provider.dart';
 
 class StaffMenu extends StatelessWidget {
@@ -40,8 +41,8 @@ class StaffMenu extends StatelessWidget {
                   context: context,
                   nameButton: StaffData.departmentAdministration,
                   route: GlobalVar.routeStaffAdministration,
-                  logo: StaffData.staffLogo,
-                  //buttonHeight: 0.08,
+                  //logo: StaffData.staffLogo,
+                  buttonHeight: 0.075,
                   buttonWidth: 0.8,
                 ),
                 const SizedBox(
@@ -51,8 +52,19 @@ class StaffMenu extends StatelessWidget {
                   context: context,
                   nameButton: StaffData.departmentReaders,
                   route: GlobalVar.routeStaffDepReaders,
-                  logo: StaffData.staffLogo,
-                  //buttonHeight: 0.1,
+                  //logo: StaffData.staffLogo,
+                  buttonHeight: 0.075,
+                  buttonWidth: 0.8,
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                MenuButton(
+                  context: context,
+                  nameButton: StaffData.departmentSecRegAndInfo,
+                  route: GlobalVar.routeStaffDepSecInfo,
+                  //logo: StaffData.staffLogo,
+                  buttonHeight: 0.075,
                   buttonWidth: 0.8,
                 ),
                 const SizedBox(
@@ -62,8 +74,8 @@ class StaffMenu extends StatelessWidget {
                   context: context,
                   nameButton: StaffData.departmentInfo,
                   route: GlobalVar.routeStaffDepInfo,
-                  logo: StaffData.staffLogo,
-                  buttonHeight: 0.1,
+                  //logo: StaffData.staffLogo,
+                  buttonHeight: 0.075,
                   buttonWidth: 0.8,
                 ),
                 const SizedBox(
@@ -73,8 +85,8 @@ class StaffMenu extends StatelessWidget {
                   context: context,
                   nameButton: StaffData.departmentCoordinations,
                   route: GlobalVar.routeStaffDepCoordination,
-                  logo: StaffData.staffLogo,
-                  buttonHeight: 0.08,
+                  //logo: StaffData.staffLogo,
+                  buttonHeight: 0.075,
                   buttonWidth: 0.8,
                 ),
                 const SizedBox(
@@ -84,8 +96,8 @@ class StaffMenu extends StatelessWidget {
                   context: context,
                   nameButton: StaffData.departmentFond,
                   route: GlobalVar.routeStaffDepFond,
-                  logo: StaffData.staffLogo,
-                  buttonHeight: 0.08,
+                  //logo: StaffData.staffLogo,
+                  buttonHeight: 0.075,
                   buttonWidth: 0.8,
                 ),
                 const SizedBox(
@@ -95,8 +107,8 @@ class StaffMenu extends StatelessWidget {
                   context: context,
                   nameButton: StaffData.departmentRedaction,
                   route: GlobalVar.routeStaffDepRedaction,
-                  logo: StaffData.staffLogo,
-                  buttonHeight: 0.08,
+                  //logo: StaffData.staffLogo,
+                  buttonHeight: 0.075,
                   buttonWidth: 0.8,
                 ),
                 const SizedBox(
@@ -106,8 +118,8 @@ class StaffMenu extends StatelessWidget {
                   context: context,
                   nameButton: StaffData.departmentInformation,
                   route: GlobalVar.routeStaffDepInformation,
-                  logo: StaffData.staffLogo,
-                  buttonHeight: 0.1,
+                  //logo: StaffData.staffLogo,
+                  buttonHeight: 0.075,
                   buttonWidth: 0.8,
                 ),
               ],
