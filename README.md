@@ -1,16 +1,11 @@
-# gorky_name
+# Web Приложение для терминала
+## _Центральной городской детской библиотеки имени А.М. Горького_
 
-A new Flutter project.
+## ScreenShot
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img src="assets/screens/main.jpg" height="870px" />
+<img src="assets/screens/afisha.jpg" height="870px" />
+<img src="assets/screens/gorky.jpg" height="870px" />
+<img src="assets/screens/3_1.jpg" height="870px" />
+<img src="assets/screens/3.jpg" height="870px" />
+<img src="assets/screens/irbis.jpg" height="870px" />
