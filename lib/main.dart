@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:gorky_name/const/const_variables.dart';
 import 'package:gorky_name/data/routing_data.dart';
 import 'package:gorky_name/ui/screens/main_screen.dart';
+import 'package:gorky_name/ui/theme/custom_theme.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -35,16 +36,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: GlobalVar.nameLib,
-        theme: ThemeData(
-          elevatedButtonTheme: ElevatedButtonThemeData(
-              style: ElevatedButton.styleFrom(
-                  primary: Colors.white,
-                  onPrimary: Colors.black87,
-                  textStyle: const TextStyle(
-                      color: Colors.black87,
-                      fontWeight: FontWeight.w600,
-                      fontSize: 52))),
-        ),
+        theme: CustomTheme.lightTheme,
         home: const MyHomePage(),
       ),
     );
