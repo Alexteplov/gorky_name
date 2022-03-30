@@ -1,10 +1,7 @@
-//import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
+import 'package:gorky_name/ui/theme/theme_colors.dart';
 
-// The style of the buttons on the main screen
-/*
-class BottonStyleMain(BuildContext context;) {
-  final ButtonStyle style = ElevatedButton.styleFrom(
-      textStyle: Theme.of(context).textTheme.headline4);
-    BottonStyleMain(this.context);
+class ElButTextStyle {
+  static TextStyle get elBTextStyle => const TextStyle(
+      color: ThemeColors.black, fontWeight: FontWeight.w600, fontSize: 52);
 }
-*/
