@@ -6,15 +6,20 @@ import 'package:gorky_name/ui/component/widgets/html_content.dart';
 // ignore: implementation_imports
 import 'package:provider/src/provider.dart';
 
-class RulesForReadersHtml extends StatelessWidget {
+class ElCatalogHtml extends StatelessWidget {
   final String urlSrc;
-  const RulesForReadersHtml({Key? key, required this.urlSrc}) : super(key: key);
+  final String uIdent;
+  const ElCatalogHtml({Key? key, required this.urlSrc, required this.uIdent})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     context.read<RoutingData>().setRouteNextSteep(GlobalVar.routeEmpty);
     return SafeArea(
-      child: HtmlContent(srcUrl: urlSrc),
+      child: HtmlContent(
+        srcUrl: urlSrc,
+        uIdent: uIdent,
+      ),
     );
   }
 }

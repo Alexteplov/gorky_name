@@ -10,8 +10,9 @@ import 'package:provider/src/provider.dart';
 
 import '../../component/widgets/afisha_bottom_event.dart';
 
-class AfishaFirst extends StatelessWidget {
-  const AfishaFirst({Key? key}) : super(key: key);
+class Afisha extends StatelessWidget {
+  final Map<String, String> dtAfisha;
+  const Afisha({Key? key, required this.dtAfisha}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

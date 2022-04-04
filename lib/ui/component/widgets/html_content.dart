@@ -6,19 +6,23 @@ import 'package:gorky_name/ui/theme/screen.dart';
 
 // ignore: must_be_immutable
 class HtmlContent extends StatefulWidget {
-  String srcUrl;
-  HtmlContent({Key? key, required this.srcUrl}) : super(key: key);
+  final String srcUrl;
+  final String uIdent;
+
+  const HtmlContent({Key? key, required this.srcUrl, required this.uIdent})
+      : super(key: key);
 
   @override
   // ignore: no_logic_in_create_state
-  _HtmlContentState createState() => _HtmlContentState(srcUrl);
+  _HtmlContentState createState() => _HtmlContentState(srcUrl, uIdent);
 }
 
 class _HtmlContentState extends State<HtmlContent> {
   late Widget _iframeWidget;
   final html.IFrameElement _iframeElement = html.IFrameElement();
-  String srcUrl;
-  _HtmlContentState(this.srcUrl);
+  final String srcUrl;
+  final String uIdent;
+  _HtmlContentState(this.srcUrl, this.uIdent);
 
   @override
   void initState() {
@@ -34,13 +38,13 @@ class _HtmlContentState extends State<HtmlContent> {
 
     // ignore: undefined_prefixed_name
     ui.platformViewRegistry.registerViewFactory(
-      'iframeElement',
+      uIdent,
       (int viewId) => _iframeElement,
     );
 
     _iframeWidget = HtmlElementView(
       key: UniqueKey(),
-      viewType: 'iframeElement',
+      viewType: uIdent,
     );
     //print('url=${srcUrl}');
   }
@@ -54,14 +58,6 @@ class _HtmlContentState extends State<HtmlContent> {
           width: Screen.width(context),
           child: _iframeWidget,
         ),
-/*         ElevatedButton.icon(
-            onPressed: () => setState(() {
-                  _iframeElement.src = srcUrl;
-                  print('Button in change url =${srcUrl}');
-                }),
-            icon: const Icon(Icons.access_alarm),
-            label: const Text('Перезагрузка URL'))
- */
       ],
     );
   }

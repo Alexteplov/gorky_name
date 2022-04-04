@@ -24,8 +24,7 @@ import 'package:gorky_name/ui/screens/books_collection/book_collection_travels_b
 import 'package:gorky_name/ui/screens/books_collection/books_menu.dart';
 import 'package:gorky_name/ui/screens/catalog/el_catalog.dart';
 import 'package:gorky_name/ui/screens/catalog/el_catalog_a.dart';
-import 'package:gorky_name/ui/screens/catalog/el_catalog_html.dart';
-import 'package:gorky_name/ui/screens/catalog/el_catalog_html_a.dart';
+import 'package:gorky_name/ui/component/widgets/screen_html.dart';
 import 'package:gorky_name/ui/screens/catalog/el_catalog_kids.dart';
 import 'package:gorky_name/ui/screens/catalog/el_catalog_menu.dart';
 import 'package:gorky_name/ui/screens/eLibs/elibs_screen.dart';
@@ -34,7 +33,6 @@ import 'package:gorky_name/ui/screens/library_structure/library_structure.dart';
 import 'package:gorky_name/ui/screens/library_structure/library_structure_a.dart';
 import 'package:gorky_name/ui/screens/library_structure/library_structure_b.dart';
 import 'package:gorky_name/ui/screens/rules_for_readers/rules_for_readers.dart';
-import 'package:gorky_name/ui/screens/rules_for_readers/rules_for_readers_html.dart';
 import 'package:gorky_name/ui/screens/staff/staff_administration.dart';
 import 'package:gorky_name/ui/screens/staff/staff_department_coordination.dart';
 import 'package:gorky_name/ui/screens/staff/staff_department_fond.dart';
@@ -138,7 +136,7 @@ class RoutingData with ChangeNotifier {
     if (route == GlobalVar.routeMainMenu) {
       _stackW.add(const MainMenu());
     } else if (route == GlobalVar.routeAfisha01) {
-      _stackW.add(const Afisha());
+      _stackW.add(const AfishaFirst());
     } else if (route == GlobalVar.routeAfisha02) {
       _stackW.add(const AfishaSecond());
     } else if (route == GlobalVar.routeAfisha03) {
@@ -168,7 +166,10 @@ class RoutingData with ChangeNotifier {
     } else if (route == GlobalVar.routeRules4Readers) {
       _stackW.add(const RulesForReaders());
     } else if (route == GlobalVar.routeRulesForReadersHtml) {
-      _stackW.add(const RulesForReadersHtml(urlSrc: GlobalVar.urlRules));
+      _stackW.add(const ScreenHtml(
+        urlSrc: GlobalVar.urlRules,
+        uIdent: GlobalVar.routeRules4Readers,
+      ));
     } else if (route == GlobalVar.routeLibiraryStructure) {
       _stackW.add(const LibraryStructure());
     } else if (route == GlobalVar.routeLibiraryStructureA) {
@@ -199,13 +200,17 @@ class RoutingData with ChangeNotifier {
     } else if (route == GlobalVar.routeECatalogA) {
       _stackW.add(const ElectronicCatalogA());
     } else if (route == GlobalVar.routeECatalogHtml) {
-      _stackW.add(const ElCatalogHtml(
+      _stackW.add(const ScreenHtml(
         urlSrc: GlobalVar.urlECatalog,
+        uIdent: GlobalVar.routeECatalog,
       ));
     } else if (route == GlobalVar.routeECatalogKids) {
       _stackW.add(const ElectronicCatalogKids());
     } else if (route == GlobalVar.routeECatalogHtmlK) {
-      _stackW.add(const ElCatalogHtmlA());
+      _stackW.add(const ScreenHtml(
+        urlSrc: GlobalVar.urlECatalogKids,
+        uIdent: GlobalVar.routeECatalogKids,
+      ));
     }
     //books collection
     else if (route == GlobalVar.routeBookCollectionMenu) {
