@@ -1,7 +1,6 @@
 import 'dart:math';
 
 import 'package:gorky_name/ui/screens/books_collection/book_collection_gorky.dart';
-import 'package:gorky_name/ui/screens/rules_for_readers_html.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:gorky_name/const/const_variables.dart';
 import 'package:gorky_name/ui/component/widgets/el_libs_qr.dart';
@@ -34,7 +33,8 @@ import 'package:gorky_name/ui/screens/library_in_network/library_in_network.dart
 import 'package:gorky_name/ui/screens/library_structure/library_structure.dart';
 import 'package:gorky_name/ui/screens/library_structure/library_structure_a.dart';
 import 'package:gorky_name/ui/screens/library_structure/library_structure_b.dart';
-import 'package:gorky_name/ui/screens/rules_for_readers.dart';
+import 'package:gorky_name/ui/screens/rules_for_readers/rules_for_readers.dart';
+import 'package:gorky_name/ui/screens/rules_for_readers/rules_for_readers_html.dart';
 import 'package:gorky_name/ui/screens/staff/staff_administration.dart';
 import 'package:gorky_name/ui/screens/staff/staff_department_coordination.dart';
 import 'package:gorky_name/ui/screens/staff/staff_department_fond.dart';
@@ -107,15 +107,15 @@ class RoutingData with ChangeNotifier {
     //DateTime _sDt = DateTime(2021, 12, 24);
     //Show default page
     String _retStr = GlobalVar.routeAfishaW02;
-    if (_now.compareTo(DateTime(2022, 03, 29)) <= 0) {
+    if (_now.compareTo(DateTime(2022, 04, 05)) <= 0) {
       _retStr = GlobalVar.routeAfisha01;
-    } else if (_now.compareTo(DateTime(2022, 03, 30)) <= 0) {
+    } else if (_now.compareTo(DateTime(2022, 04, 07)) <= 0) {
       _retStr = GlobalVar.routeAfisha02;
-    } else if (_now.compareTo(DateTime(2022, 04, 1)) <= 0) {
+    } else if (_now.compareTo(DateTime(2022, 04, 8)) <= 0) {
       _retStr = GlobalVar.routeAfisha03;
-    } else if (_now.compareTo(DateTime(2022, 04, 2)) <= 0) {
+    } else if (_now.compareTo(DateTime(2022, 04, 9)) <= 0) {
       _retStr = GlobalVar.routeAfishaW01;
-    } else if (_now.compareTo(DateTime(2022, 04, 3)) <= 0) {
+    } else if (_now.compareTo(DateTime(2022, 04, 10)) <= 0) {
       _retStr = GlobalVar.routeAfishaW02;
     }
     return _retStr;
