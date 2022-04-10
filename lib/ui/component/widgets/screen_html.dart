@@ -6,10 +6,10 @@ import 'package:gorky_name/ui/component/widgets/html_content.dart';
 // ignore: implementation_imports
 import 'package:provider/src/provider.dart';
 
-class ElCatalogHtml extends StatelessWidget {
+class ScreenHtml extends StatelessWidget {
   final String urlSrc;
   final String uIdent;
-  const ElCatalogHtml({Key? key, required this.urlSrc, required this.uIdent})
+  const ScreenHtml({Key? key, required this.urlSrc, required this.uIdent})
       : super(key: key);
 
   @override
