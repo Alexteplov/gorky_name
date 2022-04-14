@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gorky_name/ui/theme/screen.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:gorky_name/internal/theme/screen.dart';
 
 class AfishaEvent extends StatelessWidget {
   const AfishaEvent({Key? key, required this.time, required this.information})

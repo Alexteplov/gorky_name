@@ -19,7 +19,10 @@ class MainAppBar extends AppBar {
           ),
           backgroundColor: Colors.white70,
           centerTitle: true,
-          leading: Image.asset(GlobalVar.logoAppBar, width: 120, height: 100),
+          leading: GestureDetector(
+              onTap: () {},
+              child:
+                  Image.asset(GlobalVar.logoAppBar, width: 120, height: 100)),
           leadingWidth: 120,
           title: Text(
             GlobalVar.nameLib,

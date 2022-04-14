@@ -2,7 +2,7 @@
 import 'dart:html' as html;
 import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
-import 'package:gorky_name/ui/theme/screen.dart';
+import 'package:gorky_name/internal/theme/screen.dart';
 
 // ignore: must_be_immutable
 class HtmlContent extends StatefulWidget {

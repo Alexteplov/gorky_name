@@ -1,9 +1,9 @@
 //Библиотека в сети
 import 'package:flutter/widgets.dart';
 import 'package:gorky_name/const/const_variables.dart';
+import 'package:gorky_name/internal/theme/screen.dart';
 import 'package:gorky_name/ui/component/widgets/library_logo.dart';
 import 'package:gorky_name/ui/component/widgets/menu_button.dart';
-import 'package:gorky_name/ui/theme/screen.dart';
 
 class ElCatalogMenu extends StatelessWidget {
   const ElCatalogMenu({Key? key}) : super(key: key);

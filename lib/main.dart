@@ -3,10 +3,8 @@ import 'dart:html';
 //import 'dart:js';
 
 import 'package:flutter/material.dart';
-import 'package:gorky_name/const/const_variables.dart';
 import 'package:gorky_name/data/routing_data.dart';
-import 'package:gorky_name/ui/screens/main_screen.dart';
-import 'package:gorky_name/ui/theme/custom_theme.dart';
+import 'package:gorky_name/internal/application.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -33,12 +31,7 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (_) => RoutingData(context)),
       ],
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: GlobalVar.nameLib,
-        theme: CustomTheme.lightTheme,
-        home: const MyHomePage(),
-      ),
+      child: const Application(),
     );
   }
 }

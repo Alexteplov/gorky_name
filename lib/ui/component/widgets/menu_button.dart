@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gorky_name/data/routing_data.dart';
-import 'package:gorky_name/ui/theme/screen.dart';
+import 'package:gorky_name/internal/theme/screen.dart';
 // ignore: implementation_imports
 import 'package:provider/src/provider.dart';
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:gorky_name/ui/theme/screen.dart';
+import 'package:gorky_name/internal/theme/screen.dart';
 
 class AfishaBottomEvent extends StatelessWidget {
   const AfishaBottomEvent({Key? key}) : super(key: key);

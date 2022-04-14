@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gorky_name/const/const_variables.dart';
+import 'package:gorky_name/internal/theme/screen.dart';
 import 'package:gorky_name/ui/component/widgets/library_logo.dart';
 import 'package:gorky_name/ui/component/widgets/menu_button.dart';
-import 'package:gorky_name/ui/theme/screen.dart';
 
 class ElLibs extends StatelessWidget {
   const ElLibs({Key? key}) : super(key: key);

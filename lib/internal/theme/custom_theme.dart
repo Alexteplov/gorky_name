@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gorky_name/ui/theme/components_style.dart';
-import 'package:gorky_name/ui/theme/theme_colors.dart';
+import 'package:gorky_name/internal/theme/components_style.dart';
+import 'package:gorky_name/internal/theme/theme_colors.dart';
 
 class CustomTheme {
   static ThemeData get lightTheme => ThemeData(
