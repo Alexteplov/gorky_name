@@ -70,6 +70,7 @@ class RoutingData with ChangeNotifier {
     _nextSteep = GlobalVar.routeEmpty;
     _stackW.clear();
     //setStack(GlobalVar.routeMainMenu);
+    eventDt = DateTime.now();
     notifyListeners();
   }
 
@@ -79,7 +80,7 @@ class RoutingData with ChangeNotifier {
     } else {
       setStack(GlobalVar.routeMainMenu);
     }
-
+    eventDt = DateTime.now();
     notifyListeners();
   }
 
@@ -90,7 +91,7 @@ class RoutingData with ChangeNotifier {
     } else {
       _nextSteep = GlobalVar.routeEmpty;
     }
-    eventDt = DateTime.now();
+    //eventDt = DateTime.now();
   }
 
   String get getBgAfisha {
@@ -104,17 +105,15 @@ class RoutingData with ChangeNotifier {
         DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day);
     //DateTime _sDt = DateTime(2021, 12, 24);
     //Show default page
-    String _retStr = GlobalVar.routeAfishaW02;
-    if (_now.compareTo(DateTime(2022, 04, 19)) <= 0) {
+    String _retStr = GlobalVar.routeAfishaW01;
+    if (_now.compareTo(DateTime(2022, 04, 26)) <= 0) {
       _retStr = GlobalVar.routeAfisha01;
-    } else if (_now.compareTo(DateTime(2022, 04, 21)) <= 0) {
+    } else if (_now.compareTo(DateTime(2022, 04, 27)) <= 0) {
       _retStr = GlobalVar.routeAfisha02;
-    } else if (_now.compareTo(DateTime(2022, 04, 22)) <= 0) {
+    } else if (_now.compareTo(DateTime(2022, 04, 29)) <= 0) {
       _retStr = GlobalVar.routeAfisha03;
-    } else if (_now.compareTo(DateTime(2022, 04, 23)) <= 0) {
+    } else if (_now.compareTo(DateTime(2022, 04, 30)) <= 0) {
       _retStr = GlobalVar.routeAfishaW01;
-    } else if (_now.compareTo(DateTime(2022, 04, 24)) <= 0) {
-      _retStr = GlobalVar.routeAfishaW02;
     }
     return _retStr;
   }
@@ -124,6 +123,7 @@ class RoutingData with ChangeNotifier {
     if (_stackW.isEmpty) {
       _nextSteep = GlobalVar.routeEmpty;
     }
+    eventDt = DateTime.now();
     notifyListeners();
     return _stackW.isNotEmpty ? _stackW.last : const MainMenu();
   }

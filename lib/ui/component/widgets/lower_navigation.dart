@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gorky_name/const/const_variables.dart';
 import 'package:gorky_name/data/routing_data.dart';
 // ignore: implementation_imports
 import 'package:provider/src/provider.dart';
@@ -42,7 +43,7 @@ class LowerNavigation extends StatelessWidget {
                 ),
               )
             : const SizedBox(),
-        context.read<RoutingData>().getNextSteep != 'empty'
+        context.read<RoutingData>().getNextSteep != GlobalVar.routeEmpty
             ? SizedBox(
                 width: 100,
                 height: 100,
