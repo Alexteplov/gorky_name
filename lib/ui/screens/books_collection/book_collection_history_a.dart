@@ -24,7 +24,7 @@ class _BookCollectionHistoryAState extends State<BookCollectionHistoryA> {
 
   @override
   Widget build(BuildContext context) {
-    context.watch<RoutingData>().setRouteNextSteep('empty');
+    context.read<RoutingData>().setRouteNextSteep(GlobalVar.routeEmpty);
     return SafeArea(
       child: Stack(
         children: [

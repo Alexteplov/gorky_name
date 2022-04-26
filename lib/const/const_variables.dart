@@ -6,6 +6,8 @@ class MainSettings {
 }
 
 class GlobalVar {
+  static const login = 'LibAdm';
+  static const password = 'AlvbRisko90';
   static const String nameLib =
       'Центральная городская детская библиотека \nим. А. М. Горького';
 //пункты меню
@@ -145,6 +147,11 @@ class GlobalVar {
   static const String routeStaffDepSecInfo = '/staff_sector_information';
   static const String routeStaffDepInformation =
       '/staff_department_information';
+
+  //admin
+  static const String routeLoginPage = '/login_page';
+  static const String routeSheduleOfEvents = '/shedule_of_events';
+
 // Пока не используется не получается развернуть через спред оператор.
   /*
   static List<AfishaData> listDay01 = [day01, day02];

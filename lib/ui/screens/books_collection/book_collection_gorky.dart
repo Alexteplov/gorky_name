@@ -25,7 +25,7 @@ class _BookCollectionGorkyState extends State<BookCollectionGorky> {
 
   @override
   Widget build(BuildContext context) {
-    context.watch<RoutingData>().setRouteNextSteep(GlobalVar.routeEmpty);
+    context.read<RoutingData>().setRouteNextSteep(GlobalVar.routeEmpty);
     return SafeArea(
       child: Stack(
         children: [

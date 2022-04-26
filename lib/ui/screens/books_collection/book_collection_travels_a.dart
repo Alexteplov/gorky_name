@@ -26,7 +26,7 @@ class _BookCollectionTravelsAState extends State<BookCollectionTravelsA> {
   @override
   Widget build(BuildContext context) {
     context
-        .watch<RoutingData>()
+        .read<RoutingData>()
         .setRouteNextSteep(GlobalVar.routeBookCollectionTravelsB);
     return SafeArea(
       child: Stack(

@@ -1,5 +1,7 @@
 import 'dart:math';
 
+import 'package:gorky_name/ui/screens/admin/login_page.dart';
+import 'package:gorky_name/ui/screens/admin/shedule_of_events.dart';
 import 'package:gorky_name/ui/screens/books_collection/book_collection_gorky.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:gorky_name/const/const_variables.dart';
@@ -251,6 +253,10 @@ class RoutingData with ChangeNotifier {
       _stackW.add(const StaffDepartmentInformation());
     } else if (route == GlobalVar.routeStaffDepSecInfo) {
       _stackW.add(const StaffSector());
+    } else if (route == GlobalVar.routeSheduleOfEvents) {
+      _stackW.add(const SheduleOfEvents());
+    } else if (route == GlobalVar.routeLoginPage) {
+      _stackW.add(const LoginPage());
     } else {
       _stackW.add(const MainMenu());
       _nextSteep = GlobalVar.routeEmpty;

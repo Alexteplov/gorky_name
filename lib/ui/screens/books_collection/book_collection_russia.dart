@@ -25,7 +25,7 @@ class _BookCollectionRussiaState extends State<BookCollectionRussia> {
   @override
   Widget build(BuildContext context) {
     context
-        .watch<RoutingData>()
+        .read<RoutingData>()
         .setRouteNextSteep(GlobalVar.routeBookCollectionRussiaA);
     return SafeArea(
       child: Stack(

@@ -5,7 +5,9 @@
 import 'package:flutter/material.dart';
 import 'package:gorky_name/const/const_variables.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:gorky_name/data/routing_data.dart';
 import 'package:gorky_name/ui/component/widgets/current_date.dart';
+import 'package:provider/provider.dart';
 
 class MainAppBar extends AppBar {
   final BuildContext context;
@@ -20,7 +22,9 @@ class MainAppBar extends AppBar {
           backgroundColor: Colors.white70,
           centerTitle: true,
           leading: GestureDetector(
-              onTap: () {},
+              onTap: () => context
+                  .read<RoutingData>()
+                  .setRoute(GlobalVar.routeLoginPage),
               child:
                   Image.asset(GlobalVar.logoAppBar, width: 120, height: 100)),
           leadingWidth: 120,
