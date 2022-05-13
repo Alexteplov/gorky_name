@@ -35,12 +35,12 @@ class AfishaSunday extends StatelessWidget {
       '16:30':
           'Клуб любителей настольных игр «Сто наСтолок». Игра «Клякса» (5-7 лет)',
     };
-    context.watch<RoutingData>().setRouteNextSteep(GlobalVar.routeEmpty);
+    context.read<RoutingData>().setRouteNextSteep(GlobalVar.routeAfisha01);
     return SafeArea(
       child: Stack(
         children: [
           Opacity(
-            opacity: 0.2,
+            opacity: 0.4,
             child: Container(
               height: Screen.height(context),
               width: Screen.width(context),

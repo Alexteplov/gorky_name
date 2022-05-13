@@ -24,7 +24,7 @@ class AfishaSundayA extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Map<String, String> events = {
+/*     final Map<String, String> events = {
       '10:30':
           'Кружок «Фиксики». Тема занятия «Фиксики в мире животных» (5-7 лет)',
       '12:00':
@@ -38,26 +38,28 @@ class AfishaSundayA extends StatelessWidget {
           'Интерактивное занятие «Вечный огонь» с мастер-классом в рамках акции «Поклонимся великим тем годам» (от 8 лет)',
       '16:00':
           'Клуб «БиблиоГОЛОС» - «Актерские техники и работа на камеру» (от 10 лет)',
-    };
+    }; */
 
-    context.watch<RoutingData>().setRouteNextSteep(GlobalVar.routeAfisha02);
+    context.read<RoutingData>().setRouteNextSteep(GlobalVar.routeEmpty);
     return SafeArea(
       child: Stack(
         children: [
           Opacity(
-            opacity: 0.3,
+            opacity: 1.0,
             child: Container(
               height: Screen.height(context),
               width: Screen.width(context),
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage(context.read<RoutingData>().getBgAfisha),
+                  image: AssetImage(
+                      //context.read<RoutingData>().getBgAfisha
+                      'image/bgAfisha/schedule/5.jpg'),
                   fit: BoxFit.fill,
                 ),
               ),
             ),
           ),
-          Column(
+/*           Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Expanded(
@@ -91,6 +93,7 @@ class AfishaSundayA extends StatelessWidget {
               ),
             ],
           ),
+ */
         ],
       ),
     );

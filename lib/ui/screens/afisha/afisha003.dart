@@ -22,7 +22,7 @@ class AfishaThird extends StatelessWidget {
           'Литературно-музыкальная композиция «Долгое эхо войны» (стихи и песни о войне) (от 12 лет)',
     };
 
-    context.watch<RoutingData>().setRouteNextSteep(GlobalVar.routeAfishaW01);
+    context.read<RoutingData>().setRouteNextSteep(GlobalVar.routeAfishaW01);
     return SafeArea(
       child: Stack(
         children: [

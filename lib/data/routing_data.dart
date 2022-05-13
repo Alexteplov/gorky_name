@@ -107,21 +107,23 @@ class RoutingData with ChangeNotifier {
         DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day);
     //DateTime _sDt = DateTime(2021, 12, 24);
     //Show default page
-    String _retStr = GlobalVar.routeAfishaW02;
-    if (_now.compareTo(DateTime(2022, 05, 6)) <= 0) {
-      _retStr = GlobalVar.routeAfisha03a;
-    } else if (_now.compareTo(DateTime(2022, 05, 7)) <= 0) {
-      _retStr = GlobalVar.routeAfishaW01a;
-    } else if (_now.compareTo(DateTime(2022, 05, 8)) <= 0) {
-      _retStr = GlobalVar.routeAfishaW02a;
-    } else if (_now.compareTo(DateTime(2022, 05, 12)) <= 0) {
-      _retStr = GlobalVar.routeAfisha02;
-    } else if (_now.compareTo(DateTime(2022, 05, 13)) <= 0) {
+    String _retStr = GlobalVar.routeAfishaW02a;
+    if (_now.compareTo(DateTime(2022, 05, 13)) <= 0) {
       _retStr = GlobalVar.routeAfisha03;
     } else if (_now.compareTo(DateTime(2022, 05, 14)) <= 0) {
       _retStr = GlobalVar.routeAfishaW01;
     } else if (_now.compareTo(DateTime(2022, 05, 15)) <= 0) {
       _retStr = GlobalVar.routeAfishaW02;
+    } else if (_now.compareTo(DateTime(2022, 05, 17)) <= 0) {
+      _retStr = GlobalVar.routeAfisha01;
+    } else if (_now.compareTo(DateTime(2022, 05, 18)) <= 0) {
+      _retStr = GlobalVar.routeAfisha02;
+    } else if (_now.compareTo(DateTime(2022, 05, 20)) <= 0) {
+      _retStr = GlobalVar.routeAfisha03a;
+    } else if (_now.compareTo(DateTime(2022, 05, 21)) <= 0) {
+      _retStr = GlobalVar.routeAfishaW01a;
+    } else if (_now.compareTo(DateTime(2022, 05, 22)) <= 0) {
+      _retStr = GlobalVar.routeAfishaW02a;
     }
     return _retStr;
   }

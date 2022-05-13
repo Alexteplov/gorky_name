@@ -15,6 +15,7 @@ class AfishaThirdA extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+/*
     final Map<String, String> events = {
       '13:00':
           'Литературный час «Хлеб той зимы» по книге Э. Фоняковой (от 12 лет)',
@@ -25,7 +26,7 @@ class AfishaThirdA extends StatelessWidget {
           'Литературно-исторический час «Великая Отечественная в рассказах Сергея Алексеева» (от 8 лет)',
     };
 
-/*     final Map<String, String> eventsA = {
+    final Map<String, String> eventsA = {
       '12:00': 'Мастер-класс «Новогодняя фантазия» (от 6 лет)',
       '14:30':
           'Литературно-игровая программа "Новогодний салат из сказок" (от 6 лет)',
@@ -35,24 +36,26 @@ class AfishaThirdA extends StatelessWidget {
           'Новогодний кинопросмотр фильма «Гринч» по мотивам книги Доктора Сьюза «Как Гринч украл Рождество» (от 6 лет)',
     };
  */
-    context.watch<RoutingData>().setRouteNextSteep(GlobalVar.routeAfishaW01a);
+    context.read<RoutingData>().setRouteNextSteep(GlobalVar.routeAfishaW01a);
     return SafeArea(
       child: Stack(
         children: [
           Opacity(
-            opacity: 0.4,
+            opacity: 1.0,
             child: Container(
               height: Screen.height(context),
               width: Screen.width(context),
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage(context.read<RoutingData>().getBgAfisha),
+                  image: AssetImage(
+                      //context.read<RoutingData>().getBgAfisha
+                      'image/bgAfisha/schedule/3.jpg'),
                   fit: BoxFit.fill,
                 ),
               ),
             ),
           ),
-          Column(
+/*           Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Expanded(
@@ -92,6 +95,7 @@ class AfishaThirdA extends StatelessWidget {
               ),
             ],
           ),
+ */
         ],
       ),
     );

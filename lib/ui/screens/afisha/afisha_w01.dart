@@ -31,12 +31,13 @@ class AfishaSaturday extends StatelessWidget {
       '16:30':
           'Клуб любителей настольных игр «Сто наСтолок». Игра «Абра Казам» (от 10 лет)',
     };
+
     context.read<RoutingData>().setRouteNextSteep(GlobalVar.routeAfishaW02);
     return SafeArea(
       child: Stack(
         children: [
           Opacity(
-            opacity: 0.3,
+            opacity: 0.4,
             child: Container(
               height: Screen.height(context),
               width: Screen.width(context),
