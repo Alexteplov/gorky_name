@@ -14,42 +14,43 @@ class AfishaSaturday extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Map<String, String> events = {
-      '11:00':
-          'Кружок «Сказка на песке». Тема занятия: «Моя вообразилия» (3-5 лет)',
-      '11:30':
-          'Клуб «Книжная семья». Литературная игра «Что я люблю и чего не люблю» (по книге В.Драгунского «Денискины рассказы») (6-7 лет)',
-      '14:00': 'Интерактивное занятие «Умный пол» - «Танграм» (от 8 лет)',
-      '15:00':
-          'Мульстудия «Настроение». Заключительное занятие «Ура, мультфильмы!» (от 8 лет)',
-      '15:00 ':
-          'Кружок «Киберзнайка». Тема: «Основы работы в редакторе презентаций» (от 7 лет)',
-      '15:30':
-          'Кружок «Киберзнайка». Тема: «Основы работы в редакторе презентаций» (от 7 лет)',
+/*     final Map<String, String> events = {
+      '10:00 и 11:00':
+          'Познавательное занятие «От Челябы до Челябинска» (5-7 лет)',
       '16:00':
-          'Кружок «Сказка на песке». Тема занятия: «Моя вообразилия» (3-5 лет)',
+          'Квест «Секретное слово МАКСа, или Посвящение пятиклассников» (для организованных групп 5 классов)',
       '16:30':
-          'Клуб любителей настольных игр «Сто наСтолок». Игра «Абра Казам» (от 10 лет)',
+          'Кружок «Сказка на песке» Тема занятия: «Песочный садовод» (3- 5 лет)',
+      '17:00': 'Мастер-класс по рисованию «Цветы» (5-7 лет)',
     };
+    final Map<String, String> eventsA = {
+      '15:00':
+          'Познавательный час «Невозможное сегодня станет возможным завтра», к 165-летие со дня рождения К. Э. Циолковского (от 10 лет)',
+      '16:00': 'Интерактивное занятие «Умный пол». Игра «2048» (6-9 лет)',
+      '16:00 ':
+          'Кинопросмотр и обсуждение фильма «Радость познания» с обзором художественных книг Тема: Ответственность (от 10-14 лет)',
+    }; */
 
     context.read<RoutingData>().setRouteNextSteep(GlobalVar.routeAfishaW02);
     return SafeArea(
       child: Stack(
         children: [
           Opacity(
-            opacity: 0.4,
+            opacity: 1.0,
             child: Container(
               height: Screen.height(context),
               width: Screen.width(context),
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage(context.read<RoutingData>().getBgAfisha),
+                  image: AssetImage(
+                      //context.read<RoutingData>().getBgAfisha
+                      'image/bgAfisha/schedule/4.jpg'),
                   fit: BoxFit.fill,
                 ),
               ),
             ),
           ),
-          Column(
+          /* Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Expanded(
@@ -67,13 +68,19 @@ class AfishaSaturday extends StatelessWidget {
               ),
               /************************ */
               const AfishaHeaderEvent(
-                head: '14 мая – суббота',
+                head: '15 сентября – четверг',
               ),
               ...events.entries
                   .map((e) => AfishaEvent(time: e.key, information: e.value)),
               const AfishaBottomEvent(),
+              const AfishaHeaderEvent(
+                head: '16 сентября – пятница',
+              ),
+              ...eventsA.entries
+                  .map((e) => AfishaEvent(time: e.key, information: e.value)),
+              const AfishaBottomEvent(),
               const Expanded(
-                flex: 8,
+                flex: 6,
                 child: SizedBox(),
               ),
               //const BottomLeftRight(next_steep: GlobalVar.routeAfishaW02),
@@ -81,7 +88,7 @@ class AfishaSaturday extends StatelessWidget {
                 height: 30,
               ),
             ],
-          ),
+          ), */
         ],
       ),
     );

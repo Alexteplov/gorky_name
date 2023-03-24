@@ -7,7 +7,7 @@ import 'package:gorky_name/ui/component/widgets/afisha_header_event.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_event.dart';
 //import 'package:gorky_name/ui/component/widgets/afisha_qr_code.dart';
 import 'package:google_fonts/google_fonts.dart';
-// ignore: implementation_imports
+//ignore: implementation_imports
 import 'package:provider/src/provider.dart';
 
 class AfishaThirdA extends StatelessWidget {
@@ -15,15 +15,18 @@ class AfishaThirdA extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-/*
-    final Map<String, String> events = {
+/*    final Map<String, String> events = {
+      '11:00':
+          'Кружок «Волшебный фонарь». Просмотр диафильма «Рикки-Тикки-Тави» (4-7 лет)',
+      '12:00':
+          'Клуб «РасЧитайка». Литературное занятие «Осенние сказки Ёжика» (5-7 лет)',
       '13:00':
-          'Литературный час «Хлеб той зимы» по книге Э. Фоняковой (от 12 лет)',
-      '14:00': 'Исторический час «Животные на войне» (от 12 лет)',
-      '14:30':
-          'Литературный час «Хлеб той зимы» по книге Э. Фоняковой (от 12 лет)',
+          'Кружок вязания «Чудесный крючок». Знакомство с техникой вязания крючком (от 8 лет)',
+      '14:00': 'Мастер-класс 3D поделка «Корзиночка» (от 7 лет)',
+      '16:30 и 17:00':
+          'Клуб любителей настольных игр «Сто наСтолок». Игра «Гембло» (от 6 лет)',
       '16:00':
-          'Литературно-исторический час «Великая Отечественная в рассказах Сергея Алексеева» (от 8 лет)',
+          'Кинопросмотр и обсуждение фильма «Школьные ботаны» с обзором художественных книг. Тема: Целеустремленность (от 10 лет)',
     };
 
     final Map<String, String> eventsA = {
@@ -49,13 +52,13 @@ class AfishaThirdA extends StatelessWidget {
                 image: DecorationImage(
                   image: AssetImage(
                       //context.read<RoutingData>().getBgAfisha
-                      'image/bgAfisha/schedule/3.jpg'),
+                      'image/bgAfisha/schedule/6.png'),
                   fit: BoxFit.fill,
                 ),
               ),
             ),
           ),
-/*           Column(
+          /* Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Expanded(
@@ -73,7 +76,7 @@ class AfishaThirdA extends StatelessWidget {
               ),
               /************************ */
               const AfishaHeaderEvent(
-                head: '6 мая - пятница',
+                head: '18 сентября - воскресенье',
               ),
               ...events.entries
                   .map((e) => AfishaEvent(time: e.key, information: e.value)),
@@ -94,8 +97,7 @@ class AfishaThirdA extends StatelessWidget {
                 height: 30,
               ),
             ],
-          ),
- */
+          ), */
         ],
       ),
     );

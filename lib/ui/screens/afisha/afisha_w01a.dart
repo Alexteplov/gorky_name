@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:gorky_name/const/const_variables.dart';
 import 'package:gorky_name/data/routing_data.dart';
 import 'package:gorky_name/internal/theme/screen.dart';
-import 'package:gorky_name/ui/component/widgets/afisha_bottom_event.dart';
+/* import 'package:gorky_name/ui/component/widgets/afisha_bottom_event.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_header_event.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_event.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:google_fonts/google_fonts.dart'; */
 // ignore: implementation_imports
 import 'package:provider/src/provider.dart';
 
@@ -33,7 +33,7 @@ class AfishaSaturdayA extends StatelessWidget {
           'Клуб любителей настольных игр «Сто наСтолок». Военно-историческая игра «Победа» (от 12 лет)',
     }; */
 
-    context.read<RoutingData>().setRouteNextSteep(GlobalVar.routeAfishaW02a);
+    context.read<RoutingData>().setRouteNextSteep(GlobalVar.routeEmpty);
     return SafeArea(
       child: Stack(
         children: [
@@ -46,7 +46,7 @@ class AfishaSaturdayA extends StatelessWidget {
                 image: DecorationImage(
                   image: AssetImage(
                       //context.read<RoutingData>().getBgAfisha
-                      'image/bgAfisha/schedule/4.jpg'),
+                      'image/bgAfisha/schedule/7.png'),
                   fit: BoxFit.fill,
                 ),
               ),

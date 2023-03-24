@@ -15,44 +15,37 @@ class AfishaSunday extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Map<String, String> events = {
-      '10:00':
-          'Кружок вязания «Чудесный крючок». Знакомство с техникой вязания крючком (от 8 лет)',
-      '10:30':
-          'Кружок «Фиксики». Тема занятия «Фиксики в мире животных» (5-7 лет)',
-      '11:30':
-          'Кружок «Волшебный фонарь». Просмотр диафильма «Красная шапочка» (от 4 до 6 лет)',
-      '12:00':
-          'Фотоклуб «Искусство мобильной съемки» Тема: «Видеосъёмка — монтаж» (от 14 лет)',
+/*     final Map<String, String> events = {
+      '11:00':
+          'Интерактивное занятие «Умный пол». Игра «Найди лишнее» (6-8 лет)',
+      '14:00': 'Архитектурный мастер-класс «Что такое СФЕРА?» (5-8 лет)',
       '15:00':
-          'Клуб по развитию лидерских качеств и организаторских способностей «ProЯвись». Тема «Волонтерство. Что это и с чем его «едят»?» (от 12 лет)',
-      '15:00 ':
-          'Мастер-класс по тамбурной вышивке от рукодельницы - Софьи Чечушковой. (от 7 лет)',
+          'Мастер-класс «Золотая рыбка» от Кондитерский студии «Высший вкус» (от 5 лет)',
       '16:00':
-          'Клуб «БиблиоБЛОГИНГ». Занятие по теме: Отработка методики «Мозговой штурм» (от 10 лет)',
-      '16:00 ':
-          'Клуб любителей настольных игр «Сто наСтолок». Игра «Клякса» (5-7 лет)',
-      '16:30':
-          'Клуб любителей настольных игр «Сто наСтолок». Игра «Клякса» (5-7 лет)',
-    };
-    context.read<RoutingData>().setRouteNextSteep(GlobalVar.routeAfisha01);
+          'Кружок «Сказка на песке». Тема занятия: «Песочный садовод» (3-5 лет)',
+      '17:00':
+          'Клуб любителей настольных игр «Сто наСтолок». Игра «Имаджинариум» (от 10 лет)',
+    }; */
+    context.read<RoutingData>().setRouteNextSteep(GlobalVar.routeEmpty);
     return SafeArea(
       child: Stack(
         children: [
           Opacity(
-            opacity: 0.4,
+            opacity: 1.0,
             child: Container(
               height: Screen.height(context),
               width: Screen.width(context),
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage(context.read<RoutingData>().getBgAfisha),
+                  image: AssetImage(
+                      //context.read<RoutingData>().getBgAfisha
+                      'image/bgAfisha/schedule/5.jpg'),
                   fit: BoxFit.fill,
                 ),
               ),
             ),
           ),
-          Column(
+          /* Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Expanded(
@@ -70,7 +63,7 @@ class AfishaSunday extends StatelessWidget {
               ),
               /************************ */
               const AfishaHeaderEvent(
-                head: '15 мая – воскресенье',
+                head: '17 сентября – суббота',
               ),
               ...events.entries
                   .map((e) => AfishaEvent(time: e.key, information: e.value)),
@@ -85,7 +78,7 @@ class AfishaSunday extends StatelessWidget {
                 height: 30,
               ),
             ],
-          ),
+          ), */
         ],
       ),
     );

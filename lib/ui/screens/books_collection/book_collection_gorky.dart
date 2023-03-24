@@ -25,7 +25,9 @@ class _BookCollectionGorkyState extends State<BookCollectionGorky> {
 
   @override
   Widget build(BuildContext context) {
-    context.read<RoutingData>().setRouteNextSteep(GlobalVar.routeEmpty);
+    context
+        .read<RoutingData>()
+        .setRouteNextSteep(GlobalVar.routeBookCollectionBooks);
     return SafeArea(
       child: Stack(
         children: [
@@ -62,7 +64,7 @@ class _BookCollectionGorkyState extends State<BookCollectionGorky> {
                       children: [
                         TextSpan(
                           text:
-                              '(обзор редких изданий А. М. Горького\nиз фондов детских библиотек г. Челябинска)',
+                              '(обзор редких изданий А. М. Горького\nв фондах детских библиотек г. Челябинска)',
                           style: GoogleFonts.oswald(
                               textStyle: Theme.of(context)
                                   .textTheme
@@ -147,7 +149,7 @@ class _BookCollectionGorkyState extends State<BookCollectionGorky> {
                                       children: [
                                         TextSpan(
                                           text:
-                                              'собое место в фонде редких книг МКУК ЦСДБ  г. Челябинска по праву занимают книги А. М. Горького, поскольку Центральная городская детская библиотека носит имя этого писателя. Нас часто спрашивают, почему библиотека носит имя Алексея Максимовича Горького?',
+                                              'собое место в коллекции редких книг МКУК ЦСДБ  г. Челябинска по праву занимают книги А. М. Горького, поскольку Центральная городская детская библиотека носит имя этого писателя. Нас часто спрашивают, почему библиотека носит имя Алексея Максимовича Горького?',
                                           style: GoogleFonts.oswald(
                                               textStyle: Theme.of(context)
                                                   .textTheme
@@ -322,7 +324,7 @@ class _BookCollectionGorkyState extends State<BookCollectionGorky> {
                           padding: const EdgeInsets.only(left: 20.0, top: 8),
                           child: SizedBox(
                             width: 820,
-                            height: 200,
+                            height: 250,
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -330,7 +332,7 @@ class _BookCollectionGorkyState extends State<BookCollectionGorky> {
                                   textDirection: TextDirection.ltr,
                                   textAlign: TextAlign.justify,
                                   text: TextSpan(
-                                    text: 'Ф',
+                                    text: 'К',
                                     style: GoogleFonts.oswald(
                                         textStyle: Theme.of(context)
                                             .textTheme
@@ -341,7 +343,7 @@ class _BookCollectionGorkyState extends State<BookCollectionGorky> {
                                     children: [
                                       TextSpan(
                                           text:
-                                              'онд редких книг – это часть основного фонда, в которую включаются редкие или особо ценные документы, отличающиеся выдающимися историческими, научными, художественно-эстетическими и полиграфическими достоинствами.',
+                                              'оллекция детских изданий – это часть коллекции детских изданий XX века, в которую включаются редкие или особо ценные документы, отличающиеся выдающимися историческими, научными, художественно-эстетическими и полиграфическими достоинствами.',
                                           style: GoogleFonts.oswald(
                                               textStyle: Theme.of(context)
                                                   .textTheme

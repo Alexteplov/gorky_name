@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:gorky_name/const/const_variables.dart';
 import 'package:gorky_name/data/routing_data.dart';
 import 'package:gorky_name/internal/theme/screen.dart';
-import 'package:gorky_name/ui/component/widgets/afisha_bottom_event.dart';
+/* import 'package:gorky_name/ui/component/widgets/afisha_bottom_event.dart';
 import 'package:gorky_name/ui/component/widgets/afisha_header_event.dart';
-import 'package:gorky_name/ui/component/widgets/afisha_event.dart';
+import 'package:gorky_name/ui/component/widgets/afisha_event.dart'; */
 //import 'package:gorky_name/ui/component/widgets/afisha_qr_code.dart';
-import 'package:google_fonts/google_fonts.dart';
+//import 'package:google_fonts/google_fonts.dart';
 // ignore: implementation_imports
 import 'package:provider/src/provider.dart';
 
@@ -40,7 +40,7 @@ class AfishaSundayA extends StatelessWidget {
           'Клуб «БиблиоГОЛОС» - «Актерские техники и работа на камеру» (от 10 лет)',
     }; */
 
-    context.read<RoutingData>().setRouteNextSteep(GlobalVar.routeEmpty);
+    context.read<RoutingData>().setRouteNextSteep(GlobalVar.routeAfishaW03a);
     return SafeArea(
       child: Stack(
         children: [
@@ -53,7 +53,7 @@ class AfishaSundayA extends StatelessWidget {
                 image: DecorationImage(
                   image: AssetImage(
                       //context.read<RoutingData>().getBgAfisha
-                      'image/bgAfisha/schedule/5.jpg'),
+                      'image/bgAfisha/schedule/8.png'),
                   fit: BoxFit.fill,
                 ),
               ),

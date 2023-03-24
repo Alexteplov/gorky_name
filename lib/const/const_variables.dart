@@ -33,7 +33,8 @@ class GlobalVar {
   static const String booksCollectionTravel = 'Великие русские путешественники';
   static const String booksCollectionRussia = 'Книги о России';
   static const String booksCollectionHistory = 'Пешком в историю';
-  static const String booksCollectionGorky = 'Редкие книги\nА.М. Горького';
+  static const String booksCollectionGorky =
+      'Коллекция детских изданий XX века';
 
 //QR codes
   static const String qrNEDB = 'image/QR_nedb.png';
@@ -87,6 +88,7 @@ class GlobalVar {
   static const String routeAfishaW02 = '/afisha_sunday';
   static const String routeAfishaW01a = '/afisha_saturdaya';
   static const String routeAfishaW02a = '/afisha_sundaya';
+  static const String routeAfishaW03a = '/afisha_sundaya1';
 
   //electronic librarys
   static const String routeElLibs = '/main_el_lib';
@@ -135,6 +137,7 @@ class GlobalVar {
   static const String routeBookCollectionHistoryA =
       '/book_collection_history_a';
   static const String routeBookCollectionGorky = '/book_collection_gorky';
+  static const String routeBookCollectionBooks = '/book_collection_books';
   //staff
   static const String routeStaffMenu = '/staff_menu';
   static const String routeStaffAdministration = '/staff_administration';
@@ -264,6 +267,16 @@ class BooksCollectionData {
   //gorky
   static String imgGorky = 'image/booksCollections/gorky/gorky001.jpg';
   static String imgGorkyBooks = 'image/booksCollections/gorky/books.jpg';
+  static String img1903 = 'image/booksCollections/gorky/1903.jpg';
+  static String img1903Full = 'image/booksCollections/gorky/1903_full.jpg';
+  static String imgChildhold = 'image/booksCollections/gorky/childhold.jpg';
+  static String imgChildholdFull =
+      'image/booksCollections/gorky/childhold_full.jpg';
+  static String imgStoryes = 'image/booksCollections/gorky/storyes.jpg';
+  static String imgStoryesFull =
+      'image/booksCollections/gorky/storyes_full.jpg';
+  static String imgMother = 'image/booksCollections/gorky/mother.jpg';
+  static String imgMotherFull = 'image/booksCollections/gorky/mother_full.jpg';
 
   static String logoBooksCollectionG = 'image/booksCollections/logo_gorky.jpg';
   static String logoBooksCollection =
@@ -338,7 +351,7 @@ class StaffData {
   static const String departmentReaders = 'ОТДЕЛ ПО РАБОТЕ С ЧИТАТЕЛЯМИ';
   static const String departmentInfo = 'ИНФОРМАЦИОННО-БИБЛИОГРАФИЧЕСКИЙ ОТДЕЛ';
   static const String departmentCoordinations =
-      'КООРДИОЦИОННО-МЕТОДИЧЕСКИЙ ОТДЕЛ';
+      'КООРДИНАЦИОННО-МЕТОДИЧЕСКИЙ ОТДЕЛ';
   static const String departmentFond = 'ОТДЕЛ ФОРМИРОВАНИЯ И ОРГАНИЗАЦИИ ФОНДА';
   static const String departmentRedaction = 'РЕДАКЦИОННО-ИЗДАТЕЛЬСКИЙ ОТДЕЛ';
   static const String departmentInformation =
