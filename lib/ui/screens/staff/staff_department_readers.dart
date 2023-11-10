@@ -23,7 +23,7 @@ class _StaffDepartmentReadersState extends State<StaffDepartmentReaders> {
   bool _showPreview = false;
   String _image = GlobalVar.bgImgAfishaWeekendsW;
   static double rectangleSide = 320;
-  static double hSingleChV = 6000;
+  static double hSingleChV = 4920;
   double _hImage = 0;
   //double _hPosition = 1920;
 
@@ -63,6 +63,7 @@ class _StaffDepartmentReadersState extends State<StaffDepartmentReaders> {
                 ),
               ),
               const LibraryLogo(),
+              /*Аишева*/
               Positioned(
                 top: 300,
                 left: 20,
@@ -88,7 +89,7 @@ class _StaffDepartmentReadersState extends State<StaffDepartmentReaders> {
                                 onTap: () async {
                                   setState(() {
                                     _showPreview = !_showPreview;
-                                    _image = StaffData.staffEmptyWoman;
+                                    _image = StaffData.staffDepReadersAish;
 
                                     //print(_showPreview);
                                   });
@@ -103,7 +104,191 @@ class _StaffDepartmentReadersState extends State<StaffDepartmentReaders> {
                                     borderRadius: BorderRadius.circular(20),
                                     image: const DecorationImage(
                                         image: AssetImage(
-                                            StaffData.staffEmptyWoman),
+                                            StaffData.staffDepReadersAish),
+                                        fit: BoxFit.scaleDown),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Stack(
+                          textDirection: TextDirection.ltr,
+                          alignment: AlignmentDirectional.topStart,
+                          children: [
+                            Padding(
+                              padding:
+                                  const EdgeInsets.only(left: 20.0, top: 8),
+                              child: SizedBox(
+                                  width: 700,
+                                  height: 330,
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'Аишева Азиза Дмитриевна ',
+                                        textAlign: TextAlign.justify,
+                                        style: GoogleFonts.oswald(
+                                          textStyle: Theme.of(context)
+                                              .textTheme
+                                              .headline4!
+                                              .copyWith(
+                                                  fontWeight: FontWeight.bold,
+                                                  color: StaffData.headerColor),
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        height: 10,
+                                      ),
+                                      RichText(
+                                        textDirection: TextDirection.ltr,
+                                        textAlign: TextAlign.justify,
+                                        text: TextSpan(
+                                          text:
+                                              'Библиотекарь отдела работы с читателями ЦГДБ им. А.М. Горького.\n\n',
+                                          style: GoogleFonts.oswald(
+                                              textStyle: Theme.of(context)
+                                                  .textTheme
+                                                  .headline5!
+                                                  .copyWith(
+                                                      color: Colors.black87)),
+                                          children: [
+                                            TextSpan(
+                                              text: "Образование",
+                                              style: GoogleFonts.oswald(
+                                                  textStyle: Theme.of(context)
+                                                      .textTheme
+                                                      .headline5!
+                                                      .copyWith(
+                                                          color: Colors.black87,
+                                                          fontStyle: FontStyle
+                                                              .italic)),
+                                            ),
+                                            TextSpan(
+                                              text:
+                                                  " - студент Южно-Уральского государственного университета, факультет журналистики\n \n",
+                                              style: GoogleFonts.oswald(
+                                                textStyle: Theme.of(context)
+                                                    .textTheme
+                                                    .headline5!
+                                                    .copyWith(
+                                                      color: Colors.black87,
+                                                    ),
+                                              ),
+                                            ),
+                                            TextSpan(
+                                              text:
+                                                  "Стаж работы в библиотечной отрасли",
+                                              style: GoogleFonts.oswald(
+                                                  textStyle: Theme.of(context)
+                                                      .textTheme
+                                                      .headline5!
+                                                      .copyWith(
+                                                          color: Colors.black87,
+                                                          fontStyle: FontStyle
+                                                              .italic)),
+                                            ),
+                                            TextSpan(
+                                              text: " – менее года.",
+                                              style: GoogleFonts.oswald(
+                                                textStyle: Theme.of(context)
+                                                    .textTheme
+                                                    .headline5!
+                                                    .copyWith(
+                                                      color: Colors.black87,
+                                                    ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                  )),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      width: 1040,
+                      height: 650,
+                      child: RichText(
+                        textDirection: TextDirection.ltr,
+                        textAlign: TextAlign.justify,
+                        text: TextSpan(
+                          text: 'Реализованные проекты',
+                          style: GoogleFonts.oswald(
+                            textStyle: Theme.of(context)
+                                .textTheme
+                                .headline5!
+                                .copyWith(
+                                    color: Colors.black87,
+                                    fontStyle: FontStyle.italic),
+                          ),
+                          children: [
+                            TextSpan(
+                              text:
+                                  " – организация книжного клуба «Вне сети»; разработка и проведение занятий по программе «В копилку юного актера»",
+                              style: GoogleFonts.oswald(
+                                textStyle: Theme.of(context)
+                                    .textTheme
+                                    .headline5!
+                                    .copyWith(
+                                      color: Colors.black87,
+                                    ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              /* ******************************** */
+/*Алферова*/
+              Positioned(
+                top: 750,
+                left: 20,
+                child: Column(
+                  children: [
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Stack(
+                          children: [
+                            ClipPath(
+                              clipper: StructCustomClipper(), // <--
+                              child: Container(
+                                width: rectangleSide,
+                                height: rectangleSide,
+                                color: StructureData.colorWhite,
+                              ),
+                            ),
+                            Positioned(
+                              top: rectangleSide * 0.025,
+                              left: rectangleSide * 0.025,
+                              child: GestureDetector(
+                                onTap: () async {
+                                  setState(() {
+                                    _showPreview = !_showPreview;
+                                    _image = StaffData.staffDepReadersAlf;
+
+                                    //print(_showPreview);
+                                  });
+                                  _hImage = await _calculateImageDimension()
+                                      .then((size) => size.height);
+                                },
+                                child: Container(
+                                  width: rectangleSide - (rectangleSide * 0.05),
+                                  height:
+                                      rectangleSide - (rectangleSide * 0.05),
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(20),
+                                    image: const DecorationImage(
+                                        image: AssetImage(
+                                            StaffData.staffDepReadersAlf),
                                         fit: BoxFit.scaleDown),
                                   ),
                                 ),
@@ -145,7 +330,7 @@ class _StaffDepartmentReadersState extends State<StaffDepartmentReaders> {
                                         textAlign: TextAlign.justify,
                                         text: TextSpan(
                                           text:
-                                              'Библиотекарь отдела работы с читателями ЦГДБ им. А.М. Горького.\n\n',
+                                              'Заведующий сектором отдела работы с читателями ЦГДБ им. А.М. Горького.\n\n',
                                           style: GoogleFonts.oswald(
                                               textStyle: Theme.of(context)
                                                   .textTheme
@@ -165,7 +350,8 @@ class _StaffDepartmentReadersState extends State<StaffDepartmentReaders> {
                                                               .italic)),
                                             ),
                                             TextSpan(
-                                              text: "\n\n",
+                                              text:
+                                                  " - Челябинский государственный институт культуры, 2019\n\n",
                                               style: GoogleFonts.oswald(
                                                 textStyle: Theme.of(context)
                                                     .textTheme
@@ -177,7 +363,7 @@ class _StaffDepartmentReadersState extends State<StaffDepartmentReaders> {
                                             ),
                                             TextSpan(
                                               text:
-                                                  "Стаж работы в библиотечной отрасли",
+                                                  "Стаж работы в библиотечной отрасли - 3 года",
                                               style: GoogleFonts.oswald(
                                                   textStyle: Theme.of(context)
                                                       .textTheme
@@ -226,190 +412,8 @@ class _StaffDepartmentReadersState extends State<StaffDepartmentReaders> {
                           ),
                           children: [
                             TextSpan(
-                              text: " ",
-                              style: GoogleFonts.oswald(
-                                textStyle: Theme.of(context)
-                                    .textTheme
-                                    .headline5!
-                                    .copyWith(
-                                      color: Colors.black87,
-                                    ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              /* ******************************** */
-              Positioned(
-                top: 750,
-                left: 20,
-                child: Column(
-                  children: [
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Stack(
-                          children: [
-                            ClipPath(
-                              clipper: StructCustomClipper(), // <--
-                              child: Container(
-                                width: rectangleSide,
-                                height: rectangleSide,
-                                color: StructureData.colorWhite,
-                              ),
-                            ),
-                            Positioned(
-                              top: rectangleSide * 0.025,
-                              left: rectangleSide * 0.025,
-                              child: GestureDetector(
-                                onTap: () async {
-                                  setState(() {
-                                    _showPreview = !_showPreview;
-                                    _image = StaffData.staffDepReadersArz;
-
-                                    //print(_showPreview);
-                                  });
-                                  _hImage = await _calculateImageDimension()
-                                      .then((size) => size.height);
-                                },
-                                child: Container(
-                                  width: rectangleSide - (rectangleSide * 0.05),
-                                  height:
-                                      rectangleSide - (rectangleSide * 0.05),
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(20),
-                                    image: const DecorationImage(
-                                        image: AssetImage(
-                                            StaffData.staffDepReadersArz),
-                                        fit: BoxFit.scaleDown),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        Stack(
-                          textDirection: TextDirection.ltr,
-                          alignment: AlignmentDirectional.topStart,
-                          children: [
-                            Padding(
-                              padding:
-                                  const EdgeInsets.only(left: 20.0, top: 8),
-                              child: SizedBox(
-                                  width: 700,
-                                  height: 330,
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        'Арзамасцева Юлия Михайловна ',
-                                        textAlign: TextAlign.justify,
-                                        style: GoogleFonts.oswald(
-                                          textStyle: Theme.of(context)
-                                              .textTheme
-                                              .headline4!
-                                              .copyWith(
-                                                  fontWeight: FontWeight.bold,
-                                                  color: StaffData.headerColor),
-                                        ),
-                                      ),
-                                      const SizedBox(
-                                        height: 10,
-                                      ),
-                                      RichText(
-                                        textDirection: TextDirection.ltr,
-                                        textAlign: TextAlign.justify,
-                                        text: TextSpan(
-                                          text:
-                                              'Библиотекарь отдела работы с читателями ЦГДБ им. А.М. Горького.\n\n',
-                                          style: GoogleFonts.oswald(
-                                              textStyle: Theme.of(context)
-                                                  .textTheme
-                                                  .headline5!
-                                                  .copyWith(
-                                                      color: Colors.black87)),
-                                          children: [
-                                            TextSpan(
-                                              text: "Образование",
-                                              style: GoogleFonts.oswald(
-                                                  textStyle: Theme.of(context)
-                                                      .textTheme
-                                                      .headline5!
-                                                      .copyWith(
-                                                          color: Colors.black87,
-                                                          fontStyle: FontStyle
-                                                              .italic)),
-                                            ),
-                                            TextSpan(
-                                              text:
-                                                  " – Южно-Уральский государственный университет, 2016 год. 2020/2021 гг. Челябинский государственный институт культуры Программа профессиональной переподготовки «Библиотечно-информационная деятельность».\n",
-                                              style: GoogleFonts.oswald(
-                                                textStyle: Theme.of(context)
-                                                    .textTheme
-                                                    .headline5!
-                                                    .copyWith(
-                                                      color: Colors.black87,
-                                                    ),
-                                              ),
-                                            ),
-                                            TextSpan(
-                                              text:
-                                                  "Стаж работы в библиотечной отрасли",
-                                              style: GoogleFonts.oswald(
-                                                  textStyle: Theme.of(context)
-                                                      .textTheme
-                                                      .headline5!
-                                                      .copyWith(
-                                                          color: Colors.black87,
-                                                          fontStyle: FontStyle
-                                                              .italic)),
-                                            ),
-                                            TextSpan(
-                                              text: " – 1 год.",
-                                              style: GoogleFonts.oswald(
-                                                textStyle: Theme.of(context)
-                                                    .textTheme
-                                                    .headline5!
-                                                    .copyWith(
-                                                      color: Colors.black87,
-                                                    ),
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ],
-                                  )),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      width: 1040,
-                      height: 650,
-                      child: RichText(
-                        textDirection: TextDirection.ltr,
-                        textAlign: TextAlign.justify,
-                        text: TextSpan(
-                          text: 'Реализованные проекты',
-                          style: GoogleFonts.oswald(
-                            textStyle: Theme.of(context)
-                                .textTheme
-                                .headline5!
-                                .copyWith(
-                                    color: Colors.black87,
-                                    fontStyle: FontStyle.italic),
-                          ),
-                          children: [
-                            TextSpan(
                               text:
-                                  " – участие в проекте «Первые шаги в книжном мире».",
+                                  "–  участие в реализации программ «Эко что-то» и «Навигатор в мире профессий»",
                               style: GoogleFonts.oswald(
                                 textStyle: Theme.of(context)
                                     .textTheme
@@ -426,7 +430,7 @@ class _StaffDepartmentReadersState extends State<StaffDepartmentReaders> {
                   ],
                 ),
               ),
-              /* ******************************** */
+              /* ******************************** +Григорьева Наталья Евгеньевна*/
               Positioned(
                 top: 1200,
                 left: 20,
@@ -452,14 +456,12 @@ class _StaffDepartmentReadersState extends State<StaffDepartmentReaders> {
                                 onTap: () async {
                                   setState(() {
                                     _showPreview = !_showPreview;
-                                    _image = StaffData.staffDepReadersBuk;
+                                    _image = StaffData.staffDepReadersGri;
 
                                     //print(_showPreview);
                                   });
                                   _hImage = await _calculateImageDimension()
                                       .then((size) => size.height);
-                                  /* print(
-                                      'offset =  ${_scrollController.offset} hImage = ${_hImage} screenH = ${Screen.height(context)}'); */
                                 },
                                 child: Container(
                                   width: rectangleSide - (rectangleSide * 0.05),
@@ -469,7 +471,7 @@ class _StaffDepartmentReadersState extends State<StaffDepartmentReaders> {
                                     borderRadius: BorderRadius.circular(20),
                                     image: const DecorationImage(
                                         image: AssetImage(
-                                            StaffData.staffDepReadersBuk),
+                                            StaffData.staffDepReadersGri),
                                         fit: BoxFit.scaleDown),
                                   ),
                                 ),
@@ -492,7 +494,7 @@ class _StaffDepartmentReadersState extends State<StaffDepartmentReaders> {
                                         CrossAxisAlignment.start,
                                     children: [
                                       Text(
-                                        'Букреева Татьяна Анатольевна',
+                                        'Григорьева Наталья Евгеньевна',
                                         textAlign: TextAlign.justify,
                                         style: GoogleFonts.oswald(
                                           textStyle: Theme.of(context)
@@ -511,7 +513,7 @@ class _StaffDepartmentReadersState extends State<StaffDepartmentReaders> {
                                         textAlign: TextAlign.justify,
                                         text: TextSpan(
                                           text:
-                                              'Заведующий сектором отдела работы с читателями ЦГДБ им. А. М. Горького.\n',
+                                              'Заведующий сектором отдела работы с читателями ЦГДБ им. А.М. Горького.\n\n',
                                           style: GoogleFonts.oswald(
                                               textStyle: Theme.of(context)
                                                   .textTheme
@@ -532,7 +534,7 @@ class _StaffDepartmentReadersState extends State<StaffDepartmentReaders> {
                                             ),
                                             TextSpan(
                                               text:
-                                                  " – Южно-Уральский государственный университет, 2008 год. Факультет журналистики. Кафедра русского языка и литературы. 2019/2020 гг. Челябинский государственный институт культуры Программа профессиональной переподготовки «Библиотечно - информационная деятельность».\n",
+                                                  " - Московский педагогический государственный университет, 2006\n\n",
                                               style: GoogleFonts.oswald(
                                                 textStyle: Theme.of(context)
                                                     .textTheme
@@ -544,7 +546,7 @@ class _StaffDepartmentReadersState extends State<StaffDepartmentReaders> {
                                             ),
                                             TextSpan(
                                               text:
-                                                  "Стаж работы в библиотечной отрасли",
+                                                  "Стаж работы в библиотечной отрасли - 6 лет",
                                               style: GoogleFonts.oswald(
                                                   textStyle: Theme.of(context)
                                                       .textTheme
@@ -555,7 +557,7 @@ class _StaffDepartmentReadersState extends State<StaffDepartmentReaders> {
                                                               .italic)),
                                             ),
                                             TextSpan(
-                                              text: " – 4 года.",
+                                              text: " ",
                                               style: GoogleFonts.oswald(
                                                 textStyle: Theme.of(context)
                                                     .textTheme
@@ -594,7 +596,7 @@ class _StaffDepartmentReadersState extends State<StaffDepartmentReaders> {
                           children: [
                             TextSpan(
                               text:
-                                  " – организация работы библиотечных пунктов в отдалённых школах города.",
+                                  "–  участие в реализации проекта «Библионяня»; участие в реализации программы «РасЧитайка",
                               style: GoogleFonts.oswald(
                                 textStyle: Theme.of(context)
                                     .textTheme
@@ -611,7 +613,7 @@ class _StaffDepartmentReadersState extends State<StaffDepartmentReaders> {
                   ],
                 ),
               ),
-              ////***************************** */
+              /* ******************************** */
               Positioned(
                 top: 1650,
                 left: 20,
@@ -637,12 +639,14 @@ class _StaffDepartmentReadersState extends State<StaffDepartmentReaders> {
                                 onTap: () async {
                                   setState(() {
                                     _showPreview = !_showPreview;
-                                    _image = StaffData.staffEmptyWoman;
+                                    _image = StaffData.staffDepReadersMel;
 
                                     //print(_showPreview);
                                   });
                                   _hImage = await _calculateImageDimension()
                                       .then((size) => size.height);
+                                  /* print(
+                                      'offset =  ${_scrollController.offset} hImage = ${_hImage} screenH = ${Screen.height(context)}'); */
                                 },
                                 child: Container(
                                   width: rectangleSide - (rectangleSide * 0.05),
@@ -652,7 +656,7 @@ class _StaffDepartmentReadersState extends State<StaffDepartmentReaders> {
                                     borderRadius: BorderRadius.circular(20),
                                     image: const DecorationImage(
                                         image: AssetImage(
-                                            StaffData.staffEmptyWoman),
+                                            StaffData.staffDepReadersMel),
                                         fit: BoxFit.scaleDown),
                                   ),
                                 ),
@@ -675,7 +679,558 @@ class _StaffDepartmentReadersState extends State<StaffDepartmentReaders> {
                                         CrossAxisAlignment.start,
                                     children: [
                                       Text(
-                                        'Говтова Дарья Андреевна',
+                                        'Мелехова Марина Геннадьевна',
+                                        textAlign: TextAlign.justify,
+                                        style: GoogleFonts.oswald(
+                                          textStyle: Theme.of(context)
+                                              .textTheme
+                                              .headline4!
+                                              .copyWith(
+                                                  fontWeight: FontWeight.bold,
+                                                  color: StaffData.headerColor),
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        height: 10,
+                                      ),
+                                      RichText(
+                                        textDirection: TextDirection.ltr,
+                                        textAlign: TextAlign.justify,
+                                        text: TextSpan(
+                                          text:
+                                              'Библиотекарь отдела работы с читателями ЦГДБ им. А. М. Горького.\n',
+                                          style: GoogleFonts.oswald(
+                                              textStyle: Theme.of(context)
+                                                  .textTheme
+                                                  .headline5!
+                                                  .copyWith(
+                                                      color: Colors.black87)),
+                                          children: [
+                                            TextSpan(
+                                              text: "Образование",
+                                              style: GoogleFonts.oswald(
+                                                  textStyle: Theme.of(context)
+                                                      .textTheme
+                                                      .headline5!
+                                                      .copyWith(
+                                                          color: Colors.black87,
+                                                          fontStyle: FontStyle
+                                                              .italic)),
+                                            ),
+                                            TextSpan(
+                                              text:
+                                                  " – Магнитогорский государственный педагогический институт, 1997 г.\n",
+                                              style: GoogleFonts.oswald(
+                                                textStyle: Theme.of(context)
+                                                    .textTheme
+                                                    .headline5!
+                                                    .copyWith(
+                                                      color: Colors.black87,
+                                                    ),
+                                              ),
+                                            ),
+                                            TextSpan(
+                                              text:
+                                                  "Стаж работы в библиотечной отрасли",
+                                              style: GoogleFonts.oswald(
+                                                  textStyle: Theme.of(context)
+                                                      .textTheme
+                                                      .headline5!
+                                                      .copyWith(
+                                                          color: Colors.black87,
+                                                          fontStyle: FontStyle
+                                                              .italic)),
+                                            ),
+                                            TextSpan(
+                                              text: " – менее года.",
+                                              style: GoogleFonts.oswald(
+                                                textStyle: Theme.of(context)
+                                                    .textTheme
+                                                    .headline5!
+                                                    .copyWith(
+                                                      color: Colors.black87,
+                                                    ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                  )),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      width: 1040,
+                      height: 650,
+                      child: RichText(
+                        textDirection: TextDirection.ltr,
+                        textAlign: TextAlign.justify,
+                        text: TextSpan(
+                          text: 'Реализованные проекты',
+                          style: GoogleFonts.oswald(
+                            textStyle: Theme.of(context)
+                                .textTheme
+                                .headline5!
+                                .copyWith(
+                                    color: Colors.black87,
+                                    fontStyle: FontStyle.italic),
+                          ),
+                          children: [
+                            TextSpan(
+                              text:
+                                  " – участие в реализации проекта «Библионяня»; участие в реализации программы «РасЧитайка»; разработка и проведение занятий по программе «Юный конструктор»",
+                              style: GoogleFonts.oswald(
+                                textStyle: Theme.of(context)
+                                    .textTheme
+                                    .headline5!
+                                    .copyWith(
+                                      color: Colors.black87,
+                                    ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              ////***************************** Насырова*/
+              Positioned(
+                top: 2080,
+                left: 20,
+                child: Column(
+                  children: [
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Stack(
+                          children: [
+                            ClipPath(
+                              clipper: StructCustomClipper(), // <--
+                              child: Container(
+                                width: rectangleSide,
+                                height: rectangleSide,
+                                color: StructureData.colorWhite,
+                              ),
+                            ),
+                            Positioned(
+                              top: rectangleSide * 0.025,
+                              left: rectangleSide * 0.025,
+                              child: GestureDetector(
+                                onTap: () async {
+                                  setState(() {
+                                    _showPreview = !_showPreview;
+                                    _image = StaffData.staffDepReadersNas;
+
+                                    //print(
+                                    //   'offset = ${_scrollController.offset}');
+                                  });
+                                  _hImage = await _calculateImageDimension()
+                                      .then((size) => size.height);
+                                },
+                                child: Container(
+                                  width: rectangleSide - (rectangleSide * 0.05),
+                                  height:
+                                      rectangleSide - (rectangleSide * 0.05),
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(20),
+                                    image: const DecorationImage(
+                                        image: AssetImage(
+                                            StaffData.staffDepReadersNas),
+                                        fit: BoxFit.scaleDown),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Stack(
+                          textDirection: TextDirection.ltr,
+                          alignment: AlignmentDirectional.topStart,
+                          children: [
+                            Padding(
+                              padding:
+                                  const EdgeInsets.only(left: 20.0, top: 8),
+                              child: SizedBox(
+                                  width: 700,
+                                  height: 330,
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'Насырова Ольга Сергеевна',
+                                        textAlign: TextAlign.justify,
+                                        style: GoogleFonts.oswald(
+                                          textStyle: Theme.of(context)
+                                              .textTheme
+                                              .headline4!
+                                              .copyWith(
+                                                  fontWeight: FontWeight.bold,
+                                                  color: StaffData.headerColor),
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        height: 10,
+                                      ),
+                                      RichText(
+                                        textDirection: TextDirection.ltr,
+                                        textAlign: TextAlign.justify,
+                                        text: TextSpan(
+                                          text:
+                                              'Заведующий сектором отдела работы с читателями старшего школьного возраста ЦГДБ им. А. М. Горького.\n\n',
+                                          style: GoogleFonts.oswald(
+                                              textStyle: Theme.of(context)
+                                                  .textTheme
+                                                  .headline5!
+                                                  .copyWith(
+                                                      color: Colors.black87)),
+                                          children: [
+                                            TextSpan(
+                                              text: "Образование",
+                                              style: GoogleFonts.oswald(
+                                                  textStyle: Theme.of(context)
+                                                      .textTheme
+                                                      .headline5!
+                                                      .copyWith(
+                                                          color: Colors.black87,
+                                                          fontStyle: FontStyle
+                                                              .italic)),
+                                            ),
+                                            TextSpan(
+                                              text:
+                                                  " – Челябинский государственный университет, 2006 год (специальность – учитель русского языка и литературы).\n\n",
+                                              style: GoogleFonts.oswald(
+                                                textStyle: Theme.of(context)
+                                                    .textTheme
+                                                    .headline5!
+                                                    .copyWith(
+                                                      color: Colors.black87,
+                                                    ),
+                                              ),
+                                            ),
+                                            TextSpan(
+                                              text:
+                                                  "Стаж работы в библиотечной отрасли",
+                                              style: GoogleFonts.oswald(
+                                                  textStyle: Theme.of(context)
+                                                      .textTheme
+                                                      .headline5!
+                                                      .copyWith(
+                                                          color: Colors.black87,
+                                                          fontStyle: FontStyle
+                                                              .italic)),
+                                            ),
+                                            TextSpan(
+                                              text: " – 13 лет.",
+                                              style: GoogleFonts.oswald(
+                                                textStyle: Theme.of(context)
+                                                    .textTheme
+                                                    .headline5!
+                                                    .copyWith(
+                                                      color: Colors.black87,
+                                                    ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                  )),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      width: 1040,
+                      height: 650,
+                      child: RichText(
+                        textDirection: TextDirection.ltr,
+                        textAlign: TextAlign.justify,
+                        text: TextSpan(
+                          text: 'Реализованные проекты',
+                          style: GoogleFonts.oswald(
+                            textStyle: Theme.of(context)
+                                .textTheme
+                                .headline5!
+                                .copyWith(
+                                    color: Colors.black87,
+                                    fontStyle: FontStyle.italic),
+                          ),
+                          children: [
+                            TextSpan(
+                              text:
+                                  " – «Молодежный перекресток», «Правовой лабиринт», «Все в сеть» (курсы компьютерной грамотности),  «Стиль жизни-здоровье».",
+                              style: GoogleFonts.oswald(
+                                textStyle: Theme.of(context)
+                                    .textTheme
+                                    .headline5!
+                                    .copyWith(
+                                      color: Colors.black87,
+                                    ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+////***************************** Обвинцева*/
+              Positioned(
+                top: 2550,
+                left: 20,
+                child: Column(
+                  children: [
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Stack(
+                          children: [
+                            ClipPath(
+                              clipper: StructCustomClipper(), // <--
+                              child: Container(
+                                width: rectangleSide,
+                                height: rectangleSide,
+                                color: StructureData.colorWhite,
+                              ),
+                            ),
+                            Positioned(
+                              top: rectangleSide * 0.025,
+                              left: rectangleSide * 0.025,
+                              child: GestureDetector(
+                                onTap: () async {
+                                  setState(() {
+                                    _showPreview = !_showPreview;
+                                    _image = StaffData.staffDepReadersObv;
+
+                                    //print(
+                                    //   'offset = ${_scrollController.offset}');
+                                  });
+                                  _hImage = await _calculateImageDimension()
+                                      .then((size) => size.height);
+                                },
+                                child: Container(
+                                  width: rectangleSide - (rectangleSide * 0.05),
+                                  height:
+                                      rectangleSide - (rectangleSide * 0.05),
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(20),
+                                    image: const DecorationImage(
+                                        image: AssetImage(
+                                            StaffData.staffDepReadersObv),
+                                        fit: BoxFit.scaleDown),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Stack(
+                          textDirection: TextDirection.ltr,
+                          alignment: AlignmentDirectional.topStart,
+                          children: [
+                            Padding(
+                              padding:
+                                  const EdgeInsets.only(left: 20.0, top: 8),
+                              child: SizedBox(
+                                  width: 700,
+                                  height: 330,
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'Обвинцева Марина Михайловна',
+                                        textAlign: TextAlign.justify,
+                                        style: GoogleFonts.oswald(
+                                          textStyle: Theme.of(context)
+                                              .textTheme
+                                              .headline4!
+                                              .copyWith(
+                                                  fontWeight: FontWeight.bold,
+                                                  color: StaffData.headerColor),
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        height: 10,
+                                      ),
+                                      RichText(
+                                        textDirection: TextDirection.ltr,
+                                        textAlign: TextAlign.justify,
+                                        text: TextSpan(
+                                          text:
+                                              'Библиотекарь отдела работы с читателями ЦГДБ им. А. М. Горького.\n\n',
+                                          style: GoogleFonts.oswald(
+                                              textStyle: Theme.of(context)
+                                                  .textTheme
+                                                  .headline5!
+                                                  .copyWith(
+                                                      color: Colors.black87)),
+                                          children: [
+                                            TextSpan(
+                                              text: "Образование",
+                                              style: GoogleFonts.oswald(
+                                                  textStyle: Theme.of(context)
+                                                      .textTheme
+                                                      .headline5!
+                                                      .copyWith(
+                                                          color: Colors.black87,
+                                                          fontStyle: FontStyle
+                                                              .italic)),
+                                            ),
+                                            TextSpan(
+                                              text:
+                                                  " –  Южно-Уральский государственный институт искусств имени ПИ. Чайковского, 2023\n\n",
+                                              style: GoogleFonts.oswald(
+                                                textStyle: Theme.of(context)
+                                                    .textTheme
+                                                    .headline5!
+                                                    .copyWith(
+                                                      color: Colors.black87,
+                                                    ),
+                                              ),
+                                            ),
+                                            TextSpan(
+                                              text:
+                                                  "Стаж работы в библиотечной отрасли",
+                                              style: GoogleFonts.oswald(
+                                                  textStyle: Theme.of(context)
+                                                      .textTheme
+                                                      .headline5!
+                                                      .copyWith(
+                                                          color: Colors.black87,
+                                                          fontStyle: FontStyle
+                                                              .italic)),
+                                            ),
+                                            TextSpan(
+                                              text: " – менее года.",
+                                              style: GoogleFonts.oswald(
+                                                textStyle: Theme.of(context)
+                                                    .textTheme
+                                                    .headline5!
+                                                    .copyWith(
+                                                      color: Colors.black87,
+                                                    ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                  )),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      width: 1040,
+                      height: 650,
+                      child: RichText(
+                        textDirection: TextDirection.ltr,
+                        textAlign: TextAlign.justify,
+                        text: TextSpan(
+                          text: 'Реализованные проекты',
+                          style: GoogleFonts.oswald(
+                            textStyle: Theme.of(context)
+                                .textTheme
+                                .headline5!
+                                .copyWith(
+                                    color: Colors.black87,
+                                    fontStyle: FontStyle.italic),
+                          ),
+                          children: [
+                            TextSpan(
+                              text:
+                                  " – Проведение творческих мастер-классов по рисованию.",
+                              style: GoogleFonts.oswald(
+                                textStyle: Theme.of(context)
+                                    .textTheme
+                                    .headline5!
+                                    .copyWith(
+                                      color: Colors.black87,
+                                    ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              ////***************************** Пертен*/
+              Positioned(
+                top: 3000,
+                left: 20,
+                child: Column(
+                  children: [
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Stack(
+                          children: [
+                            ClipPath(
+                              clipper: StructCustomClipper(), // <--
+                              child: Container(
+                                width: rectangleSide,
+                                height: rectangleSide,
+                                color: StructureData.colorWhite,
+                              ),
+                            ),
+                            Positioned(
+                              top: rectangleSide * 0.025,
+                              left: rectangleSide * 0.025,
+                              child: GestureDetector(
+                                onTap: () async {
+                                  setState(() {
+                                    _showPreview = !_showPreview;
+                                    _image = StaffData.staffDepReadersPer;
+
+                                    //print(_showPreview);
+                                  });
+                                  _hImage = await _calculateImageDimension()
+                                      .then((size) => size.height);
+                                },
+                                child: Container(
+                                  width: rectangleSide - (rectangleSide * 0.05),
+                                  height:
+                                      rectangleSide - (rectangleSide * 0.05),
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(20),
+                                    image: const DecorationImage(
+                                        image: AssetImage(
+                                            StaffData.staffDepReadersPer),
+                                        fit: BoxFit.scaleDown),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Stack(
+                          textDirection: TextDirection.ltr,
+                          alignment: AlignmentDirectional.topStart,
+                          children: [
+                            Padding(
+                              padding:
+                                  const EdgeInsets.only(left: 20.0, top: 8),
+                              child: SizedBox(
+                                  width: 700,
+                                  height: 330,
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'Пертэн Ксения Леонидовна',
                                         textAlign: TextAlign.justify,
                                         style: GoogleFonts.oswald(
                                           textStyle: Theme.of(context)
@@ -714,7 +1269,8 @@ class _StaffDepartmentReadersState extends State<StaffDepartmentReaders> {
                                                               .italic)),
                                             ),
                                             TextSpan(
-                                              text: "\n\n",
+                                              text:
+                                                  " - Уральский государственный университет физической культуры, 2007; Аспирантура Уральского государственного университета физической культуры, 2013, кандидат педагогических наук\n",
                                               style: GoogleFonts.oswald(
                                                 textStyle: Theme.of(context)
                                                     .textTheme
@@ -775,191 +1331,8 @@ class _StaffDepartmentReadersState extends State<StaffDepartmentReaders> {
                           ),
                           children: [
                             TextSpan(
-                              text: " ",
-                              style: GoogleFonts.oswald(
-                                textStyle: Theme.of(context)
-                                    .textTheme
-                                    .headline5!
-                                    .copyWith(
-                                      color: Colors.black87,
-                                    ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-
-              /* ******************************** */
-              Positioned(
-                top: 2100,
-                left: 20,
-                child: Column(
-                  children: [
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Stack(
-                          children: [
-                            ClipPath(
-                              clipper: StructCustomClipper(), // <--
-                              child: Container(
-                                width: rectangleSide,
-                                height: rectangleSide,
-                                color: StructureData.colorWhite,
-                              ),
-                            ),
-                            Positioned(
-                              top: rectangleSide * 0.025,
-                              left: rectangleSide * 0.025,
-                              child: GestureDetector(
-                                onTap: () async {
-                                  setState(() {
-                                    _showPreview = !_showPreview;
-                                    _image = StaffData.staffDepReadersZai;
-
-                                    //print(_showPreview);
-                                  });
-                                  _hImage = await _calculateImageDimension()
-                                      .then((size) => size.height);
-                                },
-                                child: Container(
-                                  width: rectangleSide - (rectangleSide * 0.05),
-                                  height:
-                                      rectangleSide - (rectangleSide * 0.05),
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(20),
-                                    image: const DecorationImage(
-                                        image: AssetImage(
-                                            StaffData.staffDepReadersZai),
-                                        fit: BoxFit.scaleDown),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        Stack(
-                          textDirection: TextDirection.ltr,
-                          alignment: AlignmentDirectional.topStart,
-                          children: [
-                            Padding(
-                              padding:
-                                  const EdgeInsets.only(left: 20.0, top: 8),
-                              child: SizedBox(
-                                  width: 700,
-                                  height: 330,
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        'Зайкова Любовь Андреевна',
-                                        textAlign: TextAlign.justify,
-                                        style: GoogleFonts.oswald(
-                                          textStyle: Theme.of(context)
-                                              .textTheme
-                                              .headline4!
-                                              .copyWith(
-                                                  fontWeight: FontWeight.bold,
-                                                  color: StaffData.headerColor),
-                                        ),
-                                      ),
-                                      const SizedBox(
-                                        height: 10,
-                                      ),
-                                      RichText(
-                                        textDirection: TextDirection.ltr,
-                                        textAlign: TextAlign.justify,
-                                        text: TextSpan(
-                                          text:
-                                              'Заведующий сектором отдела работы с читателями ЦГДБ им. А. М. Горького.\n\n',
-                                          style: GoogleFonts.oswald(
-                                              textStyle: Theme.of(context)
-                                                  .textTheme
-                                                  .headline5!
-                                                  .copyWith(
-                                                      color: Colors.black87)),
-                                          children: [
-                                            TextSpan(
-                                              text: "Образование",
-                                              style: GoogleFonts.oswald(
-                                                  textStyle: Theme.of(context)
-                                                      .textTheme
-                                                      .headline5!
-                                                      .copyWith(
-                                                          color: Colors.black87,
-                                                          fontStyle: FontStyle
-                                                              .italic)),
-                                            ),
-                                            TextSpan(
-                                              text:
-                                                  " – Академия труда и социальных отношений, (специальность – экономист), Челябинский государственный институт культуры Программа профессиональной переподготовки «Библиотечно-информационная деятельность» 250 часов, 2018 год.\n",
-                                              style: GoogleFonts.oswald(
-                                                textStyle: Theme.of(context)
-                                                    .textTheme
-                                                    .headline5!
-                                                    .copyWith(
-                                                      color: Colors.black87,
-                                                    ),
-                                              ),
-                                            ),
-                                            TextSpan(
-                                              text:
-                                                  "Стаж работы в библиотечной отрасли",
-                                              style: GoogleFonts.oswald(
-                                                  textStyle: Theme.of(context)
-                                                      .textTheme
-                                                      .headline5!
-                                                      .copyWith(
-                                                          color: Colors.black87,
-                                                          fontStyle: FontStyle
-                                                              .italic)),
-                                            ),
-                                            TextSpan(
-                                              text: " – 9 лет.",
-                                              style: GoogleFonts.oswald(
-                                                textStyle: Theme.of(context)
-                                                    .textTheme
-                                                    .headline5!
-                                                    .copyWith(
-                                                      color: Colors.black87,
-                                                    ),
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ],
-                                  )),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      width: 1040,
-                      height: 650,
-                      child: RichText(
-                        textDirection: TextDirection.ltr,
-                        textAlign: TextAlign.justify,
-                        text: TextSpan(
-                          text: 'Реализованные проекты',
-                          style: GoogleFonts.oswald(
-                            textStyle: Theme.of(context)
-                                .textTheme
-                                .headline5!
-                                .copyWith(
-                                    color: Colors.black87,
-                                    fontStyle: FontStyle.italic),
-                          ),
-                          children: [
-                            TextSpan(
                               text:
-                                  " –  создание зала научно-популярной литературы и периодики (разработка концепции, организация пространства, реализация просветительских программ), каникулярная программа «Летний библиотечный клуб», организация работы библиотечных пунктов в образовательных центрах Челябинска, Фестиваль научно-познавательной литературы.",
+                                  " - разработка и проведение занятий по программе «Библиотечная лаборатория «Научно-нескучно»\n",
                               style: GoogleFonts.oswald(
                                 textStyle: Theme.of(context)
                                     .textTheme
@@ -976,8 +1349,10 @@ class _StaffDepartmentReadersState extends State<StaffDepartmentReaders> {
                   ],
                 ),
               ),
-              ////***************************** */
+
               /* ******************************** */
+              /* ******************************** */
+/*
               Positioned(
                 top: 2650,
                 left: 20,
@@ -1160,193 +1535,11 @@ class _StaffDepartmentReadersState extends State<StaffDepartmentReaders> {
                   ],
                 ),
               ),
+*/
               ////***************************** */
               /* ******************************** */
-              Positioned(
-                top: 3100,
-                left: 20,
-                child: Column(
-                  children: [
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Stack(
-                          children: [
-                            ClipPath(
-                              clipper: StructCustomClipper(), // <--
-                              child: Container(
-                                width: rectangleSide,
-                                height: rectangleSide,
-                                color: StructureData.colorWhite,
-                              ),
-                            ),
-                            Positioned(
-                              top: rectangleSide * 0.025,
-                              left: rectangleSide * 0.025,
-                              child: GestureDetector(
-                                onTap: () async {
-                                  setState(() {
-                                    _showPreview = !_showPreview;
-                                    _image = StaffData.staffDepReadersNas;
-
-                                    //print(
-                                    //   'offset = ${_scrollController.offset}');
-                                  });
-                                  _hImage = await _calculateImageDimension()
-                                      .then((size) => size.height);
-                                },
-                                child: Container(
-                                  width: rectangleSide - (rectangleSide * 0.05),
-                                  height:
-                                      rectangleSide - (rectangleSide * 0.05),
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(20),
-                                    image: const DecorationImage(
-                                        image: AssetImage(
-                                            StaffData.staffDepReadersNas),
-                                        fit: BoxFit.scaleDown),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        Stack(
-                          textDirection: TextDirection.ltr,
-                          alignment: AlignmentDirectional.topStart,
-                          children: [
-                            Padding(
-                              padding:
-                                  const EdgeInsets.only(left: 20.0, top: 8),
-                              child: SizedBox(
-                                  width: 700,
-                                  height: 330,
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        'Насырова Ольга Сергеевна',
-                                        textAlign: TextAlign.justify,
-                                        style: GoogleFonts.oswald(
-                                          textStyle: Theme.of(context)
-                                              .textTheme
-                                              .headline4!
-                                              .copyWith(
-                                                  fontWeight: FontWeight.bold,
-                                                  color: StaffData.headerColor),
-                                        ),
-                                      ),
-                                      const SizedBox(
-                                        height: 10,
-                                      ),
-                                      RichText(
-                                        textDirection: TextDirection.ltr,
-                                        textAlign: TextAlign.justify,
-                                        text: TextSpan(
-                                          text:
-                                              'Заведующий сектором отдела работы с читателями старшего школьного возраста ЦГДБ им. А. М. Горького.\n\n',
-                                          style: GoogleFonts.oswald(
-                                              textStyle: Theme.of(context)
-                                                  .textTheme
-                                                  .headline5!
-                                                  .copyWith(
-                                                      color: Colors.black87)),
-                                          children: [
-                                            TextSpan(
-                                              text: "Образование",
-                                              style: GoogleFonts.oswald(
-                                                  textStyle: Theme.of(context)
-                                                      .textTheme
-                                                      .headline5!
-                                                      .copyWith(
-                                                          color: Colors.black87,
-                                                          fontStyle: FontStyle
-                                                              .italic)),
-                                            ),
-                                            TextSpan(
-                                              text:
-                                                  " – Челябинский государственный университет, 2006 год (специальность – учитель русского языка и литературы).\n\n",
-                                              style: GoogleFonts.oswald(
-                                                textStyle: Theme.of(context)
-                                                    .textTheme
-                                                    .headline5!
-                                                    .copyWith(
-                                                      color: Colors.black87,
-                                                    ),
-                                              ),
-                                            ),
-                                            TextSpan(
-                                              text:
-                                                  "Стаж работы в библиотечной отрасли",
-                                              style: GoogleFonts.oswald(
-                                                  textStyle: Theme.of(context)
-                                                      .textTheme
-                                                      .headline5!
-                                                      .copyWith(
-                                                          color: Colors.black87,
-                                                          fontStyle: FontStyle
-                                                              .italic)),
-                                            ),
-                                            TextSpan(
-                                              text: " – 13 лет.",
-                                              style: GoogleFonts.oswald(
-                                                textStyle: Theme.of(context)
-                                                    .textTheme
-                                                    .headline5!
-                                                    .copyWith(
-                                                      color: Colors.black87,
-                                                    ),
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ],
-                                  )),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      width: 1040,
-                      height: 650,
-                      child: RichText(
-                        textDirection: TextDirection.ltr,
-                        textAlign: TextAlign.justify,
-                        text: TextSpan(
-                          text: 'Реализованные проекты',
-                          style: GoogleFonts.oswald(
-                            textStyle: Theme.of(context)
-                                .textTheme
-                                .headline5!
-                                .copyWith(
-                                    color: Colors.black87,
-                                    fontStyle: FontStyle.italic),
-                          ),
-                          children: [
-                            TextSpan(
-                              text:
-                                  " – «Молодежный перекресток», «Правовой лабиринт», «Все в сеть» (курсы компьютерной грамотности),  «Стиль жизни-здоровье».",
-                              style: GoogleFonts.oswald(
-                                textStyle: Theme.of(context)
-                                    .textTheme
-                                    .headline5!
-                                    .copyWith(
-                                      color: Colors.black87,
-                                    ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              ////***************************** */
               /* ******************************** */
+              /* просвирину просто скрыть
               Positioned(
                 top: 3600,
                 left: 20,
@@ -1530,10 +1723,12 @@ class _StaffDepartmentReadersState extends State<StaffDepartmentReaders> {
                   ],
                 ),
               ),
+              */
               ////***************************** */
               /* ******************************** */
+              /*
               Positioned(
-                top: 4100,
+                top: 3050,
                 left: 20,
                 child: Column(
                   children: [
@@ -1715,10 +1910,11 @@ class _StaffDepartmentReadersState extends State<StaffDepartmentReaders> {
                   ],
                 ),
               ),
+              */
               ////***************************** */
               /* ******************************** */
               Positioned(
-                top: 4600,
+                top: 3430,
                 left: 20,
                 child: Column(
                   children: [
@@ -1902,7 +2098,7 @@ class _StaffDepartmentReadersState extends State<StaffDepartmentReaders> {
               ),
               ////***************************** */
               Positioned(
-                top: 5100,
+                top: 3910,
                 left: 20,
                 child: Column(
                   children: [
@@ -2085,8 +2281,9 @@ class _StaffDepartmentReadersState extends State<StaffDepartmentReaders> {
                 ),
               ),
               ////***************************** */
+/*
               Positioned(
-                top: 5600,
+                top: 4550,
                 left: 20,
                 child: Column(
                   children: [
@@ -2265,7 +2462,191 @@ class _StaffDepartmentReadersState extends State<StaffDepartmentReaders> {
                   ],
                 ),
               ),
+*/
               /* ******************************** */
+              Positioned(
+                top: 4380,
+                left: 20,
+                child: Column(
+                  children: [
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Stack(
+                          children: [
+                            ClipPath(
+                              clipper: StructCustomClipper(), // <--
+                              child: Container(
+                                width: rectangleSide,
+                                height: rectangleSide,
+                                color: StructureData.colorWhite,
+                              ),
+                            ),
+                            Positioned(
+                              top: rectangleSide * 0.025,
+                              left: rectangleSide * 0.025,
+                              child: GestureDetector(
+                                onTap: () async {
+                                  setState(() {
+                                    _showPreview = !_showPreview;
+                                    _image = StaffData.staffDepReadersYus;
+
+                                    //print(_showPreview);
+                                  });
+                                  _hImage = await _calculateImageDimension()
+                                      .then((size) => size.height);
+                                },
+                                child: Container(
+                                  width: rectangleSide - (rectangleSide * 0.05),
+                                  height:
+                                      rectangleSide - (rectangleSide * 0.05),
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(20),
+                                    image: const DecorationImage(
+                                        image: AssetImage(
+                                            StaffData.staffDepReadersYus),
+                                        fit: BoxFit.scaleDown),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Stack(
+                          textDirection: TextDirection.ltr,
+                          alignment: AlignmentDirectional.topStart,
+                          children: [
+                            Padding(
+                              padding:
+                                  const EdgeInsets.only(left: 20.0, top: 8),
+                              child: SizedBox(
+                                  width: 700,
+                                  height: 330,
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'Юсупова Инна Сергеевна',
+                                        textAlign: TextAlign.justify,
+                                        style: GoogleFonts.oswald(
+                                          textStyle: Theme.of(context)
+                                              .textTheme
+                                              .headline4!
+                                              .copyWith(
+                                                  fontWeight: FontWeight.bold,
+                                                  color: StaffData.headerColor),
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        height: 10,
+                                      ),
+                                      RichText(
+                                        textDirection: TextDirection.ltr,
+                                        textAlign: TextAlign.justify,
+                                        text: TextSpan(
+                                          text:
+                                              'Главный библиотекарь отдела работы с читателями ЦГДБ им. А. М. Горького.\n\n',
+                                          style: GoogleFonts.oswald(
+                                              textStyle: Theme.of(context)
+                                                  .textTheme
+                                                  .headline5!
+                                                  .copyWith(
+                                                      color: Colors.black87)),
+                                          children: [
+                                            TextSpan(
+                                              text: "Образование",
+                                              style: GoogleFonts.oswald(
+                                                  textStyle: Theme.of(context)
+                                                      .textTheme
+                                                      .headline5!
+                                                      .copyWith(
+                                                          color: Colors.black87,
+                                                          fontStyle: FontStyle
+                                                              .italic)),
+                                            ),
+                                            TextSpan(
+                                              text:
+                                                  " – Челябинский государственный педагогический университет, 2006.\n",
+                                              style: GoogleFonts.oswald(
+                                                textStyle: Theme.of(context)
+                                                    .textTheme
+                                                    .headline5!
+                                                    .copyWith(
+                                                      color: Colors.black87,
+                                                    ),
+                                              ),
+                                            ),
+                                            TextSpan(
+                                              text:
+                                                  "Стаж работы в библиотечной отрасли",
+                                              style: GoogleFonts.oswald(
+                                                  textStyle: Theme.of(context)
+                                                      .textTheme
+                                                      .headline5!
+                                                      .copyWith(
+                                                          color: Colors.black87,
+                                                          fontStyle: FontStyle
+                                                              .italic)),
+                                            ),
+                                            TextSpan(
+                                              text: " – менее года.",
+                                              style: GoogleFonts.oswald(
+                                                textStyle: Theme.of(context)
+                                                    .textTheme
+                                                    .headline5!
+                                                    .copyWith(
+                                                      color: Colors.black87,
+                                                    ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                  )),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      width: 1040,
+                      height: 650,
+                      child: RichText(
+                        textDirection: TextDirection.ltr,
+                        textAlign: TextAlign.justify,
+                        text: TextSpan(
+                          text: 'Реализованные проекты',
+                          style: GoogleFonts.oswald(
+                            textStyle: Theme.of(context)
+                                .textTheme
+                                .headline5!
+                                .copyWith(
+                                    color: Colors.black87,
+                                    fontStyle: FontStyle.italic),
+                          ),
+                          children: [
+                            TextSpan(
+                              text:
+                                  " – участие в реализации проекта «Библионяня»;  разработка и проведение занятий по программам «Сказка на ладошке», «Мастерим из фетра»",
+                              style: GoogleFonts.oswald(
+                                textStyle: Theme.of(context)
+                                    .textTheme
+                                    .headline5!
+                                    .copyWith(
+                                      color: Colors.black87,
+                                    ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              ////***************************** */
 
               ///******************** */
               if (_showPreview) ...[

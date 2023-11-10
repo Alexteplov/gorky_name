@@ -40,7 +40,7 @@ class AfishaSundayA1 extends StatelessWidget {
           'Клуб «БиблиоГОЛОС» - «Актерские техники и работа на камеру» (от 10 лет)',
     }; */
 
-    context.read<RoutingData>().setRouteNextSteep(GlobalVar.routeAfishaW01a);
+    context.read<RoutingData>().setRouteNextSteep(GlobalVar.routeEmpty);
     return SafeArea(
       child: Stack(
         children: [
@@ -53,7 +53,7 @@ class AfishaSundayA1 extends StatelessWidget {
                 image: DecorationImage(
                   image: AssetImage(
                       //context.read<RoutingData>().getBgAfisha
-                      'image/bgAfisha/schedule/9.png'),
+                      'image/bgAfisha/schedule/6.jpg'),
                   fit: BoxFit.fill,
                 ),
               ),

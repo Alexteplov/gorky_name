@@ -46,7 +46,7 @@ class AfishaSaturdayA extends StatelessWidget {
                 image: DecorationImage(
                   image: AssetImage(
                       //context.read<RoutingData>().getBgAfisha
-                      'image/bgAfisha/schedule/7.png'),
+                      'image/bgAfisha/schedule/7.jpg'),
                   fit: BoxFit.fill,
                 ),
               ),

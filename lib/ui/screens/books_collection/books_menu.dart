@@ -84,7 +84,7 @@ class BooksMenu extends StatelessWidget {
                   nameButton: GlobalVar.booksCollectionGorky,
                   route: GlobalVar.routeBookCollectionGorky,
                   logo: BooksCollectionData.logoBooksCollectionG,
-                  //buttonHeight: 0.1,
+                  buttonHeight: 0.1,
                 ),
               ],
             ),

@@ -34,7 +34,7 @@ class GlobalVar {
   static const String booksCollectionRussia = 'Книги о России';
   static const String booksCollectionHistory = 'Пешком в историю';
   static const String booksCollectionGorky =
-      'Коллекция детских изданий XX века';
+      'Коллекция детских изданий XX века о М.Горьком';
 
 //QR codes
   static const String qrNEDB = 'image/QR_nedb.png';
@@ -46,12 +46,14 @@ class GlobalVar {
   static const String qrContact = 'image/QR_vk.png';
   static const String qrInstagram = 'image/QR_instagram.png';
   static const String qrTikTok = 'image/QR_tiktok.png';
+  static const String qrRuStore = 'image/QR_RuStore.jpg';
 
 //Библиотека в сети
   static const String libInNet = 'Сайт www.db74.ru';
   static const String inContact = 'ВКонтакте';
   static const String instagram = 'Instagram';
   static const String tiktok = 'TikTok';
+  static const String rustore = 'Мобильное приложение';
 
   //лого
   static const String logoLibInNet = 'image/http_logo.png';
@@ -63,6 +65,7 @@ class GlobalVar {
   static const String logoLitres = 'image/litres_logo.png';
   static const String logoNEB = 'image/neb_logo.png';
   static const String logoNEDB = 'image/nedb_logo.png';
+  static const String logoRuStore = 'image/ru_store_logo.png';
 
 //Фоновая картинка
   static const String bgImage = 'image/main_background.jpg';
@@ -107,6 +110,7 @@ class GlobalVar {
   static const String routeInContact = '/inContact_qr';
   static const String routeInstagram = '/instagram_qr';
   static const String routeTikTok = '/tikTok_qr';
+  static const String routeRuStore = '/ru_store_qr';
 
   //structure library
   static const String routeLibiraryStructure = '/library_structure';
@@ -277,6 +281,29 @@ class BooksCollectionData {
       'image/booksCollections/gorky/storyes_full.jpg';
   static String imgMother = 'image/booksCollections/gorky/mother.jpg';
   static String imgMotherFull = 'image/booksCollections/gorky/mother_full.jpg';
+  static String imgPeople = 'image/booksCollections/gorky/people.jpg';
+  static String imgPeopleFull = 'image/booksCollections/gorky/people_full.jpg';
+  static String imgVerse = 'image/booksCollections/gorky/verse.jpg';
+  static String imgVerseFull = 'image/booksCollections/gorky/verse_full.jpg';
+  static String imgBird = 'image/booksCollections/gorky/bird.jpg';
+  static String imgBirdFull = 'image/booksCollections/gorky/bird_full.jpg';
+  static String imgDanko = 'image/booksCollections/gorky/danko.jpg';
+  static String imgDankoFull = 'image/booksCollections/gorky/danko_full.jpg';
+  static String imgChildren = 'image/booksCollections/gorky/children.jpg';
+  static String imgChildrenFull =
+      'image/booksCollections/gorky/children_full.jpg';
+  static String imgOldMan = 'image/booksCollections/gorky/oldMan.jpg';
+  static String imgOldManFull = 'image/booksCollections/gorky/oldMan_full.jpg';
+  static String img30Tom = 'image/booksCollections/gorky/30Tom.jpg';
+  static String img30TomFull = 'image/booksCollections/gorky/30Tom_full.jpg';
+  static String img18Tom = 'image/booksCollections/gorky/18Tom.jpg';
+  static String img18TomFull = 'image/booksCollections/gorky/18Tom_full.jpg';
+  static String img25Tom = 'image/booksCollections/gorky/25Tom.jpg';
+  static String img25TomFull = 'image/booksCollections/gorky/25Tom_full.jpg';
+  static String imgZhzlG = 'image/booksCollections/gorky/zhzlG.jpg';
+  static String imgZhzlGFull = 'image/booksCollections/gorky/zhzlG_full.jpg';
+  static String imgBikov = 'image/booksCollections/gorky/bikov.jpg';
+  static String imgBikovFull = 'image/booksCollections/gorky/bikov_full.jpg';
 
   static String logoBooksCollectionG = 'image/booksCollections/logo_gorky.jpg';
   static String logoBooksCollection =
@@ -319,6 +346,14 @@ class StaffData {
   static const String staffDepReadersRya = 'image/staff/ryabchenko.jpg';
   static const String staffDepReadersUru = 'image/staff/urusheva.jpg';
   static const String staffDepReadersHiz = 'image/staff/hizhnyak.jpg';
+  static const String staffDepReadersAlf = 'image/staff/alferova.jpg';
+  static const String staffDepReadersAish = 'image/staff/aisheva.jpg';
+  static const String staffDepReadersMel = 'image/staff/melihova.jpg';
+  static const String staffDepReadersPer = 'image/staff/perten.jpg';
+  static const String staffDepReadersYus = 'image/staff/yusupova.jpg';
+  static const String staffDepReadersGri = 'image/staff/grigoreva.jpg';
+  static const String staffDepReadersObv = 'image/staff/obvinseva.jpg';
+
   //Info
   static const String staffDepInfoVin = 'image/staff/vinnik.jpg';
   static const String staffDepInfoCir = 'image/staff/cirazhitdinova.jpg';
@@ -337,6 +372,8 @@ class StaffData {
   static const String staffDepFondNik = 'image/staff/nikitenko.jpg';
   static const String staffDepFondPil = 'image/staff/pilnikova.jpg';
   static const String staffDepFondRya = 'image/staff/ryabova.jpg';
+  static const String staffDepFondMya = 'image/staff/myasnikova.jpg';
+
 // Staff Sector registration and information
   static const String staffDepSecSus = 'image/staff/empty_woman.jpg';
   static const String staffDepSecMar = 'image/staff/empty_woman.jpg';

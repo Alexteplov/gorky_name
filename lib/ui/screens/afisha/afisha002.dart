@@ -54,7 +54,7 @@ class AfishaSecond extends StatelessWidget {
               decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(
-                    'image/bgAfisha/schedule/2.png',
+                    'image/bgAfisha/schedule/2.jpg',
                   ),
                   fit: BoxFit.fill,
                 ),

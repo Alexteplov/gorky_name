@@ -52,7 +52,7 @@ class AfishaThirdA extends StatelessWidget {
                 image: DecorationImage(
                   image: AssetImage(
                       //context.read<RoutingData>().getBgAfisha
-                      'image/bgAfisha/schedule/6.png'),
+                      'image/bgAfisha/schedule/6.jpg'),
                   fit: BoxFit.fill,
                 ),
               ),

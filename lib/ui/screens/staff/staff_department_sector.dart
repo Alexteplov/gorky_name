@@ -40,6 +40,7 @@ class _StaffSectorState extends State<StaffSector> {
               ),
             ),
             const LibraryLogo(),
+/*
             Positioned(
               top: 300,
               left: 20,
@@ -214,9 +215,10 @@ class _StaffSectorState extends State<StaffSector> {
                 ],
               ),
             ),
+*/
             /* ******************************** */
             Positioned(
-              top: 800,
+              top: 300,
               left: 20,
               child: Column(
                 children: [
@@ -334,7 +336,7 @@ class _StaffSectorState extends State<StaffSector> {
                                                             FontStyle.italic)),
                                           ),
                                           TextSpan(
-                                            text: "– лет.",
+                                            text: " – 1 год.",
                                             style: GoogleFonts.oswald(
                                               textStyle: Theme.of(context)
                                                   .textTheme

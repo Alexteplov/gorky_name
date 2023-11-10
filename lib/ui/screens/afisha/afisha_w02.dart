@@ -26,7 +26,7 @@ class AfishaSunday extends StatelessWidget {
       '17:00':
           'Клуб любителей настольных игр «Сто наСтолок». Игра «Имаджинариум» (от 10 лет)',
     }; */
-    context.read<RoutingData>().setRouteNextSteep(GlobalVar.routeEmpty);
+    context.read<RoutingData>().setRouteNextSteep(GlobalVar.routeAfisha03a);
     return SafeArea(
       child: Stack(
         children: [

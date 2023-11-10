@@ -46,7 +46,7 @@ import 'package:gorky_name/ui/screens/staff/staff_department_readers.dart';
 import 'package:gorky_name/ui/screens/staff/staff_department_redaction.dart';
 import 'package:gorky_name/ui/screens/staff/staff_menu.dart';
 
-import '../const/const_variables.dart';
+//import '../const/const_variables.dart';
 import '../ui/screens/staff/staff_department_sector.dart';
 
 class RoutingData with ChangeNotifier {
@@ -109,21 +109,23 @@ class RoutingData with ChangeNotifier {
         DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day);
     //DateTime _sDt = DateTime(2021, 12, 24);
     //Show default page
-    String _retStr = GlobalVar.routeAfishaW02;
-    if (_now.compareTo(DateTime(2023, 03, 20)) <= 0) {
+    String _retStr = GlobalVar.routeAfishaW01a;
+    if (_now.compareTo(DateTime(2023, 11, 05)) <= 0) {
       _retStr = GlobalVar.routeAfisha01;
-    } else if (_now.compareTo(DateTime(2023, 03, 22)) <= 0) {
+    } else if (_now.compareTo(DateTime(2023, 11, 07)) <= 0) {
       _retStr = GlobalVar.routeAfisha02;
-    } else if (_now.compareTo(DateTime(2023, 03, 24)) <= 0) {
+    } else if (_now.compareTo(DateTime(2023, 11, 08)) <= 0) {
       _retStr = GlobalVar.routeAfisha03;
-    } else if (_now.compareTo(DateTime(2023, 03, 25)) <= 0) {
+    } else if (_now.compareTo(DateTime(2023, 11, 09)) <= 0) {
       _retStr = GlobalVar.routeAfishaW01;
-    } else if (_now.compareTo(DateTime(2023, 03, 26)) <= 0) {
+    } else if (_now.compareTo(DateTime(2023, 11, 10)) <= 0) {
       _retStr = GlobalVar.routeAfishaW02;
-    } else if (_now.compareTo(DateTime(2023, 03, 18)) <= 0) {
+    } else if (_now.compareTo(DateTime(2023, 11, 11)) <= 0) {
       _retStr = GlobalVar.routeAfisha03a;
-    } else if (_now.compareTo(DateTime(2023, 03, 19)) <= 0) {
+    } else if (_now.compareTo(DateTime(2023, 11, 12)) <= 0) {
       _retStr = GlobalVar.routeAfishaW01a;
+    } else if (_now.compareTo(DateTime(2023, 08, 05)) <= 0) {
+      _retStr = GlobalVar.routeAfishaW02a;
     }
     return _retStr;
   }
@@ -203,6 +205,9 @@ class RoutingData with ChangeNotifier {
     } else if (route == GlobalVar.routeTikTok) {
       _stackW.add(const ElLibsQr(
           nameLib: GlobalVar.tiktok, qrCode: GlobalVar.qrTikTok));
+    } else if (route == GlobalVar.routeRuStore) {
+      _stackW.add(const ElLibsQr(
+          nameLib: GlobalVar.rustore, qrCode: GlobalVar.qrRuStore));
     }
     //eCatalog routeECatalogKids
     else if (route == GlobalVar.routeECatalogMenu) {

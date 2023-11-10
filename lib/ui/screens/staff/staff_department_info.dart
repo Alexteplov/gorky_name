@@ -394,6 +394,7 @@ class _StaffDepartmentInfoState extends State<StaffDepartmentInfo> {
               ),
             ),
             ////***************************** */
+/*
             Positioned(
               top: 1320,
               left: 20,
@@ -570,7 +571,7 @@ class _StaffDepartmentInfoState extends State<StaffDepartmentInfo> {
                 ],
               ),
             ),
-
+*/
             ///******************** */
             if (_showPreview) ...[
               BackdropFilter(

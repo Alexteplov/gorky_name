@@ -47,15 +47,15 @@ class LibraryInNetwork extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-/*                 MenuButton(
+                MenuButton(
                   context: context,
-                  nameButton: GlobalVar.instagram,
-                  route: GlobalVar.routeInstagram,
-                  logo: GlobalVar.logoInstagram,
+                  nameButton: GlobalVar.rustore,
+                  route: GlobalVar.routeRuStore,
+                  logo: GlobalVar.logoRuStore,
                 ),
                 const SizedBox(
                   height: 20,
-                ), */
+                ),
 /*                 MenuButton(
                   context: context,
                   nameButton: GlobalVar.tiktok,
